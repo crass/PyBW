@@ -19,6 +19,7 @@ EventDispatcher::~EventDispatcher()
 void EventDispatcher::LoadEventHandler()
 {
   PyObject* pybw_module = PyImport_ImportModule("pybw");
+  PyErr_Clear();
   if (pybw_module == NULL)
   {
 	  MessageBoxA(0, "Error importing pybw module (is pybw.py in path?)", 0,0);
@@ -26,6 +27,7 @@ void EventDispatcher::LoadEventHandler()
   }
 
   event_handler = PyObject_GetAttrString(pybw_module, "event_handler");
+  PyErr_Clear();
   Py_DECREF( pybw_module );
 
   if (event_handler == NULL)
