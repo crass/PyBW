@@ -57,14 +57,20 @@ sys.stderr = PrintToBroodwar(broodwar, '! ', sys.stderr)
 
 print "Creating event handler"
 
-import basicai
-event_handler = basicai.EventHandler(broodwar)
+try:
+    import basicai
+    event_handler = basicai.EventHandler(broodwar)
+except Exception, e:
+    print "error", e
 
 def reload():
     global event_handler
-    import basicai
-    reload(basicai)
-    event_handler = basicai.EventHandler(broodwar)
+    try:
+        import basicai
+        reload(basicai)
+        event_handler = basicai.EventHandler(broodwar)
+    except Exception, e:
+        print "error", e
 
 
 print "PyBW module Initialization complete"
