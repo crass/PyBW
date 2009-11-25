@@ -2713,32 +2713,31 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_UnitSet swig_types[28]
 #define SWIGTYPE_p_UpgradeType swig_types[29]
 #define SWIGTYPE_p_char swig_types[30]
-#define SWIGTYPE_p_int swig_types[31]
-#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[32]
-#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[33]
-#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[34]
-#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[35]
-#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[36]
-#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[37]
-#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[38]
-#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[39]
-#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[40]
-#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[41]
-#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[42]
-#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[43]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t swig_types[44]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[45]
-#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[46]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[47]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t swig_types[48]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[49]
-#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[50]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t swig_types[51]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[52]
-#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[53]
-#define SWIGTYPE_p_std__string swig_types[54]
-static swig_type_info *swig_types[56];
-static swig_module_info swig_module = {swig_types, 55, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[31]
+#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[32]
+#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[33]
+#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[34]
+#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[35]
+#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[36]
+#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[37]
+#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[38]
+#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[39]
+#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[40]
+#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[41]
+#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[42]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t swig_types[43]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[44]
+#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[45]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[46]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t swig_types[47]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[48]
+#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[49]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t swig_types[50]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[51]
+#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[52]
+#define SWIGTYPE_p_std__string swig_types[53]
+static swig_type_info *swig_types[55];
+static swig_module_info swig_module = {swig_types, 54, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3207,10 +3206,10 @@ SWIGINTERN UnitSet *BWAPI_Player_getUnits(BWAPI::Player *self){
 
   #define SWIG_From_double   PyFloat_FromDouble 
 
-SWIGINTERN int BWAPI_Position_x(BWAPI::Position *self){
+SWIGINTERN int BWAPI_Position_getX(BWAPI::Position *self){
         return self->x();
     }
-SWIGINTERN int BWAPI_Position_y(BWAPI::Position *self){
+SWIGINTERN int BWAPI_Position_getY(BWAPI::Position *self){
         return self->y();
     }
 
@@ -3222,6 +3221,12 @@ SWIGINTERN int BWAPI_Position_y(BWAPI::Position *self){
 
 #include "BWAPI/TilePosition.h"
 
+SWIGINTERN int BWAPI_TilePosition_getX(BWAPI::TilePosition *self){
+        return self->x();
+    }
+SWIGINTERN int BWAPI_TilePosition_getY(BWAPI::TilePosition *self){
+        return self->y();
+    }
 
 #include "BWAPI/Unit.h"
 
@@ -3470,7 +3475,13 @@ SWIGINTERN PyObject *_wrap_PlayerSet_next(PyObject *SWIGUNUSEDPARM(self), PyObje
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PlayerSet_next" "', argument " "1"" of type '" "PlayerSet *""'"); 
   }
   arg1 = reinterpret_cast< PlayerSet * >(argp1);
-  result = (BWAPI::Player *)(arg1)->next();
+  {
+    result = (BWAPI::Player *)(arg1)->next();
+    if (!result) {
+      PyErr_SetString(PyExc_StopIteration,"End of list");
+      return NULL;
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Player, 0 |  0 );
   return resultobj;
 fail:
@@ -3589,7 +3600,13 @@ SWIGINTERN PyObject *_wrap_ForceSet_next(PyObject *SWIGUNUSEDPARM(self), PyObjec
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ForceSet_next" "', argument " "1"" of type '" "ForceSet *""'"); 
   }
   arg1 = reinterpret_cast< ForceSet * >(argp1);
-  result = (BWAPI::Force *)(arg1)->next();
+  {
+    result = (BWAPI::Force *)(arg1)->next();
+    if (!result) {
+      PyErr_SetString(PyExc_StopIteration,"End of list");
+      return NULL;
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Force, 0 |  0 );
   return resultobj;
 fail:
@@ -3708,7 +3725,13 @@ SWIGINTERN PyObject *_wrap_TilePositionSet_next(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TilePositionSet_next" "', argument " "1"" of type '" "TilePositionSet *""'"); 
   }
   arg1 = reinterpret_cast< TilePositionSet * >(argp1);
-  result = (BWAPI::TilePosition *)(arg1)->next();
+  {
+    result = (BWAPI::TilePosition *)(arg1)->next();
+    if (!result) {
+      PyErr_SetString(PyExc_StopIteration,"End of list");
+      return NULL;
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__TilePosition, 0 |  0 );
   return resultobj;
 fail:
@@ -18025,7 +18048,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Position_x(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Position_getX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
   void *argp1 = 0 ;
@@ -18033,13 +18056,13 @@ SWIGINTERN PyObject *_wrap_Position_x(PyObject *SWIGUNUSEDPARM(self), PyObject *
   PyObject * obj0 = 0 ;
   int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:Position_x",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:Position_getX",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Position, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Position_x" "', argument " "1"" of type '" "BWAPI::Position *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Position_getX" "', argument " "1"" of type '" "BWAPI::Position *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Position * >(argp1);
-  result = (int)BWAPI_Position_x(arg1);
+  result = (int)BWAPI_Position_getX(arg1);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -18047,7 +18070,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Position_y(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Position_getY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
   void *argp1 = 0 ;
@@ -18055,13 +18078,13 @@ SWIGINTERN PyObject *_wrap_Position_y(PyObject *SWIGUNUSEDPARM(self), PyObject *
   PyObject * obj0 = 0 ;
   int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:Position_y",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:Position_getY",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Position, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Position_y" "', argument " "1"" of type '" "BWAPI::Position *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Position_getY" "', argument " "1"" of type '" "BWAPI::Position *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Position * >(argp1);
-  result = (int)BWAPI_Position_y(arg1);
+  result = (int)BWAPI_Position_getY(arg1);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -20044,51 +20067,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_TilePosition_x__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::TilePosition *arg1 = (BWAPI::TilePosition *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:TilePosition_x",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__TilePosition, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TilePosition_x" "', argument " "1"" of type '" "BWAPI::TilePosition *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::TilePosition * >(argp1);
-  result = (int *) &(arg1)->x();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_int, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TilePosition_y__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::TilePosition *arg1 = (BWAPI::TilePosition *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:TilePosition_y",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__TilePosition, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TilePosition_y" "', argument " "1"" of type '" "BWAPI::TilePosition *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::TilePosition * >(argp1);
-  result = (int *) &(arg1)->y();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_int, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TilePosition_x__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TilePosition_getX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::TilePosition *arg1 = (BWAPI::TilePosition *) 0 ;
   void *argp1 = 0 ;
@@ -20096,13 +20075,13 @@ SWIGINTERN PyObject *_wrap_TilePosition_x__SWIG_1(PyObject *SWIGUNUSEDPARM(self)
   PyObject * obj0 = 0 ;
   int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:TilePosition_x",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:TilePosition_getX",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__TilePosition, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TilePosition_x" "', argument " "1"" of type '" "BWAPI::TilePosition const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TilePosition_getX" "', argument " "1"" of type '" "BWAPI::TilePosition *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::TilePosition * >(argp1);
-  result = (int)((BWAPI::TilePosition const *)arg1)->x();
+  result = (int)BWAPI_TilePosition_getX(arg1);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -20110,45 +20089,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_TilePosition_x(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[2];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = (int)PyObject_Length(args);
-  for (ii = 0; (ii < argc) && (ii < 1); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__TilePosition, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_TilePosition_x__SWIG_0(self, args);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__TilePosition, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_TilePosition_x__SWIG_1(self, args);
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'TilePosition_x'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    x(BWAPI::TilePosition *)\n"
-    "    x(BWAPI::TilePosition const *)\n");
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TilePosition_y__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_TilePosition_getY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::TilePosition *arg1 = (BWAPI::TilePosition *) 0 ;
   void *argp1 = 0 ;
@@ -20156,54 +20097,16 @@ SWIGINTERN PyObject *_wrap_TilePosition_y__SWIG_1(PyObject *SWIGUNUSEDPARM(self)
   PyObject * obj0 = 0 ;
   int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:TilePosition_y",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:TilePosition_getY",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__TilePosition, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TilePosition_y" "', argument " "1"" of type '" "BWAPI::TilePosition const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TilePosition_getY" "', argument " "1"" of type '" "BWAPI::TilePosition *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::TilePosition * >(argp1);
-  result = (int)((BWAPI::TilePosition const *)arg1)->y();
+  result = (int)BWAPI_TilePosition_getY(arg1);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TilePosition_y(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[2];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = (int)PyObject_Length(args);
-  for (ii = 0; (ii < argc) && (ii < 1); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__TilePosition, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_TilePosition_y__SWIG_0(self, args);
-    }
-  }
-  if (argc == 1) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__TilePosition, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      return _wrap_TilePosition_y__SWIG_1(self, args);
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'TilePosition_y'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    y(BWAPI::TilePosition *)\n"
-    "    y(BWAPI::TilePosition const *)\n");
   return NULL;
 }
 
@@ -31112,8 +31015,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Position___isub__", _wrap_Position___isub__, METH_VARARGS, NULL},
 	 { (char *)"Position_getDistance", _wrap_Position_getDistance, METH_VARARGS, NULL},
 	 { (char *)"Position_getLength", _wrap_Position_getLength, METH_VARARGS, NULL},
-	 { (char *)"Position_x", _wrap_Position_x, METH_VARARGS, NULL},
-	 { (char *)"Position_y", _wrap_Position_y, METH_VARARGS, NULL},
+	 { (char *)"Position_getX", _wrap_Position_getX, METH_VARARGS, NULL},
+	 { (char *)"Position_getY", _wrap_Position_getY, METH_VARARGS, NULL},
 	 { (char *)"delete_Position", _wrap_delete_Position, METH_VARARGS, NULL},
 	 { (char *)"Position_swigregister", Position_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_Race", _wrap_new_Race, METH_VARARGS, NULL},
@@ -31158,8 +31061,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"TilePosition_getDistance", _wrap_TilePosition_getDistance, METH_VARARGS, NULL},
 	 { (char *)"TilePosition_getLength", _wrap_TilePosition_getLength, METH_VARARGS, NULL},
 	 { (char *)"TilePosition_isValid", _wrap_TilePosition_isValid, METH_VARARGS, NULL},
-	 { (char *)"TilePosition_x", _wrap_TilePosition_x, METH_VARARGS, NULL},
-	 { (char *)"TilePosition_y", _wrap_TilePosition_y, METH_VARARGS, NULL},
+	 { (char *)"TilePosition_getX", _wrap_TilePosition_getX, METH_VARARGS, NULL},
+	 { (char *)"TilePosition_getY", _wrap_TilePosition_getY, METH_VARARGS, NULL},
 	 { (char *)"delete_TilePosition", _wrap_delete_TilePosition, METH_VARARGS, NULL},
 	 { (char *)"TilePosition_swigregister", TilePosition_swigregister, METH_VARARGS, NULL},
 	 { (char *)"Unit_getPlayer", _wrap_Unit_getPlayer, METH_VARARGS, NULL},
@@ -31471,7 +31374,6 @@ static swig_type_info _swigt__p_TilePositionSet = {"_p_TilePositionSet", "TilePo
 static swig_type_info _swigt__p_UnitSet = {"_p_UnitSet", "UnitSet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UpgradeType = {"_p_UpgradeType", "UpgradeType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_int = {"_p_int", "int *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__listT_BWAPI__UnitType_t = {"_p_std__listT_BWAPI__UnitType_t", "std::list< BWAPI::UnitType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__listT_BWAPI__Unit_p_t = {"_p_std__listT_BWAPI__Unit_p_t", "std::list< BWAPI::Unit * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t = {"_p_std__mapT_BWAPI__UnitType_const_p_int_t", "std::map< BWAPI::UnitType const *,int > *", 0, 0, (void*)0, 0};
@@ -31528,7 +31430,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_UnitSet,
   &_swigt__p_UpgradeType,
   &_swigt__p_char,
-  &_swigt__p_int,
   &_swigt__p_std__listT_BWAPI__UnitType_t,
   &_swigt__p_std__listT_BWAPI__Unit_p_t,
   &_swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t,
@@ -31585,7 +31486,6 @@ static swig_cast_info _swigc__p_TilePositionSet[] = {  {&_swigt__p_TilePositionS
 static swig_cast_info _swigc__p_UnitSet[] = {  {&_swigt__p_UnitSet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UpgradeType[] = {  {&_swigt__p_UpgradeType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__listT_BWAPI__UnitType_t[] = {  {&_swigt__p_std__listT_BWAPI__UnitType_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__listT_BWAPI__Unit_p_t[] = {  {&_swigt__p_std__listT_BWAPI__Unit_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_BWAPI__UnitType_const_p_int_t[] = {  {&_swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -31642,7 +31542,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_UnitSet,
   _swigc__p_UpgradeType,
   _swigc__p_char,
-  _swigc__p_int,
   _swigc__p_std__listT_BWAPI__UnitType_t,
   _swigc__p_std__listT_BWAPI__Unit_p_t,
   _swigc__p_std__mapT_BWAPI__UnitType_const_p_int_t,

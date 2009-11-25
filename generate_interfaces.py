@@ -58,6 +58,30 @@ f.write("""
   }
 }
 
+%exception PlayerSet::next {
+  $action
+  if (!result) {
+     PyErr_SetString(PyExc_StopIteration,"End of list");
+     return NULL;
+  }
+}
+
+%exception ForceSet::next {
+  $action
+  if (!result) {
+     PyErr_SetString(PyExc_StopIteration,"End of list");
+     return NULL;
+  }
+}
+
+%exception TilePositionSet::next {
+  $action
+  if (!result) {
+     PyErr_SetString(PyExc_StopIteration,"End of list");
+     return NULL;
+  }
+}
+
 
 %extend BWAPI::Player {
     UnitSet* getUnits()
@@ -165,17 +189,31 @@ f.write("""
 %ignore BWAPI::Force::getPlayers;
 
 %extend BWAPI::Position {
-    int x()
+    int getX()
     {
         return self->x();
     }
-    int y()
+    int getY()
     {
         return self->y();
     }
 }
 %ignore BWAPI::Position::x;
 %ignore BWAPI::Position::y;
+
+%extend BWAPI::TilePosition {
+    int getX()
+    {
+        return self->x();
+    }
+    int getY()
+    {
+        return self->y();
+    }
+}
+%ignore BWAPI::TilePosition::x;
+%ignore BWAPI::TilePosition::y;
+
 
 
 

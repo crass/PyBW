@@ -759,8 +759,8 @@ class Position(_object):
     def __isub__(self, *args): return _pybw_swig.Position___isub__(self, *args)
     def getDistance(self, *args): return _pybw_swig.Position_getDistance(self, *args)
     def getLength(self): return _pybw_swig.Position_getLength(self)
-    def x(self): return _pybw_swig.Position_x(self)
-    def y(self): return _pybw_swig.Position_y(self)
+    def getX(self): return _pybw_swig.Position_getX(self)
+    def getY(self): return _pybw_swig.Position_getY(self)
     __swig_destroy__ = _pybw_swig.delete_Position
     __del__ = lambda self : None;
 Position_swigregister = _pybw_swig.Position_swigregister
@@ -875,8 +875,8 @@ class TilePosition(_object):
     def getDistance(self, *args): return _pybw_swig.TilePosition_getDistance(self, *args)
     def getLength(self): return _pybw_swig.TilePosition_getLength(self)
     def isValid(self): return _pybw_swig.TilePosition_isValid(self)
-    def x(self, *args): return _pybw_swig.TilePosition_x(self, *args)
-    def y(self, *args): return _pybw_swig.TilePosition_y(self, *args)
+    def getX(self): return _pybw_swig.TilePosition_getX(self)
+    def getY(self): return _pybw_swig.TilePosition_getY(self)
     __swig_destroy__ = _pybw_swig.delete_TilePosition
     __del__ = lambda self : None;
 TilePosition_swigregister = _pybw_swig.TilePosition_swigregister

@@ -1,4 +1,6 @@
 import sys
+import types
+import inspect
 
 class FileFlusher:
     def __init__(self, *args):
@@ -20,6 +22,35 @@ import _pybw_swig
 
 print "Importing swig module (python file)"
 import pybw_swig
+
+print "Converting all 'getSomething' into 'something'..."
+def deget_class(c):
+    for name in c.__dict__.keys():
+        obj = getattr(c, name)
+        if not inspect.ismethod(obj):
+            continue
+        argspec = inspect.getargspec(obj)
+        if len(argspec.args) != 1:  # not really get?
+            continue
+        if argspec.varargs != None or argspec.keywords != None: # not really get?
+            continue
+        if name.startswith('_') or name == 'next':  # kinda hackish..
+            continue
+        if name.startswith('get'):            
+            prop_name = name[3].lower() + name[4:]
+        else:
+            prop_name = name
+        setattr(c, prop_name, property(obj) )
+        
+def get_all_classes(m):
+    for name in m.__dict__.keys():
+        obj = getattr(m, name)
+        if inspect.isclass(obj) and not name.startswith('_'):
+            yield obj
+
+for c in get_all_classes(pybw_swig):
+    deget_class(c)
+    
 
 
 print "Creating a broodwar instance (of Game)"
