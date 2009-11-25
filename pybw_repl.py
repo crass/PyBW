@@ -5,6 +5,7 @@ import threading
 from SimpleXMLRPCServer import SimpleXMLRPCServer
 import xmlrpclib
 import socket
+import time
 
 PS1 = 'pybw> '
 PS2 = 'pybw| '
@@ -21,7 +22,8 @@ def xmlrpc_server_thread(shared_data):
             return buffer
 
         def write_to_console(text):
-            sys.stdout.write ('\n%s' % text)
+            sys.stdout.write ('%s' % text)
+            shared_data.waiting_for_output = 0
             return 0
             
         
@@ -41,6 +43,7 @@ def main():
         shared_data = ThreadSharedData()    # the thread will populate it later
         shared_data.commands_buffer = commands_buffer
         shared_data.commands_buffer_lock = threading.Lock()
+        shared_data.waiting_for_output = 0
 
         t = threading.Thread( target=xmlrpc_server_thread, args=(shared_data,) )
         t.start()
@@ -48,7 +51,18 @@ def main():
             i = code.InteractiveConsole()
             code_list = []
             while True:
-                code_list +=[ i.raw_input(PS2 if len(code_list) else PS1 ) ]
+                while shared_data.waiting_for_output:   # remove this for asynchronous REPL
+                    time.sleep(0.01)
+
+                try:
+                    input = i.raw_input(PS2 if len(code_list) else PS1 )
+                except EOFError:
+                    if not code_list:
+                        raise
+                    code_list = []
+                    continue
+
+                code_list +=[ input ]
                 
                 code_str = '\n'.join(code_list)
                 try:
@@ -60,12 +74,15 @@ def main():
                     if code_str:
                         with shared_data.commands_buffer_lock:
                             commands_buffer += [code_str]
+                            shared_data.waiting_for_output = 1
                     code_list = []
 
         finally:
             shared_data.shutdown()
             t.join()
-                
+
+    except EOFError:
+        pass                
     except Exception, e:
         print "Error", e
         raw_input()
