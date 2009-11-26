@@ -11,9 +11,13 @@ class EventHandler:
         try:
             d = dict(globals())
             d['broodwar'] = self.broodwar
+            d['bw'] = self.broodwar
             self.console_client = pybw_repl.ConsoleClient(d)
         except Exception, e:
             print "onStart error", e
+
+    def onEnd(self):
+        pass
 
     def onFrame(self):
         #for unit in self.broodwar.getSelectedUnits():
@@ -30,4 +34,29 @@ class EventHandler:
 
     def onSendText(self, text):
         print "recieved text: %s" % text
+
+    def onPlayerLeft(self, player):
+        print "OnPlayerLeft: %r" % player
+
+    def onNukeDetect(self, target):
+        print "onNukeDetect: %r" % target
+
+    def onUnitCreate(self, unit):
+        print "onUnitCreate: %r" % unit
+
+    def onUnitDestroy(self, unit):
+        print "onUnitDestroy: %r" % unit
+
+    def onUnitMorph(self, unit):
+        print "onUnitMorph: %r" % unit
+
+    def onUnitShow(self, unit):
+        print "onUnitShow: %r" % unit
+
+    def onUnitHide(self, unit):
+        print "onUnitHide: %r" % unit
+
+    def onUnitRenegade(self, unit):
+        print "onUnitRenegade: %r" % unit
+
 

@@ -1472,6 +1472,18 @@ def getBroodwar():
   return _pybw_swig.getBroodwar()
 getBroodwar = _pybw_swig.getBroodwar
 
+def _getSwigUnit(*args):
+  return _pybw_swig._getSwigUnit(*args)
+_getSwigUnit = _pybw_swig._getSwigUnit
+
+def _getSwigPlayer(*args):
+  return _pybw_swig._getSwigPlayer(*args)
+_getSwigPlayer = _pybw_swig._getSwigPlayer
+
+def _getSwigPosition(*args):
+  return _pybw_swig._getSwigPosition(*args)
+_getSwigPosition = _pybw_swig._getSwigPosition
+
 Gauss_Rifle = cvar.Gauss_Rifle
 C_10_Canister_Rifle = cvar.C_10_Canister_Rifle
 Fragmentation_Grenade = cvar.Fragmentation_Grenade

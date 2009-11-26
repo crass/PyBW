@@ -222,6 +222,22 @@ f.write("""
 %{
 #include "stdset_wrapper.h"
 
+PyObject* _getSwigUnit(BWAPI::Unit* unit)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(unit), SWIGTYPE_p_BWAPI__Unit, 0 );
+}
+
+PyObject* _getSwigPlayer(BWAPI::Player* player)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(player), SWIGTYPE_p_BWAPI__Player, 0 );
+}
+
+PyObject* _getSwigPosition(BWAPI::Position* position)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(position), SWIGTYPE_p_BWAPI__Position, 0 );
+}
+
+
 %}
 %include "stdset_wrapper.h"
 
@@ -250,6 +266,11 @@ SWIG_init(void);
 void python_wrap_init()
 {
 	SWIG_init();
+}
+
+Unit* _getUnitFromPtr(long ptr)
+{
+    return (Unit*)ptr;
 }
 
 #include "helper.h"

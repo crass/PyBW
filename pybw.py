@@ -55,12 +55,31 @@ for c in get_all_classes(pybw_swig):
 
 print "Creating a broodwar instance (of Game)"
 
-old_Game = pybw_swig.Game
-class Game(old_Game):
-    def __init__(self):
-        self.this = pybw_swig.getBroodwar()
+#old_Game = pybw_swig.Game
+#class Game(old_Game):
+#    def __init__(self):
+#        self.this = pybw_swig.getBroodwar()
 
-broodwar = Game()
+broodwar = pybw_swig.getBroodwar()
+
+print "Adding __repr__ method to classes"
+def Position_repr(self):
+    return "Position(%s, %s)" % (self.x, self.y)
+pybw_swig.Position.__repr__ = Position_repr
+
+def UnitType_repr(self):
+    return "<UnitType: %s>" % self.name
+pybw_swig.UnitType.__repr__ = UnitType_repr
+
+def Player_repr(self):
+    return "<Player: %s, race=%s>" % (self.name, self.race)
+pybw_swig.Player.__repr__ = Player_repr
+
+def Unit_repr(self):
+    return "<Unit: %s, player=%s>" % (self.type.name, self.player.name)
+pybw_swig.Unit.__repr__ = Unit_repr
+
+
 
 print "Redirecting output to broodwar console"
 

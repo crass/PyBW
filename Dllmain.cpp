@@ -12,13 +12,15 @@ void python_wrap_init();
 
 #include "ExampleAIModule.h"
 namespace BWAPI { Game* Broodwar = NULL; }
-BOOL APIENTRY DllMain( HANDLE hModule, 
-                       DWORD  ul_reason_for_call, 
-                       LPVOID lpReserved
+BOOL APIENTRY DllMain( HANDLE module, 
+                       DWORD  reason_for_call, 
+                       LPVOID reserved
 					 )
 {
+	UNREFERENCED_PARAMETER( reserved );
+	UNREFERENCED_PARAMETER( module );
     
-	switch (ul_reason_for_call)
+	switch (reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
         BWAPI::BWAPI_init();

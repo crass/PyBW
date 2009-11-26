@@ -36,6 +36,10 @@ void ExampleAIModule::onStart()
   {
 	event_dispatcher->onStart();
   }
+  else
+  {
+	  Broodwar->printf("Error! Could not instantiate EventDispatcher");
+  }
 
   if (Broodwar->isReplay())
   {
@@ -69,7 +73,10 @@ void ExampleAIModule::onFrame()
   if (Broodwar->isReplay())
     return;
 
-  event_dispatcher->onFrame();
+  if (event_dispatcher)
+  {
+	  event_dispatcher->onFrame();
+  }
 
   drawStats();
 
@@ -79,40 +86,6 @@ void ExampleAIModule::onFrame()
 	  item.unit->rightClick( item.pos );
   }*/
   
-  if (analyzed && Broodwar->getFrameCount()%30==0)
-  {
-    //order one of our workers to guard our chokepoint.
-    /*for(std::set<Unit*>::iterator i=Broodwar->self()->getUnits().begin();i!=Broodwar->self()->getUnits().end();i++)
-    {
-      if ((*i)->getType().isWorker())
-      {
-		  Position m(1,1);
-		  (*i)->rightClick( (*i)->getPosition() + m );
-		
-        //get the chokepoints linked to our home region
-        /*std::set<BWTA::Chokepoint*> chokepoints= home->getChokepoints();
-        double min_length=10000;
-        BWTA::Chokepoint* choke=NULL;
-
-        //iterate through all chokepoints and look for the one with the smallest gap (least width)
-        for(std::set<BWTA::Chokepoint*>::iterator c=chokepoints.begin();c!=chokepoints.end();c++)
-        {
-          double length=(*c)->getWidth();
-          if (length<min_length || choke==NULL)
-          {
-            min_length=length;
-            choke=*c;
-          }
-        }
-
-        //order the worker to move to the center of the gap
-        (*i)->rightClick(choke->getCenter());
-        break;
-      }
-    }*/
-
-    //PyRun_SimpleString("import pybw\npybw.go()");
-  }
   if (analyzed)
   {
     //we will iterate through all the base locations, and draw their outlines.
@@ -177,12 +150,17 @@ void ExampleAIModule::onFrame()
 
 void ExampleAIModule::onUnitCreate(BWAPI::Unit* unit)
 {
-  if (!Broodwar->isReplay())
+	if (event_dispatcher != NULL)
+	{
+		event_dispatcher->onUnitCreate(unit);
+	}
+
+  /*if (!Broodwar->isReplay())
     Broodwar->printf("A %s [%x] has been created at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
   else
   {
-    /*if we are in a replay, then we will print out the build order
-    (just of the buildings, not the units).*/
+    / *if we are in a replay, then we will print out the build order
+    (just of the buildings, not the units).* /
     if (unit->getType().isBuilding() && unit->getPlayer()->isNeutral()==false)
     {
       int seconds=Broodwar->getFrameCount()/24;
@@ -190,21 +168,31 @@ void ExampleAIModule::onUnitCreate(BWAPI::Unit* unit)
       seconds%=60;
       Broodwar->printf("%.2d:%.2d: %s creates a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
     }
-  }
+  }*/
 }
 void ExampleAIModule::onUnitDestroy(BWAPI::Unit* unit)
 {
-  if (!Broodwar->isReplay())
-    Broodwar->printf("A %s [%x] has been destroyed at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
+	if (event_dispatcher != NULL)
+	{
+		event_dispatcher->onUnitDestroy(unit);
+	}
+
+  //if (!Broodwar->isReplay())
+   // Broodwar->printf("A %s [%x] has been destroyed at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
 }
 void ExampleAIModule::onUnitMorph(BWAPI::Unit* unit)
 {
-  if (!Broodwar->isReplay())
+	if (event_dispatcher != NULL)
+	{
+		event_dispatcher->onUnitMorph(unit);
+	}
+
+  /*if (!Broodwar->isReplay())
     Broodwar->printf("A %s [%x] has been morphed at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
   else
   {
-    /*if we are in a replay, then we will print out the build order
-    (just of the buildings, not the units).*/
+    / *if we are in a replay, then we will print out the build order
+    (just of the buildings, not the units).* /
     if (unit->getType().isBuilding() && unit->getPlayer()->isNeutral()==false)
     {
       int seconds=Broodwar->getFrameCount()/24;
@@ -212,34 +200,57 @@ void ExampleAIModule::onUnitMorph(BWAPI::Unit* unit)
       seconds%=60;
       Broodwar->printf("%.2d:%.2d: %s morphs a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
     }
-  }
+  }*/
 }
 void ExampleAIModule::onUnitShow(BWAPI::Unit* unit)
 {
-  if (!Broodwar->isReplay())
-    Broodwar->printf("A %s [%x] has been spotted at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
+	if (event_dispatcher != NULL)
+	{
+		event_dispatcher->onUnitShow(unit);
+	}
+
+  //if (!Broodwar->isReplay())
+  //  Broodwar->printf("A %s [%x] has been spotted at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
 }
 void ExampleAIModule::onUnitHide(BWAPI::Unit* unit)
 {
-  if (!Broodwar->isReplay())
-    Broodwar->printf("A %s [%x] was last seen at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
+	if (event_dispatcher != NULL)
+	{
+		event_dispatcher->onUnitHide(unit);
+	}
+
+  //if (!Broodwar->isReplay())
+  //  Broodwar->printf("A %s [%x] was last seen at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
+}
+
+void ExampleAIModule::onPlayerLeft( Player* player )
+{
+	if (event_dispatcher != NULL)
+	{
+		event_dispatcher->onPlayerLeft(player);
+	}
+}
+
+void ExampleAIModule::onNukeDetect( Position target )
+{
+	if (event_dispatcher != NULL)
+	{
+		event_dispatcher->onNukeDetect(target);
+	}
+}
+
+void ExampleAIModule::onUnitRenegade( Unit* unit )
+{
+	if (event_dispatcher != NULL)
+	{
+		event_dispatcher->onUnitRenegade(unit);
+	}
 }
 
 bool ExampleAIModule::onSendText(std::string text)
 {
   if (text=="py")
   {
-	//PyRun_SimpleString("try:\n\timport pybw\n\tpybw.go()\nexcept Exception, e:\n\tpybw='error importing pybw!'+str(e)\n");
-	//PyRun_SimpleString("import pybw\npybw.go()");
-    /*for(std::set<Unit*>::iterator i=Broodwar->self()->getUnits().begin();i!=Broodwar->self()->getUnits().end();i++)
-    {
-      if ((*i)->getType().isWorker())
-      {
-		  Position m(-10,-10);
-		  (*i)->rightClick( (*i)->getPosition() + m );
-	  }
-	}*/
-	//Py_DECREF( PyObject_CallFunction(go, NULL) );
   }
   else if (text=="/show players")
   {
@@ -259,7 +270,6 @@ bool ExampleAIModule::onSendText(std::string text)
     return false;
   } else
   {
-    //Broodwar->printf("You typed '%s'!",text.c_str());
 	  if (event_dispatcher != NULL)
 	  {
 		event_dispatcher->onSendText(text);

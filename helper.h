@@ -1,9 +1,16 @@
-#include <queue>
-using namespace std;
+//#include <queue>
+//using namespace std;
+
+#include <Python.h>
 
 #include <BWAPI.h>
 
 BWAPI::Game* getBroodwar();
+
+
+PyObject* _getSwigUnit(BWAPI::Unit* unit);
+PyObject* _getSwigPlayer(BWAPI::Player* player);
+PyObject* _getSwigPosition(BWAPI::Position* position);
 
 //void setBroodwarPtr(unsigned int ptr);
 

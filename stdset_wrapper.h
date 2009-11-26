@@ -7,9 +7,7 @@
 #include "BWAPI/Force.h"
 #include "BWAPI/TilePosition.h"
 
-//for( theIterator = charList.begin(); theIterator != charList.end(); theIterator++ ) {
-//		cout << *theIterator;
-
+#pragma warning(disable: 4512)
 
 class UnitSet
 {
@@ -17,6 +15,7 @@ class UnitSet
 	std::set<BWAPI::Unit*>::iterator iterator;
 
 public:
+
 	UnitSet(std::set<BWAPI::Unit*>& _units)
 		: units(_units)
 	{
@@ -150,4 +149,4 @@ public:
 	}
 };
 
-
+#pragma warning(default: 4512)

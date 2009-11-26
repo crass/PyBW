@@ -2839,6 +2839,22 @@ namespace swig {
 
 #include "stdset_wrapper.h"
 
+PyObject* _getSwigUnit(BWAPI::Unit* unit)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(unit), SWIGTYPE_p_BWAPI__Unit, 0 );
+}
+
+PyObject* _getSwigPlayer(BWAPI::Player* player)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(player), SWIGTYPE_p_BWAPI__Player, 0 );
+}
+
+PyObject* _getSwigPosition(BWAPI::Position* position)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(position), SWIGTYPE_p_BWAPI__Position, 0 );
+}
+
+
 
 
   #define SWIG_From_long   PyInt_FromLong 
@@ -3326,6 +3342,11 @@ SWIG_init(void);
 void python_wrap_init()
 {
 	SWIG_init();
+}
+
+Unit* _getUnitFromPtr(long ptr)
+{
+    return (Unit*)ptr;
 }
 
 #include "helper.h"
@@ -30852,6 +30873,72 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap__getSwigUnit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:_getSwigUnit",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "_getSwigUnit" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (PyObject *)_getSwigUnit(arg1);
+  resultobj = result;
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap__getSwigPlayer(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:_getSwigPlayer",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "_getSwigPlayer" "', argument " "1"" of type '" "BWAPI::Player *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  result = (PyObject *)_getSwigPlayer(arg1);
+  resultobj = result;
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap__getSwigPosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Position *arg1 = (BWAPI::Position *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:_getSwigPosition",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Position, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "_getSwigPosition" "', argument " "1"" of type '" "BWAPI::Position *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Position * >(argp1);
+  result = (PyObject *)_getSwigPosition(arg1);
+  resultobj = result;
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"new_UnitSet", _wrap_new_UnitSet, METH_VARARGS, NULL},
@@ -31397,6 +31484,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"normalWeaponTypes", _wrap_normalWeaponTypes, METH_VARARGS, NULL},
 	 { (char *)"specialWeaponTypes", _wrap_specialWeaponTypes, METH_VARARGS, NULL},
 	 { (char *)"getBroodwar", _wrap_getBroodwar, METH_VARARGS, NULL},
+	 { (char *)"_getSwigUnit", _wrap__getSwigUnit, METH_VARARGS, NULL},
+	 { (char *)"_getSwigPlayer", _wrap__getSwigPlayer, METH_VARARGS, NULL},
+	 { (char *)"_getSwigPosition", _wrap__getSwigPosition, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
