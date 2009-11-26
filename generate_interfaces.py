@@ -50,6 +50,8 @@ f = open("pybw.i",'w')
 f.write("""
 %module pybw_swig
 
+%include "std_string.i"
+
 %exception UnitSet::next {
   $action
   if (!result) {

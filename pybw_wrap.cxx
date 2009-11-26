@@ -2834,6 +2834,9 @@ namespace swig {
 }
 
 
+#include <string>
+
+
 #include "stdset_wrapper.h"
 
 
@@ -2981,70 +2984,6 @@ SWIG_AsVal_bool (PyObject *obj, bool *val)
 }
 
 
-SWIGINTERNINLINE PyObject*
-  SWIG_From_bool  (bool value)
-{
-  return PyBool_FromLong(value ? 1 : 0);
-}
-
-
-#include "BWAPI/Color.h"
-
-
-#include <limits.h>
-#if !defined(SWIG_NO_LLONG_MAX)
-# if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
-#   define LLONG_MAX __LONG_LONG_MAX__
-#   define LLONG_MIN (-LLONG_MAX - 1LL)
-#   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
-# endif
-#endif
-
-
-SWIGINTERN int
-SWIG_AsVal_int (PyObject * obj, int *val)
-{
-  long v;
-  int res = SWIG_AsVal_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v < INT_MIN || v > INT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = static_cast< int >(v);
-    }
-  }  
-  return res;
-}
-
-
-#include "BWAPI/Constants.h"
-
-
-#include "BWAPI/CoordinateType.h"
-
-
-#include "BWAPI/DamageType.h"
-
-
-#include "BWAPI/Error.h"
-
-
-#include "BWAPI/ExplosionType.h"
-
-
-#include "BWAPI/Flag.h"
-
-
-#include "BWAPI/Force.h"
-
-SWIGINTERN PlayerSet *BWAPI_Force_getPlayers(BWAPI::Force *self){
-        static PlayerSet us( self->getPlayers() );
-        return &us;
-    }
-
-#include "BWAPI/Game.h"
-
-
 SWIGINTERN swig_type_info*
 SWIG_pchar_descriptor(void)
 {
@@ -3132,6 +3071,133 @@ SWIG_AsCharPtrAndSize(PyObject *obj, char** cptr, size_t* psize, int *alloc)
   }
   return SWIG_TypeError;
 }
+
+
+SWIGINTERN int
+SWIG_AsPtr_std_string (PyObject * obj, std::string **val) 
+{
+  char* buf = 0 ; size_t size = 0; int alloc = SWIG_OLDOBJ;
+  if (SWIG_IsOK((SWIG_AsCharPtrAndSize(obj, &buf, &size, &alloc)))) {
+    if (buf) {
+      if (val) *val = new std::string(buf, size - 1);
+      if (alloc == SWIG_NEWOBJ) delete[] buf;
+      return SWIG_NEWOBJ;
+    } else {
+      if (val) *val = 0;
+      return SWIG_OLDOBJ;
+    }
+  } else {
+    static int init = 0;
+    static swig_type_info* descriptor = 0;
+    if (!init) {
+      descriptor = SWIG_TypeQuery("std::string" " *");
+      init = 1;
+    }
+    if (descriptor) {
+      std::string *vptr;
+      int res = SWIG_ConvertPtr(obj, (void**)&vptr, descriptor, 0);
+      if (SWIG_IsOK(res) && val) *val = vptr;
+      return res;
+    }
+  }
+  return SWIG_ERROR;
+}
+
+
+SWIGINTERNINLINE PyObject*
+  SWIG_From_bool  (bool value)
+{
+  return PyBool_FromLong(value ? 1 : 0);
+}
+
+
+#include "BWAPI/Color.h"
+
+
+#include <limits.h>
+#if !defined(SWIG_NO_LLONG_MAX)
+# if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
+#   define LLONG_MAX __LONG_LONG_MAX__
+#   define LLONG_MIN (-LLONG_MAX - 1LL)
+#   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
+# endif
+#endif
+
+
+SWIGINTERN int
+SWIG_AsVal_int (PyObject * obj, int *val)
+{
+  long v;
+  int res = SWIG_AsVal_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v < INT_MIN || v > INT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = static_cast< int >(v);
+    }
+  }  
+  return res;
+}
+
+
+#include "BWAPI/Constants.h"
+
+
+#include "BWAPI/CoordinateType.h"
+
+
+#include "BWAPI/DamageType.h"
+
+
+SWIGINTERNINLINE PyObject *
+SWIG_FromCharPtrAndSize(const char* carray, size_t size)
+{
+  if (carray) {
+    if (size > INT_MAX) {
+      swig_type_info* pchar_descriptor = SWIG_pchar_descriptor();
+      return pchar_descriptor ? 
+	SWIG_NewPointerObj(const_cast< char * >(carray), pchar_descriptor, 0) : SWIG_Py_Void();
+    } else {
+#if PY_VERSION_HEX >= 0x03000000
+      return PyUnicode_FromStringAndSize(carray, static_cast< int >(size));
+#else
+      return PyString_FromStringAndSize(carray, static_cast< int >(size));
+#endif
+    }
+  } else {
+    return SWIG_Py_Void();
+  }
+}
+
+
+SWIGINTERNINLINE PyObject *
+SWIG_From_std_string  (const std::string& s)
+{
+  if (s.size()) {
+    return SWIG_FromCharPtrAndSize(s.data(), s.size());
+  } else {
+    return SWIG_FromCharPtrAndSize(s.c_str(), 0);
+  }
+}
+
+
+#include "BWAPI/Error.h"
+
+
+#include "BWAPI/ExplosionType.h"
+
+
+#include "BWAPI/Flag.h"
+
+
+#include "BWAPI/Force.h"
+
+SWIGINTERN PlayerSet *BWAPI_Force_getPlayers(BWAPI::Force *self){
+        static PlayerSet us( self->getPlayers() );
+        return &us;
+    }
+
+#include "BWAPI/Game.h"
 
 
 
@@ -3879,8 +3945,6 @@ SWIGINTERN PyObject *_wrap_AIModule_onSendText(PyObject *SWIGUNUSEDPARM(self), P
   std::string arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   bool result;
@@ -3892,17 +3956,13 @@ SWIGINTERN PyObject *_wrap_AIModule_onSendText(PyObject *SWIGUNUSEDPARM(self), P
   }
   arg1 = reinterpret_cast< BWAPI::AIModule * >(argp1);
   {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__string,  0  | 0);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "AIModule_onSendText" "', argument " "2"" of type '" "std::string""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "AIModule_onSendText" "', argument " "2"" of type '" "std::string""'");
-    } else {
-      std::string * temp = reinterpret_cast< std::string * >(argp2);
-      arg2 = *temp;
-      if (SWIG_IsNewObj(res2)) delete temp;
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj1, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "AIModule_onSendText" "', argument " "2"" of type '" "std::string""'"); 
     }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
   }
   result = (bool)(arg1)->onSendText(arg2);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
@@ -4973,7 +5033,7 @@ SWIGINTERN PyObject *_wrap_DamageType_getName(PyObject *SWIGUNUSEDPARM(self), Py
   }
   arg1 = reinterpret_cast< BWAPI::DamageType * >(argp1);
   result = ((BWAPI::DamageType const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -5385,7 +5445,7 @@ SWIGINTERN PyObject *_wrap_Error_toString(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = reinterpret_cast< BWAPI::Error * >(argp1);
   result = ((BWAPI::Error const *)arg1)->toString();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -5993,7 +6053,7 @@ SWIGINTERN PyObject *_wrap_ExplosionType_getName(PyObject *SWIGUNUSEDPARM(self),
   }
   arg1 = reinterpret_cast< BWAPI::ExplosionType * >(argp1);
   result = ((BWAPI::ExplosionType const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -6445,7 +6505,7 @@ SWIGINTERN PyObject *_wrap_Force_getName(PyObject *SWIGUNUSEDPARM(self), PyObjec
   }
   arg1 = reinterpret_cast< BWAPI::Force * >(argp1);
   result = ((BWAPI::Force const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -6776,7 +6836,7 @@ SWIGINTERN PyObject *_wrap_Game_mapFilename(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (arg1)->mapFilename();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -6798,7 +6858,7 @@ SWIGINTERN PyObject *_wrap_Game_mapName(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (arg1)->mapName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -13475,7 +13535,7 @@ SWIGINTERN PyObject *_wrap_Order_getName(PyObject *SWIGUNUSEDPARM(self), PyObjec
   }
   arg1 = reinterpret_cast< BWAPI::Order * >(argp1);
   result = ((BWAPI::Order const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -16259,7 +16319,7 @@ SWIGINTERN PyObject *_wrap_Player_getName(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
   result = ((BWAPI::Player const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -17396,7 +17456,7 @@ SWIGINTERN PyObject *_wrap_PlayerType_getName(PyObject *SWIGUNUSEDPARM(self), Py
   }
   arg1 = reinterpret_cast< BWAPI::PlayerType * >(argp1);
   result = ((BWAPI::PlayerType const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -18403,7 +18463,7 @@ SWIGINTERN PyObject *_wrap_Race_getName(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   arg1 = reinterpret_cast< BWAPI::Race * >(argp1);
   result = ((BWAPI::Race const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -18925,7 +18985,7 @@ SWIGINTERN PyObject *_wrap_TechType_getName(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = reinterpret_cast< BWAPI::TechType * >(argp1);
   result = ((BWAPI::TechType const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -24126,7 +24186,7 @@ SWIGINTERN PyObject *_wrap_UnitSizeType_getName(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = reinterpret_cast< BWAPI::UnitSizeType * >(argp1);
   result = ((BWAPI::UnitSizeType const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -24524,7 +24584,7 @@ SWIGINTERN PyObject *_wrap_UnitType_getName(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
   result = ((BWAPI::UnitType const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -24546,7 +24606,7 @@ SWIGINTERN PyObject *_wrap_UnitType_getSubLabel(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
   result = ((BWAPI::UnitType const *)arg1)->getSubLabel();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -28030,7 +28090,7 @@ SWIGINTERN PyObject *_wrap_UpgradeType_getName(PyObject *SWIGUNUSEDPARM(self), P
   }
   arg1 = reinterpret_cast< BWAPI::UpgradeType * >(argp1);
   result = ((BWAPI::UpgradeType const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
@@ -29292,7 +29352,7 @@ SWIGINTERN PyObject *_wrap_WeaponType_getName(PyObject *SWIGUNUSEDPARM(self), Py
   }
   arg1 = reinterpret_cast< BWAPI::WeaponType * >(argp1);
   result = ((BWAPI::WeaponType const *)arg1)->getName();
-  resultobj = SWIG_NewPointerObj((new std::string(static_cast< const std::string& >(result))), SWIGTYPE_p_std__string, SWIG_POINTER_OWN |  0 );
+  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
   return resultobj;
 fail:
   return NULL;
