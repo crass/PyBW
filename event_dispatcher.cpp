@@ -81,7 +81,7 @@ void EventDispatcher::onSendText(std::string text)
 }
 
 
-void EventDispatcher::onPlayerLeft(Player* player)
+void EventDispatcher::onPlayerLeft(BWAPI::Player* player)
 {
 	if (event_handler != NULL)
 	{
@@ -89,7 +89,7 @@ void EventDispatcher::onPlayerLeft(Player* player)
 	}
 }
 
-void EventDispatcher::onNukeDetect(Position target)
+void EventDispatcher::onNukeDetect(BWAPI::Position target)
 {
 	if (event_handler != NULL)
 	{
@@ -97,7 +97,7 @@ void EventDispatcher::onNukeDetect(Position target)
 	}
 }
 
-void EventDispatcher::onUnitCreate(Unit* unit)
+void EventDispatcher::onUnitCreate(BWAPI::Unit* unit)
 {
 	if (event_handler != NULL)
 	{
@@ -105,7 +105,7 @@ void EventDispatcher::onUnitCreate(Unit* unit)
 	}
 }
 
-void EventDispatcher::onUnitDestroy(Unit* unit)
+void EventDispatcher::onUnitDestroy(BWAPI::Unit* unit)
 {
 	if (event_handler != NULL)
 	{
@@ -113,7 +113,7 @@ void EventDispatcher::onUnitDestroy(Unit* unit)
 	}
 }
 
-void EventDispatcher::onUnitMorph(Unit* unit)
+void EventDispatcher::onUnitMorph(BWAPI::Unit* unit)
 {
 	if (event_handler != NULL)
 	{
@@ -121,7 +121,7 @@ void EventDispatcher::onUnitMorph(Unit* unit)
 	}
 }
 
-void EventDispatcher::onUnitShow(Unit* unit)
+void EventDispatcher::onUnitShow(BWAPI::Unit* unit)
 {
 	if (event_handler != NULL)
 	{
@@ -129,7 +129,7 @@ void EventDispatcher::onUnitShow(Unit* unit)
 	}
 }
 
-void EventDispatcher::onUnitHide(Unit* unit)
+void EventDispatcher::onUnitHide(BWAPI::Unit* unit)
 {
 	if (event_handler != NULL)
 	{
@@ -137,7 +137,7 @@ void EventDispatcher::onUnitHide(Unit* unit)
 	}
 }
 
-void EventDispatcher::onUnitRenegade(Unit* unit)
+void EventDispatcher::onUnitRenegade(BWAPI::Unit* unit)
 {
 	if (event_handler != NULL)
 	{

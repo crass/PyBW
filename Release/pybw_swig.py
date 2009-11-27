@@ -383,7 +383,6 @@ class Game(_object):
     def visible(self, *args): return _pybw_swig.Game_visible(self, *args)
     def hasCreep(self, *args): return _pybw_swig.Game_hasCreep(self, *args)
     def hasPower(self, *args): return _pybw_swig.Game_hasPower(self, *args)
-    def canBuildHere(self, *args): return _pybw_swig.Game_canBuildHere(self, *args)
     def canMake(self, *args): return _pybw_swig.Game_canMake(self, *args)
     def canResearch(self, *args): return _pybw_swig.Game_canResearch(self, *args)
     def canUpgrade(self, *args): return _pybw_swig.Game_canUpgrade(self, *args)
@@ -443,6 +442,7 @@ class Game(_object):
     def getForces(self): return _pybw_swig.Game_getForces(self)
     def unitsOnTile(self, *args): return _pybw_swig.Game_unitsOnTile(self, *args)
     def getStartLocations(self): return _pybw_swig.Game_getStartLocations(self)
+    def canBuildHere(self, *args): return _pybw_swig.Game_canBuildHere(self, *args)
     __swig_destroy__ = _pybw_swig.delete_Game
     __del__ = lambda self : None;
 Game_swigregister = _pybw_swig.Game_swigregister

@@ -183,6 +183,11 @@ f.write("""
         return &us;
     }
 
+    bool canBuildHere(BWAPI::Unit* builder, BWAPI::TilePosition position, BWAPI::UnitType type)
+    {
+        return self->canBuildHere(builder, position, type);
+    }
+
 }
 %ignore BWAPI::Game::getAllUnits;
 %ignore BWAPI::Game::getMinerals;
@@ -196,6 +201,7 @@ f.write("""
 %ignore BWAPI::Game::getForces;
 %ignore BWAPI::Game::unitsOnTile;
 %ignore BWAPI::Game::getStartLocations;
+%ignore BWAPI::Game::canBuildHere;
 
 %extend BWAPI::Force {
     PlayerSet* getPlayers()

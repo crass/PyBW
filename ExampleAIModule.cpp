@@ -3,7 +3,6 @@
 #include "ExampleAIModule.h"
 using namespace BWAPI;
 
-
 void ExampleAIModule::onEnd()
 {
 	if (event_dispatcher != NULL)

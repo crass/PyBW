@@ -1,6 +1,3 @@
-//#include <queue>
-//using namespace std;
-
 #include <Python.h>
 
 #include <BWAPI.h>

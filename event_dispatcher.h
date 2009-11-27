@@ -3,7 +3,6 @@
 #include <Python.h>
 
 #include <BWAPI.h>
-using namespace BWAPI;
 
 #include "helper.h"
 
@@ -20,14 +19,14 @@ public:
 	void onFrame();
 	void onSendText(std::string text);
 
-	void onPlayerLeft(Player* player);
-	void onNukeDetect(Position target);
-	void onUnitCreate(Unit* unit);
-	void onUnitDestroy(Unit* unit);
-	void onUnitMorph(Unit* unit);
-	void onUnitShow(Unit* unit);
-	void onUnitHide(Unit* unit);
-	void onUnitRenegade(Unit* unit);
+	void onPlayerLeft(BWAPI::Player* player);
+	void onNukeDetect(BWAPI::Position target);
+	void onUnitCreate(BWAPI::Unit* unit);
+	void onUnitDestroy(BWAPI::Unit* unit);
+	void onUnitMorph(BWAPI::Unit* unit);
+	void onUnitShow(BWAPI::Unit* unit);
+	void onUnitHide(BWAPI::Unit* unit);
+	void onUnitRenegade(BWAPI::Unit* unit);
 
 private:
 

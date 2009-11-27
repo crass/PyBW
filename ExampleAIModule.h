@@ -21,15 +21,15 @@ public:
   virtual void onEnd();
   virtual void onFrame();
   virtual bool onSendText(std::string text);
-  virtual void onUnitCreate(Unit* unit);
-  virtual void onUnitDestroy(Unit* unit);
-  virtual void onUnitMorph(Unit* unit);
-  virtual void onUnitShow(Unit* unit);
-  virtual void onUnitHide(Unit* unit);
+  virtual void onUnitCreate(BWAPI::Unit* unit);
+  virtual void onUnitDestroy(BWAPI::Unit* unit);
+  virtual void onUnitMorph(BWAPI::Unit* unit);
+  virtual void onUnitShow(BWAPI::Unit* unit);
+  virtual void onUnitHide(BWAPI::Unit* unit);
 
-  virtual void onPlayerLeft(Player* player);
-  virtual void onNukeDetect(Position target);
-  virtual void onUnitRenegade(Unit* unit);
+  virtual void onPlayerLeft(BWAPI::Player* player);
+  virtual void onNukeDetect(BWAPI::Position target);
+  virtual void onUnitRenegade(BWAPI::Unit* unit);
 
 
   void drawStats(); //not part of BWAPI::AIModule

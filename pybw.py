@@ -88,7 +88,7 @@ def Player_eq(self, other):
 pybw_swig.Player.__eq__ = Player_eq
 
 def Force_eq(self, other):
-    return self.name == other.name
+    raise NotImplementedError("Cannot compare forces. Compare force.name instead")
 pybw_swig.Force.__eq__ = Force_eq
 
 
