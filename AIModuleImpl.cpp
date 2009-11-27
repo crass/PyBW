@@ -250,9 +250,15 @@ void AIModuleImpl::onUnitRenegade( Unit* unit )
 
 bool AIModuleImpl::onSendText(std::string text)
 {
-  if (text=="py")
-  {
-  }
+	if (text=="/reload")
+	{
+		if (event_dispatcher != NULL)
+		{
+			Broodwar->printf("Reloading event dispatcher...");
+			event_dispatcher->reload();
+		}
+	return false;
+	}
   else if (text=="/show players")
   {
     showPlayers();

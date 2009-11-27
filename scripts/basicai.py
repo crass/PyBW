@@ -5,19 +5,16 @@ import pybw_repl
 class EventHandler:
     def __init__(self, broodwar):
         self.broodwar = broodwar
+        d = dict(globals())
+        d['broodwar'] = self.broodwar
+        d['bw'] = self.broodwar
+        self.console_client = pybw_repl.ConsoleClient(d)
 
     def onStart(self):
         print "PyBW is online!"
-        try:
-            d = dict(globals())
-            d['broodwar'] = self.broodwar
-            d['bw'] = self.broodwar
-            self.console_client = pybw_repl.ConsoleClient(d)
-        except Exception, e:
-            print "onStart error", e
 
-    def onEnd(self):
-        pass
+    def onEnd(self, is_winner):
+        print "Match ended. I " + (['lost','won'][is_winner])
 
     def onFrame(self):
         #for unit in self.broodwar.getSelectedUnits():

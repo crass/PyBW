@@ -113,6 +113,12 @@ class ConsoleClient(object):
         self._new_process()
 
         self.exec_env = code.InteractiveConsole(env_dict)
+
+    def __del__(self):
+        try:
+            self.process.kill()
+        except AttributeError:
+            pass
     
     def on_frame(self):
         if self.proxy is not None:
@@ -121,14 +127,17 @@ class ConsoleClient(object):
 
                 for command in commands_buffer:
                     old_stdout = sys.stdout
+                    old_stderr = sys.stderr
                     sys.stdout = FakeFile()
+                    sys.stderr = FakeFile()
                     try:
                         self.exec_env.runsource(command)
-                        result = ''.join( sys.stdout.buffer )
+                        result = ''.join( sys.stdout.buffer ) + ''.join( sys.stderr.buffer )
                     except Exception, e:
                         result = "Exception: %s" % e
                     finally:
                         sys.stdout = old_stdout
+                        sys.stderr = old_stderr
 
                     self.proxy.write_to_console( result )
 

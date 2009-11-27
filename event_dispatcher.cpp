@@ -16,29 +16,8 @@ EventDispatcher::~EventDispatcher()
 	}
 }
 
-void EventDispatcher::LoadEventHandler()
-{
-  PyObject* pybw_module = PyImport_ImportModule("pybw");
-  PyErr_Clear();
-  if (pybw_module == NULL)
-  {
-	  MessageBoxA(0, "Error importing pybw module (is pybw.py in path?)", 0,0);
-	  return;
-  }
 
-  event_handler = PyObject_GetAttrString(pybw_module, "event_handler");
-  PyErr_Clear();
-  Py_DECREF( pybw_module );
-
-  if (event_handler == NULL)
-  {
-	  MessageBoxA(0, "Error getting event_handler from pybw module", 0,0);
-	  return;
-  }
-
-}
-
-void python_func_cleanup(PyObject* res)
+static void python_func_cleanup(PyObject* res)
 {
 	if (res != NULL)
 	{
@@ -47,6 +26,51 @@ void python_func_cleanup(PyObject* res)
 	PyErr_Clear();
 }
 
+void EventDispatcher::LoadEventHandler(bool call_reload)
+{
+	PyObject* pybw_module = PyImport_ImportModule("pybw");
+	PyErr_Clear();
+	if (pybw_module == NULL)
+	{
+		MessageBoxA(0, "Error importing pybw module (is pybw.py in path?)", 0,0);
+		return;
+	}
+
+	if (event_handler != NULL)
+	{
+		Py_DECREF(event_handler);
+		event_handler = NULL;
+	}
+
+	if (call_reload)
+	{
+		PyObject* reload_event_handler = PyObject_GetAttrString(pybw_module, "reload_event_handler");
+		PyErr_Clear();
+		if (reload_event_handler == NULL)
+		{
+			MessageBoxA(0, "Error getting reload_event_handler from pybw module", 0,0);
+			return;
+		}
+
+		python_func_cleanup( PyObject_CallFunction(reload_event_handler, NULL) );
+		Py_DECREF(reload_event_handler);
+	}
+
+	event_handler = PyObject_GetAttrString(pybw_module, "event_handler");
+	PyErr_Clear();
+	Py_DECREF( pybw_module );
+
+	if (event_handler == NULL)
+	{
+		MessageBoxA(0, "Error getting event_handler from pybw module", 0,0);
+		return;
+	}
+
+}
+void EventDispatcher::reload()
+{
+	LoadEventHandler(true);
+}
 
 void EventDispatcher::onStart()
 {

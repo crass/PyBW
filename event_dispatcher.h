@@ -28,9 +28,11 @@ public:
 	void onUnitHide(BWAPI::Unit* unit);
 	void onUnitRenegade(BWAPI::Unit* unit);
 
+	void reload();
+
 private:
 
 	PyObject* event_handler;
-	void LoadEventHandler();
+	void LoadEventHandler(bool call_reload = false);
 };
 

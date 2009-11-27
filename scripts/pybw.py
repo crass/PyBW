@@ -42,7 +42,14 @@ def deget_class(c):
             prop_name = name[3].lower() + name[4:]
         else:
             prop_name = name
+
+        if prop_name!=name and hasattr(c, prop_name):
+            print "Cannot deget property %s->%s of class %s: Already exists" % (name, prop_name, c)
+            continue    # don't overwrite existing... In the future combine somehow?
+
         setattr(c, prop_name, property(obj) )
+            
+
         
 def get_all_classes(m):
     for name in m.__dict__.keys():
@@ -124,9 +131,10 @@ try:
 except Exception, e:
     print "error", e
 
-def reload():
+def reload_event_handler():
     global event_handler
     try:
+        event_handler = None
         import basicai
         reload(basicai)
         event_handler = basicai.EventHandler(broodwar)
