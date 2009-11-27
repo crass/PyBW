@@ -290,7 +290,7 @@ DWORD WINAPI AnalyzeThread()
   home = startLocation? startLocation->getRegion() : NULL; // if this is a replay, you may not have a "start location"
 
   BWTA::BaseLocation *enemy_location = BWTA::getStartLocation(BWAPI::Broodwar->enemy());
-  enemy_base = startLocation? enemy_location->getRegion() : NULL;
+  enemy_base = enemy_location? enemy_location->getRegion() : NULL;
 /*
   //enemy start location only available if Complete Map Information is enabled.
   if (BWTA::getStartLocation(BWAPI::Broodwar->enemy())!=NULL)
