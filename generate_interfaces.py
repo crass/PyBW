@@ -36,12 +36,13 @@ for m in modules:
         f.write("%%rename(%(name)ss_%(collname)s) BWAPI::%(name)ss::%(collname)s;\n" % dict(name=m, collname=cn))
 
     f.write("""
+    
 %%ignore BWAPI::%(name)ss::init;
 
 %%{
 #include "BWAPI/%(name)s.h"
 %%}
-%%include "../BWAPI_Beta_2.3/include/BWAPI/%(name)s.h"
+%%include "BWAPI/%(name)s.h"
 """ % dict(name=m)
     )
 
@@ -91,8 +92,23 @@ f.write("""
         static UnitSet us( self->getUnits() );
         return &us;
     }
+    BWAPI::PlayerType playerType()
+    {
+        return self->playerType();
+    }
+    BWAPI::Race getRace()
+    {
+        return self->getRace();
+    }
+    BWAPI::TilePosition getStartLocation()
+    {
+        return self->getStartLocation();
+    }
 }
 %ignore BWAPI::Player::getUnits;
+%ignore BWAPI::Player::playerType;
+%ignore BWAPI::Player::getStartLocation;
+%ignore BWAPI::Player::getRace;
 
 %extend BWAPI::Game {
     UnitSet* getAllUnits()
@@ -266,11 +282,6 @@ SWIG_init(void);
 void python_wrap_init()
 {
 	SWIG_init();
-}
-
-Unit* _getUnitFromPtr(long ptr)
-{
-    return (Unit*)ptr;
 }
 
 #include "helper.h"

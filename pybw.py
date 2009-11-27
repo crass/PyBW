@@ -36,7 +36,9 @@ def deget_class(c):
             continue
         if name.startswith('_') or name == 'next':  # kinda hackish..
             continue
-        if name.startswith('get'):            
+        if name == 'getID':
+            prop_name = 'id'
+        elif name.startswith('get'):            
             prop_name = name[3].lower() + name[4:]
         else:
             prop_name = name
@@ -79,6 +81,15 @@ def Unit_repr(self):
     return "<Unit: %s, player=%s>" % (self.type.name, self.player.name)
 pybw_swig.Unit.__repr__ = Unit_repr
 
+
+print "Fixing __eq__ methods in classes"
+def Player_eq(self, other):
+    return self.id == other.id
+pybw_swig.Player.__eq__ = Player_eq
+
+def Force_eq(self, other):
+    return self.name == other.name
+pybw_swig.Force.__eq__ = Force_eq
 
 
 print "Redirecting output to broodwar console"

@@ -492,13 +492,10 @@ class Player(_object):
     __repr__ = _swig_repr
     def getID(self): return _pybw_swig.Player_getID(self)
     def getName(self): return _pybw_swig.Player_getName(self)
-    def getRace(self): return _pybw_swig.Player_getRace(self)
-    def playerType(self): return _pybw_swig.Player_playerType(self)
     def getForce(self): return _pybw_swig.Player_getForce(self)
     def isAlly(self, *args): return _pybw_swig.Player_isAlly(self, *args)
     def isEnemy(self, *args): return _pybw_swig.Player_isEnemy(self, *args)
     def isNeutral(self): return _pybw_swig.Player_isNeutral(self)
-    def getStartLocation(self): return _pybw_swig.Player_getStartLocation(self)
     def leftGame(self): return _pybw_swig.Player_leftGame(self)
     def minerals(self): return _pybw_swig.Player_minerals(self)
     def gas(self): return _pybw_swig.Player_gas(self)
@@ -516,6 +513,9 @@ class Player(_object):
     def isResearching(self, *args): return _pybw_swig.Player_isResearching(self, *args)
     def isUpgrading(self, *args): return _pybw_swig.Player_isUpgrading(self, *args)
     def getUnits(self): return _pybw_swig.Player_getUnits(self)
+    def playerType(self): return _pybw_swig.Player_playerType(self)
+    def getRace(self): return _pybw_swig.Player_getRace(self)
+    def getStartLocation(self): return _pybw_swig.Player_getStartLocation(self)
     __swig_destroy__ = _pybw_swig.delete_Player
     __del__ = lambda self : None;
 Player_swigregister = _pybw_swig.Player_swigregister

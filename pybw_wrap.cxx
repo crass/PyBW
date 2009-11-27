@@ -2704,40 +2704,39 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_ForceSet swig_types[19]
 #define SWIGTYPE_p_Latency__Enum swig_types[20]
 #define SWIGTYPE_p_PlayerSet swig_types[21]
-#define SWIGTYPE_p_PlayerType swig_types[22]
-#define SWIGTYPE_p_Position swig_types[23]
-#define SWIGTYPE_p_Race swig_types[24]
-#define SWIGTYPE_p_TechType swig_types[25]
-#define SWIGTYPE_p_TilePosition swig_types[26]
-#define SWIGTYPE_p_TilePositionSet swig_types[27]
-#define SWIGTYPE_p_UnitSet swig_types[28]
-#define SWIGTYPE_p_UpgradeType swig_types[29]
-#define SWIGTYPE_p_char swig_types[30]
-#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[31]
-#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[32]
-#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[33]
-#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[34]
-#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[35]
-#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[36]
-#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[37]
-#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[38]
-#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[39]
-#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[40]
-#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[41]
-#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[42]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t swig_types[43]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[44]
-#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[45]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[46]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t swig_types[47]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[48]
-#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[49]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t swig_types[50]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[51]
-#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[52]
-#define SWIGTYPE_p_std__string swig_types[53]
-static swig_type_info *swig_types[55];
-static swig_module_info swig_module = {swig_types, 54, 0, 0, 0, 0};
+#define SWIGTYPE_p_Position swig_types[22]
+#define SWIGTYPE_p_Race swig_types[23]
+#define SWIGTYPE_p_TechType swig_types[24]
+#define SWIGTYPE_p_TilePosition swig_types[25]
+#define SWIGTYPE_p_TilePositionSet swig_types[26]
+#define SWIGTYPE_p_UnitSet swig_types[27]
+#define SWIGTYPE_p_UpgradeType swig_types[28]
+#define SWIGTYPE_p_char swig_types[29]
+#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[30]
+#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[31]
+#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[32]
+#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[33]
+#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[34]
+#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[35]
+#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[36]
+#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[37]
+#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[38]
+#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[39]
+#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[40]
+#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[41]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t swig_types[42]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[43]
+#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[44]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[45]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t swig_types[46]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[47]
+#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[48]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t swig_types[49]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[50]
+#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[51]
+#define SWIGTYPE_p_std__string swig_types[52]
+static swig_type_info *swig_types[54];
+static swig_module_info swig_module = {swig_types, 53, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3279,6 +3278,15 @@ SWIGINTERN UnitSet *BWAPI_Player_getUnits(BWAPI::Player *self){
         static UnitSet us( self->getUnits() );
         return &us;
     }
+SWIGINTERN BWAPI::PlayerType BWAPI_Player_playerType(BWAPI::Player *self){
+        return self->playerType();
+    }
+SWIGINTERN BWAPI::Race BWAPI_Player_getRace(BWAPI::Player *self){
+        return self->getRace();
+    }
+SWIGINTERN BWAPI::TilePosition BWAPI_Player_getStartLocation(BWAPI::Player *self){
+        return self->getStartLocation();
+    }
 
 #include "BWAPI/PlayerType.h"
 
@@ -3342,11 +3350,6 @@ SWIG_init(void);
 void python_wrap_init()
 {
 	SWIG_init();
-}
-
-Unit* _getUnitFromPtr(long ptr)
-{
-    return (Unit*)ptr;
 }
 
 #include "helper.h"
@@ -16347,50 +16350,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Player_getRace(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  Race result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Player_getRace",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_getRace" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
-  result = ((BWAPI::Player const *)arg1)->getRace();
-  resultobj = SWIG_NewPointerObj((new Race(static_cast< const Race& >(result))), SWIGTYPE_p_Race, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Player_playerType(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  PlayerType result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Player_playerType",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_playerType" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
-  result = ((BWAPI::Player const *)arg1)->playerType();
-  resultobj = SWIG_NewPointerObj((new PlayerType(static_cast< const PlayerType& >(result))), SWIGTYPE_p_PlayerType, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_Player_getForce(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
@@ -16491,28 +16450,6 @@ SWIGINTERN PyObject *_wrap_Player_isNeutral(PyObject *SWIGUNUSEDPARM(self), PyOb
   arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
   result = (bool)((BWAPI::Player const *)arg1)->isNeutral();
   resultobj = SWIG_From_bool(static_cast< bool >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Player_getStartLocation(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  TilePosition result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Player_getStartLocation",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_getStartLocation" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
-  result = ((BWAPI::Player const *)arg1)->getStartLocation();
-  resultobj = SWIG_NewPointerObj((new TilePosition(static_cast< const TilePosition& >(result))), SWIGTYPE_p_TilePosition, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17202,6 +17139,72 @@ SWIGINTERN PyObject *_wrap_Player_getUnits(PyObject *SWIGUNUSEDPARM(self), PyObj
   arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
   result = (UnitSet *)BWAPI_Player_getUnits(arg1);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Player_playerType(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::PlayerType result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Player_playerType",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_playerType" "', argument " "1"" of type '" "BWAPI::Player *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  result = BWAPI_Player_playerType(arg1);
+  resultobj = SWIG_NewPointerObj((new BWAPI::PlayerType(static_cast< const BWAPI::PlayerType& >(result))), SWIGTYPE_p_BWAPI__PlayerType, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Player_getRace(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Race result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Player_getRace",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_getRace" "', argument " "1"" of type '" "BWAPI::Player *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  result = BWAPI_Player_getRace(arg1);
+  resultobj = SWIG_NewPointerObj((new BWAPI::Race(static_cast< const BWAPI::Race& >(result))), SWIGTYPE_p_BWAPI__Race, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Player_getStartLocation(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::TilePosition result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Player_getStartLocation",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_getStartLocation" "', argument " "1"" of type '" "BWAPI::Player *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  result = BWAPI_Player_getStartLocation(arg1);
+  resultobj = SWIG_NewPointerObj((new BWAPI::TilePosition(static_cast< const BWAPI::TilePosition& >(result))), SWIGTYPE_p_BWAPI__TilePosition, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -31116,13 +31119,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"allOrders", _wrap_allOrders, METH_VARARGS, NULL},
 	 { (char *)"Player_getID", _wrap_Player_getID, METH_VARARGS, NULL},
 	 { (char *)"Player_getName", _wrap_Player_getName, METH_VARARGS, NULL},
-	 { (char *)"Player_getRace", _wrap_Player_getRace, METH_VARARGS, NULL},
-	 { (char *)"Player_playerType", _wrap_Player_playerType, METH_VARARGS, NULL},
 	 { (char *)"Player_getForce", _wrap_Player_getForce, METH_VARARGS, NULL},
 	 { (char *)"Player_isAlly", _wrap_Player_isAlly, METH_VARARGS, NULL},
 	 { (char *)"Player_isEnemy", _wrap_Player_isEnemy, METH_VARARGS, NULL},
 	 { (char *)"Player_isNeutral", _wrap_Player_isNeutral, METH_VARARGS, NULL},
-	 { (char *)"Player_getStartLocation", _wrap_Player_getStartLocation, METH_VARARGS, NULL},
 	 { (char *)"Player_leftGame", _wrap_Player_leftGame, METH_VARARGS, NULL},
 	 { (char *)"Player_minerals", _wrap_Player_minerals, METH_VARARGS, NULL},
 	 { (char *)"Player_gas", _wrap_Player_gas, METH_VARARGS, NULL},
@@ -31140,6 +31140,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Player_isResearching", _wrap_Player_isResearching, METH_VARARGS, NULL},
 	 { (char *)"Player_isUpgrading", _wrap_Player_isUpgrading, METH_VARARGS, NULL},
 	 { (char *)"Player_getUnits", _wrap_Player_getUnits, METH_VARARGS, NULL},
+	 { (char *)"Player_playerType", _wrap_Player_playerType, METH_VARARGS, NULL},
+	 { (char *)"Player_getRace", _wrap_Player_getRace, METH_VARARGS, NULL},
+	 { (char *)"Player_getStartLocation", _wrap_Player_getStartLocation, METH_VARARGS, NULL},
 	 { (char *)"delete_Player", _wrap_delete_Player, METH_VARARGS, NULL},
 	 { (char *)"Player_swigregister", Player_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_PlayerType", _wrap_new_PlayerType, METH_VARARGS, NULL},
@@ -31515,7 +31518,6 @@ static swig_type_info _swigt__p_BWAPI__WeaponType = {"_p_BWAPI__WeaponType", "BW
 static swig_type_info _swigt__p_ForceSet = {"_p_ForceSet", "ForceSet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Latency__Enum = {"_p_Latency__Enum", "Latency::Enum *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PlayerSet = {"_p_PlayerSet", "PlayerSet *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_PlayerType = {"_p_PlayerType", "PlayerType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Position = {"_p_Position", "Position *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Race = {"_p_Race", "Race *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TechType = {"_p_TechType", "TechType *", 0, 0, (void*)0, 0};
@@ -31571,7 +31573,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ForceSet,
   &_swigt__p_Latency__Enum,
   &_swigt__p_PlayerSet,
-  &_swigt__p_PlayerType,
   &_swigt__p_Position,
   &_swigt__p_Race,
   &_swigt__p_TechType,
@@ -31627,7 +31628,6 @@ static swig_cast_info _swigc__p_BWAPI__WeaponType[] = {  {&_swigt__p_BWAPI__Weap
 static swig_cast_info _swigc__p_ForceSet[] = {  {&_swigt__p_ForceSet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Latency__Enum[] = {  {&_swigt__p_Latency__Enum, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PlayerSet[] = {  {&_swigt__p_PlayerSet, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_PlayerType[] = {  {&_swigt__p_PlayerType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Position[] = {  {&_swigt__p_Position, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Race[] = {  {&_swigt__p_Race, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TechType[] = {  {&_swigt__p_TechType, 0, 0, 0},{0, 0, 0, 0}};
@@ -31683,7 +31683,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ForceSet,
   _swigc__p_Latency__Enum,
   _swigc__p_PlayerSet,
-  _swigc__p_PlayerType,
   _swigc__p_Position,
   _swigc__p_Race,
   _swigc__p_TechType,

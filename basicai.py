@@ -38,8 +38,8 @@ class EventHandler:
     def onPlayerLeft(self, player):
         print "OnPlayerLeft: %r" % player
 
-    def onNukeDetect(self, target):
-        print "onNukeDetect: %r" % target
+    def onNukeDetect(self):
+        print "onNukeDetect"
 
     def onUnitCreate(self, unit):
         print "onUnitCreate: %r" % unit
