@@ -109,9 +109,10 @@ class ConsoleClient(object):
 
         self.proxy = xmlrpclib.ServerProxy('http://localhost:8000')
 
-    def __init__(self, env_dict):
+    def __init__(self):
         self._new_process()
 
+    def start_repl(self, env_dict):
         self.exec_env = code.InteractiveConsole(env_dict)
 
     def __del__(self):
