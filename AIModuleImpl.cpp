@@ -1,9 +1,9 @@
 
 #include "helper.h"
-#include "ExampleAIModule.h"
+#include "AIModuleImpl.h"
 using namespace BWAPI;
 
-void ExampleAIModule::onEnd()
+void AIModuleImpl::onEnd(bool isWinner)
 {
 	if (event_dispatcher != NULL)
 	{
@@ -11,11 +11,18 @@ void ExampleAIModule::onEnd()
 		delete event_dispatcher;
 		event_dispatcher = NULL;
 	}
+
+	if (analyzingThreadHandle)
+	{
+		TerminateThread(analyzingThreadHandle, (DWORD)-1);
+		CloseHandle(analyzingThreadHandle);
+		analyzingThreadHandle = NULL;
+	}
 }
 
-void ExampleAIModule::onStart()
+void AIModuleImpl::onStart()
 {
-  Broodwar->sendText("Hello python world!");
+  Broodwar->sendText("starting PyBW...");
   Broodwar->printf("The map is %s, a %d player map",Broodwar->mapName().c_str(),Broodwar->getStartLocations().size());
   // Enable some cheat flags
   Broodwar->enableFlag(Flag::UserInput);
@@ -28,7 +35,7 @@ void ExampleAIModule::onStart()
   analysis_just_finished=false;
 
   Broodwar->printf("Analyzing map... this may take a minute");
-  CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)AnalyzeThread, NULL, 0, NULL);
+  analyzingThreadHandle = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)AnalyzeThread, NULL, 0, NULL);
 
   event_dispatcher = new EventDispatcher();
   if (event_dispatcher != NULL)
@@ -42,7 +49,7 @@ void ExampleAIModule::onStart()
 
   if (Broodwar->isReplay())
   {
-    for(std::set<Unit*>::iterator i=Broodwar->getAllUnits().begin();i!=Broodwar->getAllUnits().end();i++)
+    /*for(std::set<Unit*>::iterator i=Broodwar->getAllUnits().begin();i!=Broodwar->getAllUnits().end();i++)
     {
       if ((*i)->getType().isBuilding())
       {
@@ -56,7 +63,7 @@ void ExampleAIModule::onStart()
       {
         Broodwar->printf("%s, playing as a %s",(*p)->getName().c_str(),(*p)->getRace().getName().c_str());
       }
-    }
+    }*/
   }
   else
   {
@@ -67,79 +74,74 @@ void ExampleAIModule::onStart()
 }
 
 
-void ExampleAIModule::onFrame()
+void AIModuleImpl::onFrame()
 {
-  if (Broodwar->isReplay())
-    return;
-
   if (event_dispatcher)
   {
 	  event_dispatcher->onFrame();
   }
 
-  drawStats();
-
-  /*CommandQueueItem item = popCommandQueue();
-  if (item.unit != NULL)
+  if (!Broodwar->isReplay())
   {
-	  item.unit->rightClick( item.pos );
-  }*/
-  
-  if (analyzed)
-  {
-    //we will iterate through all the base locations, and draw their outlines.
-    for(std::set<BWTA::BaseLocation*>::const_iterator i=BWTA::getBaseLocations().begin();i!=BWTA::getBaseLocations().end();i++)
-    {
-      TilePosition p=(*i)->getTilePosition();
-      Position c=(*i)->getPosition();
+	  drawStats();
 
-      //draw outline of center location
-      Broodwar->drawBox(CoordinateType::Map,p.x()*32,p.y()*32,p.x()*32+4*32,p.y()*32+3*32,Colors::Blue,false);
+	  if (analyzed)
+	  {
+		//we will iterate through all the base locations, and draw their outlines.
+		for(std::set<BWTA::BaseLocation*>::const_iterator i=BWTA::getBaseLocations().begin();i!=BWTA::getBaseLocations().end();i++)
+		{
+		  TilePosition p=(*i)->getTilePosition();
+		  Position c=(*i)->getPosition();
 
-      //draw a circle at each mineral patch
-      for(std::set<BWAPI::Unit*>::const_iterator j=(*i)->getStaticMinerals().begin();j!=(*i)->getStaticMinerals().end();j++)
-      {
-        Position q=(*j)->getInitialPosition();
-        Broodwar->drawCircle(CoordinateType::Map,q.x(),q.y(),30,Colors::Cyan,false);
-      }
+		  //draw outline of center location
+		  Broodwar->drawBox(CoordinateType::Map,p.x()*32,p.y()*32,p.x()*32+4*32,p.y()*32+3*32,Colors::Blue,false);
 
-      //draw the outlines of vespene geysers
-      for(std::set<BWAPI::Unit*>::const_iterator j=(*i)->getGeysers().begin();j!=(*i)->getGeysers().end();j++)
-      {
-        TilePosition q=(*j)->getInitialTilePosition();
-        Broodwar->drawBox(CoordinateType::Map,q.x()*32,q.y()*32,q.x()*32+4*32,q.y()*32+2*32,Colors::Orange,false);
-      }
+		  //draw a circle at each mineral patch
+		  for(std::set<BWAPI::Unit*>::const_iterator j=(*i)->getStaticMinerals().begin();j!=(*i)->getStaticMinerals().end();j++)
+		  {
+			Position q=(*j)->getInitialPosition();
+			Broodwar->drawCircle(CoordinateType::Map,q.x(),q.y(),30,Colors::Cyan,false);
+		  }
 
-      //if this is an island expansion, draw a yellow circle around the base location
-      if ((*i)->isIsland())
-      {
-        Broodwar->drawCircle(CoordinateType::Map,c.x(),c.y(),80,Colors::Yellow,false);
-      }
-    }
-    
-    //we will iterate through all the regions and draw the polygon outline of it in green.
-    for(std::set<BWTA::Region*>::const_iterator r=BWTA::getRegions().begin();r!=BWTA::getRegions().end();r++)
-    {
-      BWTA::Polygon p=(*r)->getPolygon();
-      for(int j=0;j<(int)p.size();j++)
-      {
-        Position point1=p[j];
-        Position point2=p[(j+1) % p.size()];
-        Broodwar->drawLine(CoordinateType::Map,point1.x(),point1.y(),point2.x(),point2.y(),Colors::Green);
-      }
-    }
+		  //draw the outlines of vespene geysers
+		  for(std::set<BWAPI::Unit*>::const_iterator j=(*i)->getGeysers().begin();j!=(*i)->getGeysers().end();j++)
+		  {
+			TilePosition q=(*j)->getInitialTilePosition();
+			Broodwar->drawBox(CoordinateType::Map,q.x()*32,q.y()*32,q.x()*32+4*32,q.y()*32+2*32,Colors::Orange,false);
+		  }
 
-    //we will visualize the chokepoints with red lines
-    for(std::set<BWTA::Region*>::const_iterator r=BWTA::getRegions().begin();r!=BWTA::getRegions().end();r++)
-    {
-      for(std::set<BWTA::Chokepoint*>::const_iterator c=(*r)->getChokepoints().begin();c!=(*r)->getChokepoints().end();c++)
-      {
-        Position point1=(*c)->getSides().first;
-        Position point2=(*c)->getSides().second;
-        Broodwar->drawLine(CoordinateType::Map,point1.x(),point1.y(),point2.x(),point2.y(),Colors::Red);
-      }
-    }
+		  //if this is an island expansion, draw a yellow circle around the base location
+		  if ((*i)->isIsland())
+		  {
+			Broodwar->drawCircle(CoordinateType::Map,c.x(),c.y(),80,Colors::Yellow,false);
+		  }
+		}
+	    
+		//we will iterate through all the regions and draw the polygon outline of it in green.
+		for(std::set<BWTA::Region*>::const_iterator r=BWTA::getRegions().begin();r!=BWTA::getRegions().end();r++)
+		{
+		  BWTA::Polygon p=(*r)->getPolygon();
+		  for(int j=0;j<(int)p.size();j++)
+		  {
+			Position point1=p[j];
+			Position point2=p[(j+1) % p.size()];
+			Broodwar->drawLine(CoordinateType::Map,point1.x(),point1.y(),point2.x(),point2.y(),Colors::Green);
+		  }
+		}
+
+		//we will visualize the chokepoints with red lines
+		for(std::set<BWTA::Region*>::const_iterator r=BWTA::getRegions().begin();r!=BWTA::getRegions().end();r++)
+		{
+		  for(std::set<BWTA::Chokepoint*>::const_iterator c=(*r)->getChokepoints().begin();c!=(*r)->getChokepoints().end();c++)
+		  {
+			Position point1=(*c)->getSides().first;
+			Position point2=(*c)->getSides().second;
+			Broodwar->drawLine(CoordinateType::Map,point1.x(),point1.y(),point2.x(),point2.y(),Colors::Red);
+		  }
+		}
+	  }
   }
+
   if (analysis_just_finished)
   {
     Broodwar->printf("Finished analyzing map.");
@@ -147,7 +149,7 @@ void ExampleAIModule::onFrame()
   }
 }
 
-void ExampleAIModule::onUnitCreate(BWAPI::Unit* unit)
+void AIModuleImpl::onUnitCreate(BWAPI::Unit* unit)
 {
 	if (event_dispatcher != NULL)
 	{
@@ -169,7 +171,7 @@ void ExampleAIModule::onUnitCreate(BWAPI::Unit* unit)
     }
   }*/
 }
-void ExampleAIModule::onUnitDestroy(BWAPI::Unit* unit)
+void AIModuleImpl::onUnitDestroy(BWAPI::Unit* unit)
 {
 	if (event_dispatcher != NULL)
 	{
@@ -179,7 +181,7 @@ void ExampleAIModule::onUnitDestroy(BWAPI::Unit* unit)
   //if (!Broodwar->isReplay())
    // Broodwar->printf("A %s [%x] has been destroyed at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
 }
-void ExampleAIModule::onUnitMorph(BWAPI::Unit* unit)
+void AIModuleImpl::onUnitMorph(BWAPI::Unit* unit)
 {
 	if (event_dispatcher != NULL)
 	{
@@ -201,7 +203,7 @@ void ExampleAIModule::onUnitMorph(BWAPI::Unit* unit)
     }
   }*/
 }
-void ExampleAIModule::onUnitShow(BWAPI::Unit* unit)
+void AIModuleImpl::onUnitShow(BWAPI::Unit* unit)
 {
 	if (event_dispatcher != NULL)
 	{
@@ -211,7 +213,7 @@ void ExampleAIModule::onUnitShow(BWAPI::Unit* unit)
   //if (!Broodwar->isReplay())
   //  Broodwar->printf("A %s [%x] has been spotted at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
 }
-void ExampleAIModule::onUnitHide(BWAPI::Unit* unit)
+void AIModuleImpl::onUnitHide(BWAPI::Unit* unit)
 {
 	if (event_dispatcher != NULL)
 	{
@@ -222,7 +224,7 @@ void ExampleAIModule::onUnitHide(BWAPI::Unit* unit)
   //  Broodwar->printf("A %s [%x] was last seen at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
 }
 
-void ExampleAIModule::onPlayerLeft( Player* player )
+void AIModuleImpl::onPlayerLeft( Player* player )
 {
 	if (event_dispatcher != NULL)
 	{
@@ -230,7 +232,7 @@ void ExampleAIModule::onPlayerLeft( Player* player )
 	}
 }
 
-void ExampleAIModule::onNukeDetect( Position target )
+void AIModuleImpl::onNukeDetect( Position target )
 {
 	if (event_dispatcher != NULL)
 	{
@@ -238,7 +240,7 @@ void ExampleAIModule::onNukeDetect( Position target )
 	}
 }
 
-void ExampleAIModule::onUnitRenegade( Unit* unit )
+void AIModuleImpl::onUnitRenegade( Unit* unit )
 {
 	if (event_dispatcher != NULL)
 	{
@@ -246,7 +248,7 @@ void ExampleAIModule::onUnitRenegade( Unit* unit )
 	}
 }
 
-bool ExampleAIModule::onSendText(std::string text)
+bool AIModuleImpl::onSendText(std::string text)
 {
   if (text=="py")
   {
@@ -261,12 +263,12 @@ bool ExampleAIModule::onSendText(std::string text)
     return false;
   } else if (text=="/analyze")
   {
-    if (analyzed == false)
+    /*if (analyzed == false)
     {
       Broodwar->printf("Analyzing map... this may take a minute");
       CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)AnalyzeThread, NULL, 0, NULL);
     }
-    return false;
+    return false;*/
   } else
   {
 	  if (event_dispatcher != NULL)
@@ -282,17 +284,25 @@ DWORD WINAPI AnalyzeThread()
   BWTA::analyze();
   analyzed   = true;
   analysis_just_finished = true;
-  home       = BWTA::getStartLocation(BWAPI::Broodwar->self())->getRegion();
+
+
+  BWTA::BaseLocation *startLocation = BWTA::getStartLocation(BWAPI::Broodwar->self());
+  home = startLocation? startLocation->getRegion() : NULL; // if this is a replay, you may not have a "start location"
+
+  BWTA::BaseLocation *enemy_location = BWTA::getStartLocation(BWAPI::Broodwar->enemy());
+  enemy_base = startLocation? enemy_location->getRegion() : NULL;
+/*
   //enemy start location only available if Complete Map Information is enabled.
   if (BWTA::getStartLocation(BWAPI::Broodwar->enemy())!=NULL)
   {
     enemy_base = BWTA::getStartLocation(BWAPI::Broodwar->enemy())->getRegion();
-  }
+  }*/
   return 0;
 }
 
-void ExampleAIModule::drawStats()
+void AIModuleImpl::drawStats()
 {
+
   std::set<Unit*> myUnits = Broodwar->self()->getUnits();
   Broodwar->drawTextScreen(5,0,"I have %d units:",myUnits.size());
   std::map<UnitType, int> unitTypeCounts;
@@ -312,7 +322,7 @@ void ExampleAIModule::drawStats()
   }
 }
 
-void ExampleAIModule::showPlayers()
+void AIModuleImpl::showPlayers()
 {
   std::set<Player*> players=Broodwar->getPlayers();
   for(std::set<Player*>::iterator i=players.begin();i!=players.end();i++)
@@ -320,7 +330,7 @@ void ExampleAIModule::showPlayers()
     Broodwar->printf("Player [%d]: %s is in force: %s",(*i)->getID(),(*i)->getName().c_str(), (*i)->getForce()->getName().c_str());
   }
 }
-void ExampleAIModule::showForces()
+void AIModuleImpl::showForces()
 {
   std::set<Force*> forces=Broodwar->getForces();
   for(std::set<Force*>::iterator i=forces.begin();i!=forces.end();i++)

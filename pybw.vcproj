@@ -177,15 +177,15 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\AIModuleImpl.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Dllmain.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\event_dispatcher.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\ExampleAIModule.cpp"
 				>
 			</File>
 			<File
@@ -215,11 +215,11 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\event_dispatcher.h"
+				RelativePath=".\AIModuleImpl.h"
 				>
 			</File>
 			<File
-				RelativePath=".\ExampleAIModule.h"
+				RelativePath=".\event_dispatcher.h"
 				>
 			</File>
 			<File

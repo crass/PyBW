@@ -10,7 +10,7 @@
 
 void python_wrap_init();
 
-#include "ExampleAIModule.h"
+#include "AIModuleImpl.h"
 namespace BWAPI { Game* Broodwar = NULL; }
 BOOL APIENTRY DllMain( HANDLE module, 
                        DWORD  reason_for_call, 
@@ -39,5 +39,5 @@ BOOL APIENTRY DllMain( HANDLE module,
  extern "C" __declspec(dllexport) BWAPI::AIModule* newAIModule(BWAPI::Game* game)
 {
   BWAPI::Broodwar=game;
-  return new ExampleAIModule();
+  return new AIModuleImpl();
 }

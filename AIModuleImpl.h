@@ -11,14 +11,15 @@ static BWTA::Region* home;
 static BWTA::Region* enemy_base;
 DWORD WINAPI AnalyzeThread();
 
-class ExampleAIModule : public BWAPI::AIModule
+class AIModuleImpl : public BWAPI::AIModule
 {
   EventDispatcher* event_dispatcher;
+  HANDLE analyzingThreadHandle;
 
 public:
 
   virtual void onStart();
-  virtual void onEnd();
+  virtual void onEnd(bool isWinner);
   virtual void onFrame();
   virtual bool onSendText(std::string text);
   virtual void onUnitCreate(BWAPI::Unit* unit);
@@ -36,4 +37,5 @@ public:
   void showPlayers();
   void showForces();
   std::map<BWAPI::Unit*,BWAPI::UnitType> buildings;
+  
 };

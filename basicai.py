@@ -7,7 +7,7 @@ class EventHandler:
         self.broodwar = broodwar
 
     def onStart(self):
-        print "on start"
+        print "PyBW is online!"
         try:
             d = dict(globals())
             d['broodwar'] = self.broodwar
