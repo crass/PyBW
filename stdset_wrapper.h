@@ -7,6 +7,8 @@
 #include "BWAPI/Force.h"
 #include "BWAPI/TilePosition.h"
 
+#include "BWTA.h"
+
 #pragma warning(disable: 4512)
 
 class UnitSet
@@ -148,5 +150,114 @@ public:
 		return &*(iterator++);
 	}
 };
+
+
+// BWTA
+
+class RegionSet
+{
+	const std::set<BWTA::Region*>& regions;
+	std::set<BWTA::Region*>::const_iterator iterator;
+
+public:
+
+	RegionSet(const std::set<BWTA::Region*>& _regions)
+		: regions(_regions)
+	{
+		__iter__();
+	}
+
+	RegionSet* __iter__()	// XXX not thread-safe
+	{
+		iterator = regions.begin();
+		return this;
+	}
+
+	int __len__()
+	{
+		return regions.size();
+	}
+
+	BWTA::Region* next()
+	{
+		if (iterator == regions.end())
+		{
+			return NULL;
+		}
+
+		return *(iterator++);
+	}
+};
+
+class ChokepointSet
+{
+	const std::set<BWTA::Chokepoint*>& set;
+	std::set<BWTA::Chokepoint*>::const_iterator iterator;
+
+public:
+
+	ChokepointSet(const std::set<BWTA::Chokepoint*>& _set)
+		: set(_set)
+	{
+		__iter__();
+	}
+
+	ChokepointSet* __iter__()	// XXX not thread-safe
+	{
+		iterator = set.begin();
+		return this;
+	}
+
+	int __len__()
+	{
+		return set.size();
+	}
+
+	BWTA::Chokepoint* next()
+	{
+		if (iterator == set.end())
+		{
+			return NULL;
+		}
+
+		return *(iterator++);
+	}
+};
+
+class BaseLocationSet
+{
+	const std::set<BWTA::BaseLocation*>& set;
+	std::set<BWTA::BaseLocation*>::const_iterator iterator;
+
+public:
+
+	BaseLocationSet(const std::set<BWTA::BaseLocation*>& _set)
+		: set(_set)
+	{
+		__iter__();
+	}
+
+	BaseLocationSet* __iter__()	// XXX not thread-safe
+	{
+		iterator = set.begin();
+		return this;
+	}
+
+	int __len__()
+	{
+		return set.size();
+	}
+
+	BWTA::BaseLocation* next()
+	{
+		if (iterator == set.end())
+		{
+			return NULL;
+		}
+
+		return *(iterator++);
+	}
+};
+
 
 #pragma warning(default: 4512)
