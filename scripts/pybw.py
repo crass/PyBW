@@ -102,14 +102,30 @@ def Order_repr(self):
 pybw_swig.Order.__repr__ = Order_repr
 
 
-print "Fixing __eq__ methods in classes"
+print "Fixing __eq__ and __hash__ methods in classes"
 def Player_eq(self, other):
     return self.id == other.id
+def Player_hash(self):
+    return hash(self.id)
+pybw_swig.Player.__hash__ = Player_hash
 pybw_swig.Player.__eq__ = Player_eq
+
 
 def Force_eq(self, other):
     raise NotImplementedError("Cannot compare forces. Compare force.name instead")
+def Force_hash(self):
+    return hash(self.id)
+pybw_swig.Force.__hash__ = Force_hash
 pybw_swig.Force.__eq__ = Force_eq
+
+def Position_hash(self):
+    return hash((self.x, self.y))
+pybw_swig.Position.__hash__ = Position_hash
+
+def TilePosition_hash(self):
+    return hash((self.x, self.y))
+pybw_swig.TilePosition.__hash__ = TilePosition_hash
+
 
 
 print "Redirecting output to broodwar console"
