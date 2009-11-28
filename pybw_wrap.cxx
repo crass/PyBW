@@ -4585,8 +4585,7 @@ SWIG_From_std_string  (const std::string& s)
 #include "BWAPI/Force.h"
 
 SWIGINTERN PlayerSet *BWAPI_Force_getPlayers(BWAPI::Force *self){
-        static PlayerSet us( self->getPlayers() );
-        return &us;
+        return new PlayerSet( self->getPlayers() );
     }
 
 #include "BWAPI/Game.h"
@@ -4595,52 +4594,40 @@ SWIGINTERN PlayerSet *BWAPI_Force_getPlayers(BWAPI::Force *self){
 
 
 SWIGINTERN UnitSet *BWAPI_Game_getAllUnits(BWAPI::Game *self){
-        static UnitSet us( self->getAllUnits() );
-        return &us;
+        return new UnitSet( self->getAllUnits() );
     }
 SWIGINTERN UnitSet *BWAPI_Game_getMinerals(BWAPI::Game *self){
-        static UnitSet us( self->getMinerals() );
-        return &us;
+        return new UnitSet( self->getMinerals() );
     }
 SWIGINTERN UnitSet *BWAPI_Game_getGeysers(BWAPI::Game *self){
-        static UnitSet us( self->getGeysers() );
-        return &us;
+        return new UnitSet( self->getGeysers() );
     }
 SWIGINTERN UnitSet *BWAPI_Game_getNeutralUnits(BWAPI::Game *self){
-        static UnitSet us( self->getNeutralUnits() );
-        return &us;
+        return new UnitSet( self->getNeutralUnits() );
     }
 SWIGINTERN UnitSet *BWAPI_Game_getStaticMinerals(BWAPI::Game *self){
-        static UnitSet us( self->getStaticMinerals() );
-        return &us;
+        return new UnitSet( self->getStaticMinerals() );
     }
 SWIGINTERN UnitSet *BWAPI_Game_getStaticGeysers(BWAPI::Game *self){
-        static UnitSet us( self->getStaticGeysers() );
-        return &us;
+        return new UnitSet( self->getStaticGeysers() );
     }
 SWIGINTERN UnitSet *BWAPI_Game_getStaticNeutralUnits(BWAPI::Game *self){
-        static UnitSet us( self->getStaticNeutralUnits() );
-        return &us;
+        return new UnitSet( self->getStaticNeutralUnits() );
     }
 SWIGINTERN UnitSet *BWAPI_Game_getSelectedUnits(BWAPI::Game *self){
-        static UnitSet us( self->getSelectedUnits() );
-        return &us;
+        return new UnitSet( self->getSelectedUnits() );
     }
 SWIGINTERN PlayerSet *BWAPI_Game_getPlayers(BWAPI::Game *self){
-        static PlayerSet us( self->getPlayers() );
-        return &us;
+        return new PlayerSet( self->getPlayers() );
     }
 SWIGINTERN ForceSet *BWAPI_Game_getForces(BWAPI::Game *self){
-        static ForceSet us( self->getForces() );
-        return &us;
+        return new ForceSet( self->getForces() );
     }
 SWIGINTERN UnitSet *BWAPI_Game_unitsOnTile(BWAPI::Game *self,int x,int y){
-        UnitSet* us = new UnitSet( self->unitsOnTile(x, y) );
-        return us;
+        return new UnitSet( self->unitsOnTile(x, y) );
     }
 SWIGINTERN TilePositionSet *BWAPI_Game_getStartLocations(BWAPI::Game *self){
-        static TilePositionSet us( self->getStartLocations() );
-        return &us;
+        return new TilePositionSet( self->getStartLocations() );
     }
 SWIGINTERN bool BWAPI_Game_canBuildHere(BWAPI::Game *self,BWAPI::Unit *builder,BWAPI::TilePosition position,BWAPI::UnitType type){
         return self->canBuildHere(builder, position, type);
@@ -4655,8 +4642,7 @@ SWIGINTERN bool BWAPI_Game_canBuildHere(BWAPI::Game *self,BWAPI::Unit *builder,B
 #include "BWAPI/Player.h"
 
 SWIGINTERN UnitSet *BWAPI_Player_getUnits(BWAPI::Player *self){
-        static UnitSet us( self->getUnits() );
-        return &us;
+        return new UnitSet( self->getUnits() );
     }
 SWIGINTERN BWAPI::PlayerType BWAPI_Player_playerType(BWAPI::Player *self){
         return self->playerType();
@@ -4724,6 +4710,12 @@ SWIGINTERN int BWAPI_TilePosition_getY(BWAPI::TilePosition *self){
 
 #include "BWTA/Region.h"
 
+SWIGINTERN ChokepointSet *BWTA_Region_getChokepoints(BWTA::Region *self){
+        return new ChokepointSet( self->getChokepoints() );
+    }
+SWIGINTERN BaseLocationSet *BWTA_Region_getBaseLocations(BWTA::Region *self){
+        return new BaseLocationSet( self->getBaseLocations() );
+    }
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -5610,7 +5602,7 @@ SWIGINTERN PyObject *_wrap_UnitSet___iter__(PyObject *SWIGUNUSEDPARM(self), PyOb
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitSet___iter__" "', argument " "1"" of type '" "UnitSet *""'"); 
   }
   arg1 = reinterpret_cast< UnitSet * >(argp1);
-  result = (UnitSet *)(arg1)->__iter__();
+  result = (UnitSet *) &(arg1)->__iter__();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
   return resultobj;
 fail:
@@ -5735,7 +5727,7 @@ SWIGINTERN PyObject *_wrap_PlayerSet___iter__(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PlayerSet___iter__" "', argument " "1"" of type '" "PlayerSet *""'"); 
   }
   arg1 = reinterpret_cast< PlayerSet * >(argp1);
-  result = (PlayerSet *)(arg1)->__iter__();
+  result = (PlayerSet *) &(arg1)->__iter__();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PlayerSet, 0 |  0 );
   return resultobj;
 fail:
@@ -5860,7 +5852,7 @@ SWIGINTERN PyObject *_wrap_ForceSet___iter__(PyObject *SWIGUNUSEDPARM(self), PyO
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ForceSet___iter__" "', argument " "1"" of type '" "ForceSet *""'"); 
   }
   arg1 = reinterpret_cast< ForceSet * >(argp1);
-  result = (ForceSet *)(arg1)->__iter__();
+  result = (ForceSet *) &(arg1)->__iter__();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ForceSet, 0 |  0 );
   return resultobj;
 fail:
@@ -5985,7 +5977,7 @@ SWIGINTERN PyObject *_wrap_TilePositionSet___iter__(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TilePositionSet___iter__" "', argument " "1"" of type '" "TilePositionSet *""'"); 
   }
   arg1 = reinterpret_cast< TilePositionSet * >(argp1);
-  result = (TilePositionSet *)(arg1)->__iter__();
+  result = (TilePositionSet *) &(arg1)->__iter__();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TilePositionSet, 0 |  0 );
   return resultobj;
 fail:
@@ -6110,7 +6102,7 @@ SWIGINTERN PyObject *_wrap_RegionSet___iter__(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RegionSet___iter__" "', argument " "1"" of type '" "RegionSet *""'"); 
   }
   arg1 = reinterpret_cast< RegionSet * >(argp1);
-  result = (RegionSet *)(arg1)->__iter__();
+  result = (RegionSet *) &(arg1)->__iter__();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_RegionSet, 0 |  0 );
   return resultobj;
 fail:
@@ -6154,7 +6146,13 @@ SWIGINTERN PyObject *_wrap_RegionSet_next(PyObject *SWIGUNUSEDPARM(self), PyObje
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "RegionSet_next" "', argument " "1"" of type '" "RegionSet *""'"); 
   }
   arg1 = reinterpret_cast< RegionSet * >(argp1);
-  result = (BWTA::Region *)(arg1)->next();
+  {
+    result = (BWTA::Region *)(arg1)->next();
+    if (!result) {
+      PyErr_SetString(PyExc_StopIteration,"End of list");
+      return NULL;
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__Region, 0 |  0 );
   return resultobj;
 fail:
@@ -6229,7 +6227,7 @@ SWIGINTERN PyObject *_wrap_ChokepointSet___iter__(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ChokepointSet___iter__" "', argument " "1"" of type '" "ChokepointSet *""'"); 
   }
   arg1 = reinterpret_cast< ChokepointSet * >(argp1);
-  result = (ChokepointSet *)(arg1)->__iter__();
+  result = (ChokepointSet *) &(arg1)->__iter__();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ChokepointSet, 0 |  0 );
   return resultobj;
 fail:
@@ -6273,7 +6271,13 @@ SWIGINTERN PyObject *_wrap_ChokepointSet_next(PyObject *SWIGUNUSEDPARM(self), Py
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ChokepointSet_next" "', argument " "1"" of type '" "ChokepointSet *""'"); 
   }
   arg1 = reinterpret_cast< ChokepointSet * >(argp1);
-  result = (BWTA::Chokepoint *)(arg1)->next();
+  {
+    result = (BWTA::Chokepoint *)(arg1)->next();
+    if (!result) {
+      PyErr_SetString(PyExc_StopIteration,"End of list");
+      return NULL;
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
   return resultobj;
 fail:
@@ -6348,7 +6352,7 @@ SWIGINTERN PyObject *_wrap_BaseLocationSet___iter__(PyObject *SWIGUNUSEDPARM(sel
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocationSet___iter__" "', argument " "1"" of type '" "BaseLocationSet *""'"); 
   }
   arg1 = reinterpret_cast< BaseLocationSet * >(argp1);
-  result = (BaseLocationSet *)(arg1)->__iter__();
+  result = (BaseLocationSet *) &(arg1)->__iter__();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BaseLocationSet, 0 |  0 );
   return resultobj;
 fail:
@@ -6392,7 +6396,13 @@ SWIGINTERN PyObject *_wrap_BaseLocationSet_next(PyObject *SWIGUNUSEDPARM(self), 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocationSet_next" "', argument " "1"" of type '" "BaseLocationSet *""'"); 
   }
   arg1 = reinterpret_cast< BaseLocationSet * >(argp1);
-  result = (BWTA::BaseLocation *)(arg1)->next();
+  {
+    result = (BWTA::BaseLocation *)(arg1)->next();
+    if (!result) {
+      PyErr_SetString(PyExc_StopIteration,"End of list");
+      return NULL;
+    }
+  }
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
   return resultobj;
 fail:
@@ -11041,7 +11051,7 @@ SWIGINTERN PyObject *_wrap_Force_getPlayers(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = reinterpret_cast< BWAPI::Force * >(argp1);
   result = (PlayerSet *)BWAPI_Force_getPlayers(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PlayerSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PlayerSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17425,7 +17435,7 @@ SWIGINTERN PyObject *_wrap_Game_getAllUnits(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (UnitSet *)BWAPI_Game_getAllUnits(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17447,7 +17457,7 @@ SWIGINTERN PyObject *_wrap_Game_getMinerals(PyObject *SWIGUNUSEDPARM(self), PyOb
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (UnitSet *)BWAPI_Game_getMinerals(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17469,7 +17479,7 @@ SWIGINTERN PyObject *_wrap_Game_getGeysers(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (UnitSet *)BWAPI_Game_getGeysers(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17491,7 +17501,7 @@ SWIGINTERN PyObject *_wrap_Game_getNeutralUnits(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (UnitSet *)BWAPI_Game_getNeutralUnits(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17513,7 +17523,7 @@ SWIGINTERN PyObject *_wrap_Game_getStaticMinerals(PyObject *SWIGUNUSEDPARM(self)
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (UnitSet *)BWAPI_Game_getStaticMinerals(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17535,7 +17545,7 @@ SWIGINTERN PyObject *_wrap_Game_getStaticGeysers(PyObject *SWIGUNUSEDPARM(self),
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (UnitSet *)BWAPI_Game_getStaticGeysers(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17557,7 +17567,7 @@ SWIGINTERN PyObject *_wrap_Game_getStaticNeutralUnits(PyObject *SWIGUNUSEDPARM(s
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (UnitSet *)BWAPI_Game_getStaticNeutralUnits(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17579,7 +17589,7 @@ SWIGINTERN PyObject *_wrap_Game_getSelectedUnits(PyObject *SWIGUNUSEDPARM(self),
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (UnitSet *)BWAPI_Game_getSelectedUnits(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17601,7 +17611,7 @@ SWIGINTERN PyObject *_wrap_Game_getPlayers(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (PlayerSet *)BWAPI_Game_getPlayers(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PlayerSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PlayerSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17623,7 +17633,7 @@ SWIGINTERN PyObject *_wrap_Game_getForces(PyObject *SWIGUNUSEDPARM(self), PyObje
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (ForceSet *)BWAPI_Game_getForces(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ForceSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ForceSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17663,7 +17673,7 @@ SWIGINTERN PyObject *_wrap_Game_unitsOnTile(PyObject *SWIGUNUSEDPARM(self), PyOb
   } 
   arg3 = static_cast< int >(val3);
   result = (UnitSet *)BWAPI_Game_unitsOnTile(arg1,arg2,arg3);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -17685,7 +17695,7 @@ SWIGINTERN PyObject *_wrap_Game_getStartLocations(PyObject *SWIGUNUSEDPARM(self)
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (TilePositionSet *)BWAPI_Game_getStartLocations(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TilePositionSet, 0 |  0 );
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_TilePositionSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -35997,16 +36007,16 @@ SWIGINTERN PyObject *_wrap_Region_getChokepoints(PyObject *SWIGUNUSEDPARM(self),
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  std::set< BWTA::Chokepoint * > *result = 0 ;
+  ChokepointSet *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)"O:Region_getChokepoints",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getChokepoints" "', argument " "1"" of type '" "BWTA::Region const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getChokepoints" "', argument " "1"" of type '" "BWTA::Region *""'"); 
   }
   arg1 = reinterpret_cast< BWTA::Region * >(argp1);
-  result = (std::set< BWTA::Chokepoint * > *) &((BWTA::Region const *)arg1)->getChokepoints();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t, 0 |  0 );
+  result = (ChokepointSet *)BWTA_Region_getChokepoints(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ChokepointSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -36019,16 +36029,16 @@ SWIGINTERN PyObject *_wrap_Region_getBaseLocations(PyObject *SWIGUNUSEDPARM(self
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  std::set< BWTA::BaseLocation * > *result = 0 ;
+  BaseLocationSet *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)"O:Region_getBaseLocations",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getBaseLocations" "', argument " "1"" of type '" "BWTA::Region const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getBaseLocations" "', argument " "1"" of type '" "BWTA::Region *""'"); 
   }
   arg1 = reinterpret_cast< BWTA::Region * >(argp1);
-  result = (std::set< BWTA::BaseLocation * > *) &((BWTA::Region const *)arg1)->getBaseLocations();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t, 0 |  0 );
+  result = (BaseLocationSet *)BWTA_Region_getBaseLocations(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BaseLocationSet, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;

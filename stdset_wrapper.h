@@ -13,7 +13,7 @@
 
 class UnitSet
 {
-	std::set<BWAPI::Unit*>& units;
+	std::set<BWAPI::Unit*> units;
 	std::set<BWAPI::Unit*>::iterator iterator;
 
 public:
@@ -24,10 +24,10 @@ public:
 		__iter__();
 	}
 
-	UnitSet* __iter__()	// XXX not thread-safe
+	UnitSet& __iter__()	// XXX not thread-safe
 	{
 		iterator = units.begin();
-		return this;
+		return *this;
 	}
 
 	int __len__()
@@ -48,7 +48,7 @@ public:
 
 class PlayerSet
 {
-	std::set<BWAPI::Player*>& players;
+	std::set<BWAPI::Player*> players;
 	std::set<BWAPI::Player*>::iterator iterator;
 
 public:
@@ -58,10 +58,10 @@ public:
 		__iter__();
 	}
 
-	PlayerSet* __iter__()	// XXX not thread-safe
+	PlayerSet& __iter__()	// XXX not thread-safe
 	{
 		iterator = players.begin();
-		return this;
+		return *this;
 	}
 
 	int __len__()
@@ -83,7 +83,7 @@ public:
 
 class ForceSet
 {
-	std::set<BWAPI::Force*>& forces;
+	std::set<BWAPI::Force*> forces;
 	std::set<BWAPI::Force*>::iterator iterator;
 
 public:
@@ -93,10 +93,10 @@ public:
 		__iter__();
 	}
 
-	ForceSet* __iter__()	// XXX not thread-safe
+	ForceSet& __iter__()	// XXX not thread-safe
 	{
 		iterator = forces.begin();
-		return this;
+		return *this;
 	}
 
 	int __len__()
@@ -119,7 +119,7 @@ public:
 
 class TilePositionSet
 {
-	std::set<BWAPI::TilePosition>& tilepositions;
+	std::set<BWAPI::TilePosition> tilepositions;
 	std::set<BWAPI::TilePosition>::iterator iterator;
 
 public:
@@ -129,10 +129,10 @@ public:
 		__iter__();
 	}
 
-	TilePositionSet* __iter__()	// XXX not thread-safe
+	TilePositionSet& __iter__()	// XXX not thread-safe
 	{
 		iterator = tilepositions.begin();
-		return this;
+		return *this;
 	}
 
 	int __len__()
@@ -156,7 +156,7 @@ public:
 
 class RegionSet
 {
-	const std::set<BWTA::Region*>& regions;
+	const std::set<BWTA::Region*> regions;
 	std::set<BWTA::Region*>::const_iterator iterator;
 
 public:
@@ -167,10 +167,10 @@ public:
 		__iter__();
 	}
 
-	RegionSet* __iter__()	// XXX not thread-safe
+	RegionSet& __iter__()	// XXX not thread-safe
 	{
 		iterator = regions.begin();
-		return this;
+		return *this;
 	}
 
 	int __len__()
@@ -191,7 +191,7 @@ public:
 
 class ChokepointSet
 {
-	const std::set<BWTA::Chokepoint*>& set;
+	const std::set<BWTA::Chokepoint*> set;
 	std::set<BWTA::Chokepoint*>::const_iterator iterator;
 
 public:
@@ -202,10 +202,10 @@ public:
 		__iter__();
 	}
 
-	ChokepointSet* __iter__()	// XXX not thread-safe
+	ChokepointSet& __iter__()	// XXX not thread-safe
 	{
 		iterator = set.begin();
-		return this;
+		return *this;
 	}
 
 	int __len__()
@@ -226,7 +226,7 @@ public:
 
 class BaseLocationSet
 {
-	const std::set<BWTA::BaseLocation*>& set;
+	const std::set<BWTA::BaseLocation*> set;
 	std::set<BWTA::BaseLocation*>::const_iterator iterator;
 
 public:
@@ -237,10 +237,10 @@ public:
 		__iter__();
 	}
 
-	BaseLocationSet* __iter__()	// XXX not thread-safe
+	BaseLocationSet& __iter__()	// XXX not thread-safe
 	{
 		iterator = set.begin();
-		return this;
+		return *this;
 	}
 
 	int __len__()

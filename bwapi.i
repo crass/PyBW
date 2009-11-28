@@ -1,8 +1,9 @@
+//%newobject BWAPI::Player::getUnits;
+
 %extend BWAPI::Player {
     UnitSet* getUnits()
     {
-        static UnitSet us( self->getUnits() );
-        return &us;
+        return new UnitSet( self->getUnits() );
     }
     BWAPI::PlayerType playerType()
     {
@@ -22,77 +23,80 @@
 %ignore BWAPI::Player::getStartLocation;
 %ignore BWAPI::Player::getRace;
 
+// Game
+
+%newobject BWAPI::Game::unitsOnTile;
+%newobject BWAPI::Game::getAllUnits;
+%newobject BWAPI::Game::getMinerals;
+%newobject BWAPI::Game::getGeysers;
+%newobject BWAPI::Game::getNeutralUnits;
+%newobject BWAPI::Game::getStaticMinerals;
+%newobject BWAPI::Game::getStaticGeysers;
+%newobject BWAPI::Game::getStaticNeutralUnits;
+%newobject BWAPI::Game::getSelectedUnits;
+%newobject BWAPI::Game::getPlayers;
+%newobject BWAPI::Game::getForces;
+%newobject BWAPI::Game::getStartLocations;
+
 %extend BWAPI::Game {
     UnitSet* getAllUnits()
     {
-        static UnitSet us( self->getAllUnits() );
-        return &us;
+        return new UnitSet( self->getAllUnits() );
     }
 
     UnitSet* getMinerals()
     {
-        static UnitSet us( self->getMinerals() );
-        return &us;
+        return new UnitSet( self->getMinerals() );
     }
 
     UnitSet* getGeysers()
     {
-        static UnitSet us( self->getGeysers() );
-        return &us;
+        return new UnitSet( self->getGeysers() );
     }
 
     UnitSet* getNeutralUnits()
     {
-        static UnitSet us( self->getNeutralUnits() );
-        return &us;
+        return new UnitSet( self->getNeutralUnits() );
     }
 
     UnitSet* getStaticMinerals()
     {
-        static UnitSet us( self->getStaticMinerals() );
-        return &us;
+        return new UnitSet( self->getStaticMinerals() );
     }
 
     UnitSet* getStaticGeysers()
     {
-        static UnitSet us( self->getStaticGeysers() );
-        return &us;
+        return new UnitSet( self->getStaticGeysers() );
     }
 
     UnitSet* getStaticNeutralUnits()
     {
-        static UnitSet us( self->getStaticNeutralUnits() );
-        return &us;
+        return new UnitSet( self->getStaticNeutralUnits() );
     }
 
     UnitSet* getSelectedUnits()
     {
-        static UnitSet us( self->getSelectedUnits() );
-        return &us;
+        return new UnitSet( self->getSelectedUnits() );
     }
 
     PlayerSet* getPlayers()
     {
-        static PlayerSet us( self->getPlayers() );
-        return &us;
+        return new PlayerSet( self->getPlayers() );
     }
 
     ForceSet* getForces()
     {
-        static ForceSet us( self->getForces() );
-        return &us;
+        return new ForceSet( self->getForces() );
     }
 
     UnitSet* unitsOnTile(int x, int y) // TODO: deallocate!
     {
-        UnitSet* us = new UnitSet( self->unitsOnTile(x, y) );
-        return us;
+        return new UnitSet( self->unitsOnTile(x, y) );
     }
 
     TilePositionSet* getStartLocations()
     {
-        static TilePositionSet us( self->getStartLocations() );
-        return &us;
+        return new TilePositionSet( self->getStartLocations() );
     }
 
     bool canBuildHere(BWAPI::Unit* builder, BWAPI::TilePosition position, BWAPI::UnitType type)
@@ -115,11 +119,16 @@
 %ignore BWAPI::Game::getStartLocations;
 %ignore BWAPI::Game::canBuildHere;
 
+
+// Force
+
+%newobject BWAPI::Force::getPlayers;
+
+
 %extend BWAPI::Force {
     PlayerSet* getPlayers()
     {
-        static PlayerSet us( self->getPlayers() );
-        return &us;
+        return new PlayerSet( self->getPlayers() );
     }
 }
 %ignore BWAPI::Force::getPlayers;

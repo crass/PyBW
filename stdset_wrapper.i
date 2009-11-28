@@ -30,6 +30,31 @@
   }
 }
 
+%exception RegionSet::next {
+  $action
+  if (!result) {
+     PyErr_SetString(PyExc_StopIteration,"End of list");
+     return NULL;
+  }
+}
+
+%exception ChokepointSet::next {
+  $action
+  if (!result) {
+     PyErr_SetString(PyExc_StopIteration,"End of list");
+     return NULL;
+  }
+}
+
+%exception BaseLocationSet::next {
+  $action
+  if (!result) {
+     PyErr_SetString(PyExc_StopIteration,"End of list");
+     return NULL;
+  }
+}
+
+
 %{
 #include "stdset_wrapper.h"
 
