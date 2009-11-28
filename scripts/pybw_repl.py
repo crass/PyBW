@@ -115,11 +115,14 @@ class ConsoleClient(object):
     def start_repl(self, env_dict):
         self.exec_env = code.InteractiveConsole(env_dict)
 
-    def __del__(self):
+    def kill_server(self):
         try:
             self.process.kill()
         except AttributeError:
             pass
+
+    def __del__(self):
+        self.kill_server()
     
     def on_frame(self):
         if self.proxy is not None:

@@ -13,6 +13,7 @@ EventDispatcher::~EventDispatcher()
 	if (event_handler != NULL)
 	{
 		Py_DECREF( event_handler );
+		event_handler = NULL;
 	}
 }
 
@@ -80,11 +81,11 @@ void EventDispatcher::onStart()
   }
 }
 
-void EventDispatcher::onEnd()
+void EventDispatcher::onEnd(bool isWinner)
 {
 	if (event_handler != NULL)
 	{
-		python_func_cleanup( PyObject_CallMethod(event_handler, "onEnd", NULL) );
+		python_func_cleanup( PyObject_CallMethod(event_handler, "onEnd", "i", isWinner) );
 	}
 }
 

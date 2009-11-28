@@ -72,9 +72,14 @@ print "Creating a broodwar instance (of Game)"
 broodwar = pybw_swig.getBroodwar()
 
 print "Adding __repr__ method to classes"
+
 def Position_repr(self):
     return "Position(%s, %s)" % (self.x, self.y)
 pybw_swig.Position.__repr__ = Position_repr
+
+def TilePosition_repr(self):
+    return "TilePosition(%s, %s)" % (self.x, self.y)
+pybw_swig.TilePosition.__repr__ = TilePosition_repr
 
 def UnitType_repr(self):
     return "<UnitType: %s>" % self.name
@@ -87,6 +92,14 @@ pybw_swig.Player.__repr__ = Player_repr
 def Unit_repr(self):
     return "<Unit: %s, player=%s>" % (self.type.name, self.player.name)
 pybw_swig.Unit.__repr__ = Unit_repr
+
+def Race_repr(self):
+    return "<Race: %s>" % (self.name)
+pybw_swig.Race.__repr__ = Race_repr
+
+def Order_repr(self):
+    return "<Order: %s>" % (self.name)
+pybw_swig.Order.__repr__ = Order_repr
 
 
 print "Fixing __eq__ methods in classes"

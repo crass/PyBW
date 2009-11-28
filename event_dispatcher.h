@@ -15,7 +15,7 @@ public:
 	~EventDispatcher();
 
 	void onStart();
-	void onEnd();
+	void onEnd(bool isWinner);
 	void onFrame();
 	void onSendText(std::string text);
 

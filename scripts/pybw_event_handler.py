@@ -1,34 +1,31 @@
 import random
 import pybw_repl
 from pybw_swig import *
+import time
 
-d = dict(globals())
-console_client = pybw_repl.ConsoleClient()
+try:
+    console_client = pybw_repl.ConsoleClient()
+except:
+    print "Error loading ConsoleClient"
+    console_client = None
 
 class PyBW_EventHandler:
     def __init__(self, broodwar):
-        self.broodwar = broodwar
-
-        d['broodwar'] = self.broodwar
-        d['bw'] = self.broodwar
+        d = dict(globals())
+        d['broodwar'] = broodwar
+        d['bw'] = broodwar
         console_client.start_repl(d)
-
 
     def onStart(self):
         print "PyBW is online!"
 
     def onEnd(self, is_winner):
-        print "Match ended. I " + (['lost','won'][is_winner])
+        console_client.kill_server()
 
     def onFrame(self):
-        #for unit in self.broodwar.getSelectedUnits():
-        #    oldpos = unit.getPosition()
-        #    new_pos = oldpos + Position(random.randrange(20)-10, random.randrange(20)-10)
-        #    unit.rightClick(new_pos)
         try:
-            console_client.on_frame()
-        except AttributeError:
-            pass
+            if console_client:
+                console_client.on_frame()
         except Exception, e:
             print "onFrame error", e
 

@@ -7,7 +7,7 @@ void AIModuleImpl::onEnd(bool isWinner)
 {
 	if (event_dispatcher != NULL)
 	{
-		event_dispatcher->onEnd();
+		event_dispatcher->onEnd(isWinner);
 		delete event_dispatcher;
 		event_dispatcher = NULL;
 	}
