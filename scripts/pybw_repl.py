@@ -67,8 +67,11 @@ def main():
                 code_str = '\n'.join(code_list)
                 try:
                     res = i.compile(code_str)
-                except SyntaxError:
+                except SyntaxError, e:
                     res = None
+                    code_list = []
+                    print e
+                    continue
 
                 if res is not None: # this code is complete and without syntax error
                     if code_str:
