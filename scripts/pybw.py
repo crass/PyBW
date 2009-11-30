@@ -81,42 +81,100 @@ def TilePosition_repr(self):
     return "TilePosition(%s, %s)" % (self.x, self.y)
 pybw_swig.TilePosition.__repr__ = TilePosition_repr
 
-def UnitType_repr(self):
-    return "<UnitType: %s>" % self.name
-pybw_swig.UnitType.__repr__ = UnitType_repr
+
+def Force_repr(self):
+    return "<Force: %s, players=%s>" % (self.name, list(self.players))
+pybw_swig.Force.__repr__ = Force_repr
 
 def Player_repr(self):
     return "<Player: %s, race=%s>" % (self.name, self.race)
 pybw_swig.Player.__repr__ = Player_repr
 
+def repr_by_class_and_name(self):
+    return "<%s: %s>" % (self.__class__.__name__, self.name)
+
+pybw_swig.UnitType.__repr__ = repr_by_class_and_name
+pybw_swig.PlayerType.__repr__ = repr_by_class_and_name
+pybw_swig.TechType.__repr__ = repr_by_class_and_name
+pybw_swig.UpgradeType.__repr__ = repr_by_class_and_name
+pybw_swig.WeaponType.__repr__ = repr_by_class_and_name
+pybw_swig.DamageType.__repr__ = repr_by_class_and_name
+pybw_swig.ExplosionType.__repr__ = repr_by_class_and_name
+pybw_swig.Race.__repr__ = repr_by_class_and_name
+pybw_swig.Order.__repr__ = repr_by_class_and_name
+pybw_swig.UnitSizeType.__repr__ = repr_by_class_and_name
+
 def Unit_repr(self):
     return "<Unit: %s, player=%s>" % (self.type.name, self.player.name)
 pybw_swig.Unit.__repr__ = Unit_repr
 
-def Race_repr(self):
-    return "<Race: %s>" % (self.name)
-pybw_swig.Race.__repr__ = Race_repr
+def Error_repr(self):
+    return "<Error: %s>" % self.toString()
+pybw_swig.Error.__repr__ = Error_repr
 
-def Order_repr(self):
-    return "<Order: %s>" % (self.name)
-pybw_swig.Order.__repr__ = Order_repr
+# ToDo ?
+# * BaseLocation
+# * Chokepoint
+# * Region
+# * Polygon
 
 
 print "Fixing __eq__ and __hash__ methods in classes"
-def Player_eq(self, other):
+
+
+
+def eq_by_id(self, other):
     return self.id == other.id
-def Player_hash(self):
+def hash_by_id(self):
     return hash(self.id)
-pybw_swig.Player.__hash__ = Player_hash
-pybw_swig.Player.__eq__ = Player_eq
+
+
+pybw_swig.Player.__hash__ = hash_by_id
+pybw_swig.Player.__eq__ = eq_by_id
+
+pybw_swig.UnitType.__hash__ = hash_by_id
+pybw_swig.UnitType.__eq__ = eq_by_id
+
+pybw_swig.PlayerType.__hash__ = hash_by_id
+pybw_swig.PlayerType.__eq__ = eq_by_id
+
+pybw_swig.TechType.__hash__ = hash_by_id
+pybw_swig.TechType.__eq__ = eq_by_id
+
+pybw_swig.UpgradeType.__hash__ = hash_by_id
+pybw_swig.UpgradeType.__eq__ = eq_by_id
+
+pybw_swig.WeaponType.__hash__ = hash_by_id
+pybw_swig.WeaponType.__eq__ = eq_by_id
+
+pybw_swig.DamageType.__hash__ = hash_by_id
+pybw_swig.DamageType.__eq__ = eq_by_id
+
+pybw_swig.ExplosionType.__hash__ = hash_by_id
+pybw_swig.ExplosionType.__eq__ = eq_by_id
+
+pybw_swig.Race.__hash__ = hash_by_id
+pybw_swig.Race.__eq__ = eq_by_id
+
+pybw_swig.Order.__hash__ = hash_by_id
+pybw_swig.Order.__eq__ = eq_by_id
+
+pybw_swig.UnitSizeType.__hash__ = hash_by_id
+pybw_swig.UnitSizeType.__eq__ = eq_by_id
+
+
+pybw_swig.Error.__hash__ = hash_by_id
+pybw_swig.Error.__eq__ = eq_by_id
+
 
 
 def Force_eq(self, other):
     raise NotImplementedError("Cannot compare forces. Compare force.name instead")
 def Force_hash(self):
-    return hash(self.id)
+    raise NotImplementedError("Cannot calculate hash for force")
 pybw_swig.Force.__hash__ = Force_hash
 pybw_swig.Force.__eq__ = Force_eq
+
 
 def Position_hash(self):
     return hash((self.x, self.y))
@@ -125,6 +183,12 @@ pybw_swig.Position.__hash__ = Position_hash
 def TilePosition_hash(self):
     return hash((self.x, self.y))
 pybw_swig.TilePosition.__hash__ = TilePosition_hash
+
+# ToDo ?
+# * BaseLocation
+# * Chokepoint
+# * Region
+# * Polygon
 
 
 

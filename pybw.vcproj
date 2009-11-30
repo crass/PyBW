@@ -227,10 +227,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\resource.h"
-				>
-			</File>
-			<File
 				RelativePath=".\stdset_wrapper.h"
 				>
 			</File>

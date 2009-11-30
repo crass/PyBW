@@ -5,10 +5,10 @@
 
 #include "event_dispatcher.h"
 
-static bool analyzed;
-static bool analysis_just_finished;
+static bool terrainAnalyzed;
+static bool analysisJustFinished;
 static BWTA::Region* home;
-static BWTA::Region* enemy_base;
+static BWTA::Region* enemyBase;
 DWORD WINAPI AnalyzeThread();
 
 class AIModuleImpl : public BWAPI::AIModule
@@ -21,6 +21,7 @@ public:
   virtual void onStart();
   virtual void onEnd(bool isWinner);
   virtual void onFrame();
+
   virtual bool onSendText(std::string text);
   virtual void onUnitCreate(BWAPI::Unit* unit);
   virtual void onUnitDestroy(BWAPI::Unit* unit);
@@ -33,9 +34,9 @@ public:
   virtual void onUnitRenegade(BWAPI::Unit* unit);
 
 
-  void drawStats(); //not part of BWAPI::AIModule
-  void showPlayers();
-  void showForces();
-  std::map<BWAPI::Unit*,BWAPI::UnitType> buildings;
-  
+  //not part of BWAPI::AIModule
+  void drawTerrainAnalysis();
+  void drawStats();
+  void printPlayers();
+  void printForces();
 };
