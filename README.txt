@@ -12,9 +12,9 @@ How to Compile & Run
 ======================
 
 Get PyBW source code through the SVN
-Make sure you have "BWAPI_Beta_2.3" (latest release at the moment of writing this)
+Make sure you have "BWAPI_Beta_2.4" (latest release at the moment of writing this)
 Make sure you have Python (tested only with 2.6)
-Put PyBW in the same parent directory as BWAPI_Beta_2.3 (so they are right next to each other), unless you want to edit the paths on the PyBW project settings.
+Put PyBW in the same parent directory as BWAPI_Beta_2.4 (so they are right next to each other), unless you want to edit the paths on the PyBW project settings.
 Open solution file in Visual Studio
 Set build to "release"
 Build solution
