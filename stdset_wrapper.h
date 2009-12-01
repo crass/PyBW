@@ -13,12 +13,12 @@
 
 class UnitSet
 {
-	std::set<BWAPI::Unit*> units;
-	std::set<BWAPI::Unit*>::iterator iterator;
+	const std::set<BWAPI::Unit*> units;
+	std::set<BWAPI::Unit*>::const_iterator iterator;
 
 public:
 
-	UnitSet(std::set<BWAPI::Unit*>& _units)
+	UnitSet(const std::set<BWAPI::Unit*>& _units)
 		: units(_units)
 	{
 		__iter__();

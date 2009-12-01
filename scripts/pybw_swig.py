@@ -301,6 +301,14 @@ def analyze():
   return _pybw_swig.analyze()
 analyze = _pybw_swig.analyze
 
+def getUnwalkablePolygons():
+  return _pybw_swig.getUnwalkablePolygons()
+getUnwalkablePolygons = _pybw_swig.getUnwalkablePolygons
+
+def getNearestUnwalkablePosition(*args):
+  return _pybw_swig.getNearestUnwalkablePosition(*args)
+getNearestUnwalkablePosition = _pybw_swig.getNearestUnwalkablePosition
+
 def getBroodwar():
   return _pybw_swig.getBroodwar()
 getBroodwar = _pybw_swig.getBroodwar
@@ -556,16 +564,17 @@ class Game(_object):
     def mapHeight(self): return _pybw_swig.Game_mapHeight(self)
     def mapFilename(self): return _pybw_swig.Game_mapFilename(self)
     def mapName(self): return _pybw_swig.Game_mapName(self)
-    def buildable(self, *args): return _pybw_swig.Game_buildable(self, *args)
-    def walkable(self, *args): return _pybw_swig.Game_walkable(self, *args)
-    def visible(self, *args): return _pybw_swig.Game_visible(self, *args)
+    def getMapHash(self): return _pybw_swig.Game_getMapHash(self)
+    def getGroundHeight(self, *args): return _pybw_swig.Game_getGroundHeight(self, *args)
+    def isWalkable(self, *args): return _pybw_swig.Game_isWalkable(self, *args)
+    def isBuildable(self, *args): return _pybw_swig.Game_isBuildable(self, *args)
+    def isVisible(self, *args): return _pybw_swig.Game_isVisible(self, *args)
+    def isExplored(self, *args): return _pybw_swig.Game_isExplored(self, *args)
     def hasCreep(self, *args): return _pybw_swig.Game_hasCreep(self, *args)
     def hasPower(self, *args): return _pybw_swig.Game_hasPower(self, *args)
     def canMake(self, *args): return _pybw_swig.Game_canMake(self, *args)
     def canResearch(self, *args): return _pybw_swig.Game_canResearch(self, *args)
     def canUpgrade(self, *args): return _pybw_swig.Game_canUpgrade(self, *args)
-    def groundHeight(self, *args): return _pybw_swig.Game_groundHeight(self, *args)
-    def getMapHash(self): return _pybw_swig.Game_getMapHash(self)
     def printf(self, *args): return _pybw_swig.Game_printf(self, *args)
     def sendText(self, *args): return _pybw_swig.Game_sendText(self, *args)
     def changeRace(self, *args): return _pybw_swig.Game_changeRace(self, *args)
@@ -1199,6 +1208,7 @@ class Unit(_object):
     def isUnpowered(self): return _pybw_swig.Unit_isUnpowered(self)
     def isUpgrading(self): return _pybw_swig.Unit_isUpgrading(self)
     def isVisible(self): return _pybw_swig.Unit_isVisible(self)
+    def isBeingGathered(self): return _pybw_swig.Unit_isBeingGathered(self)
     def attackMove(self, *args): return _pybw_swig.Unit_attackMove(self, *args)
     def attackUnit(self, *args): return _pybw_swig.Unit_attackUnit(self, *args)
     def rightClick(self, *args): return _pybw_swig.Unit_rightClick(self, *args)
@@ -1700,7 +1710,7 @@ Psi_Blades = cvar.Psi_Blades
 Phase_Disruptor = cvar.Phase_Disruptor
 Psionic_Shockwave = cvar.Psionic_Shockwave
 Dual_Photon_Blasters = cvar.Dual_Photon_Blasters
-Anti_matter_Missiles = cvar.Anti_matter_Missiles
+Anti_Matter_Missiles = cvar.Anti_Matter_Missiles
 Phase_Disruptor_Cannon = cvar.Phase_Disruptor_Cannon
 Pulse_Cannon = cvar.Pulse_Cannon
 STS_Photon_Cannon = cvar.STS_Photon_Cannon
@@ -1765,6 +1775,7 @@ class Polygon(PositionList):
     def getPerimeter(self): return _pybw_swig.Polygon_getPerimeter(self)
     def getCenter(self): return _pybw_swig.Polygon_getCenter(self)
     def isInside(self, *args): return _pybw_swig.Polygon_isInside(self, *args)
+    def getNearestPoint(self, *args): return _pybw_swig.Polygon_getNearestPoint(self, *args)
     __swig_destroy__ = _pybw_swig.delete_Polygon
     __del__ = lambda self : None;
 Polygon_swigregister = _pybw_swig.Polygon_swigregister

@@ -1,6 +1,7 @@
 //%newobject BWAPI::Player::getUnits;
 
-%template(UnitType_Int_Pair) std::vector<BWAPI::Position>;
+//%template(UnitType_Int_Pair) std::vector<const BWAPI::UnitType*, int>;
+%template(PositionList) std::vector<BWAPI::Position>;
 //std::pair< const UnitType*, int >
 
 %extend BWAPI::Player {

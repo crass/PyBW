@@ -2711,12 +2711,12 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_BaseLocationSet swig_types[23]
 #define SWIGTYPE_p_ChokepointSet swig_types[24]
 #define SWIGTYPE_p_ForceSet swig_types[25]
-#define SWIGTYPE_p_Latency__Enum swig_types[26]
-#define SWIGTYPE_p_PlayerSet swig_types[27]
-#define SWIGTYPE_p_Position swig_types[28]
-#define SWIGTYPE_p_Race swig_types[29]
-#define SWIGTYPE_p_RegionSet swig_types[30]
-#define SWIGTYPE_p_TechType swig_types[31]
+#define SWIGTYPE_p_PlayerSet swig_types[26]
+#define SWIGTYPE_p_Position swig_types[27]
+#define SWIGTYPE_p_Race swig_types[28]
+#define SWIGTYPE_p_RegionSet swig_types[29]
+#define SWIGTYPE_p_TechType swig_types[30]
+#define SWIGTYPE_p_TilePosition swig_types[31]
 #define SWIGTYPE_p_TilePositionSet swig_types[32]
 #define SWIGTYPE_p_UnitSet swig_types[33]
 #define SWIGTYPE_p_UpgradeType swig_types[34]
@@ -2728,7 +2728,7 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_std__invalid_argument swig_types[40]
 #define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[41]
 #define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[42]
-#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[43]
+#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_std__lessT_BWAPI__UnitType_const_p_t_std__allocatorT_std__pairT_BWAPI__UnitType_const_pconst_int_t_t_t swig_types[43]
 #define SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t swig_types[44]
 #define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[45]
 #define SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t swig_types[46]
@@ -2753,14 +2753,15 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[65]
 #define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[66]
 #define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[67]
-#define SWIGTYPE_p_std__string swig_types[68]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[69]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[70]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[71]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[72]
-#define SWIGTYPE_p_value_type swig_types[73]
-static swig_type_info *swig_types[75];
-static swig_module_info swig_module = {swig_types, 74, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__setT_Polygon_p_t swig_types[68]
+#define SWIGTYPE_p_std__string swig_types[69]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[70]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[71]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[72]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[73]
+#define SWIGTYPE_p_value_type swig_types[74]
+static swig_type_info *swig_types[76];
+static swig_module_info swig_module = {swig_types, 75, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3205,6 +3206,14 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #include <vector>
 
 
+#include <utility>
+
+
+#include <map>
+#include <algorithm>
+#include <stdexcept>
+
+
 #include "stdset_wrapper.h"
 
 PyObject* _getSwigUnit(BWAPI::Unit* unit)
@@ -3230,9 +3239,6 @@ SWIG_From_int  (int value)
 {    
   return SWIG_From_long  (value);
 }
-
-
-using namespace BWAPI;
 
 
 namespace swig {  
@@ -4323,6 +4329,9 @@ SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg____setitem____SWIG_1(std::vector
 SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg__append(std::vector< BWAPI::Position > *self,std::vector< BWAPI::Position >::value_type const &x){
       self->push_back(x);
     }
+
+using namespace BWAPI;
+
 
     RegionSet* TA_getRegions()
     {
@@ -5572,15 +5581,15 @@ SWIGINTERN PyObject *_wrap_new_UnitSet(PyObject *SWIGUNUSEDPARM(self), PyObject 
   UnitSet *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)"O:new_UnitSet",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_std__setT_BWAPI__Unit_p_t,  0 );
+  res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_std__setT_BWAPI__Unit_p_t,  0  | 0);
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UnitSet" "', argument " "1"" of type '" "std::set< BWAPI::Unit * > &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UnitSet" "', argument " "1"" of type '" "std::set< BWAPI::Unit * > const &""'"); 
   }
   if (!argp1) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UnitSet" "', argument " "1"" of type '" "std::set< BWAPI::Unit * > &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UnitSet" "', argument " "1"" of type '" "std::set< BWAPI::Unit * > const &""'"); 
   }
   arg1 = reinterpret_cast< std::set< BWAPI::Unit * > * >(argp1);
-  result = (UnitSet *)new UnitSet(*arg1);
+  result = (UnitSet *)new UnitSet((std::set< BWAPI::Unit * > const &)*arg1);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_UnitSet, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -8272,6 +8281,49 @@ SWIGINTERN PyObject *_wrap_analyze(PyObject *SWIGUNUSEDPARM(self), PyObject *arg
   if (!PyArg_ParseTuple(args,(char *)":analyze")) SWIG_fail;
   BWTA::analyze();
   resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_getUnwalkablePolygons(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::set< Polygon * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":getUnwalkablePolygons")) SWIG_fail;
+  result = (std::set< Polygon * > *) &BWTA::getUnwalkablePolygons();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_Polygon_p_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_getNearestUnwalkablePosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Position arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:getNearestUnwalkablePosition",&obj0)) SWIG_fail;
+  {
+    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "getNearestUnwalkablePosition" "', argument " "1"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getNearestUnwalkablePosition" "', argument " "1"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp1);
+      arg1 = *temp;
+      if (SWIG_IsNewObj(res1)) delete temp;
+    }
+  }
+  result = BWTA::getNearestUnwalkablePosition(arg1);
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -11092,7 +11144,7 @@ SWIGINTERN PyObject *_wrap_Game_getLatency(PyObject *SWIGUNUSEDPARM(self), PyObj
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  Latency::Enum result;
+  int result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:Game_getLatency",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
@@ -11100,8 +11152,8 @@ SWIGINTERN PyObject *_wrap_Game_getLatency(PyObject *SWIGUNUSEDPARM(self), PyObj
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getLatency" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
-  result = (arg1)->getLatency();
-  resultobj = SWIG_NewPointerObj((new Latency::Enum(static_cast< const Latency::Enum& >(result))), SWIGTYPE_p_Latency__Enum, SWIG_POINTER_OWN |  0 );
+  result = (int)(arg1)->getLatency();
+  resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
   return NULL;
@@ -11221,7 +11273,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_isFlagEnabled(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::Flag::Enum arg2 ;
+  int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int val2 ;
@@ -11238,9 +11290,9 @@ SWIGINTERN PyObject *_wrap_Game_isFlagEnabled(PyObject *SWIGUNUSEDPARM(self), Py
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_isFlagEnabled" "', argument " "2"" of type '" "BWAPI::Flag::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_isFlagEnabled" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::Flag::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   result = (bool)(arg1)->isFlagEnabled(arg2);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
@@ -11252,7 +11304,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_enableFlag(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::Flag::Enum arg2 ;
+  int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
   int val2 ;
@@ -11268,9 +11320,9 @@ SWIGINTERN PyObject *_wrap_Game_enableFlag(PyObject *SWIGUNUSEDPARM(self), PyObj
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_enableFlag" "', argument " "2"" of type '" "BWAPI::Flag::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_enableFlag" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::Flag::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   (arg1)->enableFlag(arg2);
   resultobj = SWIG_Py_Void();
   return resultobj;
@@ -11389,7 +11441,69 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Game_buildable(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Game_getMapHash(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Game_getMapHash",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getMapHash" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  result = (int)(arg1)->getMapHash();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_getGroundHeight(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_getGroundHeight",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getGroundHeight" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_getGroundHeight" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_getGroundHeight" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  result = (int)(arg1)->getGroundHeight(arg2,arg3);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_isWalkable(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   int arg2 ;
@@ -11405,23 +11519,23 @@ SWIGINTERN PyObject *_wrap_Game_buildable(PyObject *SWIGUNUSEDPARM(self), PyObje
   PyObject * obj2 = 0 ;
   bool result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_buildable",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_isWalkable",&obj0,&obj1,&obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_buildable" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_isWalkable" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_buildable" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_isWalkable" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_buildable" "', argument " "3"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_isWalkable" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (bool)(arg1)->buildable(arg2,arg3);
+  result = (bool)(arg1)->isWalkable(arg2,arg3);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -11429,7 +11543,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Game_walkable(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Game_isBuildable__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   int arg2 ;
@@ -11445,23 +11559,23 @@ SWIGINTERN PyObject *_wrap_Game_walkable(PyObject *SWIGUNUSEDPARM(self), PyObjec
   PyObject * obj2 = 0 ;
   bool result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_walkable",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_isBuildable",&obj0,&obj1,&obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_walkable" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_isBuildable" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_walkable" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_isBuildable" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_walkable" "', argument " "3"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_isBuildable" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (bool)(arg1)->walkable(arg2,arg3);
+  result = (bool)(arg1)->isBuildable(arg2,arg3);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -11469,7 +11583,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Game_visible(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Game_isVisible__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   int arg2 ;
@@ -11485,23 +11599,23 @@ SWIGINTERN PyObject *_wrap_Game_visible(PyObject *SWIGUNUSEDPARM(self), PyObject
   PyObject * obj2 = 0 ;
   bool result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_visible",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_isVisible",&obj0,&obj1,&obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_visible" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_isVisible" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_visible" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_isVisible" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_visible" "', argument " "3"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_isVisible" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (bool)(arg1)->visible(arg2,arg3);
+  result = (bool)(arg1)->isVisible(arg2,arg3);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -11509,7 +11623,47 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Game_hasCreep(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Game_isExplored__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_isExplored",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_isExplored" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_isExplored" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_isExplored" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  result = (bool)(arg1)->isExplored(arg2,arg3);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_hasCreep__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   int arg2 ;
@@ -11549,7 +11703,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Game_hasPower(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Game_hasPower__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   int arg2 ;
@@ -11603,6 +11757,513 @@ SWIGINTERN PyObject *_wrap_Game_hasPower(PyObject *SWIGUNUSEDPARM(self), PyObjec
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_isBuildable__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  TilePosition arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Game_isBuildable",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_isBuildable" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_TilePosition,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_isBuildable" "', argument " "2"" of type '" "TilePosition""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_isBuildable" "', argument " "2"" of type '" "TilePosition""'");
+    } else {
+      TilePosition * temp = reinterpret_cast< TilePosition * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)(arg1)->isBuildable(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_isBuildable(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 3); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_TilePosition, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Game_isBuildable__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_Game_isBuildable__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_isBuildable'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    isBuildable(BWAPI::Game *,int,int)\n"
+    "    isBuildable(BWAPI::Game *,TilePosition)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_isVisible__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  TilePosition arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Game_isVisible",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_isVisible" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_TilePosition,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_isVisible" "', argument " "2"" of type '" "TilePosition""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_isVisible" "', argument " "2"" of type '" "TilePosition""'");
+    } else {
+      TilePosition * temp = reinterpret_cast< TilePosition * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)(arg1)->isVisible(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_isVisible(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 3); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_TilePosition, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Game_isVisible__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_Game_isVisible__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_isVisible'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    isVisible(BWAPI::Game *,int,int)\n"
+    "    isVisible(BWAPI::Game *,TilePosition)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_isExplored__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  TilePosition arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Game_isExplored",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_isExplored" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_TilePosition,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_isExplored" "', argument " "2"" of type '" "TilePosition""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_isExplored" "', argument " "2"" of type '" "TilePosition""'");
+    } else {
+      TilePosition * temp = reinterpret_cast< TilePosition * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)(arg1)->isExplored(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_isExplored(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 3); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_TilePosition, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Game_isExplored__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_Game_isExplored__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_isExplored'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    isExplored(BWAPI::Game *,int,int)\n"
+    "    isExplored(BWAPI::Game *,TilePosition)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_hasCreep__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  TilePosition arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Game_hasCreep",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_hasCreep" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_TilePosition,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_hasCreep" "', argument " "2"" of type '" "TilePosition""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_hasCreep" "', argument " "2"" of type '" "TilePosition""'");
+    } else {
+      TilePosition * temp = reinterpret_cast< TilePosition * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)(arg1)->hasCreep(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_hasCreep(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 3); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_TilePosition, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Game_hasCreep__SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          return _wrap_Game_hasCreep__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_hasCreep'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    hasCreep(BWAPI::Game *,int,int)\n"
+    "    hasCreep(BWAPI::Game *,TilePosition)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_hasPower__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  TilePosition arg2 ;
+  int arg3 ;
+  int arg4 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:Game_hasPower",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_hasPower" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_TilePosition,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_hasPower" "', argument " "2"" of type '" "TilePosition""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_hasPower" "', argument " "2"" of type '" "TilePosition""'");
+    } else {
+      TilePosition * temp = reinterpret_cast< TilePosition * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_hasPower" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  ecode4 = SWIG_AsVal_int(obj3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "Game_hasPower" "', argument " "4"" of type '" "int""'");
+  } 
+  arg4 = static_cast< int >(val4);
+  result = (bool)(arg1)->hasPower(arg2,arg3,arg4);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_hasPower(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[6];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 5); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 4) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_TilePosition, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          {
+            int res = SWIG_AsVal_int(argv[3], NULL);
+            _v = SWIG_CheckState(res);
+          }
+          if (_v) {
+            return _wrap_Game_hasPower__SWIG_1(self, args);
+          }
+        }
+      }
+    }
+  }
+  if (argc == 5) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          {
+            int res = SWIG_AsVal_int(argv[3], NULL);
+            _v = SWIG_CheckState(res);
+          }
+          if (_v) {
+            {
+              int res = SWIG_AsVal_int(argv[4], NULL);
+              _v = SWIG_CheckState(res);
+            }
+            if (_v) {
+              return _wrap_Game_hasPower__SWIG_0(self, args);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_hasPower'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    hasPower(BWAPI::Game *,int,int,int,int)\n"
+    "    hasPower(BWAPI::Game *,TilePosition,int,int)\n");
   return NULL;
 }
 
@@ -11745,68 +12406,6 @@ SWIGINTERN PyObject *_wrap_Game_canUpgrade(PyObject *SWIGUNUSEDPARM(self), PyObj
   }
   result = (bool)(arg1)->canUpgrade(arg2,arg3);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Game_groundHeight(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  int arg2 ;
-  int arg3 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  int val2 ;
-  int ecode2 = 0 ;
-  int val3 ;
-  int ecode3 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_groundHeight",&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_groundHeight" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
-  ecode2 = SWIG_AsVal_int(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_groundHeight" "', argument " "2"" of type '" "int""'");
-  } 
-  arg2 = static_cast< int >(val2);
-  ecode3 = SWIG_AsVal_int(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_groundHeight" "', argument " "3"" of type '" "int""'");
-  } 
-  arg3 = static_cast< int >(val3);
-  result = (int)(arg1)->groundHeight(arg2,arg3);
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Game_getMapHash(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Game_getMapHash",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getMapHash" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
-  result = (int)(arg1)->getMapHash();
-  resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
   return NULL;
@@ -12260,7 +12859,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawText__varargs__(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *varargs) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   char *arg5 = (char *) 0 ;
@@ -12290,9 +12889,9 @@ SWIGINTERN PyObject *_wrap_Game_drawText__varargs__(PyObject *SWIGUNUSEDPARM(sel
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawText" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawText" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawText" "', argument " "3"" of type '" "int""'");
@@ -12533,7 +13132,7 @@ SWIGINTERN PyObject *_wrap_Game_drawTextScreen(PyObject *self, PyObject *args) {
 SWIGINTERN PyObject *_wrap_Game_drawBox__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -12573,9 +13172,9 @@ SWIGINTERN PyObject *_wrap_Game_drawBox__SWIG_0(PyObject *SWIGUNUSEDPARM(self), 
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawBox" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawBox" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawBox" "', argument " "3"" of type '" "int""'");
@@ -12625,7 +13224,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawBox__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -12661,9 +13260,9 @@ SWIGINTERN PyObject *_wrap_Game_drawBox__SWIG_1(PyObject *SWIGUNUSEDPARM(self), 
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawBox" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawBox" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawBox" "', argument " "3"" of type '" "int""'");
@@ -12811,8 +13410,8 @@ SWIGINTERN PyObject *_wrap_Game_drawBox(PyObject *self, PyObject *args) {
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_drawBox'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    drawBox(BWAPI::Game *,BWAPI::CoordinateType::Enum,int,int,int,int,BWAPI::Color,bool)\n"
-    "    drawBox(BWAPI::Game *,BWAPI::CoordinateType::Enum,int,int,int,int,BWAPI::Color)\n");
+    "    drawBox(BWAPI::Game *,int,int,int,int,int,BWAPI::Color,bool)\n"
+    "    drawBox(BWAPI::Game *,int,int,int,int,int,BWAPI::Color)\n");
   return NULL;
 }
 
@@ -13591,7 +14190,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawTriangle__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -13639,9 +14238,9 @@ SWIGINTERN PyObject *_wrap_Game_drawTriangle__SWIG_0(PyObject *SWIGUNUSEDPARM(se
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawTriangle" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawTriangle" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawTriangle" "', argument " "3"" of type '" "int""'");
@@ -13701,7 +14300,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawTriangle__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -13745,9 +14344,9 @@ SWIGINTERN PyObject *_wrap_Game_drawTriangle__SWIG_1(PyObject *SWIGUNUSEDPARM(se
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawTriangle" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawTriangle" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawTriangle" "', argument " "3"" of type '" "int""'");
@@ -13929,8 +14528,8 @@ SWIGINTERN PyObject *_wrap_Game_drawTriangle(PyObject *self, PyObject *args) {
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_drawTriangle'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    drawTriangle(BWAPI::Game *,BWAPI::CoordinateType::Enum,int,int,int,int,int,int,BWAPI::Color,bool)\n"
-    "    drawTriangle(BWAPI::Game *,BWAPI::CoordinateType::Enum,int,int,int,int,int,int,BWAPI::Color)\n");
+    "    drawTriangle(BWAPI::Game *,int,int,int,int,int,int,int,BWAPI::Color,bool)\n"
+    "    drawTriangle(BWAPI::Game *,int,int,int,int,int,int,int,BWAPI::Color)\n");
   return NULL;
 }
 
@@ -14889,7 +15488,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawCircle__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -14925,9 +15524,9 @@ SWIGINTERN PyObject *_wrap_Game_drawCircle__SWIG_0(PyObject *SWIGUNUSEDPARM(self
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawCircle" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawCircle" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawCircle" "', argument " "3"" of type '" "int""'");
@@ -14972,7 +15571,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawCircle__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -15004,9 +15603,9 @@ SWIGINTERN PyObject *_wrap_Game_drawCircle__SWIG_1(PyObject *SWIGUNUSEDPARM(self
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawCircle" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawCircle" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawCircle" "', argument " "3"" of type '" "int""'");
@@ -15137,8 +15736,8 @@ SWIGINTERN PyObject *_wrap_Game_drawCircle(PyObject *self, PyObject *args) {
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_drawCircle'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    drawCircle(BWAPI::Game *,BWAPI::CoordinateType::Enum,int,int,int,BWAPI::Color,bool)\n"
-    "    drawCircle(BWAPI::Game *,BWAPI::CoordinateType::Enum,int,int,int,BWAPI::Color)\n");
+    "    drawCircle(BWAPI::Game *,int,int,int,int,BWAPI::Color,bool)\n"
+    "    drawCircle(BWAPI::Game *,int,int,int,int,BWAPI::Color)\n");
   return NULL;
 }
 
@@ -15827,7 +16426,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawEllipse__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -15867,9 +16466,9 @@ SWIGINTERN PyObject *_wrap_Game_drawEllipse__SWIG_0(PyObject *SWIGUNUSEDPARM(sel
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawEllipse" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawEllipse" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawEllipse" "', argument " "3"" of type '" "int""'");
@@ -15919,7 +16518,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawEllipse__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -15955,9 +16554,9 @@ SWIGINTERN PyObject *_wrap_Game_drawEllipse__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawEllipse" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawEllipse" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawEllipse" "', argument " "3"" of type '" "int""'");
@@ -16105,8 +16704,8 @@ SWIGINTERN PyObject *_wrap_Game_drawEllipse(PyObject *self, PyObject *args) {
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'Game_drawEllipse'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    drawEllipse(BWAPI::Game *,BWAPI::CoordinateType::Enum,int,int,int,int,BWAPI::Color,bool)\n"
-    "    drawEllipse(BWAPI::Game *,BWAPI::CoordinateType::Enum,int,int,int,int,BWAPI::Color)\n");
+    "    drawEllipse(BWAPI::Game *,int,int,int,int,int,BWAPI::Color,bool)\n"
+    "    drawEllipse(BWAPI::Game *,int,int,int,int,int,BWAPI::Color)\n");
   return NULL;
 }
 
@@ -16885,7 +17484,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawDot(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   BWAPI::Color arg5 ;
@@ -16913,9 +17512,9 @@ SWIGINTERN PyObject *_wrap_Game_drawDot(PyObject *SWIGUNUSEDPARM(self), PyObject
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawDot" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawDot" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawDot" "', argument " "3"" of type '" "int""'");
@@ -17118,7 +17717,7 @@ fail:
 SWIGINTERN PyObject *_wrap_Game_drawLine(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  BWAPI::CoordinateType::Enum arg2 ;
+  int arg2 ;
   int arg3 ;
   int arg4 ;
   int arg5 ;
@@ -17154,9 +17753,9 @@ SWIGINTERN PyObject *_wrap_Game_drawLine(PyObject *SWIGUNUSEDPARM(self), PyObjec
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawLine" "', argument " "2"" of type '" "BWAPI::CoordinateType::Enum""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_drawLine" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< BWAPI::CoordinateType::Enum >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_drawLine" "', argument " "3"" of type '" "int""'");
@@ -26989,6 +27588,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Unit_isBeingGathered(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_isBeingGathered",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_isBeingGathered" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (bool)((BWAPI::Unit const *)arg1)->isBeingGathered();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Unit_attackMove(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -29165,7 +29786,7 @@ SWIGINTERN PyObject *_wrap_UnitType_whatBuilds(PyObject *SWIGUNUSEDPARM(self), P
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  std::pair< BWAPI::UnitType const *,int > result;
+  SwigValueWrapper< std::pair< BWAPI::UnitType const *,int > > result;
   
   if (!PyArg_ParseTuple(args,(char *)"O:UnitType_whatBuilds",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
@@ -29187,7 +29808,7 @@ SWIGINTERN PyObject *_wrap_UnitType_requiredUnits(PyObject *SWIGUNUSEDPARM(self)
   void *argp1 = 0 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
-  std::map< BWAPI::UnitType const *,int > *result = 0 ;
+  std::map< BWAPI::UnitType const *,int,std::less< BWAPI::UnitType const * >,std::allocator< std::pair< BWAPI::UnitType const *const,int > > > *result = 0 ;
   
   if (!PyArg_ParseTuple(args,(char *)"O:UnitType_requiredUnits",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
@@ -29195,8 +29816,8 @@ SWIGINTERN PyObject *_wrap_UnitType_requiredUnits(PyObject *SWIGUNUSEDPARM(self)
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_requiredUnits" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
-  result = (std::map< BWAPI::UnitType const *,int > *) &((BWAPI::UnitType const *)arg1)->requiredUnits();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  result = (std::map< BWAPI::UnitType const *,int,std::less< BWAPI::UnitType const * >,std::allocator< std::pair< BWAPI::UnitType const *const,int > > > *) &((BWAPI::UnitType const *)arg1)->requiredUnits();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_std__lessT_BWAPI__UnitType_const_p_t_std__allocatorT_std__pairT_BWAPI__UnitType_const_pconst_int_t_t_t, 0 |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -34915,16 +35536,16 @@ SWIGINTERN PyObject *Swig_var_Dual_Photon_Blasters_get(void) {
 }
 
 
-SWIGINTERN int Swig_var_Anti_matter_Missiles_set(PyObject *) {
-  SWIG_Error(SWIG_AttributeError,"Variable Anti_matter_Missiles is read-only.");
+SWIGINTERN int Swig_var_Anti_Matter_Missiles_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Anti_Matter_Missiles is read-only.");
   return 1;
 }
 
 
-SWIGINTERN PyObject *Swig_var_Anti_matter_Missiles_get(void) {
+SWIGINTERN PyObject *Swig_var_Anti_Matter_Missiles_get(void) {
   PyObject *pyobj = 0;
   
-  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Anti_matter_Missiles), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Anti_Matter_Missiles), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -35929,6 +36550,45 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Polygon_getNearestPoint(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  BWAPI::Position arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Polygon_getNearestPoint",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Polygon_getNearestPoint" "', argument " "1"" of type '" "BWTA::Polygon const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Polygon_getNearestPoint" "', argument " "2"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Polygon_getNearestPoint" "', argument " "2"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = ((BWTA::Polygon const *)arg1)->getNearestPoint(arg2);
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_delete_Polygon(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
@@ -36177,6 +36837,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"TA_getStartLocations", _wrap_TA_getStartLocations, METH_VARARGS, NULL},
 	 { (char *)"readMap", _wrap_readMap, METH_VARARGS, NULL},
 	 { (char *)"analyze", _wrap_analyze, METH_VARARGS, NULL},
+	 { (char *)"getUnwalkablePolygons", _wrap_getUnwalkablePolygons, METH_VARARGS, NULL},
+	 { (char *)"getNearestUnwalkablePosition", _wrap_getNearestUnwalkablePosition, METH_VARARGS, NULL},
 	 { (char *)"getBroodwar", _wrap_getBroodwar, METH_VARARGS, NULL},
 	 { (char *)"_getSwigUnit", _wrap__getSwigUnit, METH_VARARGS, NULL},
 	 { (char *)"_getSwigPlayer", _wrap__getSwigPlayer, METH_VARARGS, NULL},
@@ -36253,16 +36915,17 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Game_mapHeight", _wrap_Game_mapHeight, METH_VARARGS, NULL},
 	 { (char *)"Game_mapFilename", _wrap_Game_mapFilename, METH_VARARGS, NULL},
 	 { (char *)"Game_mapName", _wrap_Game_mapName, METH_VARARGS, NULL},
-	 { (char *)"Game_buildable", _wrap_Game_buildable, METH_VARARGS, NULL},
-	 { (char *)"Game_walkable", _wrap_Game_walkable, METH_VARARGS, NULL},
-	 { (char *)"Game_visible", _wrap_Game_visible, METH_VARARGS, NULL},
+	 { (char *)"Game_getMapHash", _wrap_Game_getMapHash, METH_VARARGS, NULL},
+	 { (char *)"Game_getGroundHeight", _wrap_Game_getGroundHeight, METH_VARARGS, NULL},
+	 { (char *)"Game_isWalkable", _wrap_Game_isWalkable, METH_VARARGS, NULL},
+	 { (char *)"Game_isBuildable", _wrap_Game_isBuildable, METH_VARARGS, NULL},
+	 { (char *)"Game_isVisible", _wrap_Game_isVisible, METH_VARARGS, NULL},
+	 { (char *)"Game_isExplored", _wrap_Game_isExplored, METH_VARARGS, NULL},
 	 { (char *)"Game_hasCreep", _wrap_Game_hasCreep, METH_VARARGS, NULL},
 	 { (char *)"Game_hasPower", _wrap_Game_hasPower, METH_VARARGS, NULL},
 	 { (char *)"Game_canMake", _wrap_Game_canMake, METH_VARARGS, NULL},
 	 { (char *)"Game_canResearch", _wrap_Game_canResearch, METH_VARARGS, NULL},
 	 { (char *)"Game_canUpgrade", _wrap_Game_canUpgrade, METH_VARARGS, NULL},
-	 { (char *)"Game_groundHeight", _wrap_Game_groundHeight, METH_VARARGS, NULL},
-	 { (char *)"Game_getMapHash", _wrap_Game_getMapHash, METH_VARARGS, NULL},
 	 { (char *)"Game_printf", _wrap_Game_printf, METH_VARARGS, NULL},
 	 { (char *)"Game_sendText", _wrap_Game_sendText, METH_VARARGS, NULL},
 	 { (char *)"Game_changeRace", _wrap_Game_changeRace, METH_VARARGS, NULL},
@@ -36524,6 +37187,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_isUnpowered", _wrap_Unit_isUnpowered, METH_VARARGS, NULL},
 	 { (char *)"Unit_isUpgrading", _wrap_Unit_isUpgrading, METH_VARARGS, NULL},
 	 { (char *)"Unit_isVisible", _wrap_Unit_isVisible, METH_VARARGS, NULL},
+	 { (char *)"Unit_isBeingGathered", _wrap_Unit_isBeingGathered, METH_VARARGS, NULL},
 	 { (char *)"Unit_attackMove", _wrap_Unit_attackMove, METH_VARARGS, NULL},
 	 { (char *)"Unit_attackUnit", _wrap_Unit_attackUnit, METH_VARARGS, NULL},
 	 { (char *)"Unit_rightClick", _wrap_Unit_rightClick, METH_VARARGS, NULL},
@@ -36725,6 +37389,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Polygon_getPerimeter", _wrap_Polygon_getPerimeter, METH_VARARGS, NULL},
 	 { (char *)"Polygon_getCenter", _wrap_Polygon_getCenter, METH_VARARGS, NULL},
 	 { (char *)"Polygon_isInside", _wrap_Polygon_isInside, METH_VARARGS, NULL},
+	 { (char *)"Polygon_getNearestPoint", _wrap_Polygon_getNearestPoint, METH_VARARGS, NULL},
 	 { (char *)"delete_Polygon", _wrap_delete_Polygon, METH_VARARGS, NULL},
 	 { (char *)"Polygon_swigregister", Polygon_swigregister, METH_VARARGS, NULL},
 	 { (char *)"Region_getPolygon", _wrap_Region_getPolygon, METH_VARARGS, NULL},
@@ -36768,12 +37433,12 @@ static swig_type_info _swigt__p_BWTA__Region = {"_p_BWTA__Region", "BWTA::Region
 static swig_type_info _swigt__p_BaseLocationSet = {"_p_BaseLocationSet", "BaseLocationSet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ChokepointSet = {"_p_ChokepointSet", "ChokepointSet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ForceSet = {"_p_ForceSet", "ForceSet *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_Latency__Enum = {"_p_Latency__Enum", "Latency::Enum *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_PlayerSet = {"_p_PlayerSet", "PlayerSet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Position = {"_p_Position", "Position *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Race = {"_p_Race", "Race *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_RegionSet = {"_p_RegionSet", "RegionSet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TechType = {"_p_TechType", "TechType *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_TilePosition = {"_p_TilePosition", "TilePosition *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TilePositionSet = {"_p_TilePositionSet", "TilePositionSet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UnitSet = {"_p_UnitSet", "UnitSet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UpgradeType = {"_p_UpgradeType", "UpgradeType *", 0, 0, (void*)0, 0};
@@ -36785,7 +37450,7 @@ static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__listT_BWAPI__UnitType_t = {"_p_std__listT_BWAPI__UnitType_t", "std::list< BWAPI::UnitType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__listT_BWAPI__Unit_p_t = {"_p_std__listT_BWAPI__Unit_p_t", "std::list< BWAPI::Unit * > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t = {"_p_std__mapT_BWAPI__UnitType_const_p_int_t", "std::map< BWAPI::UnitType const *,int > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__mapT_BWAPI__UnitType_const_p_int_std__lessT_BWAPI__UnitType_const_p_t_std__allocatorT_std__pairT_BWAPI__UnitType_const_pconst_int_t_t_t = {"_p_std__mapT_BWAPI__UnitType_const_p_int_std__lessT_BWAPI__UnitType_const_p_t_std__allocatorT_std__pairT_BWAPI__UnitType_const_pconst_int_t_t_t", "std::map< BWAPI::UnitType const *,int,std::less< BWAPI::UnitType const * >,std::allocator< std::pair< BWAPI::UnitType const *const,int > > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t = {"_p_std__pairT_BWAPI__Position_BWAPI__Position_t", "std::pair< BWAPI::Position,BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_BWAPI__UnitType_const_p_int_t = {"_p_std__pairT_BWAPI__UnitType_const_p_int_t", "std::pair< BWAPI::UnitType const *,int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t = {"_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t", "std::pair< BWTA::Region *,BWTA::Region * > *", 0, 0, (void*)0, 0};
@@ -36810,6 +37475,7 @@ static swig_type_info _swigt__p_std__setT_BWAPI__WeaponType_t = {"_p_std__setT_B
 static swig_type_info _swigt__p_std__setT_BWTA__BaseLocation_p_t = {"_p_std__setT_BWTA__BaseLocation_p_t", "std::set< BWTA::BaseLocation * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWTA__Chokepoint_p_t = {"_p_std__setT_BWTA__Chokepoint_p_t", "std::set< BWTA::Chokepoint * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWTA__Region_p_t = {"_p_std__setT_BWTA__Region_p_t", "std::set< BWTA::Region * > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__setT_Polygon_p_t = {"_p_std__setT_Polygon_p_t", "std::set< Polygon * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t", "std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *|std::vector< BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type", "std::vector< BWAPI::Position >::allocator_type *|std::allocator< BWAPI::Position > *", 0, 0, (void*)0, 0};
@@ -36844,12 +37510,12 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_BaseLocationSet,
   &_swigt__p_ChokepointSet,
   &_swigt__p_ForceSet,
-  &_swigt__p_Latency__Enum,
   &_swigt__p_PlayerSet,
   &_swigt__p_Position,
   &_swigt__p_Race,
   &_swigt__p_RegionSet,
   &_swigt__p_TechType,
+  &_swigt__p_TilePosition,
   &_swigt__p_TilePositionSet,
   &_swigt__p_UnitSet,
   &_swigt__p_UpgradeType,
@@ -36861,7 +37527,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__invalid_argument,
   &_swigt__p_std__listT_BWAPI__UnitType_t,
   &_swigt__p_std__listT_BWAPI__Unit_p_t,
-  &_swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t,
+  &_swigt__p_std__mapT_BWAPI__UnitType_const_p_int_std__lessT_BWAPI__UnitType_const_p_t_std__allocatorT_std__pairT_BWAPI__UnitType_const_pconst_int_t_t_t,
   &_swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t,
   &_swigt__p_std__pairT_BWAPI__UnitType_const_p_int_t,
   &_swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t,
@@ -36886,6 +37552,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__setT_BWTA__BaseLocation_p_t,
   &_swigt__p_std__setT_BWTA__Chokepoint_p_t,
   &_swigt__p_std__setT_BWTA__Region_p_t,
+  &_swigt__p_std__setT_Polygon_p_t,
   &_swigt__p_std__string,
   &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,
   &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type,
@@ -36920,12 +37587,12 @@ static swig_cast_info _swigc__p_BWTA__Region[] = {  {&_swigt__p_BWTA__Region, 0,
 static swig_cast_info _swigc__p_BaseLocationSet[] = {  {&_swigt__p_BaseLocationSet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ChokepointSet[] = {  {&_swigt__p_ChokepointSet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ForceSet[] = {  {&_swigt__p_ForceSet, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Latency__Enum[] = {  {&_swigt__p_Latency__Enum, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PlayerSet[] = {  {&_swigt__p_PlayerSet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Position[] = {  {&_swigt__p_Position, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Race[] = {  {&_swigt__p_Race, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_RegionSet[] = {  {&_swigt__p_RegionSet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TechType[] = {  {&_swigt__p_TechType, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_TilePosition[] = {  {&_swigt__p_TilePosition, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TilePositionSet[] = {  {&_swigt__p_TilePositionSet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UnitSet[] = {  {&_swigt__p_UnitSet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UpgradeType[] = {  {&_swigt__p_UpgradeType, 0, 0, 0},{0, 0, 0, 0}};
@@ -36937,7 +37604,7 @@ static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0}
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__listT_BWAPI__UnitType_t[] = {  {&_swigt__p_std__listT_BWAPI__UnitType_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__listT_BWAPI__Unit_p_t[] = {  {&_swigt__p_std__listT_BWAPI__Unit_p_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__mapT_BWAPI__UnitType_const_p_int_t[] = {  {&_swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__mapT_BWAPI__UnitType_const_p_int_std__lessT_BWAPI__UnitType_const_p_t_std__allocatorT_std__pairT_BWAPI__UnitType_const_pconst_int_t_t_t[] = {  {&_swigt__p_std__mapT_BWAPI__UnitType_const_p_int_std__lessT_BWAPI__UnitType_const_p_t_std__allocatorT_std__pairT_BWAPI__UnitType_const_pconst_int_t_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_BWAPI__Position_BWAPI__Position_t[] = {  {&_swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_BWAPI__UnitType_const_p_int_t[] = {  {&_swigt__p_std__pairT_BWAPI__UnitType_const_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t[] = {  {&_swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -36962,6 +37629,7 @@ static swig_cast_info _swigc__p_std__setT_BWAPI__WeaponType_t[] = {  {&_swigt__p
 static swig_cast_info _swigc__p_std__setT_BWTA__BaseLocation_p_t[] = {  {&_swigt__p_std__setT_BWTA__BaseLocation_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWTA__Chokepoint_p_t[] = {  {&_swigt__p_std__setT_BWTA__Chokepoint_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWTA__Region_p_t[] = {  {&_swigt__p_std__setT_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__setT_Polygon_p_t[] = {  {&_swigt__p_std__setT_Polygon_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t[] = {  {&_swigt__p_BWTA__Polygon, _p_BWTA__PolygonTo_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0, 0},  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type[] = {  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type, 0, 0, 0},{0, 0, 0, 0}};
@@ -36996,12 +37664,12 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_BaseLocationSet,
   _swigc__p_ChokepointSet,
   _swigc__p_ForceSet,
-  _swigc__p_Latency__Enum,
   _swigc__p_PlayerSet,
   _swigc__p_Position,
   _swigc__p_Race,
   _swigc__p_RegionSet,
   _swigc__p_TechType,
+  _swigc__p_TilePosition,
   _swigc__p_TilePositionSet,
   _swigc__p_UnitSet,
   _swigc__p_UpgradeType,
@@ -37013,7 +37681,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__invalid_argument,
   _swigc__p_std__listT_BWAPI__UnitType_t,
   _swigc__p_std__listT_BWAPI__Unit_p_t,
-  _swigc__p_std__mapT_BWAPI__UnitType_const_p_int_t,
+  _swigc__p_std__mapT_BWAPI__UnitType_const_p_int_std__lessT_BWAPI__UnitType_const_p_t_std__allocatorT_std__pairT_BWAPI__UnitType_const_pconst_int_t_t_t,
   _swigc__p_std__pairT_BWAPI__Position_BWAPI__Position_t,
   _swigc__p_std__pairT_BWAPI__UnitType_const_p_int_t,
   _swigc__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t,
@@ -37038,6 +37706,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__setT_BWTA__BaseLocation_p_t,
   _swigc__p_std__setT_BWTA__Chokepoint_p_t,
   _swigc__p_std__setT_BWTA__Region_p_t,
+  _swigc__p_std__setT_Polygon_p_t,
   _swigc__p_std__string,
   _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,
   _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type,
@@ -38188,7 +38857,7 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char*)"Phase_Disruptor",Swig_var_Phase_Disruptor_get, Swig_var_Phase_Disruptor_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Psionic_Shockwave",Swig_var_Psionic_Shockwave_get, Swig_var_Psionic_Shockwave_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Dual_Photon_Blasters",Swig_var_Dual_Photon_Blasters_get, Swig_var_Dual_Photon_Blasters_set);
-  SWIG_addvarlink(SWIG_globals(),(char*)"Anti_matter_Missiles",Swig_var_Anti_matter_Missiles_get, Swig_var_Anti_matter_Missiles_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Anti_Matter_Missiles",Swig_var_Anti_Matter_Missiles_get, Swig_var_Anti_Matter_Missiles_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Phase_Disruptor_Cannon",Swig_var_Phase_Disruptor_Cannon_get, Swig_var_Phase_Disruptor_Cannon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Pulse_Cannon",Swig_var_Pulse_Cannon_get, Swig_var_Pulse_Cannon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"STS_Photon_Cannon",Swig_var_STS_Photon_Cannon_get, Swig_var_STS_Photon_Cannon_set);
