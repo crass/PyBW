@@ -95,24 +95,6 @@ class SwigPyIterator(_object):
 SwigPyIterator_swigregister = _pybw_swig.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
-class UnitSet(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, UnitSet, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, UnitSet, name)
-    __repr__ = _swig_repr
-    def __init__(self, *args): 
-        this = _pybw_swig.new_UnitSet(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    def __iter__(self): return _pybw_swig.UnitSet___iter__(self)
-    def __len__(self): return _pybw_swig.UnitSet___len__(self)
-    def next(self): return _pybw_swig.UnitSet_next(self)
-    __swig_destroy__ = _pybw_swig.delete_UnitSet
-    __del__ = lambda self : None;
-UnitSet_swigregister = _pybw_swig.UnitSet_swigregister
-UnitSet_swigregister(UnitSet)
-
 class PlayerSet(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, PlayerSet, name, value)
@@ -123,13 +105,33 @@ class PlayerSet(_object):
         this = _pybw_swig.new_PlayerSet(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __iter__(self): return _pybw_swig.PlayerSet___iter__(self)
-    def __len__(self): return _pybw_swig.PlayerSet___len__(self)
-    def next(self): return _pybw_swig.PlayerSet_next(self)
     __swig_destroy__ = _pybw_swig.delete_PlayerSet
     __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.PlayerSet___len__(self)
+    def __contains__(self, *args): return _pybw_swig.PlayerSet___contains__(self, *args)
+    def __iter__(self): return _pybw_swig.PlayerSet___iter__(self)
+    def next(self): return _pybw_swig.PlayerSet_next(self)
 PlayerSet_swigregister = _pybw_swig.PlayerSet_swigregister
 PlayerSet_swigregister(PlayerSet)
+
+class UnitSet(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, UnitSet, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, UnitSet, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_UnitSet(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _pybw_swig.delete_UnitSet
+    __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.UnitSet___len__(self)
+    def __contains__(self, *args): return _pybw_swig.UnitSet___contains__(self, *args)
+    def __iter__(self): return _pybw_swig.UnitSet___iter__(self)
+    def next(self): return _pybw_swig.UnitSet_next(self)
+UnitSet_swigregister = _pybw_swig.UnitSet_swigregister
+UnitSet_swigregister(UnitSet)
 
 class ForceSet(_object):
     __swig_setmethods__ = {}
@@ -141,13 +143,33 @@ class ForceSet(_object):
         this = _pybw_swig.new_ForceSet(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __iter__(self): return _pybw_swig.ForceSet___iter__(self)
-    def __len__(self): return _pybw_swig.ForceSet___len__(self)
-    def next(self): return _pybw_swig.ForceSet_next(self)
     __swig_destroy__ = _pybw_swig.delete_ForceSet
     __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.ForceSet___len__(self)
+    def __contains__(self, *args): return _pybw_swig.ForceSet___contains__(self, *args)
+    def __iter__(self): return _pybw_swig.ForceSet___iter__(self)
+    def next(self): return _pybw_swig.ForceSet_next(self)
 ForceSet_swigregister = _pybw_swig.ForceSet_swigregister
 ForceSet_swigregister(ForceSet)
+
+class PositionSet(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, PositionSet, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, PositionSet, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_PositionSet(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _pybw_swig.delete_PositionSet
+    __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.PositionSet___len__(self)
+    def __contains__(self, *args): return _pybw_swig.PositionSet___contains__(self, *args)
+    def __iter__(self): return _pybw_swig.PositionSet___iter__(self)
+    def next(self): return _pybw_swig.PositionSet_next(self)
+PositionSet_swigregister = _pybw_swig.PositionSet_swigregister
+PositionSet_swigregister(PositionSet)
 
 class TilePositionSet(_object):
     __swig_setmethods__ = {}
@@ -159,11 +181,12 @@ class TilePositionSet(_object):
         this = _pybw_swig.new_TilePositionSet(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __iter__(self): return _pybw_swig.TilePositionSet___iter__(self)
-    def __len__(self): return _pybw_swig.TilePositionSet___len__(self)
-    def next(self): return _pybw_swig.TilePositionSet_next(self)
     __swig_destroy__ = _pybw_swig.delete_TilePositionSet
     __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.TilePositionSet___len__(self)
+    def __contains__(self, *args): return _pybw_swig.TilePositionSet___contains__(self, *args)
+    def __iter__(self): return _pybw_swig.TilePositionSet___iter__(self)
+    def next(self): return _pybw_swig.TilePositionSet_next(self)
 TilePositionSet_swigregister = _pybw_swig.TilePositionSet_swigregister
 TilePositionSet_swigregister(TilePositionSet)
 
@@ -177,11 +200,12 @@ class RegionSet(_object):
         this = _pybw_swig.new_RegionSet(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __iter__(self): return _pybw_swig.RegionSet___iter__(self)
-    def __len__(self): return _pybw_swig.RegionSet___len__(self)
-    def next(self): return _pybw_swig.RegionSet_next(self)
     __swig_destroy__ = _pybw_swig.delete_RegionSet
     __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.RegionSet___len__(self)
+    def __contains__(self, *args): return _pybw_swig.RegionSet___contains__(self, *args)
+    def __iter__(self): return _pybw_swig.RegionSet___iter__(self)
+    def next(self): return _pybw_swig.RegionSet_next(self)
 RegionSet_swigregister = _pybw_swig.RegionSet_swigregister
 RegionSet_swigregister(RegionSet)
 
@@ -195,11 +219,12 @@ class ChokepointSet(_object):
         this = _pybw_swig.new_ChokepointSet(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __iter__(self): return _pybw_swig.ChokepointSet___iter__(self)
-    def __len__(self): return _pybw_swig.ChokepointSet___len__(self)
-    def next(self): return _pybw_swig.ChokepointSet_next(self)
     __swig_destroy__ = _pybw_swig.delete_ChokepointSet
     __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.ChokepointSet___len__(self)
+    def __contains__(self, *args): return _pybw_swig.ChokepointSet___contains__(self, *args)
+    def __iter__(self): return _pybw_swig.ChokepointSet___iter__(self)
+    def next(self): return _pybw_swig.ChokepointSet_next(self)
 ChokepointSet_swigregister = _pybw_swig.ChokepointSet_swigregister
 ChokepointSet_swigregister(ChokepointSet)
 
@@ -213,61 +238,19 @@ class BaseLocationSet(_object):
         this = _pybw_swig.new_BaseLocationSet(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __iter__(self): return _pybw_swig.BaseLocationSet___iter__(self)
-    def __len__(self): return _pybw_swig.BaseLocationSet___len__(self)
-    def next(self): return _pybw_swig.BaseLocationSet_next(self)
     __swig_destroy__ = _pybw_swig.delete_BaseLocationSet
     __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.BaseLocationSet___len__(self)
+    def __contains__(self, *args): return _pybw_swig.BaseLocationSet___contains__(self, *args)
+    def __iter__(self): return _pybw_swig.BaseLocationSet___iter__(self)
+    def next(self): return _pybw_swig.BaseLocationSet_next(self)
 BaseLocationSet_swigregister = _pybw_swig.BaseLocationSet_swigregister
 BaseLocationSet_swigregister(BaseLocationSet)
 
-class PositionList(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PositionList, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PositionList, name)
-    __repr__ = _swig_repr
-    def iterator(self): return _pybw_swig.PositionList_iterator(self)
-    def __iter__(self): return self.iterator()
-    def __nonzero__(self): return _pybw_swig.PositionList___nonzero__(self)
-    def __bool__(self): return _pybw_swig.PositionList___bool__(self)
-    def __len__(self): return _pybw_swig.PositionList___len__(self)
-    def pop(self): return _pybw_swig.PositionList_pop(self)
-    def __getslice__(self, *args): return _pybw_swig.PositionList___getslice__(self, *args)
-    def __setslice__(self, *args): return _pybw_swig.PositionList___setslice__(self, *args)
-    def __delslice__(self, *args): return _pybw_swig.PositionList___delslice__(self, *args)
-    def __delitem__(self, *args): return _pybw_swig.PositionList___delitem__(self, *args)
-    def __getitem__(self, *args): return _pybw_swig.PositionList___getitem__(self, *args)
-    def __setitem__(self, *args): return _pybw_swig.PositionList___setitem__(self, *args)
-    def append(self, *args): return _pybw_swig.PositionList_append(self, *args)
-    def empty(self): return _pybw_swig.PositionList_empty(self)
-    def size(self): return _pybw_swig.PositionList_size(self)
-    def clear(self): return _pybw_swig.PositionList_clear(self)
-    def swap(self, *args): return _pybw_swig.PositionList_swap(self, *args)
-    def get_allocator(self): return _pybw_swig.PositionList_get_allocator(self)
-    def begin(self): return _pybw_swig.PositionList_begin(self)
-    def end(self): return _pybw_swig.PositionList_end(self)
-    def rbegin(self): return _pybw_swig.PositionList_rbegin(self)
-    def rend(self): return _pybw_swig.PositionList_rend(self)
-    def pop_back(self): return _pybw_swig.PositionList_pop_back(self)
-    def erase(self, *args): return _pybw_swig.PositionList_erase(self, *args)
-    def __init__(self, *args): 
-        this = _pybw_swig.new_PositionList(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    def push_back(self, *args): return _pybw_swig.PositionList_push_back(self, *args)
-    def front(self): return _pybw_swig.PositionList_front(self)
-    def back(self): return _pybw_swig.PositionList_back(self)
-    def assign(self, *args): return _pybw_swig.PositionList_assign(self, *args)
-    def resize(self, *args): return _pybw_swig.PositionList_resize(self, *args)
-    def insert(self, *args): return _pybw_swig.PositionList_insert(self, *args)
-    def reserve(self, *args): return _pybw_swig.PositionList_reserve(self, *args)
-    def capacity(self): return _pybw_swig.PositionList_capacity(self)
-    __swig_destroy__ = _pybw_swig.delete_PositionList
-    __del__ = lambda self : None;
-PositionList_swigregister = _pybw_swig.PositionList_swigregister
-PositionList_swigregister(PositionList)
 
+def BWAPI_init():
+  return _pybw_swig.BWAPI_init()
+BWAPI_init = _pybw_swig.BWAPI_init
 
 def TA_getStartLocation(*args):
   return _pybw_swig.TA_getStartLocation(*args)
@@ -276,6 +259,38 @@ TA_getStartLocation = _pybw_swig.TA_getStartLocation
 def TA_getNearestBaseLocation(*args):
   return _pybw_swig.TA_getNearestBaseLocation(*args)
 TA_getNearestBaseLocation = _pybw_swig.TA_getNearestBaseLocation
+
+def readMap():
+  return _pybw_swig.readMap()
+readMap = _pybw_swig.readMap
+
+def analyze():
+  return _pybw_swig.analyze()
+analyze = _pybw_swig.analyze
+
+def getRegions():
+  return _pybw_swig.getRegions()
+getRegions = _pybw_swig.getRegions
+
+def getChokepoints():
+  return _pybw_swig.getChokepoints()
+getChokepoints = _pybw_swig.getChokepoints
+
+def getBaseLocations():
+  return _pybw_swig.getBaseLocations()
+getBaseLocations = _pybw_swig.getBaseLocations
+
+def getStartLocations():
+  return _pybw_swig.getStartLocations()
+getStartLocations = _pybw_swig.getStartLocations
+
+def getUnwalkablePolygons():
+  return _pybw_swig.getUnwalkablePolygons()
+getUnwalkablePolygons = _pybw_swig.getUnwalkablePolygons
+
+def getNearestUnwalkablePosition(*args):
+  return _pybw_swig.getNearestUnwalkablePosition(*args)
+getNearestUnwalkablePosition = _pybw_swig.getNearestUnwalkablePosition
 
 def TA_getRegions():
   return _pybw_swig.TA_getRegions()
@@ -292,22 +307,6 @@ TA_getBaseLocations = _pybw_swig.TA_getBaseLocations
 def TA_getStartLocations():
   return _pybw_swig.TA_getStartLocations()
 TA_getStartLocations = _pybw_swig.TA_getStartLocations
-
-def readMap():
-  return _pybw_swig.readMap()
-readMap = _pybw_swig.readMap
-
-def analyze():
-  return _pybw_swig.analyze()
-analyze = _pybw_swig.analyze
-
-def getUnwalkablePolygons():
-  return _pybw_swig.getUnwalkablePolygons()
-getUnwalkablePolygons = _pybw_swig.getUnwalkablePolygons
-
-def getNearestUnwalkablePosition(*args):
-  return _pybw_swig.getNearestUnwalkablePosition(*args)
-getNearestUnwalkablePosition = _pybw_swig.getNearestUnwalkablePosition
 
 def getBroodwar():
   return _pybw_swig.getBroodwar()
@@ -1759,12 +1758,10 @@ class Chokepoint(_object):
 Chokepoint_swigregister = _pybw_swig.Chokepoint_swigregister
 Chokepoint_swigregister(Chokepoint)
 
-class Polygon(PositionList):
+class Polygon(_object):
     __swig_setmethods__ = {}
-    for _s in [PositionList]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, Polygon, name, value)
     __swig_getmethods__ = {}
-    for _s in [PositionList]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, Polygon, name)
     __repr__ = _swig_repr
     def __init__(self): 

@@ -1,13 +1,11 @@
-//%newobject BWAPI::Player::getUnits;
-
-//%template(UnitType_Int_Pair) std::vector<const BWAPI::UnitType*, int>;
 %template(PositionList) std::vector<BWAPI::Position>;
-//std::pair< const UnitType*, int >
+
+%newobject BWAPI::Player::getUnits;
 
 %extend BWAPI::Player {
-    UnitSet* getUnits()
+    SetWrapper<BWAPI::Unit*>* getUnits()
     {
-        return new UnitSet( self->getUnits() );
+        return new SetWrapper<BWAPI::Unit*>( self->getUnits() );
     }
     BWAPI::PlayerType playerType()
     {
@@ -27,7 +25,10 @@
 %ignore BWAPI::Player::getStartLocation;
 %ignore BWAPI::Player::getRace;
 
+
+
 // Game
+
 
 %newobject BWAPI::Game::unitsOnTile;
 %newobject BWAPI::Game::getAllUnits;
@@ -42,65 +43,66 @@
 %newobject BWAPI::Game::getForces;
 %newobject BWAPI::Game::getStartLocations;
 
+
 %extend BWAPI::Game {
-    UnitSet* getAllUnits()
+    SetWrapper<BWAPI::Unit*>* getAllUnits()
     {
-        return new UnitSet( self->getAllUnits() );
+        return new SetWrapper<BWAPI::Unit*>( self->getAllUnits() );
     }
 
-    UnitSet* getMinerals()
+    SetWrapper<BWAPI::Unit*>* getMinerals()
     {
-        return new UnitSet( self->getMinerals() );
+        return new SetWrapper<BWAPI::Unit*>( self->getMinerals() );
     }
 
-    UnitSet* getGeysers()
+    SetWrapper<BWAPI::Unit*>* getGeysers()
     {
-        return new UnitSet( self->getGeysers() );
+        return new SetWrapper<BWAPI::Unit*>( self->getGeysers() );
     }
 
-    UnitSet* getNeutralUnits()
+    SetWrapper<BWAPI::Unit*>* getNeutralUnits()
     {
-        return new UnitSet( self->getNeutralUnits() );
+        return new SetWrapper<BWAPI::Unit*>( self->getNeutralUnits() );
     }
 
-    UnitSet* getStaticMinerals()
+    SetWrapper<BWAPI::Unit*>* getStaticMinerals()
     {
-        return new UnitSet( self->getStaticMinerals() );
+        return new SetWrapper<BWAPI::Unit*>( self->getStaticMinerals() );
     }
 
-    UnitSet* getStaticGeysers()
+    SetWrapper<BWAPI::Unit*>* getStaticGeysers()
     {
-        return new UnitSet( self->getStaticGeysers() );
+        return new SetWrapper<BWAPI::Unit*>( self->getStaticGeysers() );
     }
 
-    UnitSet* getStaticNeutralUnits()
+    SetWrapper<BWAPI::Unit*>* getStaticNeutralUnits()
     {
-        return new UnitSet( self->getStaticNeutralUnits() );
+        return new SetWrapper<BWAPI::Unit*>( self->getStaticNeutralUnits() );
     }
 
-    UnitSet* getSelectedUnits()
+    SetWrapper<BWAPI::Unit*>* getSelectedUnits()
     {
-        return new UnitSet( self->getSelectedUnits() );
+        return new SetWrapper<BWAPI::Unit*>( self->getSelectedUnits() );
     }
 
-    PlayerSet* getPlayers()
+    SetWrapper<BWAPI::Player*>* getPlayers()
     {
-        return new PlayerSet( self->getPlayers() );
+        return new SetWrapper<BWAPI::Player*>( self->getPlayers() );
     }
 
-    ForceSet* getForces()
+    SetWrapper<BWAPI::Force*>* getForces()
     {
-        return new ForceSet( self->getForces() );
+        return new SetWrapper<BWAPI::Force*>( self->getForces() );
     }
 
-    UnitSet* unitsOnTile(int x, int y) // TODO: deallocate!
+    SetWrapper<BWAPI::Unit*>* unitsOnTile(int x, int y) // TODO: deallocate!
     {
-        return new UnitSet( self->unitsOnTile(x, y) );
+        return new SetWrapper<BWAPI::Unit*>( self->unitsOnTile(x, y) );
     }
 
-    TilePositionSet* getStartLocations()
+    SetWrapper_PtrNext<BWAPI::TilePosition>* getStartLocations()
     {
-        return new TilePositionSet( self->getStartLocations() );
+        return new SetWrapper_PtrNext<BWAPI::TilePosition>( self->getStartLocations() );
     }
 
     bool canBuildHere(BWAPI::Unit* builder, BWAPI::TilePosition position, BWAPI::UnitType type)
@@ -126,16 +128,19 @@
 
 // Force
 
+
 %newobject BWAPI::Force::getPlayers;
 
 
 %extend BWAPI::Force {
-    PlayerSet* getPlayers()
+    SetWrapper<BWAPI::Player*>* getPlayers()
     {
-        return new PlayerSet( self->getPlayers() );
+        return new SetWrapper<BWAPI::Player*>( self->getPlayers() );
     }
 }
 %ignore BWAPI::Force::getPlayers;
+
+
 
 %extend BWAPI::Position {
     int getX()
@@ -172,5 +177,11 @@
 
 
 %{
+#include "BWAPI.h"
+
 using namespace BWAPI;
 %}
+
+%include "BWAPI.h"
+
+

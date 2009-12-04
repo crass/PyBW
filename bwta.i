@@ -1,4 +1,3 @@
-%template(PositionList) std::vector<BWAPI::Position>;
 
 
 %rename(TA_getStartLocation) getStartLocation;
@@ -13,32 +12,44 @@ BWTA::BaseLocation* getNearestBaseLocation(BWAPI::TilePosition position);
 
 
 
+%{
+#include "BWTA.h"
+
+using namespace BWTA;
+
+%}
+%include "BWTA.h"
+
+
+
+
 %newobject TA_getRegions;
 %newobject TA_getChokepoints;
 %newobject TA_getBaseLocations;
 %newobject TA_getStartLocations;
 %{
-    RegionSet* TA_getRegions()
+    SetWrapper<BWTA::Region*>* TA_getRegions()
     {
-        return new RegionSet( BWTA::getRegions() );
+        return new SetWrapper<BWTA::Region*>( BWTA::getRegions() );
     }
-    ChokepointSet* TA_getChokepoints()
+    SetWrapper<BWTA::Chokepoint*>* TA_getChokepoints()
     {
-        return new ChokepointSet( BWTA::getChokepoints() );
+        return new SetWrapper<BWTA::Chokepoint*>( BWTA::getChokepoints() );
     }
-    BaseLocationSet* TA_getBaseLocations()
+    SetWrapper<BWTA::BaseLocation*>* TA_getBaseLocations()
     {
-        return new BaseLocationSet( BWTA::getBaseLocations() );
+        return new SetWrapper<BWTA::BaseLocation*>( BWTA::getBaseLocations() );
     }
-    BaseLocationSet* TA_getStartLocations()
+    SetWrapper<BWTA::BaseLocation*>* TA_getStartLocations()
     {
-        return new BaseLocationSet( BWTA::getStartLocations() );
-    }    
+        return new SetWrapper<BWTA::BaseLocation*>( BWTA::getStartLocations() );
+    }
+
 %}
-RegionSet* TA_getRegions();
-ChokepointSet* TA_getChokepoints();
-BaseLocationSet* TA_getBaseLocations();
-BaseLocationSet* TA_getStartLocations();
+SetWrapper<BWTA::Region*>* TA_getRegions();
+SetWrapper<BWTA::Chokepoint*>* TA_getChokepoints();
+SetWrapper<BWTA::BaseLocation*>* TA_getBaseLocations();
+SetWrapper<BWTA::BaseLocation*>* TA_getStartLocations();
 
 %ignore BWTA::getRegions;
 %ignore BWTA::getChokepoints;
@@ -52,14 +63,14 @@ BaseLocationSet* TA_getStartLocations();
 %newobject BWTA::Region::getBaseLocations;
 
 %extend BWTA::Region {
-    ChokepointSet* getChokepoints()
+    SetWrapper<BWTA::Chokepoint*>* getChokepoints()
     {
-        return new ChokepointSet( self->getChokepoints() );
+        return new SetWrapper<BWTA::Chokepoint*>( self->getChokepoints() );
     }
 
-    BaseLocationSet* getBaseLocations()
+    SetWrapper<BWTA::BaseLocation*>* getBaseLocations()
     {
-        return new BaseLocationSet( self->getBaseLocations() );
+        return new SetWrapper<BWTA::BaseLocation*>( self->getBaseLocations() );
     }
 }
 %ignore BWTA::Region::getChokepoints;
@@ -68,13 +79,3 @@ BaseLocationSet* TA_getStartLocations();
 
 
 
-
-%{
-#include "BWTA.h"
-%}
-%include "BWTA.h"
-
-
-%{
-using namespace BWTA;
-%}

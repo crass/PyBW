@@ -36,6 +36,14 @@ collision_names = ['None', 'Normal', 'Unknown', 'Irradiate', 'Corrosive_Acid', '
 def module_include_filename(module_name):
     return 'Temp/%s.i' % module_name
 
+l1 = ["Player", "Unit", "Force"]
+l2 = ["Position", "TilePosition"]
+l3 = ["Region", "Chokepoint", "BaseLocation"]
+templates1 = '\n'.join("%%template (%sSet) SetWrapper<BWAPI::%s*>;"%(x,x) for x in l1)
+templates2 = '\n'.join("%%template (%sSet) SetWrapper_PtrNext<BWAPI::%s>;"%(x,x) for x in l2)
+templates3 = '\n'.join("%%template (%sSet) SetWrapper<BWTA::%s*>;"%(x,x) for x in l3)
+templates = templates1 + templates2 + templates3
+
 
 
 for m in bwapi_modules:
@@ -75,10 +83,13 @@ f.write("""
 
 %include "std_string.i"
 %include "std_vector.i"
-%include "std_pair.i"
-%include "std_map.i"
+//%include "std_pair.i"
+//%include "std_map.i"
 
-%include "stdset_wrapper.i"
+%include "std_wrappers.i"
+""" + templates +
+"""
+
 %include "bwapi.i"
 %include "bwta.i"
 
@@ -103,6 +114,24 @@ void python_wrap_init()
 }
 
 #include "helper.h"
+
+// Used for callbacks
+PyObject* _getSwigUnit(BWAPI::Unit* unit)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(unit), SWIGTYPE_p_BWAPI__Unit, 0 );
+}
+
+PyObject* _getSwigPlayer(BWAPI::Player* player)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(player), SWIGTYPE_p_BWAPI__Player, 0 );
+}
+
+PyObject* _getSwigPosition(BWAPI::Position* position)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(position), SWIGTYPE_p_BWAPI__Position, 0 );
+}
+
+
 %}
 %include "helper.h"
 

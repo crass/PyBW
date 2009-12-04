@@ -204,10 +204,6 @@
 					/>
 				</FileConfiguration>
 			</File>
-			<File
-				RelativePath=".\stdset_wrapper.cpp"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
