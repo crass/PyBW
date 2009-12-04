@@ -8,17 +8,17 @@
 
 
 %{
-#include "map_wrapper.h"
-#include "set_wrapper.h"
-#include "vector_wrapper.h"
-#include "list_wrapper.h"
+//#include "map_wrapper.h"
+#include "stdset_wrapper.h"
+//#include "vector_wrapper.h"
+//#include "list_wrapper.h"
 
 
 %}
-%include "map_wrapper.h"
-%include "set_wrapper.h"
-%include "vector_wrapper.h"
-%include "list_wrapper.h"
+//%include "map_wrapper.h"
+%include "stdset_wrapper.h"
+//%include "vector_wrapper.h"
+//%include "list_wrapper.h"
 
 %newobject SetWrapper::__iter__;
 %newobject SetWrapper_PtrNext::__iter__;

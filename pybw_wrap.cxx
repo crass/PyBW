@@ -2721,44 +2721,52 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_TechType swig_types[33]
 #define SWIGTYPE_p_TilePosition swig_types[34]
 #define SWIGTYPE_p_UpgradeType swig_types[35]
-#define SWIGTYPE_p_char swig_types[36]
-#define SWIGTYPE_p_std__invalid_argument swig_types[37]
-#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[38]
-#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[39]
-#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[40]
-#define SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t swig_types[41]
-#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[42]
-#define SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t swig_types[43]
-#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[44]
-#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[45]
-#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[46]
-#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[47]
-#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[48]
-#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[49]
-#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[50]
-#define SWIGTYPE_p_std__setT_BWAPI__Position_t swig_types[51]
-#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[52]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t swig_types[53]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[54]
-#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[55]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[56]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t swig_types[57]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[58]
-#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[59]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t swig_types[60]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[61]
-#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[62]
-#define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[63]
-#define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[64]
-#define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[65]
-#define SWIGTYPE_p_std__setT_BaseLocation_p_t swig_types[66]
-#define SWIGTYPE_p_std__setT_Chokepoint_p_t swig_types[67]
-#define SWIGTYPE_p_std__setT_Polygon_p_t swig_types[68]
-#define SWIGTYPE_p_std__setT_Region_p_t swig_types[69]
-#define SWIGTYPE_p_std__string swig_types[70]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[71]
-static swig_type_info *swig_types[73];
-static swig_module_info swig_module = {swig_types, 72, 0, 0, 0, 0};
+#define SWIGTYPE_p_allocator_type swig_types[36]
+#define SWIGTYPE_p_char swig_types[37]
+#define SWIGTYPE_p_difference_type swig_types[38]
+#define SWIGTYPE_p_p_PyObject swig_types[39]
+#define SWIGTYPE_p_size_type swig_types[40]
+#define SWIGTYPE_p_std__invalid_argument swig_types[41]
+#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[42]
+#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[43]
+#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[44]
+#define SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t swig_types[45]
+#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[46]
+#define SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t swig_types[47]
+#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[48]
+#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[49]
+#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[50]
+#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[51]
+#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[52]
+#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[53]
+#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[54]
+#define SWIGTYPE_p_std__setT_BWAPI__Position_t swig_types[55]
+#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[56]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t swig_types[57]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[58]
+#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[59]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[60]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t swig_types[61]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[62]
+#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[63]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t swig_types[64]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[65]
+#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[66]
+#define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[67]
+#define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[68]
+#define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[69]
+#define SWIGTYPE_p_std__setT_BaseLocation_p_t swig_types[70]
+#define SWIGTYPE_p_std__setT_Chokepoint_p_t swig_types[71]
+#define SWIGTYPE_p_std__setT_Polygon_p_t swig_types[72]
+#define SWIGTYPE_p_std__setT_Region_p_t swig_types[73]
+#define SWIGTYPE_p_std__string swig_types[74]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[75]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[76]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[77]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[78]
+#define SWIGTYPE_p_value_type swig_types[79]
+static swig_type_info *swig_types[81];
+static swig_module_info swig_module = {swig_types, 80, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3203,10 +3211,10 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #include <vector>
 
 
-#include "map_wrapper.h"
-#include "set_wrapper.h"
-#include "vector_wrapper.h"
-#include "list_wrapper.h"
+//#include "map_wrapper.h"
+#include "stdset_wrapper.h"
+//#include "vector_wrapper.h"
+//#include "list_wrapper.h"
 
 
 
@@ -3222,6 +3230,1095 @@ SWIG_From_int  (int value)
 
 using namespace BWAPI;
 
+
+namespace swig {  
+  template <class Type>
+  struct noconst_traits {
+    typedef Type noconst_type;
+  };
+
+  template <class Type>
+  struct noconst_traits<const Type> {
+    typedef Type noconst_type;
+  };
+
+  /*
+    type categories
+  */
+  struct pointer_category { };  
+  struct value_category { };
+
+  /*
+    General traits that provides type_name and type_info
+  */
+  template <class Type> struct traits { };
+
+  template <class Type>
+  inline const char* type_name() {
+    return traits<typename noconst_traits<Type >::noconst_type >::type_name();
+  }
+
+  template <class Type> 
+  struct traits_info {
+    static swig_type_info *type_query(std::string name) {
+      name += " *";
+      return SWIG_TypeQuery(name.c_str());
+    }    
+    static swig_type_info *type_info() {
+      static swig_type_info *info = type_query(type_name<Type>());
+      return info;
+    }
+  };
+
+  template <class Type>
+  inline swig_type_info *type_info() {
+    return traits_info<Type>::type_info();
+  }
+
+  /*
+    Partial specialization for pointers
+  */
+  template <class Type> struct traits <Type *> {
+    typedef pointer_category category;
+    static std::string make_ptr_name(const char* name) {
+      std::string ptrname = name;
+      ptrname += " *";
+      return ptrname;
+    }    
+    static const char* type_name() {
+      static std::string name = make_ptr_name(swig::type_name<Type>());
+      return name.c_str();
+    }
+  };
+
+  template <class Type, class Category> 
+  struct traits_as { };
+ 
+  template <class Type, class Category> 
+  struct traits_check { };
+
+}
+
+
+namespace swig {  
+  /*
+    Traits that provides the from method
+  */
+  template <class Type> struct traits_from_ptr {
+    static PyObject *from(Type *val, int owner = 0) {
+      return SWIG_NewPointerObj(val, type_info<Type>(), owner);
+    }
+  };
+
+  template <class Type> struct traits_from {
+    static PyObject *from(const Type& val) {
+      return traits_from_ptr<Type>::from(new Type(val), 1);
+    }
+  };
+
+  template <class Type> struct traits_from<Type *> {
+    static PyObject *from(Type* val) {
+      return traits_from_ptr<Type>::from(val, 0);
+    }
+  };
+
+  template <class Type> struct traits_from<const Type *> {
+    static PyObject *from(const Type* val) {
+      return traits_from_ptr<Type>::from(const_cast<Type*>(val), 0);
+    }
+  };
+
+
+  template <class Type>
+  inline PyObject *from(const Type& val) {
+    return traits_from<Type>::from(val);
+  }
+
+  template <class Type>
+  inline PyObject *from_ptr(Type* val, int owner) {
+    return traits_from_ptr<Type>::from(val, owner);
+  }
+
+  /*
+    Traits that provides the asval/as/check method
+  */
+  template <class Type>
+  struct traits_asptr {   
+    static int asptr(PyObject *obj, Type **val) {
+      Type *p;
+      int res = SWIG_ConvertPtr(obj, (void**)&p, type_info<Type>(), 0);
+      if (SWIG_IsOK(res)) {
+	if (val) *val = p;
+      }
+      return res;
+    }
+  }; 
+
+  template <class Type>
+  inline int asptr(PyObject *obj, Type **vptr) {
+    return traits_asptr<Type>::asptr(obj, vptr);
+  }
+
+  template <class Type> 
+  struct traits_asval {
+    static int asval(PyObject *obj, Type *val) {
+      if (val) {
+	Type *p = 0;
+	int res = traits_asptr<Type>::asptr(obj, &p);
+	if (!SWIG_IsOK(res)) return res;	
+	if (p) {
+	  typedef typename noconst_traits<Type>::noconst_type noconst_type;
+	  *(const_cast<noconst_type*>(val)) = *p;
+	  if (SWIG_IsNewObj(res)){
+	    delete p;
+	    res = SWIG_DelNewMask(res);
+	  }
+	  return res;
+	} else {
+	  return SWIG_ERROR;
+	}
+      } else {
+	return traits_asptr<Type>::asptr(obj, (Type **)(0));
+      }
+    }
+  };
+
+  template <class Type> struct traits_asval<Type*> {
+    static int asval(PyObject *obj, Type **val) {
+      if (val) {
+        typedef typename noconst_traits<Type>::noconst_type noconst_type;
+        noconst_type *p = 0;
+        int res = traits_asptr<noconst_type>::asptr(obj,  &p);
+        if (SWIG_IsOK(res)) {
+          *(const_cast<noconst_type**>(val)) = p;
+	}
+	return res;
+      } else {
+	return traits_asptr<Type>::asptr(obj, (Type **)(0));
+      }
+    }
+  };
+  
+  template <class Type>
+  inline int asval(PyObject *obj, Type *val) {
+    return traits_asval<Type>::asval(obj, val);
+  }
+
+  template <class Type> 
+  struct traits_as<Type, value_category> {
+    static Type as(PyObject *obj, bool throw_error) {
+      Type v;
+      int res = asval(obj, &v);
+      if (!obj || !SWIG_IsOK(res)) {
+	if (!PyErr_Occurred()) {
+	  ::SWIG_Error(SWIG_TypeError,  swig::type_name<Type>());
+	}
+	if (throw_error) throw std::invalid_argument("bad type");
+      }
+      return v;
+    }
+  };
+
+  template <class Type> 
+  struct traits_as<Type, pointer_category> {
+    static Type as(PyObject *obj, bool throw_error) {
+      Type *v = 0;      
+      int res = (obj ? traits_asptr<Type>::asptr(obj, &v) : SWIG_ERROR);
+      if (SWIG_IsOK(res) && v) {
+	if (SWIG_IsNewObj(res)) {
+	  Type r(*v);
+	  delete v;
+	  return r;
+	} else {
+	  return *v;
+	}
+      } else {
+	// Uninitialized return value, no Type() constructor required.
+	static Type *v_def = (Type*) malloc(sizeof(Type));
+	if (!PyErr_Occurred()) {
+	  SWIG_Error(SWIG_TypeError,  swig::type_name<Type>());
+	}
+	if (throw_error) throw std::invalid_argument("bad type");
+	memset(v_def,0,sizeof(Type));
+	return *v_def;
+      }
+    }
+  };
+
+  template <class Type> 
+  struct traits_as<Type*, pointer_category> {
+    static Type* as(PyObject *obj, bool throw_error) {
+      Type *v = 0;      
+      int res = (obj ? traits_asptr<Type>::asptr(obj, &v) : SWIG_ERROR);
+      if (SWIG_IsOK(res)) {
+	return v;
+      } else {
+	if (!PyErr_Occurred()) {
+	  SWIG_Error(SWIG_TypeError,  swig::type_name<Type>());
+	}
+	if (throw_error) throw std::invalid_argument("bad type");
+	return 0;
+      }
+    }
+  };
+    
+  template <class Type>
+  inline Type as(PyObject *obj, bool te = false) {
+    return traits_as<Type, typename traits<Type>::category>::as(obj, te);
+  }
+
+  template <class Type> 
+  struct traits_check<Type, value_category> {
+    static bool check(PyObject *obj) {
+      int res = obj ? asval(obj, (Type *)(0)) : SWIG_ERROR;
+      return SWIG_IsOK(res) ? true : false;
+    }
+  };
+
+  template <class Type> 
+  struct traits_check<Type, pointer_category> {
+    static bool check(PyObject *obj) {
+      int res = obj ? asptr(obj, (Type **)(0)) : SWIG_ERROR;
+      return SWIG_IsOK(res) ? true : false;
+    }
+  };
+
+  template <class Type>
+  inline bool check(PyObject *obj) {
+    return traits_check<Type, typename traits<Type>::category>::check(obj);
+  }
+}
+
+
+#include <functional>
+
+namespace std {
+  template <>
+  struct less <PyObject *>: public binary_function<PyObject *, PyObject *, bool>
+  {
+    bool
+    operator()(PyObject * v, PyObject *w) const
+    { 
+      bool res;
+      SWIG_PYTHON_THREAD_BEGIN_BLOCK;
+      res = PyObject_RichCompareBool(v, w, Py_LT) ? true : false;
+      /* This may fall into a case of inconsistent
+               eg. ObjA > ObjX > ObjB
+               but ObjA < ObjB
+      */
+      if( PyErr_Occurred() && PyErr_ExceptionMatches(PyExc_TypeError) )
+      {
+        /* Objects can't be compared, this mostly occurred in Python 3.0 */
+        /* Compare their ptr directly for a workaround */
+        res = (v < w);
+        PyErr_Clear();
+      }
+      SWIG_PYTHON_THREAD_END_BLOCK;
+      return res;
+    }
+  };
+
+  template <>
+  struct less <swig::SwigPtr_PyObject>: public binary_function<swig::SwigPtr_PyObject, swig::SwigPtr_PyObject, bool>
+  {
+    bool
+    operator()(const swig::SwigPtr_PyObject& v, const swig::SwigPtr_PyObject& w) const
+    {
+      return std::less<PyObject *>()(v, w);
+    }
+  };
+
+  template <>
+  struct less <swig::SwigVar_PyObject>: public binary_function<swig::SwigVar_PyObject, swig::SwigVar_PyObject, bool>
+  {
+    bool
+    operator()(const swig::SwigVar_PyObject& v, const swig::SwigVar_PyObject& w) const
+    {
+      return std::less<PyObject *>()(v, w);
+    }
+  };
+
+}
+
+namespace swig {
+  template <> struct traits<PyObject *> {
+    typedef value_category category;
+    static const char* type_name() { return "PyObject *"; }
+  };  
+
+  template <>  struct traits_asval<PyObject * > {   
+    typedef PyObject * value_type;
+    static int asval(PyObject *obj, value_type *val) {
+      if (val) *val = obj;
+      return SWIG_OK;
+    }
+  };
+
+  template <> 
+  struct traits_check<PyObject *, value_category> {
+    static bool check(PyObject *) {
+      return true;
+    }
+  };
+
+  template <>  struct traits_from<PyObject *> {
+    typedef PyObject * value_type;
+    static PyObject *from(const value_type& val) {
+      Py_XINCREF(val);
+      return val;
+    }
+  };
+  
+}
+
+namespace swig {
+  inline size_t
+  check_index(ptrdiff_t i, size_t size, bool insert = false) {
+    if ( i < 0 ) {
+      if ((size_t) (-i) <= size)
+	return (size_t) (i + size);
+    } else if ( (size_t) i < size ) {
+      return (size_t) i;
+    } else if (insert && ((size_t) i == size)) {
+      return size;
+    }
+    
+    throw std::out_of_range("index out of range");
+  }
+
+  inline size_t
+  slice_index(ptrdiff_t i, size_t size) {
+    if ( i < 0 ) {
+      if ((size_t) (-i) <= size) {
+	return (size_t) (i + size);
+      } else {
+	throw std::out_of_range("index out of range");
+      }
+    } else {
+      return ( (size_t) i < size ) ? ((size_t) i) : size;
+    }
+  }
+
+  template <class Sequence, class Difference>
+  inline typename Sequence::iterator
+  getpos(Sequence* self, Difference i)  {
+    typename Sequence::iterator pos = self->begin();
+    std::advance(pos, check_index(i,self->size()));
+    return pos;
+  }
+
+  template <class Sequence, class Difference>
+  inline typename Sequence::const_iterator
+  cgetpos(const Sequence* self, Difference i)  {
+    typename Sequence::const_iterator pos = self->begin();
+    std::advance(pos, check_index(i,self->size()));
+    return pos;
+  }
+
+  template <class Sequence, class Difference>
+  inline Sequence*
+  getslice(const Sequence* self, Difference i, Difference j) {
+    typename Sequence::size_type size = self->size();
+    typename Sequence::size_type ii = swig::check_index(i, size);
+    typename Sequence::size_type jj = swig::slice_index(j, size);
+
+    if (jj > ii) {
+      typename Sequence::const_iterator vb = self->begin();
+      typename Sequence::const_iterator ve = self->begin();
+      std::advance(vb,ii);
+      std::advance(ve,jj);
+      return new Sequence(vb, ve);
+    } else {
+      return new Sequence();
+    }
+  }
+
+  template <class Sequence, class Difference, class InputSeq>
+  inline void
+  setslice(Sequence* self, Difference i, Difference j, const InputSeq& v) {
+    typename Sequence::size_type size = self->size();
+    typename Sequence::size_type ii = swig::check_index(i, size, true);
+    typename Sequence::size_type jj = swig::slice_index(j, size);
+    if (jj < ii) jj = ii;
+    size_t ssize = jj - ii;
+    if (ssize <= v.size()) {
+      typename Sequence::iterator sb = self->begin();
+      typename InputSeq::const_iterator vmid = v.begin();
+      std::advance(sb,ii);
+      std::advance(vmid, jj - ii);
+      self->insert(std::copy(v.begin(), vmid, sb), vmid, v.end());
+    } else {
+      typename Sequence::iterator sb = self->begin();
+      typename Sequence::iterator se = self->begin();
+      std::advance(sb,ii);
+      std::advance(se,jj);
+      self->erase(sb,se);
+      self->insert(sb, v.begin(), v.end());
+    }
+  }
+
+  template <class Sequence, class Difference>
+  inline void
+  delslice(Sequence* self, Difference i, Difference j) {
+    typename Sequence::size_type size = self->size();
+    typename Sequence::size_type ii = swig::check_index(i, size, true);
+    typename Sequence::size_type jj = swig::slice_index(j, size);
+    if (jj > ii) {
+      typename Sequence::iterator sb = self->begin();
+      typename Sequence::iterator se = self->begin();
+      std::advance(sb,ii);
+      std::advance(se,jj);
+      self->erase(sb,se);
+    }
+  }
+}
+
+
+#if defined(__SUNPRO_CC) && defined(_RWSTD_VER)
+#  if !defined(SWIG_NO_STD_NOITERATOR_TRAITS_STL)
+#    define SWIG_STD_NOITERATOR_TRAITS_STL
+#  endif
+#endif
+
+#if !defined(SWIG_STD_NOITERATOR_TRAITS_STL)
+#include <iterator>
+#else
+namespace std {
+  template <class Iterator>
+  struct iterator_traits {
+    typedef ptrdiff_t difference_type;
+    typedef typename Iterator::value_type value_type;
+  };
+
+  template <class Iterator, class Category,class T, class Reference, class Pointer, class Distance>
+  struct iterator_traits<__reverse_bi_iterator<Iterator,Category,T,Reference,Pointer,Distance> > {
+    typedef Distance difference_type;
+    typedef T value_type;
+  };
+
+  template <class T>
+  struct iterator_traits<T*> {
+    typedef T value_type;
+    typedef ptrdiff_t difference_type;
+  };
+
+  template<typename _InputIterator>
+  inline typename iterator_traits<_InputIterator>::difference_type
+  distance(_InputIterator __first, _InputIterator __last)
+  {
+    typename iterator_traits<_InputIterator>::difference_type __n = 0;
+    while (__first != __last) {
+      ++__first; ++__n;
+    }
+    return __n;
+  }
+}
+#endif
+
+
+namespace swig {
+  template<typename OutIterator>
+  class SwigPyIterator_T :  public SwigPyIterator
+  {
+  public:
+    typedef OutIterator out_iterator;
+    typedef typename std::iterator_traits<out_iterator>::value_type value_type;    
+    typedef SwigPyIterator_T<out_iterator> self_type;
+
+    SwigPyIterator_T(out_iterator curr, PyObject *seq)
+      : SwigPyIterator(seq), current(curr)
+    {
+    }
+
+    const out_iterator& get_current() const
+    {
+      return current;
+    }
+
+    
+    bool equal (const SwigPyIterator &iter) const
+    {
+      const self_type *iters = dynamic_cast<const self_type *>(&iter);
+      if (iters) {
+	return (current == iters->get_current());
+      } else {
+	throw std::invalid_argument("bad iterator type");
+      }
+    }
+    
+    ptrdiff_t distance(const SwigPyIterator &iter) const
+    {
+      const self_type *iters = dynamic_cast<const self_type *>(&iter);
+      if (iters) {
+	return std::distance(current, iters->get_current());
+      } else {
+	throw std::invalid_argument("bad iterator type");
+      }
+    }    
+    
+  protected:
+    out_iterator current;
+  };
+  
+  template <class ValueType>
+  struct from_oper 
+  {
+    typedef const ValueType& argument_type;
+    typedef PyObject *result_type;
+    result_type operator()(argument_type v) const
+    {
+      return swig::from(v);
+    }
+  };
+
+  template<typename OutIterator, 
+	   typename ValueType = typename std::iterator_traits<OutIterator>::value_type,
+	   typename FromOper = from_oper<ValueType> >
+  class SwigPyIteratorOpen_T :  public SwigPyIterator_T<OutIterator>
+  {
+  public:
+    FromOper from;
+    typedef OutIterator out_iterator;
+    typedef ValueType value_type;
+    typedef SwigPyIterator_T<out_iterator>  base;
+    typedef SwigPyIteratorOpen_T<OutIterator, ValueType, FromOper> self_type;
+    
+    SwigPyIteratorOpen_T(out_iterator curr, PyObject *seq)
+      : SwigPyIterator_T<OutIterator>(curr, seq)
+    {
+    }
+    
+    PyObject *value() const {
+      return from(static_cast<const value_type&>(*(base::current)));
+    }
+    
+    SwigPyIterator *copy() const
+    {
+      return new self_type(*this);
+    }
+
+    SwigPyIterator *incr(size_t n = 1)
+    {
+      while (n--) {
+	++base::current;
+      }
+      return this;
+    }
+
+    SwigPyIterator *decr(size_t n = 1)
+    {
+      while (n--) {
+	--base::current;
+      }
+      return this;
+    }
+  };
+
+  template<typename OutIterator, 
+	   typename ValueType = typename std::iterator_traits<OutIterator>::value_type,
+	   typename FromOper = from_oper<ValueType> >
+  class SwigPyIteratorClosed_T :  public SwigPyIterator_T<OutIterator>
+  {
+  public:
+    FromOper from;
+    typedef OutIterator out_iterator;
+    typedef ValueType value_type;
+    typedef SwigPyIterator_T<out_iterator>  base;    
+    typedef SwigPyIteratorClosed_T<OutIterator, ValueType, FromOper> self_type;
+    
+    SwigPyIteratorClosed_T(out_iterator curr, out_iterator first, out_iterator last, PyObject *seq)
+      : SwigPyIterator_T<OutIterator>(curr, seq), begin(first), end(last)
+    {
+    }
+    
+    PyObject *value() const {
+      if (base::current == end) {
+	throw stop_iteration();
+      } else {
+	return from(static_cast<const value_type&>(*(base::current)));
+      }
+    }
+    
+    SwigPyIterator *copy() const
+    {
+      return new self_type(*this);
+    }
+
+    SwigPyIterator *incr(size_t n = 1)
+    {
+      while (n--) {
+	if (base::current == end) {
+	  throw stop_iteration();
+	} else {
+	  ++base::current;
+	}
+      }
+      return this;
+    }
+
+    SwigPyIterator *decr(size_t n = 1)
+    {
+      while (n--) {
+	if (base::current == begin) {
+	  throw stop_iteration();
+	} else {
+	  --base::current;
+	}
+      }
+      return this;
+    }
+
+  private:
+    out_iterator begin;
+    out_iterator end;
+  };
+
+  template<typename OutIter>
+  inline SwigPyIterator*
+  make_output_iterator(const OutIter& current, const OutIter& begin,const OutIter& end, PyObject *seq = 0)
+  {
+    return new SwigPyIteratorClosed_T<OutIter>(current, begin, end, seq);
+  }
+
+  template<typename OutIter>
+  inline SwigPyIterator*
+  make_output_iterator(const OutIter& current, PyObject *seq = 0)
+  {
+    return new SwigPyIteratorOpen_T<OutIter>(current, seq);
+  }
+}
+
+
+namespace swig
+{
+  template <class T>
+  struct SwigPySequence_Ref
+  {
+    SwigPySequence_Ref(PyObject* seq, int index)
+      : _seq(seq), _index(index)
+    {
+    }
+    
+    operator T () const
+    {
+      swig::SwigVar_PyObject item = PySequence_GetItem(_seq, _index);
+      try {
+	return swig::as<T>(item, true);
+      } catch (std::exception& e) {
+	char msg[1024];
+	sprintf(msg, "in sequence element %d ", _index);
+	if (!PyErr_Occurred()) {
+	  ::SWIG_Error(SWIG_TypeError,  swig::type_name<T>());
+	}
+	SWIG_Python_AddErrorMsg(msg);
+	SWIG_Python_AddErrorMsg(e.what());
+	throw;
+      }
+    }
+
+    SwigPySequence_Ref& operator=(const T& v)
+    {
+      PySequence_SetItem(_seq, _index, swig::from<T>(v));
+      return *this;
+    }
+
+  private:
+    PyObject* _seq;
+    int _index;
+  };
+
+  template <class T>
+  struct SwigPySequence_ArrowProxy
+  {
+    SwigPySequence_ArrowProxy(const T& x): m_value(x) {}
+    const T* operator->() const { return &m_value; }
+    operator const T*() const { return &m_value; }
+    T m_value;
+  };
+
+  template <class T, class Reference >
+  struct SwigPySequence_InputIterator
+  {
+    typedef SwigPySequence_InputIterator<T, Reference > self;
+
+    typedef std::random_access_iterator_tag iterator_category;
+    typedef Reference reference;
+    typedef T value_type;
+    typedef T* pointer;
+    typedef int difference_type;
+
+    SwigPySequence_InputIterator()
+    {
+    }
+
+    SwigPySequence_InputIterator(PyObject* seq, int index)
+      : _seq(seq), _index(index)
+    {
+    }
+
+    reference operator*() const
+    {
+      return reference(_seq, _index);
+    }
+
+    SwigPySequence_ArrowProxy<T>
+    operator->() const {
+      return SwigPySequence_ArrowProxy<T>(operator*());
+    }
+
+    bool operator==(const self& ri) const
+    {
+      return (_index == ri._index) && (_seq == ri._seq);
+    }
+
+    bool operator!=(const self& ri) const
+    {
+      return !(operator==(ri));
+    }
+
+    self& operator ++ ()
+    {
+      ++_index;
+      return *this;
+    }
+
+    self& operator -- ()
+    {
+      --_index;
+      return *this;
+    }
+
+    self& operator += (difference_type n)
+    {
+      _index += n;
+      return *this;
+    }
+
+    self operator +(difference_type n) const
+    {
+      return self(_seq, _index + n);
+    }
+
+    self& operator -= (difference_type n)
+    {
+      _index -= n;
+      return *this;
+    }
+
+    self operator -(difference_type n) const
+    {
+      return self(_seq, _index - n);
+    }
+
+    difference_type operator - (const self& ri) const
+    {
+      return _index - ri._index;
+    }
+
+    bool operator < (const self& ri) const
+    {
+      return _index < ri._index;
+    }
+
+    reference
+    operator[](difference_type n) const
+    {
+      return reference(_seq, _index + n);
+    }
+
+  private:
+    PyObject* _seq;
+    difference_type _index;
+  };
+
+  template <class T>
+  struct SwigPySequence_Cont
+  {
+    typedef SwigPySequence_Ref<T> reference;
+    typedef const SwigPySequence_Ref<T> const_reference;
+    typedef T value_type;
+    typedef T* pointer;
+    typedef int difference_type;
+    typedef int size_type;
+    typedef const pointer const_pointer;
+    typedef SwigPySequence_InputIterator<T, reference> iterator;
+    typedef SwigPySequence_InputIterator<T, const_reference> const_iterator;
+
+    SwigPySequence_Cont(PyObject* seq) : _seq(0)
+    {
+      if (!PySequence_Check(seq)) {
+	throw std::invalid_argument("a sequence is expected");
+      }
+      _seq = seq;
+      Py_INCREF(_seq);
+    }
+
+    ~SwigPySequence_Cont()
+    {
+      Py_XDECREF(_seq);
+    }
+
+    size_type size() const
+    {
+      return static_cast<size_type>(PySequence_Size(_seq));
+    }
+
+    bool empty() const
+    {
+      return size() == 0;
+    }
+
+    iterator begin()
+    {
+      return iterator(_seq, 0);
+    }
+
+    const_iterator begin() const
+    {
+      return const_iterator(_seq, 0);
+    }
+
+    iterator end()
+    {
+      return iterator(_seq, size());
+    }
+
+    const_iterator end() const
+    {
+      return const_iterator(_seq, size());
+    }
+
+    reference operator[](difference_type n)
+    {
+      return reference(_seq, n);
+    }
+
+    const_reference operator[](difference_type n)  const
+    {
+      return const_reference(_seq, n);
+    }
+
+    bool check(bool set_err = true) const
+    {
+      int s = size();
+      for (int i = 0; i < s; ++i) {
+	swig::SwigVar_PyObject item = PySequence_GetItem(_seq, i);
+	if (!swig::check<value_type>(item)) {
+	  if (set_err) {
+	    char msg[1024];
+	    sprintf(msg, "in sequence element %d", i);
+	    SWIG_Error(SWIG_RuntimeError, msg);
+	  }
+	  return false;
+	}
+      }
+      return true;
+    }
+
+  private:
+    PyObject* _seq;
+  };
+
+}
+
+
+  namespace swig {
+    template <>  struct traits<BWAPI::Position > {
+      typedef pointer_category category;
+      static const char* type_name() { return"BWAPI::Position"; }
+    };
+  }
+
+
+namespace swig {
+  template <class SwigPySeq, class Seq>
+  inline void
+  assign(const SwigPySeq& swigpyseq, Seq* seq) {
+    // seq->assign(swigpyseq.begin(), swigpyseq.end()); // not used as not always implemented
+    typedef typename SwigPySeq::value_type value_type;
+    typename SwigPySeq::const_iterator it = swigpyseq.begin();
+    for (;it != swigpyseq.end(); ++it) {
+      seq->insert(seq->end(),(value_type)(*it));
+    }
+  }
+
+  template <class Seq, class T = typename Seq::value_type >
+  struct traits_asptr_stdseq {
+    typedef Seq sequence;
+    typedef T value_type;
+
+    static int asptr(PyObject *obj, sequence **seq) {
+      if (obj == Py_None || SWIG_Python_GetSwigThis(obj)) {
+	sequence *p;
+	if (::SWIG_ConvertPtr(obj,(void**)&p,
+			      swig::type_info<sequence>(),0) == SWIG_OK) {
+	  if (seq) *seq = p;
+	  return SWIG_OLDOBJ;
+	}
+      } else if (PySequence_Check(obj)) {
+	try {
+	  SwigPySequence_Cont<value_type> swigpyseq(obj);
+	  if (seq) {
+	    sequence *pseq = new sequence();
+	    assign(swigpyseq, pseq);
+	    *seq = pseq;
+	    return SWIG_NEWOBJ;
+	  } else {
+	    return swigpyseq.check() ? SWIG_OK : SWIG_ERROR;
+	  }
+	} catch (std::exception& e) {
+	  if (seq) {
+	    if (!PyErr_Occurred()) {
+	      PyErr_SetString(PyExc_TypeError, e.what());
+	    }
+	  }
+	  return SWIG_ERROR;
+	}
+      }
+      return SWIG_ERROR;
+    }
+  };
+
+  template <class Seq, class T = typename Seq::value_type >
+  struct traits_from_stdseq {
+    typedef Seq sequence;
+    typedef T value_type;
+    typedef typename Seq::size_type size_type;
+    typedef typename sequence::const_iterator const_iterator;
+
+    static PyObject *from(const sequence& seq) {
+#ifdef SWIG_PYTHON_EXTRA_NATIVE_CONTAINERS
+      swig_type_info *desc = swig::type_info<sequence>();
+      if (desc && desc->clientdata) {
+	return SWIG_NewPointerObj(new sequence(seq), desc, SWIG_POINTER_OWN);
+      }
+#endif
+      size_type size = seq.size();
+      if (size <= (size_type)INT_MAX) {
+	PyObject *obj = PyTuple_New((int)size);
+	int i = 0;
+	for (const_iterator it = seq.begin();
+	     it != seq.end(); ++it, ++i) {
+	  PyTuple_SetItem(obj,i,swig::from<value_type>(*it));
+	}
+	return obj;
+      } else {
+	PyErr_SetString(PyExc_OverflowError,"sequence size not valid in python");
+	return NULL;
+      }
+    }
+  };
+}
+
+
+  namespace swig {
+    template <class T>
+    struct traits_asptr<std::vector<T> >  {
+      static int asptr(PyObject *obj, std::vector<T> **vec) {
+	return traits_asptr_stdseq<std::vector<T> >::asptr(obj, vec);
+      }
+    };
+    
+    template <class T>
+    struct traits_from<std::vector<T> > {
+      static PyObject *from(const std::vector<T>& vec) {
+	return traits_from_stdseq<std::vector<T> >::from(vec);
+      }
+    };
+  }
+
+
+      namespace swig {
+	template <>  struct traits<std::vector<BWAPI::Position, std::allocator< BWAPI::Position > > > {
+	  typedef pointer_category category;
+	  static const char* type_name() {
+	    return "std::vector<" "BWAPI::Position" "," "std::allocator< BWAPI::Position >" " >";
+	  }
+	};
+      }
+    
+SWIGINTERN swig::SwigPyIterator *std_vector_Sl_BWAPI_Position_Sg__iterator(std::vector< BWAPI::Position > *self,PyObject **PYTHON_SELF){
+      return swig::make_output_iterator(self->begin(), self->begin(), self->end(), *PYTHON_SELF);
+    }
+SWIGINTERN bool std_vector_Sl_BWAPI_Position_Sg____nonzero__(std::vector< BWAPI::Position > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN bool std_vector_Sl_BWAPI_Position_Sg____bool__(std::vector< BWAPI::Position > const *self){
+      return !(self->empty());
+    }
+SWIGINTERN std::vector< BWAPI::Position >::size_type std_vector_Sl_BWAPI_Position_Sg____len__(std::vector< BWAPI::Position > const *self){
+      return self->size();
+    }
+
+SWIGINTERNINLINE PyObject* 
+SWIG_From_unsigned_SS_long  (unsigned long value)
+{
+  return (value > LONG_MAX) ?
+    PyLong_FromUnsignedLong(value) : PyInt_FromLong(static_cast< long >(value)); 
+}
+
+
+SWIGINTERNINLINE PyObject *
+SWIG_From_size_t  (size_t value)
+{    
+  return SWIG_From_unsigned_SS_long  (static_cast< unsigned long >(value));
+}
+
+SWIGINTERN std::vector< BWAPI::Position >::value_type std_vector_Sl_BWAPI_Position_Sg__pop(std::vector< BWAPI::Position > *self){
+      if (self->size() == 0)
+	throw std::out_of_range("pop from empty container");
+      std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >::value_type x = self->back();
+      self->pop_back();
+      return x;
+    }
+SWIGINTERN std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *std_vector_Sl_BWAPI_Position_Sg____getslice__(std::vector< BWAPI::Position > *self,std::vector< BWAPI::Position >::difference_type i,std::vector< BWAPI::Position >::difference_type j){
+      return swig::getslice(self, i, j);
+    }
+SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg____setslice__(std::vector< BWAPI::Position > *self,std::vector< BWAPI::Position >::difference_type i,std::vector< BWAPI::Position >::difference_type j,std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &v){
+      swig::setslice(self, i, j, v);
+    }
+SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg____delslice__(std::vector< BWAPI::Position > *self,std::vector< BWAPI::Position >::difference_type i,std::vector< BWAPI::Position >::difference_type j){
+      swig::delslice(self, i, j);
+    }
+SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg____delitem____SWIG_0(std::vector< BWAPI::Position > *self,std::vector< BWAPI::Position >::difference_type i){
+      self->erase(swig::getpos(self,i));
+    }
+SWIGINTERN std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *std_vector_Sl_BWAPI_Position_Sg____getitem____SWIG_0(std::vector< BWAPI::Position > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return NULL;
+      }
+      PySlice_GetIndices(slice, self->size(), &i, &j, &step);
+      return swig::getslice(self, i, j);
+    }
+SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg____setitem____SWIG_0(std::vector< BWAPI::Position > *self,PySliceObject *slice,std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &v){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(slice, self->size(), &i, &j, &step);
+      swig::setslice(self, i, j, v);
+    }
+SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg____delitem____SWIG_1(std::vector< BWAPI::Position > *self,PySliceObject *slice){
+      Py_ssize_t i, j, step;
+      if( !PySlice_Check(slice) ) {
+        SWIG_Error(SWIG_TypeError, "Slice object expected.");
+        return;
+      }
+      PySlice_GetIndices(slice, self->size(), &i, &j, &step);
+      swig::delslice(self, i,j);
+    }
+SWIGINTERN std::vector< BWAPI::Position >::value_type const &std_vector_Sl_BWAPI_Position_Sg____getitem____SWIG_1(std::vector< BWAPI::Position > const *self,std::vector< BWAPI::Position >::difference_type i){
+      return *(swig::cgetpos(self, i));
+    }
+SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg____setitem____SWIG_1(std::vector< BWAPI::Position > *self,std::vector< BWAPI::Position >::difference_type i,std::vector< BWAPI::Position >::value_type const &x){
+      *(swig::getpos(self,i)) = x;
+    }
+SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg__append(std::vector< BWAPI::Position > *self,std::vector< BWAPI::Position >::value_type const &x){
+      self->push_back(x);
+    }
 
 #include "BWTA.h"
 
@@ -5744,6 +6841,1718 @@ fail:
   return NULL;
 }
 
+
+SWIGINTERN PyObject *_wrap_PositionList_iterator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  PyObject **arg2 = (PyObject **) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  swig::SwigPyIterator *result = 0 ;
+  
+  arg2 = &obj0;
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_iterator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_iterator" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = (swig::SwigPyIterator *)std_vector_Sl_BWAPI_Position_Sg__iterator(arg1,arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_swig__SwigPyIterator, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___nonzero__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList___nonzero__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___nonzero__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = (bool)std_vector_Sl_BWAPI_Position_Sg____nonzero__((std::vector< BWAPI::Position > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___bool__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList___bool__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___bool__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = (bool)std_vector_Sl_BWAPI_Position_Sg____bool__((std::vector< BWAPI::Position > const *)arg1);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___len__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList___len__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___len__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = std_vector_Sl_BWAPI_Position_Sg____len__((std::vector< BWAPI::Position > const *)arg1);
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_pop(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::value_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_pop",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_pop" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  try {
+    result = std_vector_Sl_BWAPI_Position_Sg__pop(arg1);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj((new std::vector< BWAPI::Position >::value_type(static_cast< const std::vector< BWAPI::Position >::value_type& >(result))), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___getslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::difference_type arg2 ;
+  std::vector< BWAPI::Position >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:PositionList___getslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___getslice__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList___getslice__" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "PositionList___getslice__" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< BWAPI::Position >::difference_type >(val3);
+  try {
+    result = (std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *)std_vector_Sl_BWAPI_Position_Sg____getslice__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___setslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::difference_type arg2 ;
+  std::vector< BWAPI::Position >::difference_type arg3 ;
+  std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  int res4 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:PositionList___setslice__",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___setslice__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList___setslice__" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "PositionList___setslice__" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< BWAPI::Position >::difference_type >(val3);
+  {
+    std::vector<BWAPI::Position,std::allocator< BWAPI::Position > > *ptr = (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > > *)0;
+    res4 = swig::asptr(obj3, &ptr);
+    if (!SWIG_IsOK(res4)) {
+      SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "PositionList___setslice__" "', argument " "4"" of type '" "std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList___setslice__" "', argument " "4"" of type '" "std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &""'"); 
+    }
+    arg4 = ptr;
+  }
+  try {
+    std_vector_Sl_BWAPI_Position_Sg____setslice__(arg1,arg2,arg3,(std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &)*arg4);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res4)) delete arg4;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___delslice__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::difference_type arg2 ;
+  std::vector< BWAPI::Position >::difference_type arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  ptrdiff_t val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:PositionList___delslice__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___delslice__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList___delslice__" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::difference_type >(val2);
+  ecode3 = SWIG_AsVal_ptrdiff_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "PositionList___delslice__" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg3 = static_cast< std::vector< BWAPI::Position >::difference_type >(val3);
+  try {
+    std_vector_Sl_BWAPI_Position_Sg____delslice__(arg1,arg2,arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___delitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList___delitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___delitem__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList___delitem__" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::difference_type >(val2);
+  try {
+    std_vector_Sl_BWAPI_Position_Sg____delitem____SWIG_0(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___getitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList___getitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___getitem__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  {
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    result = (std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *)std_vector_Sl_BWAPI_Position_Sg____getitem____SWIG_0(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___setitem____SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res3 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:PositionList___setitem__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___setitem__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  {
+    arg2 = (PySliceObject *) obj1;
+  }
+  {
+    std::vector<BWAPI::Position,std::allocator< BWAPI::Position > > *ptr = (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > > *)0;
+    res3 = swig::asptr(obj2, &ptr);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "PositionList___setitem__" "', argument " "3"" of type '" "std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList___setitem__" "', argument " "3"" of type '" "std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &""'"); 
+    }
+    arg3 = ptr;
+  }
+  try {
+    std_vector_Sl_BWAPI_Position_Sg____setitem____SWIG_0(arg1,arg2,(std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  catch(std::invalid_argument &_e) {
+    SWIG_exception_fail(SWIG_ValueError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res3)) delete arg3;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___delitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  PySliceObject *arg2 = (PySliceObject *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList___delitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___delitem__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  {
+    arg2 = (PySliceObject *) obj1;
+  }
+  try {
+    std_vector_Sl_BWAPI_Position_Sg____delitem____SWIG_1(arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___delitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_PositionList___delitem____SWIG_1(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_PositionList___delitem____SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'PositionList___delitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    __delitem__(std::vector< BWAPI::Position > *,std::vector< BWAPI::Position >::difference_type)\n"
+    "    __delitem__(std::vector< BWAPI::Position > *,PySliceObject *)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___getitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::difference_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< BWAPI::Position >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList___getitem__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___getitem__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList___getitem__" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::difference_type >(val2);
+  try {
+    result = (std::vector< BWAPI::Position >::value_type *) &std_vector_Sl_BWAPI_Position_Sg____getitem____SWIG_1((std::vector< BWAPI::Position > const *)arg1,arg2);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___getitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        return _wrap_PositionList___getitem____SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_PositionList___getitem____SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'PositionList___getitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    __getitem__(std::vector< BWAPI::Position > *,PySliceObject *)\n"
+    "    __getitem__(std::vector< BWAPI::Position > const *,std::vector< BWAPI::Position >::difference_type)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___setitem____SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::difference_type arg2 ;
+  std::vector< BWAPI::Position >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  ptrdiff_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:PositionList___setitem__",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList___setitem__" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_ptrdiff_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList___setitem__" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::difference_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::difference_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "PositionList___setitem__" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList___setitem__" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< BWAPI::Position >::value_type * >(argp3);
+  try {
+    std_vector_Sl_BWAPI_Position_Sg____setitem____SWIG_1(arg1,arg2,(BWAPI::Position const &)*arg3);
+  }
+  catch(std::out_of_range &_e) {
+    SWIG_exception_fail(SWIG_IndexError, (&_e)->what());
+  }
+  
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList___setitem__(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 3); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        _v = PySlice_Check(argv[1]);
+      }
+      if (_v) {
+        int res = swig::asptr(argv[2], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_PositionList___setitem____SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_ptrdiff_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_PositionList___setitem____SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'PositionList___setitem__'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    __setitem__(std::vector< BWAPI::Position > *,PySliceObject *,std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > const &)\n"
+    "    __setitem__(std::vector< BWAPI::Position > *,std::vector< BWAPI::Position >::difference_type,std::vector< BWAPI::Position >::value_type const &)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_append(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList_append",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_append" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PositionList_append" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList_append" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< BWAPI::Position >::value_type * >(argp2);
+  std_vector_Sl_BWAPI_Position_Sg__append(arg1,(BWAPI::Position const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PositionList__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_PositionList")) SWIG_fail;
+  result = (std::vector< BWAPI::Position > *)new std::vector< BWAPI::Position >();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PositionList__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = 0 ;
+  int res1 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_PositionList",&obj0)) SWIG_fail;
+  {
+    std::vector<BWAPI::Position,std::allocator< BWAPI::Position > > *ptr = (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > > *)0;
+    res1 = swig::asptr(obj0, &ptr);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PositionList" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PositionList" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const &""'"); 
+    }
+    arg1 = ptr;
+  }
+  result = (std::vector< BWAPI::Position > *)new std::vector< BWAPI::Position >((std::vector< BWAPI::Position > const &)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, SWIG_POINTER_NEW |  0 );
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res1)) delete arg1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_empty(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_empty",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_empty" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = (bool)((std::vector< BWAPI::Position > const *)arg1)->empty();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_size(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_size",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_size" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = ((std::vector< BWAPI::Position > const *)arg1)->size();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_clear(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_clear",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_clear" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  (arg1)->clear();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_swap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position > *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList_swap",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_swap" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PositionList_swap" "', argument " "2"" of type '" "std::vector< BWAPI::Position > &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList_swap" "', argument " "2"" of type '" "std::vector< BWAPI::Position > &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp2);
+  (arg1)->swap(*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_get_allocator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SwigValueWrapper< std::allocator< BWAPI::Position > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_get_allocator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_get_allocator" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = ((std::vector< BWAPI::Position > const *)arg1)->get_allocator();
+  resultobj = SWIG_NewPointerObj((new std::vector< BWAPI::Position >::allocator_type(static_cast< const std::vector< BWAPI::Position >::allocator_type& >(result))), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_begin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::const_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_begin",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_begin" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = ((std::vector< BWAPI::Position > const *)arg1)->begin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< BWAPI::Position >::const_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_end(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::const_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_end",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_end" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = ((std::vector< BWAPI::Position > const *)arg1)->end();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< BWAPI::Position >::const_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_rbegin(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::const_reverse_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_rbegin",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_rbegin" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = ((std::vector< BWAPI::Position > const *)arg1)->rbegin();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< BWAPI::Position >::const_reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_rend(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::const_reverse_iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_rend",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_rend" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = ((std::vector< BWAPI::Position > const *)arg1)->rend();
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< BWAPI::Position >::const_reverse_iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PositionList__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position >::size_type arg1 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_PositionList",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_PositionList" "', argument " "1"" of type '" "std::vector< BWAPI::Position >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< BWAPI::Position >::size_type >(val1);
+  result = (std::vector< BWAPI::Position > *)new std::vector< BWAPI::Position >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_pop_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_pop_back",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_pop_back" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  (arg1)->pop_back();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_resize__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList_resize",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_resize" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList_resize" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::size_type >(val2);
+  (arg1)->resize(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_erase__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::iterator arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< BWAPI::Position >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList_erase",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_erase" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_erase" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_erase" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+    }
+  }
+  result = (arg1)->erase(arg2);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< BWAPI::Position >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_erase__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::iterator arg2 ;
+  std::vector< BWAPI::Position >::iterator arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  swig::SwigPyIterator *iter3 = 0 ;
+  int res3 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< BWAPI::Position >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:PositionList_erase",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_erase" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_erase" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_erase" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(obj2, SWIG_as_voidptrptr(&iter3), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res3) || !iter3) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_erase" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter3);
+    if (iter_t) {
+      arg3 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_erase" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+    }
+  }
+  result = (arg1)->erase(arg2,arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< BWAPI::Position >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_erase(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 3); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter) != 0));
+      if (_v) {
+        return _wrap_PositionList_erase__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter) != 0));
+      if (_v) {
+        swig::SwigPyIterator *iter = 0;
+        int res = SWIG_ConvertPtr(argv[2], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+        _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter) != 0));
+        if (_v) {
+          return _wrap_PositionList_erase__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'PositionList_erase'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    erase(std::vector< BWAPI::Position > *,std::vector< BWAPI::Position >::iterator)\n"
+    "    erase(std::vector< BWAPI::Position > *,std::vector< BWAPI::Position >::iterator,std::vector< BWAPI::Position >::iterator)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PositionList__SWIG_3(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position >::size_type arg1 ;
+  std::vector< BWAPI::Position >::value_type *arg2 = 0 ;
+  size_t val1 ;
+  int ecode1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  std::vector< BWAPI::Position > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:new_PositionList",&obj0,&obj1)) SWIG_fail;
+  ecode1 = SWIG_AsVal_size_t(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "new_PositionList" "', argument " "1"" of type '" "std::vector< BWAPI::Position >::size_type""'");
+  } 
+  arg1 = static_cast< std::vector< BWAPI::Position >::size_type >(val1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "new_PositionList" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PositionList" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< BWAPI::Position >::value_type * >(argp2);
+  result = (std::vector< BWAPI::Position > *)new std::vector< BWAPI::Position >(arg1,(std::vector< BWAPI::Position >::value_type const &)*arg2);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_PositionList(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_PositionList__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      return _wrap_new_PositionList__SWIG_2(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_PositionList__SWIG_1(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    {
+      int res = SWIG_AsVal_size_t(argv[0], NULL);
+      _v = SWIG_CheckState(res);
+    }
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_new_PositionList__SWIG_3(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'new_PositionList'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    std::vector< BWAPI::Position >()\n"
+    "    std::vector< BWAPI::Position >(std::vector< BWAPI::Position > const &)\n"
+    "    std::vector< BWAPI::Position >(std::vector< BWAPI::Position >::size_type)\n"
+    "    std::vector< BWAPI::Position >(std::vector< BWAPI::Position >::size_type,std::vector< BWAPI::Position >::value_type const &)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_push_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::value_type *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList_push_back",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_push_back" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "PositionList_push_back" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList_push_back" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< BWAPI::Position >::value_type * >(argp2);
+  (arg1)->push_back((std::vector< BWAPI::Position >::value_type const &)*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_front(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_front",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_front" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = (std::vector< BWAPI::Position >::value_type *) &((std::vector< BWAPI::Position > const *)arg1)->front();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_back(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::value_type *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_back",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_back" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = (std::vector< BWAPI::Position >::value_type *) &((std::vector< BWAPI::Position > const *)arg1)->back();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_assign(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::size_type arg2 ;
+  std::vector< BWAPI::Position >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:PositionList_assign",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_assign" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList_assign" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::size_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "PositionList_assign" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList_assign" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< BWAPI::Position >::value_type * >(argp3);
+  (arg1)->assign(arg2,(std::vector< BWAPI::Position >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_resize__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::size_type arg2 ;
+  std::vector< BWAPI::Position >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:PositionList_resize",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_resize" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList_resize" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::size_type >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "PositionList_resize" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList_resize" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< BWAPI::Position >::value_type * >(argp3);
+  (arg1)->resize(arg2,(std::vector< BWAPI::Position >::value_type const &)*arg3);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_resize(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[4];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 3); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_PositionList_resize__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_size_t(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_PositionList_resize__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'PositionList_resize'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    resize(std::vector< BWAPI::Position > *,std::vector< BWAPI::Position >::size_type)\n"
+    "    resize(std::vector< BWAPI::Position > *,std::vector< BWAPI::Position >::size_type,std::vector< BWAPI::Position >::value_type const &)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_insert__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::iterator arg2 ;
+  std::vector< BWAPI::Position >::value_type *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  std::vector< BWAPI::Position >::iterator result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:PositionList_insert",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_insert" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_insert" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_insert" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+    }
+  }
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,  0  | 0);
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "PositionList_insert" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList_insert" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  arg3 = reinterpret_cast< std::vector< BWAPI::Position >::value_type * >(argp3);
+  result = (arg1)->insert(arg2,(std::vector< BWAPI::Position >::value_type const &)*arg3);
+  resultobj = SWIG_NewPointerObj(swig::make_output_iterator(static_cast< const std::vector< BWAPI::Position >::iterator & >(result)),
+    swig::SwigPyIterator::descriptor(),SWIG_POINTER_OWN);
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_insert__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::iterator arg2 ;
+  std::vector< BWAPI::Position >::size_type arg3 ;
+  std::vector< BWAPI::Position >::value_type *arg4 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  swig::SwigPyIterator *iter2 = 0 ;
+  int res2 ;
+  size_t val3 ;
+  int ecode3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:PositionList_insert",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_insert" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, SWIG_as_voidptrptr(&iter2), swig::SwigPyIterator::descriptor(), 0);
+  if (!SWIG_IsOK(res2) || !iter2) {
+    SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_insert" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+  } else {
+    swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *iter_t = dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter2);
+    if (iter_t) {
+      arg2 = iter_t->get_current();
+    } else {
+      SWIG_exception_fail(SWIG_ArgError(SWIG_TypeError), "in method '" "PositionList_insert" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::iterator""'");
+    }
+  }
+  ecode3 = SWIG_AsVal_size_t(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "PositionList_insert" "', argument " "3"" of type '" "std::vector< BWAPI::Position >::size_type""'");
+  } 
+  arg3 = static_cast< std::vector< BWAPI::Position >::size_type >(val3);
+  res4 = SWIG_ConvertPtr(obj3, &argp4, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,  0  | 0);
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "PositionList_insert" "', argument " "4"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  if (!argp4) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "PositionList_insert" "', argument " "4"" of type '" "std::vector< BWAPI::Position >::value_type const &""'"); 
+  }
+  arg4 = reinterpret_cast< std::vector< BWAPI::Position >::value_type * >(argp4);
+  (arg1)->insert(arg2,arg3,(std::vector< BWAPI::Position >::value_type const &)*arg4);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_insert(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[5];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 4); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter) != 0));
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_PositionList_insert__SWIG_0(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 4) {
+    int _v;
+    int res = swig::asptr(argv[0], (std::vector<BWAPI::Position,std::allocator< BWAPI::Position > >**)(0));
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      swig::SwigPyIterator *iter = 0;
+      int res = SWIG_ConvertPtr(argv[1], SWIG_as_voidptrptr(&iter), swig::SwigPyIterator::descriptor(), 0);
+      _v = (SWIG_IsOK(res) && iter && (dynamic_cast<swig::SwigPyIterator_T<std::vector< BWAPI::Position >::iterator > *>(iter) != 0));
+      if (_v) {
+        {
+          int res = SWIG_AsVal_size_t(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          int res = SWIG_ConvertPtr(argv[3], 0, SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0);
+          _v = SWIG_CheckState(res);
+          if (_v) {
+            return _wrap_PositionList_insert__SWIG_1(self, args);
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number of arguments for overloaded function 'PositionList_insert'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    insert(std::vector< BWAPI::Position > *,std::vector< BWAPI::Position >::iterator,std::vector< BWAPI::Position >::value_type const &)\n"
+    "    insert(std::vector< BWAPI::Position > *,std::vector< BWAPI::Position >::iterator,std::vector< BWAPI::Position >::size_type,std::vector< BWAPI::Position >::value_type const &)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_reserve(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  std::vector< BWAPI::Position >::size_type arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  size_t val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:PositionList_reserve",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_reserve" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  ecode2 = SWIG_AsVal_size_t(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PositionList_reserve" "', argument " "2"" of type '" "std::vector< BWAPI::Position >::size_type""'");
+  } 
+  arg2 = static_cast< std::vector< BWAPI::Position >::size_type >(val2);
+  (arg1)->reserve(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_PositionList_capacity(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWAPI::Position >::size_type result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:PositionList_capacity",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PositionList_capacity" "', argument " "1"" of type '" "std::vector< BWAPI::Position > const *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  result = ((std::vector< BWAPI::Position > const *)arg1)->capacity();
+  resultobj = SWIG_From_size_t(static_cast< size_t >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_PositionList(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::vector< BWAPI::Position > *arg1 = (std::vector< BWAPI::Position > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_PositionList",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_PositionList" "', argument " "1"" of type '" "std::vector< BWAPI::Position > *""'"); 
+  }
+  arg1 = reinterpret_cast< std::vector< BWAPI::Position > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *PositionList_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
 
 SWIGINTERN PyObject *_wrap_TA_getStartLocation(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
@@ -34448,6 +37257,40 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"BaseLocationSet_next", _wrap_BaseLocationSet_next, METH_VARARGS, NULL},
 	 { (char *)"BaseLocationSet_swigregister", BaseLocationSet_swigregister, METH_VARARGS, NULL},
 	 { (char *)"BWAPI_init", _wrap_BWAPI_init, METH_VARARGS, NULL},
+	 { (char *)"PositionList_iterator", _wrap_PositionList_iterator, METH_VARARGS, NULL},
+	 { (char *)"PositionList___nonzero__", _wrap_PositionList___nonzero__, METH_VARARGS, NULL},
+	 { (char *)"PositionList___bool__", _wrap_PositionList___bool__, METH_VARARGS, NULL},
+	 { (char *)"PositionList___len__", _wrap_PositionList___len__, METH_VARARGS, NULL},
+	 { (char *)"PositionList_pop", _wrap_PositionList_pop, METH_VARARGS, NULL},
+	 { (char *)"PositionList___getslice__", _wrap_PositionList___getslice__, METH_VARARGS, NULL},
+	 { (char *)"PositionList___setslice__", _wrap_PositionList___setslice__, METH_VARARGS, NULL},
+	 { (char *)"PositionList___delslice__", _wrap_PositionList___delslice__, METH_VARARGS, NULL},
+	 { (char *)"PositionList___delitem__", _wrap_PositionList___delitem__, METH_VARARGS, NULL},
+	 { (char *)"PositionList___getitem__", _wrap_PositionList___getitem__, METH_VARARGS, NULL},
+	 { (char *)"PositionList___setitem__", _wrap_PositionList___setitem__, METH_VARARGS, NULL},
+	 { (char *)"PositionList_append", _wrap_PositionList_append, METH_VARARGS, NULL},
+	 { (char *)"PositionList_empty", _wrap_PositionList_empty, METH_VARARGS, NULL},
+	 { (char *)"PositionList_size", _wrap_PositionList_size, METH_VARARGS, NULL},
+	 { (char *)"PositionList_clear", _wrap_PositionList_clear, METH_VARARGS, NULL},
+	 { (char *)"PositionList_swap", _wrap_PositionList_swap, METH_VARARGS, NULL},
+	 { (char *)"PositionList_get_allocator", _wrap_PositionList_get_allocator, METH_VARARGS, NULL},
+	 { (char *)"PositionList_begin", _wrap_PositionList_begin, METH_VARARGS, NULL},
+	 { (char *)"PositionList_end", _wrap_PositionList_end, METH_VARARGS, NULL},
+	 { (char *)"PositionList_rbegin", _wrap_PositionList_rbegin, METH_VARARGS, NULL},
+	 { (char *)"PositionList_rend", _wrap_PositionList_rend, METH_VARARGS, NULL},
+	 { (char *)"PositionList_pop_back", _wrap_PositionList_pop_back, METH_VARARGS, NULL},
+	 { (char *)"PositionList_erase", _wrap_PositionList_erase, METH_VARARGS, NULL},
+	 { (char *)"new_PositionList", _wrap_new_PositionList, METH_VARARGS, NULL},
+	 { (char *)"PositionList_push_back", _wrap_PositionList_push_back, METH_VARARGS, NULL},
+	 { (char *)"PositionList_front", _wrap_PositionList_front, METH_VARARGS, NULL},
+	 { (char *)"PositionList_back", _wrap_PositionList_back, METH_VARARGS, NULL},
+	 { (char *)"PositionList_assign", _wrap_PositionList_assign, METH_VARARGS, NULL},
+	 { (char *)"PositionList_resize", _wrap_PositionList_resize, METH_VARARGS, NULL},
+	 { (char *)"PositionList_insert", _wrap_PositionList_insert, METH_VARARGS, NULL},
+	 { (char *)"PositionList_reserve", _wrap_PositionList_reserve, METH_VARARGS, NULL},
+	 { (char *)"PositionList_capacity", _wrap_PositionList_capacity, METH_VARARGS, NULL},
+	 { (char *)"delete_PositionList", _wrap_delete_PositionList, METH_VARARGS, NULL},
+	 { (char *)"PositionList_swigregister", PositionList_swigregister, METH_VARARGS, NULL},
 	 { (char *)"TA_getStartLocation", _wrap_TA_getStartLocation, METH_VARARGS, NULL},
 	 { (char *)"TA_getNearestBaseLocation", _wrap_TA_getNearestBaseLocation, METH_VARARGS, NULL},
 	 { (char *)"readMap", _wrap_readMap, METH_VARARGS, NULL},
@@ -35027,6 +37870,9 @@ static PyMethodDef SwigMethods[] = {
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static void *_p_BWTA__PolygonTo_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *)  ((BWTA::Polygon *) x));
+}
 static swig_type_info _swigt__p_BWAPI__AIModule = {"_p_BWAPI__AIModule", "BWAPI::AIModule *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWAPI__Color = {"_p_BWAPI__Color", "BWAPI::Color *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWAPI__DamageType = {"_p_BWAPI__DamageType", "BWAPI::DamageType *", 0, 0, (void*)0, 0};
@@ -35063,7 +37909,11 @@ static swig_type_info _swigt__p_SetWrapper_PtrNextT_BWAPI__TilePosition_t = {"_p
 static swig_type_info _swigt__p_TechType = {"_p_TechType", "TechType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_TilePosition = {"_p_TilePosition", "TilePosition *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_UpgradeType = {"_p_UpgradeType", "UpgradeType *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_p_PyObject = {"_p_p_PyObject", "PyObject **", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__listT_BWAPI__UnitType_t = {"_p_std__listT_BWAPI__UnitType_t", "std::list< BWAPI::UnitType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__listT_BWAPI__Unit_p_t = {"_p_std__listT_BWAPI__Unit_p_t", "std::list< BWAPI::Unit * > *", 0, 0, (void*)0, 0};
@@ -35098,7 +37948,11 @@ static swig_type_info _swigt__p_std__setT_Chokepoint_p_t = {"_p_std__setT_Chokep
 static swig_type_info _swigt__p_std__setT_Polygon_p_t = {"_p_std__setT_Polygon_p_t", "std::set< Polygon * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_Region_p_t = {"_p_std__setT_Region_p_t", "std::set< Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t", "std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *|std::vector< BWAPI::Position > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type", "std::vector< BWAPI::Position >::allocator_type *|std::allocator< BWAPI::Position > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type", "std::vector< BWAPI::Position >::value_type *|BWAPI::Position *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_BWAPI__AIModule,
@@ -35137,7 +37991,11 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_TechType,
   &_swigt__p_TilePosition,
   &_swigt__p_UpgradeType,
+  &_swigt__p_allocator_type,
   &_swigt__p_char,
+  &_swigt__p_difference_type,
+  &_swigt__p_p_PyObject,
+  &_swigt__p_size_type,
   &_swigt__p_std__invalid_argument,
   &_swigt__p_std__listT_BWAPI__UnitType_t,
   &_swigt__p_std__listT_BWAPI__Unit_p_t,
@@ -35172,7 +38030,11 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__setT_Polygon_p_t,
   &_swigt__p_std__setT_Region_p_t,
   &_swigt__p_std__string,
+  &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,
+  &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type,
+  &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,
   &_swigt__p_swig__SwigPyIterator,
+  &_swigt__p_value_type,
 };
 
 static swig_cast_info _swigc__p_BWAPI__AIModule[] = {  {&_swigt__p_BWAPI__AIModule, 0, 0, 0},{0, 0, 0, 0}};
@@ -35185,7 +38047,7 @@ static swig_cast_info _swigc__p_BWAPI__Game[] = {  {&_swigt__p_BWAPI__Game, 0, 0
 static swig_cast_info _swigc__p_BWAPI__Order[] = {  {&_swigt__p_BWAPI__Order, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWAPI__Player[] = {  {&_swigt__p_BWAPI__Player, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWAPI__PlayerType[] = {  {&_swigt__p_BWAPI__PlayerType, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_BWAPI__Position[] = {  {&_swigt__p_BWAPI__Position, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_BWAPI__Position[] = {  {&_swigt__p_BWAPI__Position, 0, 0, 0},  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWAPI__Race[] = {  {&_swigt__p_BWAPI__Race, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWAPI__TechType[] = {  {&_swigt__p_BWAPI__TechType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWAPI__TilePosition[] = {  {&_swigt__p_BWAPI__TilePosition, 0, 0, 0},{0, 0, 0, 0}};
@@ -35211,7 +38073,11 @@ static swig_cast_info _swigc__p_SetWrapper_PtrNextT_BWAPI__TilePosition_t[] = { 
 static swig_cast_info _swigc__p_TechType[] = {  {&_swigt__p_TechType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_TilePosition[] = {  {&_swigt__p_TilePosition, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_UpgradeType[] = {  {&_swigt__p_UpgradeType, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_p_PyObject[] = {  {&_swigt__p_p_PyObject, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__listT_BWAPI__UnitType_t[] = {  {&_swigt__p_std__listT_BWAPI__UnitType_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__listT_BWAPI__Unit_p_t[] = {  {&_swigt__p_std__listT_BWAPI__Unit_p_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -35246,7 +38112,11 @@ static swig_cast_info _swigc__p_std__setT_Chokepoint_p_t[] = {  {&_swigt__p_std_
 static swig_cast_info _swigc__p_std__setT_Polygon_p_t[] = {  {&_swigt__p_std__setT_Polygon_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_Region_p_t[] = {  {&_swigt__p_std__setT_Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t[] = {  {&_swigt__p_BWTA__Polygon, _p_BWTA__PolygonTo_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0, 0},  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type[] = {  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type[] = {  {&_swigt__p_BWAPI__Position, 0, 0, 0},  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__SwigPyIterator[] = {  {&_swigt__p_swig__SwigPyIterator, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_BWAPI__AIModule,
@@ -35285,7 +38155,11 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_TechType,
   _swigc__p_TilePosition,
   _swigc__p_UpgradeType,
+  _swigc__p_allocator_type,
   _swigc__p_char,
+  _swigc__p_difference_type,
+  _swigc__p_p_PyObject,
+  _swigc__p_size_type,
   _swigc__p_std__invalid_argument,
   _swigc__p_std__listT_BWAPI__UnitType_t,
   _swigc__p_std__listT_BWAPI__Unit_p_t,
@@ -35320,7 +38194,11 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__setT_Polygon_p_t,
   _swigc__p_std__setT_Region_p_t,
   _swigc__p_std__string,
+  _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,
+  _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type,
+  _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,
   _swigc__p_swig__SwigPyIterator,
+  _swigc__p_value_type,
 };
 
 

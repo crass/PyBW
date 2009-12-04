@@ -1,4 +1,3 @@
-%template(PositionList) std::vector<BWAPI::Position>;
 
 %newobject BWAPI::Player::getUnits;
 
@@ -184,4 +183,5 @@ using namespace BWAPI;
 
 %include "BWAPI.h"
 
+%template(PositionList) std::vector<BWAPI::Position>;
 

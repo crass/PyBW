@@ -251,6 +251,53 @@ BaseLocationSet_swigregister(BaseLocationSet)
 def BWAPI_init():
   return _pybw_swig.BWAPI_init()
 BWAPI_init = _pybw_swig.BWAPI_init
+class PositionList(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, PositionList, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, PositionList, name)
+    __repr__ = _swig_repr
+    def iterator(self): return _pybw_swig.PositionList_iterator(self)
+    def __iter__(self): return self.iterator()
+    def __nonzero__(self): return _pybw_swig.PositionList___nonzero__(self)
+    def __bool__(self): return _pybw_swig.PositionList___bool__(self)
+    def __len__(self): return _pybw_swig.PositionList___len__(self)
+    def pop(self): return _pybw_swig.PositionList_pop(self)
+    def __getslice__(self, *args): return _pybw_swig.PositionList___getslice__(self, *args)
+    def __setslice__(self, *args): return _pybw_swig.PositionList___setslice__(self, *args)
+    def __delslice__(self, *args): return _pybw_swig.PositionList___delslice__(self, *args)
+    def __delitem__(self, *args): return _pybw_swig.PositionList___delitem__(self, *args)
+    def __getitem__(self, *args): return _pybw_swig.PositionList___getitem__(self, *args)
+    def __setitem__(self, *args): return _pybw_swig.PositionList___setitem__(self, *args)
+    def append(self, *args): return _pybw_swig.PositionList_append(self, *args)
+    def empty(self): return _pybw_swig.PositionList_empty(self)
+    def size(self): return _pybw_swig.PositionList_size(self)
+    def clear(self): return _pybw_swig.PositionList_clear(self)
+    def swap(self, *args): return _pybw_swig.PositionList_swap(self, *args)
+    def get_allocator(self): return _pybw_swig.PositionList_get_allocator(self)
+    def begin(self): return _pybw_swig.PositionList_begin(self)
+    def end(self): return _pybw_swig.PositionList_end(self)
+    def rbegin(self): return _pybw_swig.PositionList_rbegin(self)
+    def rend(self): return _pybw_swig.PositionList_rend(self)
+    def pop_back(self): return _pybw_swig.PositionList_pop_back(self)
+    def erase(self, *args): return _pybw_swig.PositionList_erase(self, *args)
+    def __init__(self, *args): 
+        this = _pybw_swig.new_PositionList(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def push_back(self, *args): return _pybw_swig.PositionList_push_back(self, *args)
+    def front(self): return _pybw_swig.PositionList_front(self)
+    def back(self): return _pybw_swig.PositionList_back(self)
+    def assign(self, *args): return _pybw_swig.PositionList_assign(self, *args)
+    def resize(self, *args): return _pybw_swig.PositionList_resize(self, *args)
+    def insert(self, *args): return _pybw_swig.PositionList_insert(self, *args)
+    def reserve(self, *args): return _pybw_swig.PositionList_reserve(self, *args)
+    def capacity(self): return _pybw_swig.PositionList_capacity(self)
+    __swig_destroy__ = _pybw_swig.delete_PositionList
+    __del__ = lambda self : None;
+PositionList_swigregister = _pybw_swig.PositionList_swigregister
+PositionList_swigregister(PositionList)
+
 
 def TA_getStartLocation(*args):
   return _pybw_swig.TA_getStartLocation(*args)
@@ -1758,10 +1805,12 @@ class Chokepoint(_object):
 Chokepoint_swigregister = _pybw_swig.Chokepoint_swigregister
 Chokepoint_swigregister(Chokepoint)
 
-class Polygon(_object):
+class Polygon(PositionList):
     __swig_setmethods__ = {}
+    for _s in [PositionList]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, Polygon, name, value)
     __swig_getmethods__ = {}
+    for _s in [PositionList]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, Polygon, name)
     __repr__ = _swig_repr
     def __init__(self): 
