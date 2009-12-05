@@ -1,4 +1,6 @@
 
+// Player
+
 %newobject BWAPI::Player::getUnits;
 
 %extend BWAPI::Player {
@@ -23,6 +25,26 @@
 %ignore BWAPI::Player::playerType;
 %ignore BWAPI::Player::getStartLocation;
 %ignore BWAPI::Player::getRace;
+
+
+
+%newobject BWAPI::Unit::getLoadedUnits;
+%newobject BWAPI::Unit::getTrainingQueue;
+
+// Unit
+%extend BWAPI::Unit {
+    ListWrapper<BWAPI::Unit*>* getLoadedUnits()
+    {
+        return new ListWrapper<BWAPI::Unit*>( self->getLoadedUnits() );
+    }
+
+    ListWrapper_PtrNext<BWAPI::UnitType>* getTrainingQueue()
+    {
+        return new ListWrapper_PtrNext<BWAPI::UnitType>( self->getTrainingQueue() );
+    }
+}
+%ignore BWAPI::Unit::getLoadedUnits;
+%ignore BWAPI::Unit::getTrainingQueue;
 
 
 
@@ -183,5 +205,5 @@ using namespace BWAPI;
 
 %include "BWAPI.h"
 
-%template(PositionList) std::vector<BWAPI::Position>;
+%template(PositionVector) std::vector<BWAPI::Position>;
 

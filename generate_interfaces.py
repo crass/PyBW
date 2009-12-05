@@ -37,12 +37,15 @@ def module_include_filename(module_name):
     return 'Temp/%s.i' % module_name
 
 l1 = ["Player", "Unit", "Force"]
-l2 = ["Position", "TilePosition"]
+l2 = ["Position", "TilePosition", "UnitType"]
 l3 = ["Region", "Chokepoint", "BaseLocation"]
 templates1 = '\n'.join("%%template (%sSet) SetWrapper<BWAPI::%s*>;"%(x,x) for x in l1)
 templates2 = '\n'.join("%%template (%sSet) SetWrapper_PtrNext<BWAPI::%s>;"%(x,x) for x in l2)
 templates3 = '\n'.join("%%template (%sSet) SetWrapper<BWTA::%s*>;"%(x,x) for x in l3)
-templates = templates1 + templates2 + templates3
+
+templates4 = '\n'.join("%%template (%sList) ListWrapper<BWAPI::%s*>;"%(x,x) for x in l1)
+templates5 = '\n'.join("%%template (%sList) ListWrapper_PtrNext<BWAPI::%s>;"%(x,x) for x in l2)
+templates = templates1 + templates2 + templates3 + templates4 + templates5
 
 
 

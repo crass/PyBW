@@ -223,6 +223,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\stdlist_wrapper.h"
+				>
+			</File>
+			<File
 				RelativePath=".\stdset_wrapper.h"
 				>
 			</File>
