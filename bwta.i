@@ -78,4 +78,27 @@ SetWrapper<BWTA::BaseLocation*>* TA_getStartLocations();
 
 
 
+%newobject BWTA::BaseLocation::getMinerals;
+%newobject BWTA::BaseLocation::getStaticMinerals;
+%newobject BWTA::BaseLocation::getGeysers;
+
+%extend BWTA::BaseLocation {
+    SetWrapper<BWAPI::Unit*>* getMinerals()
+    {
+        return new SetWrapper<BWAPI::Unit*>( self->getMinerals() );
+    }
+
+    SetWrapper<BWAPI::Unit*>* getStaticMinerals()
+    {
+        return new SetWrapper<BWAPI::Unit*>( self->getStaticMinerals() );
+    }
+
+    SetWrapper<BWAPI::Unit*>* getGeysers()
+    {
+        return new SetWrapper<BWAPI::Unit*>( self->getGeysers() );
+    }
+}
+%ignore BWTA::BaseLocation::getMinerals;
+%ignore BWTA::BaseLocation::getStaticMinerals;
+%ignore BWTA::BaseLocation::getGeysers;
 

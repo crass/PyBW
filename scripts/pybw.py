@@ -71,6 +71,7 @@ print "Creating a broodwar instance (of Game)"
 
 broodwar = pybw_swig.getBroodwar()
 
+
 print "Adding __repr__ method to classes"
 
 def Position_repr(self):
@@ -125,46 +126,59 @@ print "Fixing __eq__ and __hash__ methods in classes"
 
 def eq_by_id(self, other):
     return self.id == other.id
+def ne_by_id(self, other):
+    return self.id != other.id
 def hash_by_id(self):
     return hash(self.id)
 
 
 pybw_swig.Player.__hash__ = hash_by_id
 pybw_swig.Player.__eq__ = eq_by_id
+pybw_swig.Player.__ne__ = ne_by_id
 
 pybw_swig.UnitType.__hash__ = hash_by_id
 pybw_swig.UnitType.__eq__ = eq_by_id
+pybw_swig.UnitType.__ne__ = ne_by_id
 
 pybw_swig.PlayerType.__hash__ = hash_by_id
 pybw_swig.PlayerType.__eq__ = eq_by_id
+pybw_swig.PlayerType.__ne__ = ne_by_id
 
 pybw_swig.TechType.__hash__ = hash_by_id
 pybw_swig.TechType.__eq__ = eq_by_id
+pybw_swig.TechType.__ne__ = ne_by_id
 
 pybw_swig.UpgradeType.__hash__ = hash_by_id
 pybw_swig.UpgradeType.__eq__ = eq_by_id
+pybw_swig.UpgradeType.__ne__ = ne_by_id
 
 pybw_swig.WeaponType.__hash__ = hash_by_id
 pybw_swig.WeaponType.__eq__ = eq_by_id
+pybw_swig.WeaponType.__ne__ = ne_by_id
 
 pybw_swig.DamageType.__hash__ = hash_by_id
 pybw_swig.DamageType.__eq__ = eq_by_id
+pybw_swig.DamageType.__ne__ = ne_by_id
 
 pybw_swig.ExplosionType.__hash__ = hash_by_id
 pybw_swig.ExplosionType.__eq__ = eq_by_id
+pybw_swig.ExplosionType.__ne__ = ne_by_id
 
 pybw_swig.Race.__hash__ = hash_by_id
 pybw_swig.Race.__eq__ = eq_by_id
+pybw_swig.Race.__ne__ = ne_by_id
 
 pybw_swig.Order.__hash__ = hash_by_id
 pybw_swig.Order.__eq__ = eq_by_id
+pybw_swig.Order.__ne__ = ne_by_id
 
 pybw_swig.UnitSizeType.__hash__ = hash_by_id
 pybw_swig.UnitSizeType.__eq__ = eq_by_id
-
+pybw_swig.UnitSizeType.__ne__ = ne_by_id
 
 pybw_swig.Error.__hash__ = hash_by_id
 pybw_swig.Error.__eq__ = eq_by_id
+pybw_swig.Error.__ne__ = ne_by_id
 
 
 
@@ -174,6 +188,7 @@ def Force_hash(self):
     raise NotImplementedError("Cannot calculate hash for force")
 pybw_swig.Force.__hash__ = Force_hash
 pybw_swig.Force.__eq__ = Force_eq
+pybw_swig.Force.__ne__ = Force_eq
 
 
 def Position_hash(self):
@@ -190,7 +205,20 @@ pybw_swig.TilePosition.__hash__ = TilePosition_hash
 # * Region
 # * Polygon
 
+print "Adding some utility methods"
+def Pos_iter(self):
+    yield self.x
+    yield self.y
+pybw_swig.Position.__iter__ = Pos_iter
+pybw_swig.TilePosition.__iter__ = Pos_iter
 
+def TilePosition_toWalkable(self):
+    return self.__class__( self.x*4, self.y*4 )
+def TilePosition_fromWalkable(self):
+    return self.__class__( self.x/4, self.y/4 )
+
+pybw_swig.TilePosition.toWalkable = TilePosition_toWalkable
+pybw_swig.TilePosition.fromWalkable = TilePosition_fromWalkable
 
 print "Redirecting output to broodwar console"
 

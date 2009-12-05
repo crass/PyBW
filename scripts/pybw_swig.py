@@ -1713,14 +1713,14 @@ class BaseLocation(_object):
     def getRegion(self): return _pybw_swig.BaseLocation_getRegion(self)
     def minerals(self): return _pybw_swig.BaseLocation_minerals(self)
     def gas(self): return _pybw_swig.BaseLocation_gas(self)
-    def getMinerals(self): return _pybw_swig.BaseLocation_getMinerals(self)
-    def getStaticMinerals(self): return _pybw_swig.BaseLocation_getStaticMinerals(self)
-    def getGeysers(self): return _pybw_swig.BaseLocation_getGeysers(self)
     def getGroundDistance(self, *args): return _pybw_swig.BaseLocation_getGroundDistance(self, *args)
     def getAirDistance(self, *args): return _pybw_swig.BaseLocation_getAirDistance(self, *args)
     def isIsland(self): return _pybw_swig.BaseLocation_isIsland(self)
     def isMineralOnly(self): return _pybw_swig.BaseLocation_isMineralOnly(self)
     def isStartLocation(self): return _pybw_swig.BaseLocation_isStartLocation(self)
+    def getMinerals(self): return _pybw_swig.BaseLocation_getMinerals(self)
+    def getStaticMinerals(self): return _pybw_swig.BaseLocation_getStaticMinerals(self)
+    def getGeysers(self): return _pybw_swig.BaseLocation_getGeysers(self)
     __swig_destroy__ = _pybw_swig.delete_BaseLocation
     __del__ = lambda self : None;
 BaseLocation_swigregister = _pybw_swig.BaseLocation_swigregister

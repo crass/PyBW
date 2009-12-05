@@ -4716,6 +4716,15 @@ SWIGINTERN int BWAPI_TilePosition_getY(BWAPI::TilePosition *self){
 
 #include "BWTA/BaseLocation.h"
 
+SWIGINTERN SetWrapper< BWAPI::Unit * > *BWTA_BaseLocation_getMinerals(BWTA::BaseLocation *self){
+        return new SetWrapper<BWAPI::Unit*>( self->getMinerals() );
+    }
+SWIGINTERN SetWrapper< BWAPI::Unit * > *BWTA_BaseLocation_getStaticMinerals(BWTA::BaseLocation *self){
+        return new SetWrapper<BWAPI::Unit*>( self->getStaticMinerals() );
+    }
+SWIGINTERN SetWrapper< BWAPI::Unit * > *BWTA_BaseLocation_getGeysers(BWTA::BaseLocation *self){
+        return new SetWrapper<BWAPI::Unit*>( self->getGeysers() );
+    }
 
 #include "BWTA/Chokepoint.h"
 
@@ -36541,72 +36550,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_BaseLocation_getMinerals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::set< BWAPI::Unit * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getMinerals",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getMinerals" "', argument " "1"" of type '" "BWTA::BaseLocation *""'"); 
-  }
-  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
-  result = (std::set< BWAPI::Unit * > *) &(arg1)->getMinerals();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_BWAPI__Unit_p_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_BaseLocation_getStaticMinerals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::set< BWAPI::Unit * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getStaticMinerals",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getStaticMinerals" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
-  result = (std::set< BWAPI::Unit * > *) &((BWTA::BaseLocation const *)arg1)->getStaticMinerals();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_BWAPI__Unit_p_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_BaseLocation_getGeysers(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::set< BWAPI::Unit * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getGeysers",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getGeysers" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
-  result = (std::set< BWAPI::Unit * > *) &((BWTA::BaseLocation const *)arg1)->getGeysers();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_BWAPI__Unit_p_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_BaseLocation_getGroundDistance(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
@@ -36729,6 +36672,72 @@ SWIGINTERN PyObject *_wrap_BaseLocation_isStartLocation(PyObject *SWIGUNUSEDPARM
   arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
   result = (bool)((BWTA::BaseLocation const *)arg1)->isStartLocation();
   resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getMinerals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SetWrapper< BWAPI::Unit * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getMinerals",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getMinerals" "', argument " "1"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (SetWrapper< BWAPI::Unit * > *)BWTA_BaseLocation_getMinerals(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getStaticMinerals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SetWrapper< BWAPI::Unit * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getStaticMinerals",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getStaticMinerals" "', argument " "1"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (SetWrapper< BWAPI::Unit * > *)BWTA_BaseLocation_getStaticMinerals(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getGeysers(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SetWrapper< BWAPI::Unit * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getGeysers",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getGeysers" "', argument " "1"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (SetWrapper< BWAPI::Unit * > *)BWTA_BaseLocation_getGeysers(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -37834,14 +37843,14 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"BaseLocation_getRegion", _wrap_BaseLocation_getRegion, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_minerals", _wrap_BaseLocation_minerals, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_gas", _wrap_BaseLocation_gas, METH_VARARGS, NULL},
-	 { (char *)"BaseLocation_getMinerals", _wrap_BaseLocation_getMinerals, METH_VARARGS, NULL},
-	 { (char *)"BaseLocation_getStaticMinerals", _wrap_BaseLocation_getStaticMinerals, METH_VARARGS, NULL},
-	 { (char *)"BaseLocation_getGeysers", _wrap_BaseLocation_getGeysers, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_getGroundDistance", _wrap_BaseLocation_getGroundDistance, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_getAirDistance", _wrap_BaseLocation_getAirDistance, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_isIsland", _wrap_BaseLocation_isIsland, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_isMineralOnly", _wrap_BaseLocation_isMineralOnly, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_isStartLocation", _wrap_BaseLocation_isStartLocation, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getMinerals", _wrap_BaseLocation_getMinerals, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getStaticMinerals", _wrap_BaseLocation_getStaticMinerals, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getGeysers", _wrap_BaseLocation_getGeysers, METH_VARARGS, NULL},
 	 { (char *)"delete_BaseLocation", _wrap_delete_BaseLocation, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_swigregister", BaseLocation_swigregister, METH_VARARGS, NULL},
 	 { (char *)"Chokepoint_getRegions", _wrap_Chokepoint_getRegions, METH_VARARGS, NULL},

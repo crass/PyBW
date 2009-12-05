@@ -49,13 +49,6 @@ void AIModuleImpl::onStart()
 
 	if (Broodwar->isReplay())
 	{
-		/*for(std::set<Unit*>::iterator i=Broodwar->getAllUnits().begin();i!=Broodwar->getAllUnits().end();i++)
-		{
-		if ((*i)->getType().isBuilding())
-		{
-		this->buildings.insert(std::make_pair(*i,(*i)->getType()));
-		}
-		}*/
 		Broodwar->printf("The following players are in this replay:");
 		for(std::set<Player*>::iterator p=Broodwar->getPlayers().begin();p!=Broodwar->getPlayers().end();p++)
 		{
@@ -205,12 +198,7 @@ DWORD WINAPI AnalyzeThread()
 
 	BWTA::BaseLocation *enemy_location = BWTA::getStartLocation(BWAPI::Broodwar->enemy());
 	enemyBase = enemy_location? enemy_location->getRegion() : NULL;
-	/*
-	//enemy start location only available if Complete Map Information is enabled.
-	if (BWTA::getStartLocation(BWAPI::Broodwar->enemy())!=NULL)
-	{
-	enemy_base = BWTA::getStartLocation(BWAPI::Broodwar->enemy())->getRegion();
-	}*/
+
 	return 0;
 }
 
