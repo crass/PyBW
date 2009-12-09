@@ -15,13 +15,18 @@ class EventHandler(PyBW_EventHandler):
         self.player = self.broodwar.self
         self.race = self.player.race
 
-        [self.main_center] = [u for u in self.player.units if u.type == self.race.center]
+        self.main_centers = [u for u in self.player.units if u.type == self.race.center]
+        if self.main_centers:
+            self.main_center = self.main_centers[0]
 
-        self.mineral_queue = []
-        for mineral in self.minerals:
-            distance_to_center = mineral.position.getDistance( self.main_center.position )
-            self.mineral_queue.append(( distance_to_center, mineral ))
-        self.mineral_queue.sort()
+            self.mineral_queue = []
+            for mineral in self.minerals:
+                distance_to_center = mineral.position.getDistance( self.main_center.position )
+                self.mineral_queue.append(( distance_to_center, mineral ))
+            self.mineral_queue.sort()
+
+        else:
+            self.main_center = None
 
 
     def onStart(self):
@@ -37,14 +42,15 @@ class EventHandler(PyBW_EventHandler):
             PyBW_EventHandler.onFrame(self)
             bw = self.broodwar
 
-            self.main_center.train( self.race.worker )    # doesn't work for zerg
+            if self.main_center:
+                self.main_center.train( self.race.worker )    # doesn't work for zerg
 
-            inactive_probes = [u for u in bw.self.units if u.type.isWorker and u.order == PlayerGuard]
+                inactive_probes = [u for u in bw.self.units if u.type.isWorker and u.order == PlayerGuard]
 
-            for probe in inactive_probes:
-                mineral = self.mineral_queue.pop(0)
-                probe.rightClick( mineral[1] )
-                self.mineral_queue.append( mineral ) 
+                for probe in inactive_probes:
+                    mineral = self.mineral_queue.pop(0)
+                    probe.rightClick( mineral[1] )
+                    self.mineral_queue.append( mineral ) 
 
         except Exception, e:
             print "onFrame error: %s", e
