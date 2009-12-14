@@ -227,6 +227,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\stdmap_wrapper.h"
+				>
+			</File>
+			<File
+				RelativePath=".\stdpair_wrapper.h"
+				>
+			</File>
+			<File
 				RelativePath=".\stdset_wrapper.h"
 				>
 			</File>

@@ -2714,70 +2714,75 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__Position_t swig_types[26]
 #define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[27]
 #define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t swig_types[28]
-#define SWIGTYPE_p_Position swig_types[29]
-#define SWIGTYPE_p_Race swig_types[30]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Force_p_t swig_types[31]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Player_p_t swig_types[32]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t swig_types[33]
-#define SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t swig_types[34]
-#define SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t swig_types[35]
-#define SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t swig_types[36]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__Position_t swig_types[37]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[38]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__UnitType_t swig_types[39]
-#define SWIGTYPE_p_TechType swig_types[40]
-#define SWIGTYPE_p_TilePosition swig_types[41]
-#define SWIGTYPE_p_UpgradeType swig_types[42]
-#define SWIGTYPE_p_allocator_type swig_types[43]
-#define SWIGTYPE_p_char swig_types[44]
-#define SWIGTYPE_p_difference_type swig_types[45]
-#define SWIGTYPE_p_p_PyObject swig_types[46]
-#define SWIGTYPE_p_size_type swig_types[47]
-#define SWIGTYPE_p_std__invalid_argument swig_types[48]
-#define SWIGTYPE_p_std__listT_BWAPI__Force_p_t swig_types[49]
-#define SWIGTYPE_p_std__listT_BWAPI__Player_p_t swig_types[50]
-#define SWIGTYPE_p_std__listT_BWAPI__Position_t swig_types[51]
-#define SWIGTYPE_p_std__listT_BWAPI__TilePosition_t swig_types[52]
-#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[53]
-#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[54]
-#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[55]
-#define SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t swig_types[56]
-#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[57]
-#define SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t swig_types[58]
-#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[59]
-#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[60]
-#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[61]
-#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[62]
-#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[63]
-#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[64]
-#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[65]
-#define SWIGTYPE_p_std__setT_BWAPI__Position_t swig_types[66]
-#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[67]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t swig_types[68]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[69]
-#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[70]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[71]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t swig_types[72]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[73]
-#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[74]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t swig_types[75]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[76]
-#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[77]
-#define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[78]
-#define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[79]
-#define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[80]
-#define SWIGTYPE_p_std__setT_BaseLocation_p_t swig_types[81]
-#define SWIGTYPE_p_std__setT_Chokepoint_p_t swig_types[82]
-#define SWIGTYPE_p_std__setT_Polygon_p_t swig_types[83]
-#define SWIGTYPE_p_std__setT_Region_p_t swig_types[84]
-#define SWIGTYPE_p_std__string swig_types[85]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[86]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[87]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[88]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[89]
-#define SWIGTYPE_p_value_type swig_types[90]
-static swig_type_info *swig_types[92];
-static swig_module_info swig_module = {swig_types, 91, 0, 0, 0, 0};
+#define SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t swig_types[29]
+#define SWIGTYPE_p_MapWrapperT_BWAPI__UnitType_const_p_int_t swig_types[30]
+#define SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t swig_types[31]
+#define SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t swig_types[32]
+#define SWIGTYPE_p_Position swig_types[33]
+#define SWIGTYPE_p_Race swig_types[34]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Force_p_t swig_types[35]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Player_p_t swig_types[36]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t swig_types[37]
+#define SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t swig_types[38]
+#define SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t swig_types[39]
+#define SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t swig_types[40]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__Position_t swig_types[41]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[42]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__UnitType_t swig_types[43]
+#define SWIGTYPE_p_TechType swig_types[44]
+#define SWIGTYPE_p_TilePosition swig_types[45]
+#define SWIGTYPE_p_UpgradeType swig_types[46]
+#define SWIGTYPE_p_allocator_type swig_types[47]
+#define SWIGTYPE_p_char swig_types[48]
+#define SWIGTYPE_p_difference_type swig_types[49]
+#define SWIGTYPE_p_p_PyObject swig_types[50]
+#define SWIGTYPE_p_size_type swig_types[51]
+#define SWIGTYPE_p_std__invalid_argument swig_types[52]
+#define SWIGTYPE_p_std__listT_BWAPI__Force_p_t swig_types[53]
+#define SWIGTYPE_p_std__listT_BWAPI__Player_p_t swig_types[54]
+#define SWIGTYPE_p_std__listT_BWAPI__Position_t swig_types[55]
+#define SWIGTYPE_p_std__listT_BWAPI__TilePosition_t swig_types[56]
+#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[57]
+#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[58]
+#define SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t swig_types[59]
+#define SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t swig_types[60]
+#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t swig_types[61]
+#define SWIGTYPE_p_std__pairT_BWAPI__UnitType_p_int_t swig_types[62]
+#define SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t swig_types[63]
+#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[64]
+#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[65]
+#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[66]
+#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[67]
+#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[68]
+#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[69]
+#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[70]
+#define SWIGTYPE_p_std__setT_BWAPI__Position_t swig_types[71]
+#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[72]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_const_p_t swig_types[73]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[74]
+#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[75]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[76]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_const_p_t swig_types[77]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[78]
+#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[79]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_const_p_t swig_types[80]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[81]
+#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[82]
+#define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[83]
+#define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[84]
+#define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[85]
+#define SWIGTYPE_p_std__setT_BaseLocation_p_t swig_types[86]
+#define SWIGTYPE_p_std__setT_Chokepoint_p_t swig_types[87]
+#define SWIGTYPE_p_std__setT_Polygon_p_t swig_types[88]
+#define SWIGTYPE_p_std__setT_Region_p_t swig_types[89]
+#define SWIGTYPE_p_std__string swig_types[90]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[91]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[92]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[93]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[94]
+#define SWIGTYPE_p_value_type swig_types[95]
+static swig_type_info *swig_types[97];
+static swig_module_info swig_module = {swig_types, 96, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -3222,11 +3227,11 @@ SWIG_AsVal_ptrdiff_t (PyObject * obj, ptrdiff_t *val)
 #include <vector>
 
 
-//#include "map_wrapper.h"
+#include "stdpair_wrapper.h"
+#include "stdmap_wrapper.h"
 #include "stdset_wrapper.h"
 #include "stdlist_wrapper.h"
 //#include "vector_wrapper.h"
-//#include "list_wrapper.h"
 
 
 
@@ -4332,6 +4337,32 @@ SWIGINTERN void std_vector_Sl_BWAPI_Position_Sg__append(std::vector< BWAPI::Posi
       self->push_back(x);
     }
 
+#include <limits.h>
+#if !defined(SWIG_NO_LLONG_MAX)
+# if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
+#   define LLONG_MAX __LONG_LONG_MAX__
+#   define LLONG_MIN (-LLONG_MAX - 1LL)
+#   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
+# endif
+#endif
+
+
+SWIGINTERN int
+SWIG_AsVal_int (PyObject * obj, int *val)
+{
+  long v;
+  int res = SWIG_AsVal_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v < INT_MIN || v > INT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = static_cast< int >(v);
+    }
+  }  
+  return res;
+}
+
+
 #include "BWTA.h"
 
 using namespace BWTA;
@@ -4533,32 +4564,6 @@ SWIG_AsPtr_std_string (PyObject * obj, std::string **val)
 #include "BWAPI/Color.h"
 
 
-#include <limits.h>
-#if !defined(SWIG_NO_LLONG_MAX)
-# if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
-#   define LLONG_MAX __LONG_LONG_MAX__
-#   define LLONG_MIN (-LLONG_MAX - 1LL)
-#   define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
-# endif
-#endif
-
-
-SWIGINTERN int
-SWIG_AsVal_int (PyObject * obj, int *val)
-{
-  long v;
-  int res = SWIG_AsVal_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v < INT_MIN || v > INT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = static_cast< int >(v);
-    }
-  }  
-  return res;
-}
-
-
 #include "BWAPI/Constants.h"
 
 
@@ -4725,6 +4730,12 @@ SWIGINTERN ListWrapper_PtrNext< BWAPI::UnitType > *BWAPI_Unit_getTrainingQueue(B
 
 #include "BWAPI/UnitType.h"
 
+SWIGINTERN PairWrapper< BWAPI::UnitType const *,int > *BWAPI_UnitType_whatBuilds(BWAPI::UnitType *self){
+        return new PairWrapper<const BWAPI::UnitType*, int>( self->whatBuilds() );
+    }
+SWIGINTERN MapWrapper< BWAPI::UnitType const *,int > *BWAPI_UnitType_requiredUnits(BWAPI::UnitType *self){
+        return new MapWrapper<BWAPI::UnitType const*, int>( self->requiredUnits() );
+    }
 
 #include "BWAPI/UpgradeType.h"
 
@@ -9876,6 +9887,672 @@ SWIGINTERN PyObject *PositionVector_swigregister(PyObject *SWIGUNUSEDPARM(self),
   PyObject *obj;
   if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
   SWIG_TypeNewClientData(SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_UnitType_int_Pair__first_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType *,int > *arg1 = (PairWrapper< BWAPI::UnitType *,int > *) 0 ;
+  BWAPI::UnitType *arg2 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitType_int_Pair__first_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_int_Pair__first_set" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType *,int > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__UnitType, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitType_int_Pair__first_set" "', argument " "2"" of type '" "BWAPI::UnitType *""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::UnitType * >(argp2);
+  if (arg1) (arg1)->_first = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_int_Pair__first_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType *,int > *arg1 = (PairWrapper< BWAPI::UnitType *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_int_Pair__first_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_int_Pair__first_get" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType *,int > * >(argp1);
+  result = (BWAPI::UnitType *) ((arg1)->_first);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_int_Pair__second_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType *,int > *arg1 = (PairWrapper< BWAPI::UnitType *,int > *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitType_int_Pair__second_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_int_Pair__second_set" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType *,int > * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UnitType_int_Pair__second_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  if (arg1) (arg1)->_second = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_int_Pair__second_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType *,int > *arg1 = (PairWrapper< BWAPI::UnitType *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_int_Pair__second_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_int_Pair__second_get" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType *,int > * >(argp1);
+  result = (int) ((arg1)->_second);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_UnitType_int_Pair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::pair< BWAPI::UnitType *,int > arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PairWrapper< BWAPI::UnitType *,int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_UnitType_int_Pair",&obj0)) SWIG_fail;
+  {
+    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_std__pairT_BWAPI__UnitType_p_int_t,  0  | 0);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UnitType_int_Pair" "', argument " "1"" of type '" "std::pair< BWAPI::UnitType *,int > const""'"); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UnitType_int_Pair" "', argument " "1"" of type '" "std::pair< BWAPI::UnitType *,int > const""'");
+    } else {
+      std::pair< BWAPI::UnitType *,int > * temp = reinterpret_cast< std::pair< BWAPI::UnitType *,int > * >(argp1);
+      arg1 = *temp;
+      if (SWIG_IsNewObj(res1)) delete temp;
+    }
+  }
+  result = (PairWrapper< BWAPI::UnitType *,int > *)new PairWrapper< BWAPI::UnitType *,int >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_int_Pair_first(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType *,int > *arg1 = (PairWrapper< BWAPI::UnitType *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_int_Pair_first",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_int_Pair_first" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType *,int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType *,int > * >(argp1);
+  result = (BWAPI::UnitType *)((PairWrapper< BWAPI::UnitType *,int > const *)arg1)->first();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_int_Pair_second(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType *,int > *arg1 = (PairWrapper< BWAPI::UnitType *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_int_Pair_second",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_int_Pair_second" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType *,int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType *,int > * >(argp1);
+  result = (int)((PairWrapper< BWAPI::UnitType *,int > const *)arg1)->second();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_UnitType_int_Pair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType *,int > *arg1 = (PairWrapper< BWAPI::UnitType *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_UnitType_int_Pair",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UnitType_int_Pair" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType *,int > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *UnitType_int_Pair_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_p_int_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_Pair__first_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType const *,int > *arg1 = (PairWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  BWAPI::UnitType *arg2 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitTypeConst_int_Pair__first_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_Pair__first_set" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__UnitType, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitTypeConst_int_Pair__first_set" "', argument " "2"" of type '" "BWAPI::UnitType const *""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::UnitType * >(argp2);
+  if (arg1) (arg1)->_first = (BWAPI::UnitType const *)arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_Pair__first_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType const *,int > *arg1 = (PairWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_Pair__first_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_Pair__first_get" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  result = (BWAPI::UnitType *) ((arg1)->_first);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_Pair__second_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType const *,int > *arg1 = (PairWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitTypeConst_int_Pair__second_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_Pair__second_set" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "UnitTypeConst_int_Pair__second_set" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  if (arg1) (arg1)->_second = arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_Pair__second_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType const *,int > *arg1 = (PairWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_Pair__second_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_Pair__second_get" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  result = (int) ((arg1)->_second);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_UnitTypeConst_int_Pair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::pair< BWAPI::UnitType const *,int > arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PairWrapper< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_UnitTypeConst_int_Pair",&obj0)) SWIG_fail;
+  {
+    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t,  0  | 0);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UnitTypeConst_int_Pair" "', argument " "1"" of type '" "std::pair< BWAPI::UnitType const *,int > const""'"); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UnitTypeConst_int_Pair" "', argument " "1"" of type '" "std::pair< BWAPI::UnitType const *,int > const""'");
+    } else {
+      std::pair< BWAPI::UnitType const *,int > * temp = reinterpret_cast< std::pair< BWAPI::UnitType const *,int > * >(argp1);
+      arg1 = *temp;
+      if (SWIG_IsNewObj(res1)) delete temp;
+    }
+  }
+  result = (PairWrapper< BWAPI::UnitType const *,int > *)new PairWrapper< BWAPI::UnitType const *,int >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_Pair_first(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType const *,int > *arg1 = (PairWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_Pair_first",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_Pair_first" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType const *,int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  result = (BWAPI::UnitType *)((PairWrapper< BWAPI::UnitType const *,int > const *)arg1)->first();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_Pair_second(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType const *,int > *arg1 = (PairWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_Pair_second",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_Pair_second" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType const *,int > const *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  result = (int)((PairWrapper< BWAPI::UnitType const *,int > const *)arg1)->second();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_UnitTypeConst_int_Pair(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  PairWrapper< BWAPI::UnitType const *,int > *arg1 = (PairWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_UnitTypeConst_int_Pair",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UnitTypeConst_int_Pair" "', argument " "1"" of type '" "PairWrapper< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< PairWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *UnitTypeConst_int_Pair_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_new_UnitTypeConst_int_Map(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::map< BWAPI::UnitType const *,int > arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  MapWrapper< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_UnitTypeConst_int_Map",&obj0)) SWIG_fail;
+  {
+    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t,  0  | 0);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UnitTypeConst_int_Map" "', argument " "1"" of type '" "std::map< BWAPI::UnitType const *,int >""'"); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UnitTypeConst_int_Map" "', argument " "1"" of type '" "std::map< BWAPI::UnitType const *,int >""'");
+    } else {
+      std::map< BWAPI::UnitType const *,int > * temp = reinterpret_cast< std::map< BWAPI::UnitType const *,int > * >(argp1);
+      arg1 = *temp;
+      if (SWIG_IsNewObj(res1)) delete temp;
+    }
+  }
+  result = (MapWrapper< BWAPI::UnitType const *,int > *)new MapWrapper< BWAPI::UnitType const *,int >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MapWrapperT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_UnitTypeConst_int_Map(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  MapWrapper< BWAPI::UnitType const *,int > *arg1 = (MapWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_UnitTypeConst_int_Map",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_MapWrapperT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UnitTypeConst_int_Map" "', argument " "1"" of type '" "MapWrapper< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< MapWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_Map___len__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  MapWrapper< BWAPI::UnitType const *,int > *arg1 = (MapWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_Map___len__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_MapWrapperT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_Map___len__" "', argument " "1"" of type '" "MapWrapper< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< MapWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  result = (int)(arg1)->__len__();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_Map___iter__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  MapWrapper< BWAPI::UnitType const *,int > *arg1 = (MapWrapper< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  MapIterator< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_Map___iter__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_MapWrapperT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_Map___iter__" "', argument " "1"" of type '" "MapWrapper< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< MapWrapper< BWAPI::UnitType const *,int > * >(argp1);
+  result = (MapIterator< BWAPI::UnitType const *,int > *)(arg1)->__iter__();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *UnitTypeConst_int_Map_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_MapWrapperT_BWAPI__UnitType_const_p_int_t, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_new_UnitTypeConst_int_MapIterator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::map< BWAPI::UnitType const *,int > arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  MapIterator< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_UnitTypeConst_int_MapIterator",&obj0)) SWIG_fail;
+  {
+    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t,  0  | 0);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_UnitTypeConst_int_MapIterator" "', argument " "1"" of type '" "std::map< BWAPI::UnitType const *,int > const""'"); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_UnitTypeConst_int_MapIterator" "', argument " "1"" of type '" "std::map< BWAPI::UnitType const *,int > const""'");
+    } else {
+      std::map< BWAPI::UnitType const *,int > * temp = reinterpret_cast< std::map< BWAPI::UnitType const *,int > * >(argp1);
+      arg1 = *temp;
+      if (SWIG_IsNewObj(res1)) delete temp;
+    }
+  }
+  result = (MapIterator< BWAPI::UnitType const *,int > *)new MapIterator< BWAPI::UnitType const *,int >(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_MapIterator_next(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  MapIterator< BWAPI::UnitType const *,int > *arg1 = (MapIterator< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_MapIterator_next",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_MapIterator_next" "', argument " "1"" of type '" "MapIterator< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< MapIterator< BWAPI::UnitType const *,int > * >(argp1);
+  {
+    result = (BWAPI::UnitType *)(arg1)->next();
+    if (!result) {
+      PyErr_SetString(PyExc_StopIteration,"End of iterator");
+      return NULL;
+    }
+  }
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_MapIterator_getKey(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  MapIterator< BWAPI::UnitType const *,int > *arg1 = (MapIterator< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::UnitType *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_MapIterator_getKey",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_MapIterator_getKey" "', argument " "1"" of type '" "MapIterator< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< MapIterator< BWAPI::UnitType const *,int > * >(argp1);
+  result = (BWAPI::UnitType *)(arg1)->getKey();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_MapIterator_getValue(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  MapIterator< BWAPI::UnitType const *,int > *arg1 = (MapIterator< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_MapIterator_getValue",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_MapIterator_getValue" "', argument " "1"" of type '" "MapIterator< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< MapIterator< BWAPI::UnitType const *,int > * >(argp1);
+  result = (int)(arg1)->getValue();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitTypeConst_int_MapIterator___iter__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  MapIterator< BWAPI::UnitType const *,int > *arg1 = (MapIterator< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  MapIterator< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitTypeConst_int_MapIterator___iter__",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitTypeConst_int_MapIterator___iter__" "', argument " "1"" of type '" "MapIterator< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< MapIterator< BWAPI::UnitType const *,int > * >(argp1);
+  result = (MapIterator< BWAPI::UnitType const *,int > *)(arg1)->__iter__();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_UnitTypeConst_int_MapIterator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  MapIterator< BWAPI::UnitType const *,int > *arg1 = (MapIterator< BWAPI::UnitType const *,int > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_UnitTypeConst_int_MapIterator",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_UnitTypeConst_int_MapIterator" "', argument " "1"" of type '" "MapIterator< BWAPI::UnitType const *,int > *""'"); 
+  }
+  arg1 = reinterpret_cast< MapIterator< BWAPI::UnitType const *,int > * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *UnitTypeConst_int_MapIterator_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_MapIteratorT_BWAPI__UnitType_const_p_int_t, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
 
@@ -31552,50 +32229,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_UnitType_whatBuilds(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::pair< BWAPI::UnitType const *,int > result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_whatBuilds",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_whatBuilds" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
-  result = ((BWAPI::UnitType const *)arg1)->whatBuilds();
-  resultobj = SWIG_NewPointerObj((new std::pair< BWAPI::UnitType const *,int >(static_cast< const std::pair< BWAPI::UnitType const *,int >& >(result))), SWIGTYPE_p_std__pairT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UnitType_requiredUnits(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::map< BWAPI::UnitType const *,int > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_requiredUnits",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_requiredUnits" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
-  result = (std::map< BWAPI::UnitType const *,int > *) &((BWAPI::UnitType const *)arg1)->requiredUnits();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__mapT_BWAPI__UnitType_const_p_int_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_UnitType_requiredTech(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
@@ -32888,6 +33521,50 @@ SWIGINTERN PyObject *_wrap_UnitType_isNeutral(PyObject *SWIGUNUSEDPARM(self), Py
   arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
   result = (bool)((BWAPI::UnitType const *)arg1)->isNeutral();
   resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_whatBuilds(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  PairWrapper< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_whatBuilds",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_whatBuilds" "', argument " "1"" of type '" "BWAPI::UnitType *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = (PairWrapper< BWAPI::UnitType const *,int > *)BWAPI_UnitType_whatBuilds(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_PairWrapperT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_requiredUnits(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  MapWrapper< BWAPI::UnitType const *,int > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_requiredUnits",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_requiredUnits" "', argument " "1"" of type '" "BWAPI::UnitType *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = (MapWrapper< BWAPI::UnitType const *,int > *)BWAPI_UnitType_requiredUnits(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_MapWrapperT_BWAPI__UnitType_const_p_int_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -38671,6 +39348,36 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"PositionVector_capacity", _wrap_PositionVector_capacity, METH_VARARGS, NULL},
 	 { (char *)"delete_PositionVector", _wrap_delete_PositionVector, METH_VARARGS, NULL},
 	 { (char *)"PositionVector_swigregister", PositionVector_swigregister, METH_VARARGS, NULL},
+	 { (char *)"UnitType_int_Pair__first_set", _wrap_UnitType_int_Pair__first_set, METH_VARARGS, NULL},
+	 { (char *)"UnitType_int_Pair__first_get", _wrap_UnitType_int_Pair__first_get, METH_VARARGS, NULL},
+	 { (char *)"UnitType_int_Pair__second_set", _wrap_UnitType_int_Pair__second_set, METH_VARARGS, NULL},
+	 { (char *)"UnitType_int_Pair__second_get", _wrap_UnitType_int_Pair__second_get, METH_VARARGS, NULL},
+	 { (char *)"new_UnitType_int_Pair", _wrap_new_UnitType_int_Pair, METH_VARARGS, NULL},
+	 { (char *)"UnitType_int_Pair_first", _wrap_UnitType_int_Pair_first, METH_VARARGS, NULL},
+	 { (char *)"UnitType_int_Pair_second", _wrap_UnitType_int_Pair_second, METH_VARARGS, NULL},
+	 { (char *)"delete_UnitType_int_Pair", _wrap_delete_UnitType_int_Pair, METH_VARARGS, NULL},
+	 { (char *)"UnitType_int_Pair_swigregister", UnitType_int_Pair_swigregister, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Pair__first_set", _wrap_UnitTypeConst_int_Pair__first_set, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Pair__first_get", _wrap_UnitTypeConst_int_Pair__first_get, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Pair__second_set", _wrap_UnitTypeConst_int_Pair__second_set, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Pair__second_get", _wrap_UnitTypeConst_int_Pair__second_get, METH_VARARGS, NULL},
+	 { (char *)"new_UnitTypeConst_int_Pair", _wrap_new_UnitTypeConst_int_Pair, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Pair_first", _wrap_UnitTypeConst_int_Pair_first, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Pair_second", _wrap_UnitTypeConst_int_Pair_second, METH_VARARGS, NULL},
+	 { (char *)"delete_UnitTypeConst_int_Pair", _wrap_delete_UnitTypeConst_int_Pair, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Pair_swigregister", UnitTypeConst_int_Pair_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_UnitTypeConst_int_Map", _wrap_new_UnitTypeConst_int_Map, METH_VARARGS, NULL},
+	 { (char *)"delete_UnitTypeConst_int_Map", _wrap_delete_UnitTypeConst_int_Map, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Map___len__", _wrap_UnitTypeConst_int_Map___len__, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Map___iter__", _wrap_UnitTypeConst_int_Map___iter__, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_Map_swigregister", UnitTypeConst_int_Map_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_UnitTypeConst_int_MapIterator", _wrap_new_UnitTypeConst_int_MapIterator, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_MapIterator_next", _wrap_UnitTypeConst_int_MapIterator_next, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_MapIterator_getKey", _wrap_UnitTypeConst_int_MapIterator_getKey, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_MapIterator_getValue", _wrap_UnitTypeConst_int_MapIterator_getValue, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_MapIterator___iter__", _wrap_UnitTypeConst_int_MapIterator___iter__, METH_VARARGS, NULL},
+	 { (char *)"delete_UnitTypeConst_int_MapIterator", _wrap_delete_UnitTypeConst_int_MapIterator, METH_VARARGS, NULL},
+	 { (char *)"UnitTypeConst_int_MapIterator_swigregister", UnitTypeConst_int_MapIterator_swigregister, METH_VARARGS, NULL},
 	 { (char *)"TA_getStartLocation", _wrap_TA_getStartLocation, METH_VARARGS, NULL},
 	 { (char *)"TA_getNearestBaseLocation", _wrap_TA_getNearestBaseLocation, METH_VARARGS, NULL},
 	 { (char *)"readMap", _wrap_readMap, METH_VARARGS, NULL},
@@ -39089,8 +39796,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UnitType_getName", _wrap_UnitType_getName, METH_VARARGS, NULL},
 	 { (char *)"UnitType_getSubLabel", _wrap_UnitType_getSubLabel, METH_VARARGS, NULL},
 	 { (char *)"UnitType_getRace", _wrap_UnitType_getRace, METH_VARARGS, NULL},
-	 { (char *)"UnitType_whatBuilds", _wrap_UnitType_whatBuilds, METH_VARARGS, NULL},
-	 { (char *)"UnitType_requiredUnits", _wrap_UnitType_requiredUnits, METH_VARARGS, NULL},
 	 { (char *)"UnitType_requiredTech", _wrap_UnitType_requiredTech, METH_VARARGS, NULL},
 	 { (char *)"UnitType_abilities", _wrap_UnitType_abilities, METH_VARARGS, NULL},
 	 { (char *)"UnitType_upgrades", _wrap_UnitType_upgrades, METH_VARARGS, NULL},
@@ -39150,6 +39855,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UnitType_isAddon", _wrap_UnitType_isAddon, METH_VARARGS, NULL},
 	 { (char *)"UnitType_isFlyingBuilding", _wrap_UnitType_isFlyingBuilding, METH_VARARGS, NULL},
 	 { (char *)"UnitType_isNeutral", _wrap_UnitType_isNeutral, METH_VARARGS, NULL},
+	 { (char *)"UnitType_whatBuilds", _wrap_UnitType_whatBuilds, METH_VARARGS, NULL},
+	 { (char *)"UnitType_requiredUnits", _wrap_UnitType_requiredUnits, METH_VARARGS, NULL},
 	 { (char *)"delete_UnitType", _wrap_delete_UnitType, METH_VARARGS, NULL},
 	 { (char *)"UnitType_swigregister", UnitType_swigregister, METH_VARARGS, NULL},
 	 { (char *)"getUnitType", _wrap_getUnitType, METH_VARARGS, NULL},
@@ -39282,6 +39989,10 @@ static swig_type_info _swigt__p_ListWrapperT_BWAPI__Unit_p_t = {"_p_ListWrapperT
 static swig_type_info _swigt__p_ListWrapper_PtrNextT_BWAPI__Position_t = {"_p_ListWrapper_PtrNextT_BWAPI__Position_t", "ListWrapper_PtrNext< BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ListWrapper_PtrNextT_BWAPI__TilePosition_t = {"_p_ListWrapper_PtrNextT_BWAPI__TilePosition_t", "ListWrapper_PtrNext< BWAPI::TilePosition > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ListWrapper_PtrNextT_BWAPI__UnitType_t = {"_p_ListWrapper_PtrNextT_BWAPI__UnitType_t", "ListWrapper_PtrNext< BWAPI::UnitType > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_MapIteratorT_BWAPI__UnitType_const_p_int_t = {"_p_MapIteratorT_BWAPI__UnitType_const_p_int_t", "MapIterator< BWAPI::UnitType const *,int > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_MapWrapperT_BWAPI__UnitType_const_p_int_t = {"_p_MapWrapperT_BWAPI__UnitType_const_p_int_t", "MapWrapper< BWAPI::UnitType const *,int > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_PairWrapperT_BWAPI__UnitType_const_p_int_t = {"_p_PairWrapperT_BWAPI__UnitType_const_p_int_t", "PairWrapper< BWAPI::UnitType const *,int > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_PairWrapperT_BWAPI__UnitType_p_int_t = {"_p_PairWrapperT_BWAPI__UnitType_p_int_t", "PairWrapper< BWAPI::UnitType *,int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Position = {"_p_Position", "Position *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Race = {"_p_Race", "Race *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_SetWrapperT_BWAPI__Force_p_t = {"_p_SetWrapperT_BWAPI__Force_p_t", "SetWrapper< BWAPI::Force * > *", 0, 0, (void*)0, 0};
@@ -39311,6 +40022,7 @@ static swig_type_info _swigt__p_std__listT_BWAPI__Unit_p_t = {"_p_std__listT_BWA
 static swig_type_info _swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t = {"_p_std__mapT_BWAPI__UnitType_const_p_int_t", "std::map< BWAPI::UnitType const *,int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t = {"_p_std__pairT_BWAPI__Position_BWAPI__Position_t", "std::pair< BWAPI::Position,BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_BWAPI__UnitType_const_p_int_t = {"_p_std__pairT_BWAPI__UnitType_const_p_int_t", "std::pair< BWAPI::UnitType const *,int > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__pairT_BWAPI__UnitType_p_int_t = {"_p_std__pairT_BWAPI__UnitType_p_int_t", "std::pair< BWAPI::UnitType *,int > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t = {"_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t", "std::pair< BWTA::Region *,BWTA::Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWAPI__DamageType_t = {"_p_std__setT_BWAPI__DamageType_t", "std::set< BWAPI::DamageType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWAPI__Error_t = {"_p_std__setT_BWAPI__Error_t", "std::set< BWAPI::Error > *", 0, 0, (void*)0, 0};
@@ -39375,6 +40087,10 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_ListWrapper_PtrNextT_BWAPI__Position_t,
   &_swigt__p_ListWrapper_PtrNextT_BWAPI__TilePosition_t,
   &_swigt__p_ListWrapper_PtrNextT_BWAPI__UnitType_t,
+  &_swigt__p_MapIteratorT_BWAPI__UnitType_const_p_int_t,
+  &_swigt__p_MapWrapperT_BWAPI__UnitType_const_p_int_t,
+  &_swigt__p_PairWrapperT_BWAPI__UnitType_const_p_int_t,
+  &_swigt__p_PairWrapperT_BWAPI__UnitType_p_int_t,
   &_swigt__p_Position,
   &_swigt__p_Race,
   &_swigt__p_SetWrapperT_BWAPI__Force_p_t,
@@ -39404,6 +40120,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t,
   &_swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t,
   &_swigt__p_std__pairT_BWAPI__UnitType_const_p_int_t,
+  &_swigt__p_std__pairT_BWAPI__UnitType_p_int_t,
   &_swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t,
   &_swigt__p_std__setT_BWAPI__DamageType_t,
   &_swigt__p_std__setT_BWAPI__Error_t,
@@ -39468,6 +40185,10 @@ static swig_cast_info _swigc__p_ListWrapperT_BWAPI__Unit_p_t[] = {  {&_swigt__p_
 static swig_cast_info _swigc__p_ListWrapper_PtrNextT_BWAPI__Position_t[] = {  {&_swigt__p_ListWrapper_PtrNextT_BWAPI__Position_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ListWrapper_PtrNextT_BWAPI__TilePosition_t[] = {  {&_swigt__p_ListWrapper_PtrNextT_BWAPI__TilePosition_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ListWrapper_PtrNextT_BWAPI__UnitType_t[] = {  {&_swigt__p_ListWrapper_PtrNextT_BWAPI__UnitType_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_MapIteratorT_BWAPI__UnitType_const_p_int_t[] = {  {&_swigt__p_MapIteratorT_BWAPI__UnitType_const_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_MapWrapperT_BWAPI__UnitType_const_p_int_t[] = {  {&_swigt__p_MapWrapperT_BWAPI__UnitType_const_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PairWrapperT_BWAPI__UnitType_const_p_int_t[] = {  {&_swigt__p_PairWrapperT_BWAPI__UnitType_const_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_PairWrapperT_BWAPI__UnitType_p_int_t[] = {  {&_swigt__p_PairWrapperT_BWAPI__UnitType_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Position[] = {  {&_swigt__p_Position, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Race[] = {  {&_swigt__p_Race, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SetWrapperT_BWAPI__Force_p_t[] = {  {&_swigt__p_SetWrapperT_BWAPI__Force_p_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -39497,6 +40218,7 @@ static swig_cast_info _swigc__p_std__listT_BWAPI__Unit_p_t[] = {  {&_swigt__p_st
 static swig_cast_info _swigc__p_std__mapT_BWAPI__UnitType_const_p_int_t[] = {  {&_swigt__p_std__mapT_BWAPI__UnitType_const_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_BWAPI__Position_BWAPI__Position_t[] = {  {&_swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_BWAPI__UnitType_const_p_int_t[] = {  {&_swigt__p_std__pairT_BWAPI__UnitType_const_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__pairT_BWAPI__UnitType_p_int_t[] = {  {&_swigt__p_std__pairT_BWAPI__UnitType_p_int_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t[] = {  {&_swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWAPI__DamageType_t[] = {  {&_swigt__p_std__setT_BWAPI__DamageType_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWAPI__Error_t[] = {  {&_swigt__p_std__setT_BWAPI__Error_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -39561,6 +40283,10 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_ListWrapper_PtrNextT_BWAPI__Position_t,
   _swigc__p_ListWrapper_PtrNextT_BWAPI__TilePosition_t,
   _swigc__p_ListWrapper_PtrNextT_BWAPI__UnitType_t,
+  _swigc__p_MapIteratorT_BWAPI__UnitType_const_p_int_t,
+  _swigc__p_MapWrapperT_BWAPI__UnitType_const_p_int_t,
+  _swigc__p_PairWrapperT_BWAPI__UnitType_const_p_int_t,
+  _swigc__p_PairWrapperT_BWAPI__UnitType_p_int_t,
   _swigc__p_Position,
   _swigc__p_Race,
   _swigc__p_SetWrapperT_BWAPI__Force_p_t,
@@ -39590,6 +40316,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__mapT_BWAPI__UnitType_const_p_int_t,
   _swigc__p_std__pairT_BWAPI__Position_BWAPI__Position_t,
   _swigc__p_std__pairT_BWAPI__UnitType_const_p_int_t,
+  _swigc__p_std__pairT_BWAPI__UnitType_p_int_t,
   _swigc__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t,
   _swigc__p_std__setT_BWAPI__DamageType_t,
   _swigc__p_std__setT_BWAPI__Error_t,

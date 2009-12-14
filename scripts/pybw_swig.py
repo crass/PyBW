@@ -437,6 +437,88 @@ class PositionVector(_object):
 PositionVector_swigregister = _pybw_swig.PositionVector_swigregister
 PositionVector_swigregister(PositionVector)
 
+class UnitType_int_Pair(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, UnitType_int_Pair, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, UnitType_int_Pair, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["_first"] = _pybw_swig.UnitType_int_Pair__first_set
+    __swig_getmethods__["_first"] = _pybw_swig.UnitType_int_Pair__first_get
+    if _newclass:_first = _swig_property(_pybw_swig.UnitType_int_Pair__first_get, _pybw_swig.UnitType_int_Pair__first_set)
+    __swig_setmethods__["_second"] = _pybw_swig.UnitType_int_Pair__second_set
+    __swig_getmethods__["_second"] = _pybw_swig.UnitType_int_Pair__second_get
+    if _newclass:_second = _swig_property(_pybw_swig.UnitType_int_Pair__second_get, _pybw_swig.UnitType_int_Pair__second_set)
+    def __init__(self, *args): 
+        this = _pybw_swig.new_UnitType_int_Pair(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def first(self): return _pybw_swig.UnitType_int_Pair_first(self)
+    def second(self): return _pybw_swig.UnitType_int_Pair_second(self)
+    __swig_destroy__ = _pybw_swig.delete_UnitType_int_Pair
+    __del__ = lambda self : None;
+UnitType_int_Pair_swigregister = _pybw_swig.UnitType_int_Pair_swigregister
+UnitType_int_Pair_swigregister(UnitType_int_Pair)
+
+class UnitTypeConst_int_Pair(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, UnitTypeConst_int_Pair, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, UnitTypeConst_int_Pair, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["_first"] = _pybw_swig.UnitTypeConst_int_Pair__first_set
+    __swig_getmethods__["_first"] = _pybw_swig.UnitTypeConst_int_Pair__first_get
+    if _newclass:_first = _swig_property(_pybw_swig.UnitTypeConst_int_Pair__first_get, _pybw_swig.UnitTypeConst_int_Pair__first_set)
+    __swig_setmethods__["_second"] = _pybw_swig.UnitTypeConst_int_Pair__second_set
+    __swig_getmethods__["_second"] = _pybw_swig.UnitTypeConst_int_Pair__second_get
+    if _newclass:_second = _swig_property(_pybw_swig.UnitTypeConst_int_Pair__second_get, _pybw_swig.UnitTypeConst_int_Pair__second_set)
+    def __init__(self, *args): 
+        this = _pybw_swig.new_UnitTypeConst_int_Pair(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def first(self): return _pybw_swig.UnitTypeConst_int_Pair_first(self)
+    def second(self): return _pybw_swig.UnitTypeConst_int_Pair_second(self)
+    __swig_destroy__ = _pybw_swig.delete_UnitTypeConst_int_Pair
+    __del__ = lambda self : None;
+UnitTypeConst_int_Pair_swigregister = _pybw_swig.UnitTypeConst_int_Pair_swigregister
+UnitTypeConst_int_Pair_swigregister(UnitTypeConst_int_Pair)
+
+class UnitTypeConst_int_Map(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, UnitTypeConst_int_Map, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, UnitTypeConst_int_Map, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_UnitTypeConst_int_Map(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _pybw_swig.delete_UnitTypeConst_int_Map
+    __del__ = lambda self : None;
+    def __len__(self): return _pybw_swig.UnitTypeConst_int_Map___len__(self)
+    def __iter__(self): return _pybw_swig.UnitTypeConst_int_Map___iter__(self)
+UnitTypeConst_int_Map_swigregister = _pybw_swig.UnitTypeConst_int_Map_swigregister
+UnitTypeConst_int_Map_swigregister(UnitTypeConst_int_Map)
+
+class UnitTypeConst_int_MapIterator(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, UnitTypeConst_int_MapIterator, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, UnitTypeConst_int_MapIterator, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_UnitTypeConst_int_MapIterator(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def next(self): return _pybw_swig.UnitTypeConst_int_MapIterator_next(self)
+    def getKey(self): return _pybw_swig.UnitTypeConst_int_MapIterator_getKey(self)
+    def getValue(self): return _pybw_swig.UnitTypeConst_int_MapIterator_getValue(self)
+    def __iter__(self): return _pybw_swig.UnitTypeConst_int_MapIterator___iter__(self)
+    __swig_destroy__ = _pybw_swig.delete_UnitTypeConst_int_MapIterator
+    __del__ = lambda self : None;
+UnitTypeConst_int_MapIterator_swigregister = _pybw_swig.UnitTypeConst_int_MapIterator_swigregister
+UnitTypeConst_int_MapIterator_swigregister(UnitTypeConst_int_MapIterator)
+
 
 def TA_getStartLocation(*args):
   return _pybw_swig.TA_getStartLocation(*args)
@@ -1482,8 +1564,6 @@ class UnitType(_object):
     def getName(self): return _pybw_swig.UnitType_getName(self)
     def getSubLabel(self): return _pybw_swig.UnitType_getSubLabel(self)
     def getRace(self): return _pybw_swig.UnitType_getRace(self)
-    def whatBuilds(self): return _pybw_swig.UnitType_whatBuilds(self)
-    def requiredUnits(self): return _pybw_swig.UnitType_requiredUnits(self)
     def requiredTech(self): return _pybw_swig.UnitType_requiredTech(self)
     def abilities(self): return _pybw_swig.UnitType_abilities(self)
     def upgrades(self): return _pybw_swig.UnitType_upgrades(self)
@@ -1543,6 +1623,8 @@ class UnitType(_object):
     def isAddon(self): return _pybw_swig.UnitType_isAddon(self)
     def isFlyingBuilding(self): return _pybw_swig.UnitType_isFlyingBuilding(self)
     def isNeutral(self): return _pybw_swig.UnitType_isNeutral(self)
+    def whatBuilds(self): return _pybw_swig.UnitType_whatBuilds(self)
+    def requiredUnits(self): return _pybw_swig.UnitType_requiredUnits(self)
     __swig_destroy__ = _pybw_swig.delete_UnitType
     __del__ = lambda self : None;
 UnitType_swigregister = _pybw_swig.UnitType_swigregister

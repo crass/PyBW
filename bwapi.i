@@ -46,6 +46,25 @@
 %ignore BWAPI::Unit::getLoadedUnits;
 %ignore BWAPI::Unit::getTrainingQueue;
 
+// UnitType
+%newobject BWAPI::UnitType::whatBuilds;
+%newobject BWAPI::UnitType::requiredUnits;
+
+%extend BWAPI::UnitType {
+    PairWrapper<const BWAPI::UnitType*, int>* whatBuilds()
+    {
+        return new PairWrapper<const BWAPI::UnitType*, int>( self->whatBuilds() );
+    }
+    MapWrapper<BWAPI::UnitType const*, int>* requiredUnits()
+    {
+        return new MapWrapper<BWAPI::UnitType const*, int>( self->requiredUnits() );
+    }
+}
+%ignore BWAPI::UnitType::whatBuilds;
+%ignore BWAPI::UnitType::requiredUnits;
+
+
+
 
 
 // Game
@@ -206,4 +225,8 @@ using namespace BWAPI;
 %include "BWAPI.h"
 
 %template(PositionVector) std::vector<BWAPI::Position>;
+%template(UnitType_int_Pair) PairWrapper<BWAPI::UnitType*, int>;
+%template(UnitTypeConst_int_Pair) PairWrapper<BWAPI::UnitType const*, int>;
+%template(UnitTypeConst_int_Map) MapWrapper<BWAPI::UnitType const*, int>;
+%template(UnitTypeConst_int_MapIterator) MapIterator<BWAPI::UnitType const*, int>;
 
