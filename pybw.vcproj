@@ -117,7 +117,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="..\BWAPI_Beta_2.4\include;C:\Python26\include"
+				AdditionalIncludeDirectories="..\BWAPI_Beta_2.8\include;C:\Python26\include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;PYBW_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -136,7 +136,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="C:\Python26\libs\python26.lib BWAPI.lib BWTA.lib"
+				AdditionalDependencies="C:\Python26\libs\python26.lib ../BWAPI_Beta_2.8/lib/*"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="..\BWAPI_Beta_2.4\lib"
 				GenerateDebugInformation="true"

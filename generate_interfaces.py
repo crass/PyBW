@@ -5,6 +5,7 @@ bwapi_modules = [
     "CoordinateType",
     "DamageType",
     "Error",
+    "Event",
     "ExplosionType",
     "Flag",
     "Force",
@@ -18,6 +19,8 @@ bwapi_modules = [
     "TechType",
     "TilePosition",
     "Unit",
+    "UnitCommand",
+    "UnitCommandType",
     "UnitSizeType",
     "UnitType",
     "UpgradeType",
@@ -32,6 +35,7 @@ bwta_modules = [
 ]
 
 collision_names = ['None', 'Normal', 'Unknown', 'Irradiate', 'Corrosive_Acid', 'Lockdown', 'Invalid', 'Stasis_Field', 'Optical_Flare', 'Mind_Control', 'Nuclear_Strike', 'Independent', 'Neutral', 'Spider_Mines', 'Yamato_Gun', 'Restoration', 'Plague', 'EMP_Shockwave', 'Parasite', 'Maelstrom', 'Spawn_Broodlings', 'Feedback', 'Dark_Swarm', 'Consume', 'Ensnare', 'Psionic_Storm', 'Disruption_Web']
+command_types = ['Burrow', 'Cloak', 'Decloak', 'Follow', 'Patrol', 'Stop', 'Train', 'Unburrow', 'Unload', 'Upgrade']
         
 def module_include_filename(module_name):
     return 'Temp/%s.i' % module_name
@@ -54,7 +58,9 @@ for m in bwapi_modules:
 
     for cn in collision_names:
         f.write("%%rename(%(name)ss_%(collname)s) BWAPI::%(name)ss::%(collname)s;\n" % dict(name=m, collname=cn))
-
+    if m == 'UnitCommandType':
+        for ct in command_types:
+            f.write("%%rename(%(name)ss_%(commtype)s) BWAPI::%(name)ss::%(commtype)s;\n" % dict(name=m, commtype=ct))
     f.write("""
     
 %%ignore BWAPI::%(name)ss::init;

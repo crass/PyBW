@@ -8,9 +8,9 @@
     {
         return new SetWrapper<BWAPI::Unit*>( self->getUnits() );
     }
-    BWAPI::PlayerType playerType()
+    BWAPI::PlayerType getType()
     {
-        return self->playerType();
+        return self->getType();
     }
     BWAPI::Race getRace()
     {
@@ -25,6 +25,8 @@
 %ignore BWAPI::Player::playerType;
 %ignore BWAPI::Player::getStartLocation;
 %ignore BWAPI::Player::getRace;
+%ignore BWAPI::PlayerTypes::Player;
+%ignore BWAPI::PlayerTypes::RescuePassive;
 
 
 
@@ -47,23 +49,28 @@
 %ignore BWAPI::Unit::getTrainingQueue;
 
 // UnitType
-%newobject BWAPI::UnitType::whatBuilds;
+//%newobject BWAPI::UnitType::whatBuilds; :TODO:
 %newobject BWAPI::UnitType::requiredUnits;
 
 %extend BWAPI::UnitType {
-    PairWrapper<const BWAPI::UnitType*, int>* whatBuilds()
+    /*PairWrapper<const BWAPI::UnitType*, int>* whatBuilds()
     {
         return new PairWrapper<const BWAPI::UnitType*, int>( self->whatBuilds() );
-    }
-    MapWrapper<BWAPI::UnitType const*, int>* requiredUnits()
+    }*/
+    /*MapWrapper<BWAPI::UnitType const*, int>* requiredUnits()
     {
         return new MapWrapper<BWAPI::UnitType const*, int>( self->requiredUnits() );
-    }
+    }*/
 }
 %ignore BWAPI::UnitType::whatBuilds;
 %ignore BWAPI::UnitType::requiredUnits;
 
-
+// UnitCommand
+/*%extend BWAPI::UnitCommand {
+    UnitCommand() 
+    {
+    }
+}*/
 
 
 

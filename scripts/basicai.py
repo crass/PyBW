@@ -36,12 +36,13 @@ class EventHandler(PyBW_EventHandler):
         except Exception, e:
             print "onStart error", e
                         
-
     def onFrame(self):
         try:
             PyBW_EventHandler.onFrame(self)
             bw = self.broodwar
-
+            if all([u.hitPoints == 0 for u in bw.self.units]):
+                print "Restarting game!"
+                bw.restartGame();
             if self.main_center:
                 self.main_center.train( self.race.worker )    # doesn't work for zerg
 

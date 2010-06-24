@@ -51,10 +51,11 @@ class MapWrapper
 private:
 	std::map<K, V> _map;
 public:
-	MapWrapper(std::map<K, V> original)
-		: _map( original )
-	{
-	}
+	MapWrapper(const std::map<K, V> original)
+    {
+        this->_map = original;
+    }
+
 
 	~MapWrapper()
 	{

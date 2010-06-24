@@ -246,6 +246,10 @@ void AIModuleImpl::printForces()
 	}
 }
 
+void AIModuleImpl::onReceiveText(std::string text)
+{
+}
+
 void AIModuleImpl::drawTerrainAnalysis()
 {
 	//we will iterate through all the base locations, and draw their outlines.

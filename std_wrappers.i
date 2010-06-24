@@ -1,3 +1,7 @@
+%include "std_set.i"
+%include "std_list.i"
+
+
 %exception SetWrapper::next {
   $action
   if (!result) {

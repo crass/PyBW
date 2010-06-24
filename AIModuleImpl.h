@@ -32,6 +32,7 @@ public:
   virtual void onPlayerLeft(BWAPI::Player* player);
   virtual void onNukeDetect(BWAPI::Position target);
   virtual void onUnitRenegade(BWAPI::Unit* unit);
+  virtual void onReceiveText(std::string text);
 
 
   //not part of BWAPI::AIModule
