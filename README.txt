@@ -19,4 +19,5 @@ Open solution file in Visual Studio
 Set build to "release"
 Build solution
 change bwapi-data\bwapi.ini to accept client connections (set ai_dll to NULL)
+Run pybwClient.exe (or press Ctrl+F5 from Visual Studio)
 Start a game and enjoy watching as exampleai.py sends your workers to collect money for daddy

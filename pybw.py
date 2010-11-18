@@ -119,13 +119,17 @@ pybw_swig.Player.__hash__ = hash_by_id
 pybw_swig.Player.__eq__ = eq_by_id
 pybw_swig.Player.__ne__ = ne_by_id
 
-pybw_swig.UnitType.__hash__ = hash_by_id
-pybw_swig.UnitType.__eq__ = eq_by_id
-pybw_swig.UnitType.__ne__ = ne_by_id
-
 pybw_swig.PlayerType.__hash__ = hash_by_id
 pybw_swig.PlayerType.__eq__ = eq_by_id
 pybw_swig.PlayerType.__ne__ = ne_by_id
+
+pybw_swig.Unit.__hash__ = hash_by_id
+pybw_swig.Unit.__eq__ = eq_by_id
+pybw_swig.Unit.__ne__ = ne_by_id
+
+pybw_swig.UnitType.__hash__ = hash_by_id
+pybw_swig.UnitType.__eq__ = eq_by_id
+pybw_swig.UnitType.__ne__ = ne_by_id
 
 pybw_swig.TechType.__hash__ = hash_by_id
 pybw_swig.TechType.__eq__ = eq_by_id
