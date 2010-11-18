@@ -1,0 +1,7 @@
+* Move logic from client.cpp to python, refactor client.cpp
+* Let user call analyze map from python (or not)
+* Write sample user script
+* Fix MapWrapper, PairWrapper and apply to relevant functions
+* Fix getLarvae (and other functions of non-static sets/lists)
+* Update README file
+

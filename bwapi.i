@@ -1,3 +1,10 @@
+//%template(UnitType_int_Pair) PairWrapper_PtrFirst<BWAPI::UnitType, int>;
+/*%template(UnitType_int_Map) MapWrapper_PtrNext<BWAPI::UnitType, int>;
+%template(UnitType_int_MapIterator) MapIterator_PtrNext<BWAPI::UnitType, int>;
+
+%template(UnitTypeConst_int_Map) MapWrapper_PtrNext< BWAPI::UnitType, int>;
+%template(UnitTypeConst_int_MapIterator) MapIterator_PtrNext<const BWAPI::UnitType, int>;*/
+
 
 // Player
 
@@ -8,10 +15,10 @@
     {
         return new SetWrapper<BWAPI::Unit*>( self->getUnits() );
     }
-    BWAPI::PlayerType getType()
+    /*BWAPI::PlayerType playerType()
     {
-        return self->getType();
-    }
+        return self->playerType();
+    }   */
     BWAPI::Race getRace()
     {
         return self->getRace();
@@ -22,11 +29,9 @@
     }
 }
 %ignore BWAPI::Player::getUnits;
-%ignore BWAPI::Player::playerType;
+//%ignore BWAPI::Player::playerType;
 %ignore BWAPI::Player::getStartLocation;
 %ignore BWAPI::Player::getRace;
-%ignore BWAPI::PlayerTypes::Player;
-%ignore BWAPI::PlayerTypes::RescuePassive;
 
 
 
@@ -35,9 +40,9 @@
 
 // Unit
 %extend BWAPI::Unit {
-    ListWrapper<BWAPI::Unit*>* getLoadedUnits()
+    SetWrapper<BWAPI::Unit*>* getLoadedUnits()
     {
-        return new ListWrapper<BWAPI::Unit*>( self->getLoadedUnits() );
+        return new SetWrapper<BWAPI::Unit*>( self->getLoadedUnits() );
     }
 
     ListWrapper_PtrNext<BWAPI::UnitType>* getTrainingQueue()
@@ -49,28 +54,28 @@
 %ignore BWAPI::Unit::getTrainingQueue;
 
 // UnitType
-//%newobject BWAPI::UnitType::whatBuilds; :TODO:
+%newobject BWAPI::UnitType::whatBuilds;
 %newobject BWAPI::UnitType::requiredUnits;
 
 %extend BWAPI::UnitType {
-    /*PairWrapper<const BWAPI::UnitType*, int>* whatBuilds()
+    BWAPI::UnitType* whatBuilds()
     {
-        return new PairWrapper<const BWAPI::UnitType*, int>( self->whatBuilds() );
+        return new UnitType(self->whatBuilds().first);
+    }
+    
+    /*PairWrapper_PtrFirst<BWAPI::UnitType, int>* whatBuilds()
+    {
+        return new PairWrapper_PtrFirst<BWAPI::UnitType, int>( self->whatBuilds() );
     }*/
-    /*MapWrapper<BWAPI::UnitType const*, int>* requiredUnits()
+    /*MapWrapper_PtrNext<BWAPI::UnitType, int>* requiredUnits()
     {
-        return new MapWrapper<BWAPI::UnitType const*, int>( self->requiredUnits() );
+        return new MapWrapper_PtrNext<BWAPI::UnitType, int>( self->requiredUnits() );
     }*/
 }
 %ignore BWAPI::UnitType::whatBuilds;
 %ignore BWAPI::UnitType::requiredUnits;
 
-// UnitCommand
-/*%extend BWAPI::UnitCommand {
-    UnitCommand() 
-    {
-    }
-}*/
+
 
 
 
@@ -216,13 +221,6 @@
 %ignore BWAPI::TilePosition::y;
 
 
-
-
-
-
-%ignore BWAPI::TechType::getRace;   /* TODO: resolve! */
-
-
 %{
 #include "BWAPI.h"
 
@@ -232,8 +230,5 @@ using namespace BWAPI;
 %include "BWAPI.h"
 
 %template(PositionVector) std::vector<BWAPI::Position>;
-%template(UnitType_int_Pair) PairWrapper<BWAPI::UnitType*, int>;
-%template(UnitTypeConst_int_Pair) PairWrapper<BWAPI::UnitType const*, int>;
-%template(UnitTypeConst_int_Map) MapWrapper<BWAPI::UnitType const*, int>;
-%template(UnitTypeConst_int_MapIterator) MapIterator<BWAPI::UnitType const*, int>;
+
 

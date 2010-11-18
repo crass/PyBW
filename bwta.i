@@ -10,6 +10,11 @@ BWTA::BaseLocation* getNearestBaseLocation(BWAPI::TilePosition position);
 %ignore BWTA::getNearestBaseLocation;
 
 
+%rename(BWTA_Polygon) BWTA::Polygon;
+//const std::set<BWTA::Polygon*>& BWTA::getUnwalkablePolygons();
+BWTA::Polygon* BWTA::getNearestUnwalkablePolygon(int x, int y);
+BWTA::Polygon* BWTA::getNearestUnwalkablePolygon(BWAPI::TilePosition tileposition);
+%ignore BWTA::getNearestUnwalkablePolygon;
 
 
 %{
