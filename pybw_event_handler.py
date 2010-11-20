@@ -10,9 +10,16 @@ class VerboseEventHandler(object):
         print "Disconnected from broodwar!"
     
     def onMatchStart(self):
-        print "Match started!"
+        self.game.sendText("The map is %s, a %d player map"%(self.game.mapName, len(list(self.game.startLocations))) )
+        if self.game.isReplay:
+            self.game.sendText("List of players in this replay:")
+            for p in self.game.players:
+                if not p.isNeutral and not len(list(p.units)) == 0:
+                    self.game.sendText("* %s, playing %s"%(p.name, p.race.name))
+        else:
+            self.game.sendText("Match started, %r vs %r"%(self.game.self, self.game.enemy))
     def onMatchEnd(self, is_winner):
-        print "Match ended, I %s!" % ( ['lost', 'won'][is_winner] )
+        print "Match ended%s" % ( ['.', ', I won!'][is_winner] )
     def onSendText(self, text):
         print "I said: '%s'" % text
     def onReceiveText(self, player, text):
@@ -21,11 +28,23 @@ class VerboseEventHandler(object):
         print "OnPlayerLeft: %r" % player
     def onUnitCreate(self, unit):
         if self.game.getFrameCount() > 1:
-            print "onUnitCreate: %r" % unit
+            # if we are in a replay, then we will print out the build order
+            if self.game.isReplay:
+                if (unit.type.isBuilding and unit.player.isNeutral == False):
+                    seconds = self.game.frameCount / 24
+                    self.game.sendText("%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
+            else:
+                self.game.sendText("onUnitCreate: %r" % unit)
     def onUnitDestroy(self, unit):
-        print "onUnitDestroy: %r" % unit
+        self.game.sendText("onUnitDestroy: %r" % unit)
     def onSaveGame(self, gameName):
         print "onSaveGame to", gameName
+    def onUnitMorph(self, unit):
+        # if we are in a replay, then we will print out the build order
+        if self.game.isReplay:
+            if (unit.type.isBuilding and unit.player.isNeutral == False):
+                seconds = self.game.frameCount / 24
+                self.game.sendText("%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
 
 
 class PyBW_EventHandler(object):

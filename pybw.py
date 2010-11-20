@@ -237,10 +237,9 @@ import pybw_repl
 
 class consoleManager(object):
     def onConnect(self):
-        global game
         game = pybw_swig.getGame()
         self.consoleClient = pybw_repl.ConsoleClient()
-        self.consoleClient.start_repl(globals())
+        self.consoleClient.start_repl(dict(game=game, swig=pybw_swig))
     def onMatchFrame(self):
         self.consoleClient.on_frame()
 

@@ -14,6 +14,8 @@ public:
 	EventDispatcher();
 	~EventDispatcher();
 
+	void dispatchEvent(BWAPI::Event* e);
+
 	void onMatchStart();
 	void onMatchEnd(bool isWinner);
 	void onMatchFrame();

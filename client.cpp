@@ -97,8 +97,6 @@ int main(int argc, const char* argv[])
 		event_dispatcher.onConnect(BWAPI::Broodwar);
       }
     }
-    printf("starting match!");
-    Broodwar->printf("The map is %s, a %d player map",Broodwar->mapName().c_str(),Broodwar->getStartLocations().size());
     // Enable some cheat flags
     Broodwar->enableFlag(Flag::UserInput);
     // Uncomment to enable complete map information
@@ -112,87 +110,11 @@ int main(int argc, const char* argv[])
     show_bullets=false;
     show_visibility_data=false;
 
-    if (Broodwar->isReplay())
-    {
-      Broodwar->printf("The following players are in this replay:");
-      for(std::set<Player*>::iterator p=Broodwar->getPlayers().begin();p!=Broodwar->getPlayers().end();p++)
-      {
-        if (!(*p)->getUnits().empty() && !(*p)->isNeutral())
-        {
-          Broodwar->printf("%s, playing as a %s",(*p)->getName().c_str(),(*p)->getRace().getName().c_str());
-        }
-      }
-    }
-    else
-    {
-      Broodwar->printf("The match up is %s v %s",
-        Broodwar->self()->getRace().getName().c_str(),
-        Broodwar->enemy()->getRace().getName().c_str());
-    }
-
     while(Broodwar->isInGame())
     {
       for(std::list<Event>::iterator e=Broodwar->getEvents().begin();e!=Broodwar->getEvents().end();e++)
       {
-	    switch(e->type)
-		{
-		case EventType::MatchStart:
-			event_dispatcher.onMatchStart();
-			break;
-		case EventType::MatchEnd:
-			event_dispatcher.onMatchEnd(e->isWinner);
-			break;
-        case EventType::MatchFrame:
-            event_dispatcher.onMatchFrame();
-            break;
-        case EventType::MenuFrame:
-            event_dispatcher.onMenuFrame();
-            break;
-        case EventType::SendText:
-			event_dispatcher.onSendText(e->text);
-            break;
-        case EventType::ReceiveText:
-			event_dispatcher.onReceiveText(e->player, e->text);
-            break;
-        case EventType::PlayerLeft:
-            event_dispatcher.onPlayerLeft(e->player);
-            break;
-        case EventType::NukeDetect:
-			event_dispatcher.onNukeDetect(e->position);
-            break;
-        case EventType::UnitDiscover:
-            event_dispatcher.onUnitDiscover(e->unit);
-            break;
-        case EventType::UnitEvade:
-            event_dispatcher.onUnitEvade(e->unit);
-            break;
-        case EventType::UnitShow:
-            event_dispatcher.onUnitShow(e->unit);
-            break;
-        case EventType::UnitHide:
-            event_dispatcher.onUnitHide(e->unit);
-            break;
-        case EventType::UnitCreate:
-            event_dispatcher.onUnitCreate(e->unit);
-            break;
-        case EventType::UnitDestroy:
-            event_dispatcher.onUnitDestroy(e->unit);
-            break;
-        case EventType::UnitMorph:
-            event_dispatcher.onUnitMorph(e->unit);
-            break;
-        case EventType::UnitRenegade:
-            event_dispatcher.onUnitRenegade(e->unit);
-            break;
-        case EventType::SaveGame:
-            event_dispatcher.onSaveGame(e->text);
-            break;
-        case EventType::None:
-            break;
-        default:
-            printf("error: Unknown event");
-            break;
-		}
+	    event_dispatcher.dispatchEvent(&*e);
 
         switch(e->type)
         {
@@ -216,63 +138,11 @@ int main(int argc, const char* argv[])
                 Broodwar->printf("Analyzing map... this may take a minute");
                 CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)AnalyzeThread, NULL, 0, NULL);
               }
-            } else
-            {
-              Broodwar->printf("You typed '%s'!",e->text.c_str());
-              Broodwar->sendText("%s",e->text.c_str());
             }
-            break;
-          case EventType::NukeDetect:
-            if (e->position!=Positions::Unknown)
-              Broodwar->printf("Nuclear Launch Detected at (%d,%d)",e->position.x(),e->position.y());
-            else
-              Broodwar->printf("Nuclear Launch Detected");
-            break;
-          case EventType::UnitCreate:
-            if (Broodwar->getFrameCount()>1)
-            {
-              if (!Broodwar->isReplay())
-                Broodwar->sendText("A %s [%x] has been created at (%d,%d)",e->unit->getType().getName().c_str(),e->unit,e->unit->getPosition().x(),e->unit->getPosition().y());
-              else
-              {
-                /*if we are in a replay, then we will print out the build order
-                (just of the buildings, not the units).*/
-                if (e->unit->getType().isBuilding() && e->unit->getPlayer()->isNeutral()==false)
-                {
-                  int seconds=Broodwar->getFrameCount()/24;
-                  int minutes=seconds/60;
-                  seconds%=60;
-                  Broodwar->sendText("%.2d:%.2d: %s creates a %s",minutes,seconds,e->unit->getPlayer()->getName().c_str(),e->unit->getType().getName().c_str());
-                }
-              }
-            }
-            break;
-          case EventType::UnitDestroy:
-            if (!Broodwar->isReplay() && Broodwar->getFrameCount()>1)
-              Broodwar->sendText("A %s [%x] has been destroyed at (%d,%d)",e->unit->getType().getName().c_str(),e->unit,e->unit->getPosition().x(),e->unit->getPosition().y());
-            break;
-          case EventType::UnitMorph:
-            if (!Broodwar->isReplay())
-              Broodwar->sendText("A %s [%x] has been morphed at (%d,%d)",e->unit->getType().getName().c_str(),e->unit,e->unit->getPosition().x(),e->unit->getPosition().y());
-            else
-            {
-              /*if we are in a replay, then we will print out the build order
-              (just of the buildings, not the units).*/
-              if (e->unit->getType().isBuilding() && e->unit->getPlayer()->isNeutral()==false)
-              {
-                int seconds=Broodwar->getFrameCount()/24;
-                int minutes=seconds/60;
-                seconds%=60;
-                Broodwar->sendText("%.2d:%.2d: %s morphs a %s",minutes,seconds,e->unit->getPlayer()->getName().c_str(),e->unit->getType().getName().c_str());
-              }
-            }
-            break;
-          case EventType::UnitRenegade:
-            if (!Broodwar->isReplay())
-              Broodwar->sendText("A %s [%x] is now owned by %s",e->unit->getType().getName().c_str(),e->unit,e->unit->getPlayer()->getName().c_str());
-            break;
-          case EventType::SaveGame:
-            Broodwar->sendText("The game was saved to \"%s\".",e->text.c_str());
+			else
+			{
+				Broodwar->sendText("%s", e->text);
+			}
             break;
         }
       }
@@ -305,9 +175,7 @@ int main(int argc, const char* argv[])
 		event_dispatcher.onConnect(BWAPI::Broodwar);
       }
     }
-    printf("Game ended\n");
   }
-  system("pause");
 
   uninit();
   return 0;

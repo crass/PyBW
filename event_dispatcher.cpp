@@ -79,6 +79,69 @@ void EventDispatcher::reload()
 	LoadEventHandler(true);
 }
 
+void EventDispatcher::dispatchEvent(BWAPI::Event* e)
+{
+    switch(e->type)
+	{
+	case BWAPI::EventType::MatchStart:
+		onMatchStart();
+		break;
+	case BWAPI::EventType::MatchEnd:
+		onMatchEnd(e->isWinner);
+		break;
+    case BWAPI::EventType::MatchFrame:
+        onMatchFrame();
+        break;
+    case BWAPI::EventType::MenuFrame:
+        onMenuFrame();
+        break;
+    case BWAPI::EventType::SendText:
+		onSendText(e->text);
+        break;
+    case BWAPI::EventType::ReceiveText:
+		onReceiveText(e->player, e->text);
+        break;
+    case BWAPI::EventType::PlayerLeft:
+        onPlayerLeft(e->player);
+        break;
+    case BWAPI::EventType::NukeDetect:
+		onNukeDetect(e->position);
+        break;
+    case BWAPI::EventType::UnitDiscover:
+        onUnitDiscover(e->unit);
+        break;
+    case BWAPI::EventType::UnitEvade:
+        onUnitEvade(e->unit);
+        break;
+    case BWAPI::EventType::UnitShow:
+        onUnitShow(e->unit);
+        break;
+    case BWAPI::EventType::UnitHide:
+        onUnitHide(e->unit);
+        break;
+    case BWAPI::EventType::UnitCreate:
+        onUnitCreate(e->unit);
+        break;
+    case BWAPI::EventType::UnitDestroy:
+        onUnitDestroy(e->unit);
+        break;
+    case BWAPI::EventType::UnitMorph:
+        onUnitMorph(e->unit);
+        break;
+    case BWAPI::EventType::UnitRenegade:
+        onUnitRenegade(e->unit);
+        break;
+    case BWAPI::EventType::SaveGame:
+        onSaveGame(e->text);
+        break;
+    case BWAPI::EventType::None:
+        break;
+    default:
+        printf("error: Unknown event");
+        break;
+	}
+}
+
 void EventDispatcher::onMatchStart()
 {
   if (event_handler != NULL)

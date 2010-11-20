@@ -5,6 +5,8 @@ class ExampleAI(object):
         self.game = getGame() 
 
     def onMatchStart(self):
+        if self.game.isReplay:
+            return
         self.minerals = list(self.game.minerals)
         self.player = self.game.self
         self.race = self.player.race
@@ -23,6 +25,8 @@ class ExampleAI(object):
             self.main_center = None
 
     def onMatchFrame(self):
+        if self.game.isReplay:
+            return
         if self.main_center:
             self.main_center.train( self.race.worker )
 
