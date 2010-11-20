@@ -55,7 +55,7 @@ void EventDispatcher::LoadEventHandler(bool call_reload)
 		PyErr_Clear();
 		if (reload_event_handler == NULL)
 		{
-			MessageBoxA(0, "Error getting reload_event_handler from pybw module", 0,0);
+			printf("Error getting reload_event_handler from pybw module\n");
 			return;
 		}
 
@@ -69,7 +69,7 @@ void EventDispatcher::LoadEventHandler(bool call_reload)
 
 	if (event_handler == NULL)
 	{
-		MessageBoxA(0, "Error getting event_handler from pybw module", 0,0);
+		printf("Error getting event_handler from pybw module\n");
 		return;
 	}
 

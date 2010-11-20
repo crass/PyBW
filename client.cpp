@@ -52,7 +52,7 @@ void init()
 	BWAPI::BWAPI_init();
 	if (Py_IsInitialized())
 	{
-		MessageBoxA(0, "Python already initialized on init!", 0, 0);
+		printf("Python already initialized on init!\n");
 	}
 	else
 	{
@@ -70,7 +70,7 @@ void uninit()
 	}
 	else
 	{
-		MessageBoxA(0, "Python not initialized on uninit!", 0, 0);
+		printf("Python not initialized on uninit!");
 	}
 }
 

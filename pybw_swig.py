@@ -550,6 +550,10 @@ def getGroundDistanceMap(*args):
   return _pybw_swig.getGroundDistanceMap(*args)
 getGroundDistanceMap = _pybw_swig.getGroundDistanceMap
 
+def getGroundWalkDistanceMap(*args):
+  return _pybw_swig.getGroundWalkDistanceMap(*args)
+getGroundWalkDistanceMap = _pybw_swig.getGroundWalkDistanceMap
+
 def TA_getRegions():
   return _pybw_swig.TA_getRegions()
 TA_getRegions = _pybw_swig.TA_getRegions
@@ -914,6 +918,7 @@ Unit_Not_Owned = cvar.Unit_Not_Owned
 Unit_Busy = cvar.Unit_Busy
 Incompatible_UnitType = cvar.Incompatible_UnitType
 Incompatible_TechType = cvar.Incompatible_TechType
+Incompatible_State = cvar.Incompatible_State
 Already_Researched = cvar.Already_Researched
 Fully_Upgraded = cvar.Fully_Upgraded
 Currently_Researching = cvar.Currently_Researching
@@ -925,7 +930,9 @@ Insufficient_Energy = cvar.Insufficient_Energy
 Insufficient_Tech = cvar.Insufficient_Tech
 Insufficient_Ammo = cvar.Insufficient_Ammo
 Insufficient_Space = cvar.Insufficient_Space
+Invalid_Tile_Position = cvar.Invalid_Tile_Position
 Unbuildable_Location = cvar.Unbuildable_Location
+Unreachable_Location = cvar.Unreachable_Location
 Out_Of_Range = cvar.Out_Of_Range
 Unable_To_Hit = cvar.Unable_To_Hit
 Access_Denied = cvar.Access_Denied
@@ -1097,6 +1104,7 @@ class Game(_object):
     def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
     def getBullets(self): return _pybw_swig.Game_getBullets(self)
+    def getNukeDots(self): return _pybw_swig.Game_getNukeDots(self)
     def getEvents(self): return _pybw_swig.Game_getEvents(self)
     def getForce(self, *args): return _pybw_swig.Game_getForce(self, *args)
     def getPlayer(self, *args): return _pybw_swig.Game_getPlayer(self, *args)
@@ -1107,19 +1115,16 @@ class Game(_object):
     def getFrameCount(self): return _pybw_swig.Game_getFrameCount(self)
     def getFPS(self): return _pybw_swig.Game_getFPS(self)
     def getAverageFPS(self): return _pybw_swig.Game_getAverageFPS(self)
-    def getMouseX(self): return _pybw_swig.Game_getMouseX(self)
-    def getMouseY(self): return _pybw_swig.Game_getMouseY(self)
     def getMousePosition(self): return _pybw_swig.Game_getMousePosition(self)
     def getMouseState(self, *args): return _pybw_swig.Game_getMouseState(self, *args)
     def getKeyState(self, *args): return _pybw_swig.Game_getKeyState(self, *args)
-    def getScreenX(self): return _pybw_swig.Game_getScreenX(self)
-    def getScreenY(self): return _pybw_swig.Game_getScreenY(self)
     def getScreenPosition(self): return _pybw_swig.Game_getScreenPosition(self)
     def setScreenPosition(self, *args): return _pybw_swig.Game_setScreenPosition(self, *args)
     def pingMinimap(self, *args): return _pybw_swig.Game_pingMinimap(self, *args)
     def isFlagEnabled(self, *args): return _pybw_swig.Game_isFlagEnabled(self, *args)
     def enableFlag(self, *args): return _pybw_swig.Game_enableFlag(self, *args)
     def getLastError(self): return _pybw_swig.Game_getLastError(self)
+    def setLastError(self, *args): return _pybw_swig.Game_setLastError(self, *args)
     def mapWidth(self): return _pybw_swig.Game_mapWidth(self)
     def mapHeight(self): return _pybw_swig.Game_mapHeight(self)
     def mapFileName(self): return _pybw_swig.Game_mapFileName(self)
@@ -1151,6 +1156,7 @@ class Game(_object):
     def leaveGame(self): return _pybw_swig.Game_leaveGame(self)
     def restartGame(self): return _pybw_swig.Game_restartGame(self)
     def setLocalSpeed(self, *args): return _pybw_swig.Game_setLocalSpeed(self, *args)
+    def issueCommand(self, *args): return _pybw_swig.Game_issueCommand(self, *args)
     def self(self): return _pybw_swig.Game_self(self)
     def enemy(self): return _pybw_swig.Game_enemy(self)
     def setTextSize(self, size = 1): return _pybw_swig.Game_setTextSize(self, size)
@@ -1193,6 +1199,7 @@ class Game(_object):
     def setLatCom(self, *args): return _pybw_swig.Game_setLatCom(self, *args)
     def getReplayFrameCount(self): return _pybw_swig.Game_getReplayFrameCount(self)
     def setGUI(self, enabled = True): return _pybw_swig.Game_setGUI(self, enabled)
+    def getInstanceNumber(self): return _pybw_swig.Game_getInstanceNumber(self)
     def getAllUnits(self): return _pybw_swig.Game_getAllUnits(self)
     def getMinerals(self): return _pybw_swig.Game_getMinerals(self)
     def getGeysers(self): return _pybw_swig.Game_getGeysers(self)
@@ -1521,9 +1528,15 @@ class Player(_object):
     def hasResearched(self, *args): return _pybw_swig.Player_hasResearched(self, *args)
     def isResearching(self, *args): return _pybw_swig.Player_isResearching(self, *args)
     def isUpgrading(self, *args): return _pybw_swig.Player_isUpgrading(self, *args)
-    def maxEnergy(self, *args): return _pybw_swig.Player_maxEnergy(self, *args)
     def getColor(self): return _pybw_swig.Player_getColor(self)
     def getTextColor(self): return _pybw_swig.Player_getTextColor(self)
+    def maxEnergy(self, *args): return _pybw_swig.Player_maxEnergy(self, *args)
+    def topSpeed(self, *args): return _pybw_swig.Player_topSpeed(self, *args)
+    def groundWeaponMaxRange(self, *args): return _pybw_swig.Player_groundWeaponMaxRange(self, *args)
+    def airWeaponMaxRange(self, *args): return _pybw_swig.Player_airWeaponMaxRange(self, *args)
+    def sightRange(self, *args): return _pybw_swig.Player_sightRange(self, *args)
+    def groundWeaponDamageCooldown(self, *args): return _pybw_swig.Player_groundWeaponDamageCooldown(self, *args)
+    def armor(self, *args): return _pybw_swig.Player_armor(self, *args)
     def getUnits(self): return _pybw_swig.Player_getUnits(self)
     def getRace(self): return _pybw_swig.Player_getRace(self)
     def getStartLocation(self): return _pybw_swig.Player_getStartLocation(self)
@@ -1814,6 +1827,8 @@ class TechType(_object):
     def energyUsed(self): return _pybw_swig.TechType_energyUsed(self)
     def whatResearches(self): return _pybw_swig.TechType_whatResearches(self)
     def getWeapon(self): return _pybw_swig.TechType_getWeapon(self)
+    def targetsUnit(self): return _pybw_swig.TechType_targetsUnit(self)
+    def targetsPosition(self): return _pybw_swig.TechType_targetsPosition(self)
     def whatUses(self): return _pybw_swig.TechType_whatUses(self)
     __swig_destroy__ = _pybw_swig.delete_TechType
     __del__ = lambda self : None;
@@ -1918,7 +1933,10 @@ class Unit(_object):
     def getShields(self): return _pybw_swig.Unit_getShields(self)
     def getEnergy(self): return _pybw_swig.Unit_getEnergy(self)
     def getResources(self): return _pybw_swig.Unit_getResources(self)
+    def getResourceGroup(self): return _pybw_swig.Unit_getResourceGroup(self)
     def getDistance(self, *args): return _pybw_swig.Unit_getDistance(self, *args)
+    def hasPath(self, *args): return _pybw_swig.Unit_hasPath(self, *args)
+    def getLastOrderFrame(self): return _pybw_swig.Unit_getLastOrderFrame(self)
     def getUpgradeLevel(self, *args): return _pybw_swig.Unit_getUpgradeLevel(self, *args)
     def getInitialType(self): return _pybw_swig.Unit_getInitialType(self)
     def getInitialPosition(self): return _pybw_swig.Unit_getInitialPosition(self)
@@ -1960,10 +1978,12 @@ class Unit(_object):
     def getRallyUnit(self): return _pybw_swig.Unit_getRallyUnit(self)
     def getAddon(self): return _pybw_swig.Unit_getAddon(self)
     def getNydusExit(self): return _pybw_swig.Unit_getNydusExit(self)
+    def getPowerUp(self): return _pybw_swig.Unit_getPowerUp(self)
     def getTransport(self): return _pybw_swig.Unit_getTransport(self)
     def getCarrier(self): return _pybw_swig.Unit_getCarrier(self)
     def getInterceptors(self): return _pybw_swig.Unit_getInterceptors(self)
     def getHatchery(self): return _pybw_swig.Unit_getHatchery(self)
+    def getLarva(self): return _pybw_swig.Unit_getLarva(self)
     def exists(self): return _pybw_swig.Unit_exists(self)
     def hasNuke(self): return _pybw_swig.Unit_hasNuke(self)
     def isAccelerating(self): return _pybw_swig.Unit_isAccelerating(self)
@@ -1988,6 +2008,7 @@ class Unit(_object):
     def isHallucination(self): return _pybw_swig.Unit_isHallucination(self)
     def isHoldingPosition(self): return _pybw_swig.Unit_isHoldingPosition(self)
     def isIdle(self): return _pybw_swig.Unit_isIdle(self)
+    def isInterruptible(self): return _pybw_swig.Unit_isInterruptible(self)
     def isIrradiated(self): return _pybw_swig.Unit_isIrradiated(self)
     def isLifted(self): return _pybw_swig.Unit_isLifted(self)
     def isLoaded(self): return _pybw_swig.Unit_isLoaded(self)
@@ -2005,11 +2026,13 @@ class Unit(_object):
     def isStartingAttack(self): return _pybw_swig.Unit_isStartingAttack(self)
     def isStasised(self): return _pybw_swig.Unit_isStasised(self)
     def isStimmed(self): return _pybw_swig.Unit_isStimmed(self)
+    def isStuck(self): return _pybw_swig.Unit_isStuck(self)
     def isTraining(self): return _pybw_swig.Unit_isTraining(self)
     def isUnderStorm(self): return _pybw_swig.Unit_isUnderStorm(self)
     def isUnpowered(self): return _pybw_swig.Unit_isUnpowered(self)
     def isUpgrading(self): return _pybw_swig.Unit_isUpgrading(self)
     def isVisible(self, *args): return _pybw_swig.Unit_isVisible(self, *args)
+    def canIssueCommand(self, *args): return _pybw_swig.Unit_canIssueCommand(self, *args)
     def issueCommand(self, *args): return _pybw_swig.Unit_issueCommand(self, *args)
     def attackMove(self, *args): return _pybw_swig.Unit_attackMove(self, *args)
     def attackUnit(self, *args): return _pybw_swig.Unit_attackUnit(self, *args)
@@ -2019,8 +2042,7 @@ class Unit(_object):
     def morph(self, *args): return _pybw_swig.Unit_morph(self, *args)
     def research(self, *args): return _pybw_swig.Unit_research(self, *args)
     def upgrade(self, *args): return _pybw_swig.Unit_upgrade(self, *args)
-    def setRallyPosition(self, *args): return _pybw_swig.Unit_setRallyPosition(self, *args)
-    def setRallyUnit(self, *args): return _pybw_swig.Unit_setRallyUnit(self, *args)
+    def setRallyPoint(self, *args): return _pybw_swig.Unit_setRallyPoint(self, *args)
     def move(self, *args): return _pybw_swig.Unit_move(self, *args)
     def patrol(self, *args): return _pybw_swig.Unit_patrol(self, *args)
     def holdPosition(self): return _pybw_swig.Unit_holdPosition(self)
@@ -2049,13 +2071,9 @@ class Unit(_object):
     def cancelResearch(self): return _pybw_swig.Unit_cancelResearch(self)
     def cancelUpgrade(self): return _pybw_swig.Unit_cancelUpgrade(self)
     def useTech(self, *args): return _pybw_swig.Unit_useTech(self, *args)
-    def hasPath(self, *args): return _pybw_swig.Unit_hasPath(self, *args)
-    def getLastOrderFrame(self): return _pybw_swig.Unit_getLastOrderFrame(self)
     def setClientInfo(self, *args): return _pybw_swig.Unit_setClientInfo(self, *args)
     def getClientInfo(self): return _pybw_swig.Unit_getClientInfo(self)
-    def getResourceGroup(self): return _pybw_swig.Unit_getResourceGroup(self)
     def getLoadedUnits(self): return _pybw_swig.Unit_getLoadedUnits(self)
-    def getLarva(self): return _pybw_swig.Unit_getLarva(self)
     def getTrainingQueue(self): return _pybw_swig.Unit_getTrainingQueue(self)
     __swig_destroy__ = _pybw_swig.delete_Unit
     __del__ = lambda self : None;
@@ -2442,9 +2460,9 @@ class UnitType(_object):
     def __lt__(self, *args): return _pybw_swig.UnitType___lt__(self, *args)
     def getID(self): return _pybw_swig.UnitType_getID(self)
     def getName(self): return _pybw_swig.UnitType_getName(self)
-    def getSubLabel(self): return _pybw_swig.UnitType_getSubLabel(self)
     def getRace(self): return _pybw_swig.UnitType_getRace(self)
     def requiredTech(self): return _pybw_swig.UnitType_requiredTech(self)
+    def cloakingTech(self): return _pybw_swig.UnitType_cloakingTech(self)
     def abilities(self): return _pybw_swig.UnitType_abilities(self)
     def upgrades(self): return _pybw_swig.UnitType_upgrades(self)
     def armorUpgrade(self): return _pybw_swig.UnitType_armorUpgrade(self)
@@ -2503,6 +2521,12 @@ class UnitType(_object):
     def isAddon(self): return _pybw_swig.UnitType_isAddon(self)
     def isFlyingBuilding(self): return _pybw_swig.UnitType_isFlyingBuilding(self)
     def isNeutral(self): return _pybw_swig.UnitType_isNeutral(self)
+    def isHero(self): return _pybw_swig.UnitType_isHero(self)
+    def isPowerup(self): return _pybw_swig.UnitType_isPowerup(self)
+    def isBeacon(self): return _pybw_swig.UnitType_isBeacon(self)
+    def isFlagBeacon(self): return _pybw_swig.UnitType_isFlagBeacon(self)
+    def isSpecialBuilding(self): return _pybw_swig.UnitType_isSpecialBuilding(self)
+    def isSpell(self): return _pybw_swig.UnitType_isSpell(self)
     def producesLarva(self): return _pybw_swig.UnitType_producesLarva(self)
     def whatBuilds(self): return _pybw_swig.UnitType_whatBuilds(self)
     __swig_destroy__ = _pybw_swig.delete_UnitType
@@ -2554,52 +2578,91 @@ class UpgradeType(_object):
 UpgradeType_swigregister = _pybw_swig.UpgradeType_swigregister
 UpgradeType_swigregister(UpgradeType)
 Terran_Marine = cvar.Terran_Marine
+Hero_Jim_Raynor_Marine = cvar.Hero_Jim_Raynor_Marine
 Terran_Ghost = cvar.Terran_Ghost
+Hero_Sarah_Kerrigan = cvar.Hero_Sarah_Kerrigan
+Hero_Samir_Duran = cvar.Hero_Samir_Duran
+Hero_Infested_Duran = cvar.Hero_Infested_Duran
+Hero_Alexei_Stukov = cvar.Hero_Alexei_Stukov
 Terran_Vulture = cvar.Terran_Vulture
+Hero_Jim_Raynor_Vulture = cvar.Hero_Jim_Raynor_Vulture
 Terran_Goliath = cvar.Terran_Goliath
+Hero_Alan_Schezar = cvar.Hero_Alan_Schezar
 Terran_Siege_Tank_Tank_Mode = cvar.Terran_Siege_Tank_Tank_Mode
+Hero_Edmund_Duke_Tank_Mode = cvar.Hero_Edmund_Duke_Tank_Mode
 Terran_SCV = cvar.Terran_SCV
 Terran_Wraith = cvar.Terran_Wraith
+Hero_Tom_Kazansky = cvar.Hero_Tom_Kazansky
 Terran_Science_Vessel = cvar.Terran_Science_Vessel
+Hero_Magellan = cvar.Hero_Magellan
 Terran_Dropship = cvar.Terran_Dropship
 Terran_Battlecruiser = cvar.Terran_Battlecruiser
+Hero_Arcturus_Mengsk = cvar.Hero_Arcturus_Mengsk
+Hero_Hyperion = cvar.Hero_Hyperion
+Hero_Norad_II = cvar.Hero_Norad_II
+Hero_Gerard_DuGalle = cvar.Hero_Gerard_DuGalle
 Terran_Vulture_Spider_Mine = cvar.Terran_Vulture_Spider_Mine
 Terran_Nuclear_Missile = cvar.Terran_Nuclear_Missile
 Terran_Siege_Tank_Siege_Mode = cvar.Terran_Siege_Tank_Siege_Mode
+Hero_Edmund_Duke_Siege_Mode = cvar.Hero_Edmund_Duke_Siege_Mode
 Terran_Firebat = cvar.Terran_Firebat
+Hero_Gui_Montag = cvar.Hero_Gui_Montag
 Spell_Scanner_Sweep = cvar.Spell_Scanner_Sweep
 Terran_Medic = cvar.Terran_Medic
+Terran_Civilian = cvar.Terran_Civilian
 Zerg_Larva = cvar.Zerg_Larva
 Zerg_Egg = cvar.Zerg_Egg
 Zerg_Zergling = cvar.Zerg_Zergling
+Hero_Devouring_One = cvar.Hero_Devouring_One
+Hero_Infested_Kerrigan = cvar.Hero_Infested_Kerrigan
 Zerg_Hydralisk = cvar.Zerg_Hydralisk
+Hero_Hunter_Killer = cvar.Hero_Hunter_Killer
 Zerg_Ultralisk = cvar.Zerg_Ultralisk
+Hero_Torrasque = cvar.Hero_Torrasque
 Zerg_Broodling = cvar.Zerg_Broodling
 Zerg_Drone = cvar.Zerg_Drone
 Zerg_Overlord = cvar.Zerg_Overlord
+Hero_Yggdrasill = cvar.Hero_Yggdrasill
 Zerg_Mutalisk = cvar.Zerg_Mutalisk
+Hero_Kukulza_Mutalisk = cvar.Hero_Kukulza_Mutalisk
 Zerg_Guardian = cvar.Zerg_Guardian
+Hero_Kukulza_Guardian = cvar.Hero_Kukulza_Guardian
 Zerg_Queen = cvar.Zerg_Queen
+Hero_Matriarch = cvar.Hero_Matriarch
 Zerg_Defiler = cvar.Zerg_Defiler
+Hero_Unclean_One = cvar.Hero_Unclean_One
 Zerg_Scourge = cvar.Zerg_Scourge
 Zerg_Infested_Terran = cvar.Zerg_Infested_Terran
 Terran_Valkyrie = cvar.Terran_Valkyrie
 Zerg_Cocoon = cvar.Zerg_Cocoon
 Protoss_Corsair = cvar.Protoss_Corsair
+Hero_Raszagal = cvar.Hero_Raszagal
 Protoss_Dark_Templar = cvar.Protoss_Dark_Templar
+Hero_Dark_Templar = cvar.Hero_Dark_Templar
+Hero_Zeratul = cvar.Hero_Zeratul
 Zerg_Devourer = cvar.Zerg_Devourer
 Protoss_Dark_Archon = cvar.Protoss_Dark_Archon
 Protoss_Probe = cvar.Protoss_Probe
 Protoss_Zealot = cvar.Protoss_Zealot
+Hero_Fenix_Zealot = cvar.Hero_Fenix_Zealot
 Protoss_Dragoon = cvar.Protoss_Dragoon
+Hero_Fenix_Dragoon = cvar.Hero_Fenix_Dragoon
 Protoss_High_Templar = cvar.Protoss_High_Templar
+Hero_Tassadar = cvar.Hero_Tassadar
+Hero_Aldaris = cvar.Hero_Aldaris
 Protoss_Archon = cvar.Protoss_Archon
+Hero_Tassadar_Zeratul_Archon = cvar.Hero_Tassadar_Zeratul_Archon
 Protoss_Shuttle = cvar.Protoss_Shuttle
 Protoss_Scout = cvar.Protoss_Scout
+Hero_Mojo = cvar.Hero_Mojo
+Hero_Artanis = cvar.Hero_Artanis
 Protoss_Arbiter = cvar.Protoss_Arbiter
+Hero_Danimoth = cvar.Hero_Danimoth
 Protoss_Carrier = cvar.Protoss_Carrier
+Hero_Gantrithor = cvar.Hero_Gantrithor
 Protoss_Interceptor = cvar.Protoss_Interceptor
 Protoss_Reaver = cvar.Protoss_Reaver
+Hero_Warbringer = cvar.Hero_Warbringer
 Protoss_Observer = cvar.Protoss_Observer
 Protoss_Scarab = cvar.Protoss_Scarab
 Critter_Rhynadon = cvar.Critter_Rhynadon
@@ -2679,7 +2742,20 @@ Special_Warp_Gate = cvar.Special_Warp_Gate
 Special_Psi_Disrupter = cvar.Special_Psi_Disrupter
 Special_Power_Generator = cvar.Special_Power_Generator
 Special_Overmind_Cocoon = cvar.Special_Overmind_Cocoon
+Special_Zerg_Beacon = cvar.Special_Zerg_Beacon
+Special_Terran_Beacon = cvar.Special_Terran_Beacon
+Special_Protoss_Beacon = cvar.Special_Protoss_Beacon
+Special_Zerg_Flag_Beacon = cvar.Special_Zerg_Flag_Beacon
+Special_Terran_Flag_Beacon = cvar.Special_Terran_Flag_Beacon
+Special_Protoss_Flag_Beacon = cvar.Special_Protoss_Flag_Beacon
 Spell_Dark_Swarm = cvar.Spell_Dark_Swarm
+Powerup_Uraj_Crystal = cvar.Powerup_Uraj_Crystal
+Powerup_Khalis_Crystal = cvar.Powerup_Khalis_Crystal
+Powerup_Flag = cvar.Powerup_Flag
+Powerup_Young_Chrysalis = cvar.Powerup_Young_Chrysalis
+Powerup_Psi_Emitter = cvar.Powerup_Psi_Emitter
+Powerup_Data_Disk = cvar.Powerup_Data_Disk
+Powerup_Khaydarin_Crystal = cvar.Powerup_Khaydarin_Crystal
 UnitTypes_None = cvar.UnitTypes_None
 UnitTypes_Unknown = cvar.UnitTypes_Unknown
 
@@ -2804,38 +2880,70 @@ def specialWeaponTypes():
 specialWeaponTypes = _pybw_swig.specialWeaponTypes
 
 Gauss_Rifle = cvar.Gauss_Rifle
+Gauss_Rifle_Jim_Raynor = cvar.Gauss_Rifle_Jim_Raynor
 C_10_Canister_Rifle = cvar.C_10_Canister_Rifle
+C_10_Canister_Rifle_Sarah_Kerrigan = cvar.C_10_Canister_Rifle_Sarah_Kerrigan
+C_10_Canister_Rifle_Samir_Duran = cvar.C_10_Canister_Rifle_Samir_Duran
+C_10_Canister_Rifle_Infested_Duran = cvar.C_10_Canister_Rifle_Infested_Duran
+C_10_Canister_Rifle_Alexei_Stukov = cvar.C_10_Canister_Rifle_Alexei_Stukov
 WeaponTypes_Fragmentation_Grenade = cvar.WeaponTypes_Fragmentation_Grenade
+Fragmentation_Grenade_Jim_Raynor = cvar.Fragmentation_Grenade_Jim_Raynor
 WeaponTypes_Spider_Mines = cvar.WeaponTypes_Spider_Mines
 Twin_Autocannons = cvar.Twin_Autocannons
+Twin_Autocannons_Alan_Schezar = cvar.Twin_Autocannons_Alan_Schezar
 Hellfire_Missile_Pack = cvar.Hellfire_Missile_Pack
+Hellfire_Missile_Pack_Alan_Schezar = cvar.Hellfire_Missile_Pack_Alan_Schezar
 Arclite_Cannon = cvar.Arclite_Cannon
+Arclite_Cannon_Edmund_Duke = cvar.Arclite_Cannon_Edmund_Duke
 Fusion_Cutter = cvar.Fusion_Cutter
 WeaponTypes_Gemini_Missiles = cvar.WeaponTypes_Gemini_Missiles
+Gemini_Missiles_Tom_Kazansky = cvar.Gemini_Missiles_Tom_Kazansky
 WeaponTypes_Burst_Lasers = cvar.WeaponTypes_Burst_Lasers
+Burst_Lasers_Tom_Kazansky = cvar.Burst_Lasers_Tom_Kazansky
 ATS_Laser_Battery = cvar.ATS_Laser_Battery
+ATS_Laser_Battery_Hero = cvar.ATS_Laser_Battery_Hero
+ATS_Laser_Battery_Hyperion = cvar.ATS_Laser_Battery_Hyperion
 ATA_Laser_Battery = cvar.ATA_Laser_Battery
+ATA_Laser_Battery_Hero = cvar.ATA_Laser_Battery_Hero
+ATA_Laser_Battery_Hyperion = cvar.ATA_Laser_Battery_Hyperion
 Flame_Thrower = cvar.Flame_Thrower
+Flame_Thrower_Gui_Montag = cvar.Flame_Thrower_Gui_Montag
 Arclite_Shock_Cannon = cvar.Arclite_Shock_Cannon
+Arclite_Shock_Cannon_Edmund_Duke = cvar.Arclite_Shock_Cannon_Edmund_Duke
 WeaponTypes_Longbolt_Missile = cvar.WeaponTypes_Longbolt_Missile
 Claws = cvar.Claws
+Claws_Devouring_One = cvar.Claws_Devouring_One
+Claws_Infested_Kerrigan = cvar.Claws_Infested_Kerrigan
 Needle_Spines = cvar.Needle_Spines
+Needle_Spines_Hunter_Killer = cvar.Needle_Spines_Hunter_Killer
 Kaiser_Blades = cvar.Kaiser_Blades
+Kaiser_Blades_Torrasque = cvar.Kaiser_Blades_Torrasque
 Toxic_Spores = cvar.Toxic_Spores
 Spines = cvar.Spines
 WeaponTypes_Acid_Spore = cvar.WeaponTypes_Acid_Spore
+Acid_Spore_Kukulza = cvar.Acid_Spore_Kukulza
 WeaponTypes_Glave_Wurm = cvar.WeaponTypes_Glave_Wurm
+Glave_Wurm_Kukulza = cvar.Glave_Wurm_Kukulza
 WeaponTypes_Seeker_Spores = cvar.WeaponTypes_Seeker_Spores
 Subterranean_Tentacle = cvar.Subterranean_Tentacle
 Suicide_Infested_Terran = cvar.Suicide_Infested_Terran
 Suicide_Scourge = cvar.Suicide_Scourge
 Particle_Beam = cvar.Particle_Beam
 Psi_Blades = cvar.Psi_Blades
+Psi_Blades_Fenix = cvar.Psi_Blades_Fenix
 WeaponTypes_Phase_Disruptor = cvar.WeaponTypes_Phase_Disruptor
+Phase_Disruptor_Fenix = cvar.Phase_Disruptor_Fenix
+Psi_Assault = cvar.Psi_Assault
 Psionic_Shockwave = cvar.Psionic_Shockwave
+Psionic_Shockwave_TZ_Archon = cvar.Psionic_Shockwave_TZ_Archon
 Dual_Photon_Blasters = cvar.Dual_Photon_Blasters
+Dual_Photon_Blasters_Mojo = cvar.Dual_Photon_Blasters_Mojo
+Dual_Photon_Blasters_Artanis = cvar.Dual_Photon_Blasters_Artanis
 Anti_Matter_Missiles = cvar.Anti_Matter_Missiles
+Anti_Matter_Missiles_Mojo = cvar.Anti_Matter_Missiles_Mojo
+Anti_Matter_Missiles_Artanis = cvar.Anti_Matter_Missiles_Artanis
 Phase_Disruptor_Cannon = cvar.Phase_Disruptor_Cannon
+Phase_Disruptor_Cannon_Danimoth = cvar.Phase_Disruptor_Cannon_Danimoth
 WeaponTypes_Pulse_Cannon = cvar.WeaponTypes_Pulse_Cannon
 STS_Photon_Cannon = cvar.STS_Photon_Cannon
 STA_Photon_Cannon = cvar.STA_Photon_Cannon
@@ -2845,6 +2953,8 @@ WeaponTypes_Halo_Rockets = cvar.WeaponTypes_Halo_Rockets
 WeaponTypes_Corrosive_Acid = cvar.WeaponTypes_Corrosive_Acid
 WeaponTypes_Subterranean_Spines = cvar.WeaponTypes_Subterranean_Spines
 Warp_Blades = cvar.Warp_Blades
+Warp_Blades_Hero = cvar.Warp_Blades_Hero
+Warp_Blades_Zeratul = cvar.Warp_Blades_Zeratul
 WeaponTypes_Yamato_Gun = cvar.WeaponTypes_Yamato_Gun
 WeaponTypes_Nuclear_Strike = cvar.WeaponTypes_Nuclear_Strike
 WeaponTypes_Lockdown = cvar.WeaponTypes_Lockdown

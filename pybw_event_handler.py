@@ -17,7 +17,7 @@ class VerboseEventHandler(object):
                 if not p.isNeutral and not len(list(p.units)) == 0:
                     self.game.sendText("* %s, playing %s"%(p.name, p.race.name))
         else:
-            self.game.sendText("Match started, %r vs %r"%(self.game.self, self.game.enemy))
+            self.game.sendText("", "*Match started, %r vs %r"%(self.game.self, self.game.enemy))
     def onMatchEnd(self, is_winner):
         print "Match ended%s" % ( ['.', ', I won!'][is_winner] )
     def onSendText(self, text):
@@ -32,7 +32,7 @@ class VerboseEventHandler(object):
             if self.game.isReplay:
                 if (unit.type.isBuilding and unit.player.isNeutral == False):
                     seconds = self.game.frameCount / 24
-                    self.game.sendText("%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
+                    self.game.sendText("", "%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
             else:
                 self.game.sendText("onUnitCreate: %r" % unit)
     def onUnitDestroy(self, unit):

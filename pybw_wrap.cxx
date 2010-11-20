@@ -2793,17 +2793,18 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[104]
 #define SWIGTYPE_p_std__setT_BaseLocation_p_t swig_types[105]
 #define SWIGTYPE_p_std__setT_Chokepoint_p_t swig_types[106]
-#define SWIGTYPE_p_std__setT_Region_p_t swig_types[107]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[108]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[109]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[110]
-#define SWIGTYPE_p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t swig_types[111]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[112]
-#define SWIGTYPE_p_unsigned_char swig_types[113]
-#define SWIGTYPE_p_value_type swig_types[114]
-#define SWIGTYPE_p_void swig_types[115]
-static swig_type_info *swig_types[117];
-static swig_module_info swig_module = {swig_types, 116, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__setT_Position_t swig_types[107]
+#define SWIGTYPE_p_std__setT_Region_p_t swig_types[108]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[109]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[110]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[111]
+#define SWIGTYPE_p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t swig_types[112]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[113]
+#define SWIGTYPE_p_unsigned_char swig_types[114]
+#define SWIGTYPE_p_value_type swig_types[115]
+#define SWIGTYPE_p_void swig_types[116]
+static swig_type_info *swig_types[118];
+static swig_module_info swig_module = {swig_types, 117, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -4745,9 +4746,6 @@ SWIGINTERN int BWAPI_TilePosition_getY(BWAPI::TilePosition *self){
     }
 SWIGINTERN SetWrapper< BWAPI::Unit * > *BWAPI_Unit_getLoadedUnits(BWAPI::Unit *self){
         return new SetWrapper<BWAPI::Unit*>( self->getLoadedUnits() );
-    }
-SWIGINTERN SetWrapper< BWAPI::Unit * > *BWAPI_Unit_getLarva(BWAPI::Unit *self){
-        return new SetWrapper<BWAPI::Unit*>( self->getLarva() );
     }
 SWIGINTERN ListWrapper_PtrNext< BWAPI::UnitType > *BWAPI_Unit_getTrainingQueue(BWAPI::Unit *self){
         return new ListWrapper_PtrNext<BWAPI::UnitType>( self->getTrainingQueue() );
@@ -10719,6 +10717,36 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_getNearestChokepoint__SWIG_2(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Position arg1 ;
+  void *argp1 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  Chokepoint *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:getNearestChokepoint",&obj0)) SWIG_fail;
+  {
+    res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "getNearestChokepoint" "', argument " "1"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getNearestChokepoint" "', argument " "1"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp1);
+      arg1 = *temp;
+      if (SWIG_IsNewObj(res1)) delete temp;
+    }
+  }
+  result = (Chokepoint *)BWTA::getNearestChokepoint(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_Chokepoint, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_getNearestChokepoint(PyObject *self, PyObject *args) {
   int argc;
   PyObject *argv[3];
@@ -10735,6 +10763,14 @@ SWIGINTERN PyObject *_wrap_getNearestChokepoint(PyObject *self, PyObject *args) 
     _v = SWIG_CheckState(res);
     if (_v) {
       return _wrap_getNearestChokepoint__SWIG_1(self, args);
+    }
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_BWAPI__Position, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_getNearestChokepoint__SWIG_2(self, args);
     }
   }
   if (argc == 2) {
@@ -10758,7 +10794,8 @@ fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'getNearestChokepoint'.\n"
     "  Possible C/C++ prototypes are:\n"
     "    BWTA::getNearestChokepoint(int,int)\n"
-    "    BWTA::getNearestChokepoint(BWAPI::TilePosition)\n");
+    "    BWTA::getNearestChokepoint(BWAPI::TilePosition)\n"
+    "    BWTA::getNearestChokepoint(BWAPI::Position)\n");
   return NULL;
 }
 
@@ -11022,15 +11059,15 @@ SWIGINTERN PyObject *_wrap_getNearestTilePosition(PyObject *SWIGUNUSEDPARM(self)
       if (SWIG_IsNewObj(res1)) delete temp;
     }
   }
-  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__setT_BWAPI__TilePosition_t,  0 );
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__setT_BWAPI__TilePosition_t,  0  | 0);
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "getNearestTilePosition" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "getNearestTilePosition" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > const &""'"); 
   }
   if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getNearestTilePosition" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getNearestTilePosition" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > const &""'"); 
   }
   arg2 = reinterpret_cast< std::set< BWAPI::TilePosition > * >(argp2);
-  result = BWTA::getNearestTilePosition(arg1,*arg2);
+  result = BWTA::getNearestTilePosition(arg1,(std::set< BWAPI::TilePosition > const &)*arg2);
   resultobj = SWIG_NewPointerObj((new std::pair< BWAPI::TilePosition,double >(static_cast< const std::pair< BWAPI::TilePosition,double >& >(result))), SWIGTYPE_p_std__pairT_BWAPI__TilePosition_double_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -11064,15 +11101,15 @@ SWIGINTERN PyObject *_wrap_getGroundDistances(PyObject *SWIGUNUSEDPARM(self), Py
       if (SWIG_IsNewObj(res1)) delete temp;
     }
   }
-  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__setT_BWAPI__TilePosition_t,  0 );
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__setT_BWAPI__TilePosition_t,  0  | 0);
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "getGroundDistances" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "getGroundDistances" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > const &""'"); 
   }
   if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getGroundDistances" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getGroundDistances" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > const &""'"); 
   }
   arg2 = reinterpret_cast< std::set< BWAPI::TilePosition > * >(argp2);
-  result = BWTA::getGroundDistances(arg1,*arg2);
+  result = BWTA::getGroundDistances(arg1,(std::set< BWAPI::TilePosition > const &)*arg2);
   resultobj = SWIG_NewPointerObj((new std::map< BWAPI::TilePosition,double >(static_cast< const std::map< BWAPI::TilePosition,double >& >(result))), SWIGTYPE_p_std__mapT_BWAPI__TilePosition_double_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -11114,6 +11151,48 @@ SWIGINTERN PyObject *_wrap_getGroundDistanceMap(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg2 = reinterpret_cast< RectangleArray< double > * >(argp2);
   BWTA::getGroundDistanceMap(arg1,*arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_getGroundWalkDistanceMap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  int arg1 ;
+  int arg2 ;
+  RectangleArray< double > *arg3 = 0 ;
+  int val1 ;
+  int ecode1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:getGroundWalkDistanceMap",&obj0,&obj1,&obj2)) SWIG_fail;
+  ecode1 = SWIG_AsVal_int(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "getGroundWalkDistanceMap" "', argument " "1"" of type '" "int""'");
+  } 
+  arg1 = static_cast< int >(val1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "getGroundWalkDistanceMap" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_RectangleArrayT_double_t,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "getGroundWalkDistanceMap" "', argument " "3"" of type '" "RectangleArray< double > &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getGroundWalkDistanceMap" "', argument " "3"" of type '" "RectangleArray< double > &""'"); 
+  }
+  arg3 = reinterpret_cast< RectangleArray< double > * >(argp3);
+  BWTA::getGroundWalkDistanceMap(arg1,arg2,*arg3);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -11194,15 +11273,15 @@ SWIGINTERN PyObject *_wrap_getShortestPath__SWIG_1(PyObject *SWIGUNUSEDPARM(self
       if (SWIG_IsNewObj(res1)) delete temp;
     }
   }
-  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__setT_BWAPI__TilePosition_t,  0 );
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__setT_BWAPI__TilePosition_t,  0  | 0);
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "getShortestPath" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > &""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "getShortestPath" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > const &""'"); 
   }
   if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getShortestPath" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > &""'"); 
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "getShortestPath" "', argument " "2"" of type '" "std::set< BWAPI::TilePosition > const &""'"); 
   }
   arg2 = reinterpret_cast< std::set< BWAPI::TilePosition > * >(argp2);
-  result = BWTA::getShortestPath(arg1,*arg2);
+  result = BWTA::getShortestPath(arg1,(std::set< BWAPI::TilePosition > const &)*arg2);
   resultobj = SWIG_NewPointerObj((new std::vector< BWAPI::TilePosition,std::allocator< BWAPI::TilePosition > >(static_cast< const std::vector< BWAPI::TilePosition,std::allocator< BWAPI::TilePosition > >& >(result))), SWIGTYPE_p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -11237,8 +11316,7 @@ SWIGINTERN PyObject *_wrap_getShortestPath(PyObject *self, PyObject *args) {
     int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_BWAPI__TilePosition, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_std__setT_BWAPI__TilePosition_t, 0);
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_std__setT_BWAPI__TilePosition_t, 0);
       _v = SWIG_CheckState(res);
       if (_v) {
         return _wrap_getShortestPath__SWIG_1(self, args);
@@ -11250,7 +11328,7 @@ fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'getShortestPath'.\n"
     "  Possible C/C++ prototypes are:\n"
     "    BWTA::getShortestPath(BWAPI::TilePosition,BWAPI::TilePosition)\n"
-    "    BWTA::getShortestPath(BWAPI::TilePosition,std::set< BWAPI::TilePosition > &)\n");
+    "    BWTA::getShortestPath(BWAPI::TilePosition,std::set< BWAPI::TilePosition > const &)\n");
   return NULL;
 }
 
@@ -14572,6 +14650,20 @@ SWIGINTERN PyObject *Swig_var_Incompatible_TechType_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Incompatible_State_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Incompatible_State is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Incompatible_State_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::Errors::Incompatible_State), SWIGTYPE_p_BWAPI__Error,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Already_Researched_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Already_Researched is read-only.");
   return 1;
@@ -14726,6 +14818,20 @@ SWIGINTERN PyObject *Swig_var_Insufficient_Space_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Invalid_Tile_Position_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Invalid_Tile_Position is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Invalid_Tile_Position_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::Errors::Invalid_Tile_Position), SWIGTYPE_p_BWAPI__Error,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Unbuildable_Location_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Unbuildable_Location is read-only.");
   return 1;
@@ -14736,6 +14842,20 @@ SWIGINTERN PyObject *Swig_var_Unbuildable_Location_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::Errors::Unbuildable_Location), SWIGTYPE_p_BWAPI__Error,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Unreachable_Location_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Unreachable_Location is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Unreachable_Location_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::Errors::Unreachable_Location), SWIGTYPE_p_BWAPI__Error,  0 );
   return pyobj;
 }
 
@@ -16369,6 +16489,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Game_getNukeDots(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::set< Position > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Game_getNukeDots",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getNukeDots" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  result = (std::set< Position > *) &(arg1)->getNukeDots();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_Position_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Game_getEvents(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
@@ -16619,50 +16761,6 @@ SWIGINTERN PyObject *_wrap_Game_getAverageFPS(PyObject *SWIGUNUSEDPARM(self), Py
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = (double)(arg1)->getAverageFPS();
   resultobj = SWIG_From_double(static_cast< double >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Game_getMouseX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Game_getMouseX",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getMouseX" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
-  result = (int)(arg1)->getMouseX();
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Game_getMouseY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Game_getMouseY",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getMouseY" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
-  result = (int)(arg1)->getMouseY();
-  resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
   return NULL;
@@ -16923,50 +17021,6 @@ fail:
     "  Possible C/C++ prototypes are:\n"
     "    getKeyState(BWAPI::Game *,Key)\n"
     "    getKeyState(BWAPI::Game *,int)\n");
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Game_getScreenX(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Game_getScreenX",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getScreenX" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
-  result = (int)(arg1)->getScreenX();
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Game_getScreenY(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Game_getScreenY",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getScreenY" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
-  result = (int)(arg1)->getScreenY();
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
   return NULL;
 }
 
@@ -17332,6 +17386,45 @@ SWIGINTERN PyObject *_wrap_Game_getLastError(PyObject *SWIGUNUSEDPARM(self), PyO
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   result = ((BWAPI::Game const *)arg1)->getLastError();
   resultobj = SWIG_NewPointerObj((new BWAPI::Error(static_cast< const BWAPI::Error& >(result))), SWIGTYPE_p_BWAPI__Error, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_setLastError(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Error arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Game_setLastError",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_setLastError" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Error,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_setLastError" "', argument " "2"" of type '" "BWAPI::Error""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_setLastError" "', argument " "2"" of type '" "BWAPI::Error""'");
+    } else {
+      BWAPI::Error * temp = reinterpret_cast< BWAPI::Error * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)(arg1)->setLastError(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -18392,7 +18485,7 @@ SWIGINTERN PyObject *_wrap_Game_canMake(PyObject *SWIGUNUSEDPARM(self), PyObject
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_canMake" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_canMake" "', argument " "2"" of type '" "BWAPI::Unit const *""'"); 
   }
   arg2 = reinterpret_cast< BWAPI::Unit * >(argp2);
   {
@@ -18408,7 +18501,7 @@ SWIGINTERN PyObject *_wrap_Game_canMake(PyObject *SWIGUNUSEDPARM(self), PyObject
       if (SWIG_IsNewObj(res3)) delete temp;
     }
   }
-  result = (bool)(arg1)->canMake(arg2,arg3);
+  result = (bool)(arg1)->canMake((BWAPI::Unit const *)arg2,arg3);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -18440,7 +18533,7 @@ SWIGINTERN PyObject *_wrap_Game_canResearch(PyObject *SWIGUNUSEDPARM(self), PyOb
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_canResearch" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_canResearch" "', argument " "2"" of type '" "BWAPI::Unit const *""'"); 
   }
   arg2 = reinterpret_cast< BWAPI::Unit * >(argp2);
   {
@@ -18456,7 +18549,7 @@ SWIGINTERN PyObject *_wrap_Game_canResearch(PyObject *SWIGUNUSEDPARM(self), PyOb
       if (SWIG_IsNewObj(res3)) delete temp;
     }
   }
-  result = (bool)(arg1)->canResearch(arg2,arg3);
+  result = (bool)(arg1)->canResearch((BWAPI::Unit const *)arg2,arg3);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -18488,7 +18581,7 @@ SWIGINTERN PyObject *_wrap_Game_canUpgrade(PyObject *SWIGUNUSEDPARM(self), PyObj
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_canUpgrade" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_canUpgrade" "', argument " "2"" of type '" "BWAPI::Unit const *""'"); 
   }
   arg2 = reinterpret_cast< BWAPI::Unit * >(argp2);
   {
@@ -18504,7 +18597,7 @@ SWIGINTERN PyObject *_wrap_Game_canUpgrade(PyObject *SWIGUNUSEDPARM(self), PyObj
       if (SWIG_IsNewObj(res3)) delete temp;
     }
   }
-  result = (bool)(arg1)->canUpgrade(arg2,arg3);
+  result = (bool)(arg1)->canUpgrade((BWAPI::Unit const *)arg2,arg3);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -19009,6 +19102,57 @@ fail:
     "  Possible C/C++ prototypes are:\n"
     "    setLocalSpeed(BWAPI::Game *,int)\n"
     "    setLocalSpeed(BWAPI::Game *)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_issueCommand(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  std::set< BWAPI::Unit * > *arg2 = 0 ;
+  UnitCommand arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_issueCommand",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_issueCommand" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_std__setT_BWAPI__Unit_p_t,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_issueCommand" "', argument " "2"" of type '" "std::set< BWAPI::Unit * > const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_issueCommand" "', argument " "2"" of type '" "std::set< BWAPI::Unit * > const &""'"); 
+  }
+  arg2 = reinterpret_cast< std::set< BWAPI::Unit * > * >(argp2);
+  {
+    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_UnitCommand,  0  | 0);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Game_issueCommand" "', argument " "3"" of type '" "UnitCommand""'"); 
+    }  
+    if (!argp3) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_issueCommand" "', argument " "3"" of type '" "UnitCommand""'");
+    } else {
+      UnitCommand * temp = reinterpret_cast< UnitCommand * >(argp3);
+      arg3 = *temp;
+      if (SWIG_IsNewObj(res3)) delete temp;
+    }
+  }
+  result = (bool)(arg1)->issueCommand((std::set< BWAPI::Unit * > const &)*arg2,arg3);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
   return NULL;
 }
 
@@ -24638,6 +24782,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Game_getInstanceNumber(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Game_getInstanceNumber",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getInstanceNumber" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  result = (int)(arg1)->getInstanceNumber();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Game_getAllUnits(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
@@ -28953,6 +29119,50 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Player_getColor(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Color result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Player_getColor",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_getColor" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  result = ((BWAPI::Player const *)arg1)->getColor();
+  resultobj = SWIG_NewPointerObj((new BWAPI::Color(static_cast< const BWAPI::Color& >(result))), SWIGTYPE_p_BWAPI__Color, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Player_getTextColor(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Player_getTextColor",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_getTextColor" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  result = (int)((BWAPI::Player const *)arg1)->getTextColor();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Player_maxEnergy(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
@@ -28992,43 +29202,233 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Player_getColor(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Player_topSpeed(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
   PyObject * obj0 = 0 ;
-  BWAPI::Color result;
+  PyObject * obj1 = 0 ;
+  double result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:Player_getColor",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:Player_topSpeed",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_getColor" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_topSpeed" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
-  result = ((BWAPI::Player const *)arg1)->getColor();
-  resultobj = SWIG_NewPointerObj((new BWAPI::Color(static_cast< const BWAPI::Color& >(result))), SWIGTYPE_p_BWAPI__Color, SWIG_POINTER_OWN |  0 );
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitType,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Player_topSpeed" "', argument " "2"" of type '" "BWAPI::UnitType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Player_topSpeed" "', argument " "2"" of type '" "BWAPI::UnitType""'");
+    } else {
+      BWAPI::UnitType * temp = reinterpret_cast< BWAPI::UnitType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (double)((BWAPI::Player const *)arg1)->topSpeed(arg2);
+  resultobj = SWIG_From_double(static_cast< double >(result));
   return resultobj;
 fail:
   return NULL;
 }
 
 
-SWIGINTERN PyObject *_wrap_Player_getTextColor(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Player_groundWeaponMaxRange(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
   PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
   int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:Player_getTextColor",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:Player_groundWeaponMaxRange",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_getTextColor" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_groundWeaponMaxRange" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
-  result = (int)((BWAPI::Player const *)arg1)->getTextColor();
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitType,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Player_groundWeaponMaxRange" "', argument " "2"" of type '" "BWAPI::UnitType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Player_groundWeaponMaxRange" "', argument " "2"" of type '" "BWAPI::UnitType""'");
+    } else {
+      BWAPI::UnitType * temp = reinterpret_cast< BWAPI::UnitType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (int)((BWAPI::Player const *)arg1)->groundWeaponMaxRange(arg2);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Player_airWeaponMaxRange(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Player_airWeaponMaxRange",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_airWeaponMaxRange" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitType,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Player_airWeaponMaxRange" "', argument " "2"" of type '" "BWAPI::UnitType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Player_airWeaponMaxRange" "', argument " "2"" of type '" "BWAPI::UnitType""'");
+    } else {
+      BWAPI::UnitType * temp = reinterpret_cast< BWAPI::UnitType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (int)((BWAPI::Player const *)arg1)->airWeaponMaxRange(arg2);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Player_sightRange(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Player_sightRange",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_sightRange" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitType,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Player_sightRange" "', argument " "2"" of type '" "BWAPI::UnitType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Player_sightRange" "', argument " "2"" of type '" "BWAPI::UnitType""'");
+    } else {
+      BWAPI::UnitType * temp = reinterpret_cast< BWAPI::UnitType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (int)((BWAPI::Player const *)arg1)->sightRange(arg2);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Player_groundWeaponDamageCooldown(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Player_groundWeaponDamageCooldown",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_groundWeaponDamageCooldown" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitType,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Player_groundWeaponDamageCooldown" "', argument " "2"" of type '" "BWAPI::UnitType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Player_groundWeaponDamageCooldown" "', argument " "2"" of type '" "BWAPI::UnitType""'");
+    } else {
+      BWAPI::UnitType * temp = reinterpret_cast< BWAPI::UnitType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (int)((BWAPI::Player const *)arg1)->groundWeaponDamageCooldown(arg2);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Player_armor(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Player_armor",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_armor" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitType,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Player_armor" "', argument " "2"" of type '" "BWAPI::UnitType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Player_armor" "', argument " "2"" of type '" "BWAPI::UnitType""'");
+    } else {
+      BWAPI::UnitType * temp = reinterpret_cast< BWAPI::UnitType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (int)((BWAPI::Player const *)arg1)->armor(arg2);
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -31123,6 +31523,50 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_TechType_targetsUnit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TechType_targetsUnit",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__TechType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TechType_targetsUnit" "', argument " "1"" of type '" "BWAPI::TechType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::TechType * >(argp1);
+  result = (bool)((BWAPI::TechType const *)arg1)->targetsUnit();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TechType_targetsPosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TechType_targetsPosition",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__TechType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TechType_targetsPosition" "', argument " "1"" of type '" "BWAPI::TechType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::TechType * >(argp1);
+  result = (bool)((BWAPI::TechType const *)arg1)->targetsPosition();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_TechType_whatUses(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::TechType *arg1 = (BWAPI::TechType *) 0 ;
@@ -32547,6 +32991,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Unit_getResourceGroup(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getResourceGroup",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getResourceGroup" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (int)((BWAPI::Unit const *)arg1)->getResourceGroup();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Unit_getDistance__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -32660,6 +33126,145 @@ fail:
     "  Possible C/C++ prototypes are:\n"
     "    getDistance(BWAPI::Unit const *,BWAPI::Unit *)\n"
     "    getDistance(BWAPI::Unit const *,BWAPI::Position)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_hasPath__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_hasPath",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_hasPath" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_hasPath" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::Unit * >(argp2);
+  result = (bool)((BWAPI::Unit const *)arg1)->hasPath(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_hasPath__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::Position arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_hasPath",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_hasPath" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_hasPath" "', argument " "2"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Unit_hasPath" "', argument " "2"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)((BWAPI::Unit const *)arg1)->hasPath(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_hasPath(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Unit_hasPath__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_BWAPI__Position, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Unit_hasPath__SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Unit_hasPath'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    hasPath(BWAPI::Unit const *,BWAPI::Unit *)\n"
+    "    hasPath(BWAPI::Unit const *,BWAPI::Position)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_getLastOrderFrame(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getLastOrderFrame",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getLastOrderFrame" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (int)((BWAPI::Unit const *)arg1)->getLastOrderFrame();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
   return NULL;
 }
 
@@ -33583,6 +34188,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Unit_getPowerUp(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Unit *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getPowerUp",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getPowerUp" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (BWAPI::Unit *)((BWAPI::Unit const *)arg1)->getPowerUp();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Unit_getTransport(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -33665,6 +34292,28 @@ SWIGINTERN PyObject *_wrap_Unit_getHatchery(PyObject *SWIGUNUSEDPARM(self), PyOb
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   result = (BWAPI::Unit *)((BWAPI::Unit const *)arg1)->getHatchery();
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_getLarva(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SwigValueWrapper< std::set< BWAPI::Unit * > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getLarva",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getLarva" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = ((BWAPI::Unit const *)arg1)->getLarva();
+  resultobj = SWIG_NewPointerObj((new std::set< BWAPI::Unit * >(static_cast< const std::set< BWAPI::Unit * >& >(result))), SWIGTYPE_p_std__setT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -34199,6 +34848,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Unit_isInterruptible(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_isInterruptible",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_isInterruptible" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (bool)((BWAPI::Unit const *)arg1)->isInterruptible();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Unit_isIrradiated(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -34573,6 +35244,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Unit_isStuck(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_isStuck",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_isStuck" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (bool)((BWAPI::Unit const *)arg1)->isStuck();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Unit_isTraining(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -34753,6 +35446,45 @@ fail:
     "  Possible C/C++ prototypes are:\n"
     "    isVisible(BWAPI::Unit const *)\n"
     "    isVisible(BWAPI::Unit const *,BWAPI::Player *)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_canIssueCommand(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  UnitCommand arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_canIssueCommand",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_canIssueCommand" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_UnitCommand,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_canIssueCommand" "', argument " "2"" of type '" "UnitCommand""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Unit_canIssueCommand" "', argument " "2"" of type '" "UnitCommand""'");
+    } else {
+      UnitCommand * temp = reinterpret_cast< UnitCommand * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)((BWAPI::Unit const *)arg1)->canIssueCommand(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
   return NULL;
 }
 
@@ -35117,7 +35849,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Unit_setRallyPosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Unit_setRallyPoint__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   BWAPI::Position arg2 ;
@@ -35129,26 +35861,26 @@ SWIGINTERN PyObject *_wrap_Unit_setRallyPosition(PyObject *SWIGUNUSEDPARM(self),
   PyObject * obj1 = 0 ;
   bool result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_setRallyPosition",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_setRallyPoint",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_setRallyPosition" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_setRallyPoint" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   {
     res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_setRallyPosition" "', argument " "2"" of type '" "BWAPI::Position""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_setRallyPoint" "', argument " "2"" of type '" "BWAPI::Position""'"); 
     }  
     if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Unit_setRallyPosition" "', argument " "2"" of type '" "BWAPI::Position""'");
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Unit_setRallyPoint" "', argument " "2"" of type '" "BWAPI::Position""'");
     } else {
       BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
       arg2 = *temp;
       if (SWIG_IsNewObj(res2)) delete temp;
     }
   }
-  result = (bool)(arg1)->setRallyPosition(arg2);
+  result = (bool)(arg1)->setRallyPoint(arg2);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -35156,7 +35888,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Unit_setRallyUnit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Unit_setRallyPoint__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
@@ -35168,21 +35900,68 @@ SWIGINTERN PyObject *_wrap_Unit_setRallyUnit(PyObject *SWIGUNUSEDPARM(self), PyO
   PyObject * obj1 = 0 ;
   bool result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_setRallyUnit",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_setRallyPoint",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_setRallyUnit" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_setRallyPoint" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_setRallyUnit" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_setRallyPoint" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
   }
   arg2 = reinterpret_cast< BWAPI::Unit * >(argp2);
-  result = (bool)(arg1)->setRallyUnit(arg2);
+  result = (bool)(arg1)->setRallyPoint(arg2);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_setRallyPoint(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_BWAPI__Position, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Unit_setRallyPoint__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_Unit_setRallyPoint__SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Unit_setRallyPoint'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    setRallyPoint(BWAPI::Unit *,BWAPI::Position)\n"
+    "    setRallyPoint(BWAPI::Unit *,BWAPI::Unit *)\n");
   return NULL;
 }
 
@@ -35968,28 +36747,6 @@ fail:
 SWIGINTERN PyObject *_wrap_Unit_cancelTrain__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  bool result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Unit_cancelTrain",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_cancelTrain" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  result = (bool)(arg1)->cancelTrain();
-  resultobj = SWIG_From_bool(static_cast< bool >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Unit_cancelTrain__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -36018,6 +36775,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Unit_cancelTrain__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_cancelTrain",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_cancelTrain" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (bool)(arg1)->cancelTrain();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Unit_cancelTrain(PyObject *self, PyObject *args) {
   int argc;
   PyObject *argv[3];
@@ -36034,7 +36813,7 @@ SWIGINTERN PyObject *_wrap_Unit_cancelTrain(PyObject *self, PyObject *args) {
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_Unit_cancelTrain__SWIG_0(self, args);
+      return _wrap_Unit_cancelTrain__SWIG_1(self, args);
     }
   }
   if (argc == 2) {
@@ -36048,7 +36827,7 @@ SWIGINTERN PyObject *_wrap_Unit_cancelTrain(PyObject *self, PyObject *args) {
         _v = SWIG_CheckState(res);
       }
       if (_v) {
-        return _wrap_Unit_cancelTrain__SWIG_1(self, args);
+        return _wrap_Unit_cancelTrain__SWIG_0(self, args);
       }
     }
   }
@@ -36056,8 +36835,8 @@ SWIGINTERN PyObject *_wrap_Unit_cancelTrain(PyObject *self, PyObject *args) {
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Unit_cancelTrain'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    cancelTrain(BWAPI::Unit *)\n"
-    "    cancelTrain(BWAPI::Unit *,int)\n");
+    "    cancelTrain(BWAPI::Unit *,int)\n"
+    "    cancelTrain(BWAPI::Unit *)\n");
   return NULL;
 }
 
@@ -36340,145 +37119,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Unit_hasPath__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  BWAPI::Position arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  bool result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_hasPath",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_hasPath" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_hasPath" "', argument " "2"" of type '" "BWAPI::Position""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Unit_hasPath" "', argument " "2"" of type '" "BWAPI::Position""'");
-    } else {
-      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
-      arg2 = *temp;
-      if (SWIG_IsNewObj(res2)) delete temp;
-    }
-  }
-  result = (bool)(arg1)->hasPath(arg2);
-  resultobj = SWIG_From_bool(static_cast< bool >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Unit_hasPath__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  bool result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_hasPath",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_hasPath" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_hasPath" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg2 = reinterpret_cast< BWAPI::Unit * >(argp2);
-  result = (bool)(arg1)->hasPath(arg2);
-  resultobj = SWIG_From_bool(static_cast< bool >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Unit_hasPath(PyObject *self, PyObject *args) {
-  int argc;
-  PyObject *argv[3];
-  int ii;
-  
-  if (!PyTuple_Check(args)) SWIG_fail;
-  argc = (int)PyObject_Length(args);
-  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
-    argv[ii] = PyTuple_GET_ITEM(args,ii);
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_BWAPI__Position, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_Unit_hasPath__SWIG_0(self, args);
-      }
-    }
-  }
-  if (argc == 2) {
-    int _v;
-    void *vptr = 0;
-    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
-    _v = SWIG_CheckState(res);
-    if (_v) {
-      void *vptr = 0;
-      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
-      _v = SWIG_CheckState(res);
-      if (_v) {
-        return _wrap_Unit_hasPath__SWIG_1(self, args);
-      }
-    }
-  }
-  
-fail:
-  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Unit_hasPath'.\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    hasPath(BWAPI::Unit *,BWAPI::Position)\n"
-    "    hasPath(BWAPI::Unit *,BWAPI::Unit *)\n");
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Unit_getLastOrderFrame(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getLastOrderFrame",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getLastOrderFrame" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  result = (int)(arg1)->getLastOrderFrame();
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_Unit_setClientInfo(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -36529,28 +37169,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Unit_getResourceGroup(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  int result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getResourceGroup",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getResourceGroup" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  result = (int)(arg1)->getResourceGroup();
-  resultobj = SWIG_From_int(static_cast< int >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_Unit_getLoadedUnits(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -36566,28 +37184,6 @@ SWIGINTERN PyObject *_wrap_Unit_getLoadedUnits(PyObject *SWIGUNUSEDPARM(self), P
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   result = (SetWrapper< BWAPI::Unit * > *)BWAPI_Unit_getLoadedUnits(arg1);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Unit_getLarva(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  SetWrapper< BWAPI::Unit * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getLarva",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getLarva" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  result = (SetWrapper< BWAPI::Unit * > *)BWAPI_Unit_getLarva(arg1);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -37964,28 +38560,6 @@ fail:
 SWIGINTERN PyObject *_wrap_UnitCommand_cancelTrain__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  BWAPI::UnitCommand result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_cancelTrain",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_cancelTrain" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  result = BWAPI::UnitCommand::cancelTrain(arg1);
-  resultobj = SWIG_NewPointerObj((new BWAPI::UnitCommand(static_cast< const BWAPI::UnitCommand& >(result))), SWIGTYPE_p_BWAPI__UnitCommand, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_UnitCommand_cancelTrain__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -38014,6 +38588,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_UnitCommand_cancelTrain__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::UnitCommand result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_cancelTrain",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_cancelTrain" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = BWAPI::UnitCommand::cancelTrain(arg1);
+  resultobj = SWIG_NewPointerObj((new BWAPI::UnitCommand(static_cast< const BWAPI::UnitCommand& >(result))), SWIGTYPE_p_BWAPI__UnitCommand, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_UnitCommand_cancelTrain(PyObject *self, PyObject *args) {
   int argc;
   PyObject *argv[3];
@@ -38030,7 +38626,7 @@ SWIGINTERN PyObject *_wrap_UnitCommand_cancelTrain(PyObject *self, PyObject *arg
     int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
     _v = SWIG_CheckState(res);
     if (_v) {
-      return _wrap_UnitCommand_cancelTrain__SWIG_0(self, args);
+      return _wrap_UnitCommand_cancelTrain__SWIG_1(self, args);
     }
   }
   if (argc == 2) {
@@ -38044,7 +38640,7 @@ SWIGINTERN PyObject *_wrap_UnitCommand_cancelTrain(PyObject *self, PyObject *arg
         _v = SWIG_CheckState(res);
       }
       if (_v) {
-        return _wrap_UnitCommand_cancelTrain__SWIG_1(self, args);
+        return _wrap_UnitCommand_cancelTrain__SWIG_0(self, args);
       }
     }
   }
@@ -38052,8 +38648,8 @@ SWIGINTERN PyObject *_wrap_UnitCommand_cancelTrain(PyObject *self, PyObject *arg
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UnitCommand_cancelTrain'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    cancelTrain(BWAPI::Unit *)\n"
-    "    BWAPI::UnitCommand::cancelTrain(BWAPI::Unit *,int)\n");
+    "    cancelTrain(BWAPI::Unit *,int)\n"
+    "    BWAPI::UnitCommand::cancelTrain(BWAPI::Unit *)\n");
   return NULL;
 }
 
@@ -40272,28 +40868,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_UnitType_getSubLabel(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::string result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_getSubLabel",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_getSubLabel" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
-  result = ((BWAPI::UnitType const *)arg1)->getSubLabel();
-  resultobj = SWIG_From_std_string(static_cast< std::string >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_UnitType_getRace(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
@@ -40331,6 +40905,28 @@ SWIGINTERN PyObject *_wrap_UnitType_requiredTech(PyObject *SWIGUNUSEDPARM(self),
   }
   arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
   result = ((BWAPI::UnitType const *)arg1)->requiredTech();
+  resultobj = SWIG_NewPointerObj((new BWAPI::TechType(static_cast< const BWAPI::TechType& >(result))), SWIGTYPE_p_BWAPI__TechType, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_cloakingTech(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::TechType result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_cloakingTech",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_cloakingTech" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = ((BWAPI::UnitType const *)arg1)->cloakingTech();
   resultobj = SWIG_NewPointerObj((new BWAPI::TechType(static_cast< const BWAPI::TechType& >(result))), SWIGTYPE_p_BWAPI__TechType, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -41614,6 +42210,138 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_UnitType_isHero(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_isHero",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_isHero" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = (bool)((BWAPI::UnitType const *)arg1)->isHero();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_isPowerup(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_isPowerup",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_isPowerup" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = (bool)((BWAPI::UnitType const *)arg1)->isPowerup();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_isBeacon(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_isBeacon",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_isBeacon" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = (bool)((BWAPI::UnitType const *)arg1)->isBeacon();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_isFlagBeacon(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_isFlagBeacon",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_isFlagBeacon" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = (bool)((BWAPI::UnitType const *)arg1)->isFlagBeacon();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_isSpecialBuilding(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_isSpecialBuilding",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_isSpecialBuilding" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = (bool)((BWAPI::UnitType const *)arg1)->isSpecialBuilding();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitType_isSpell(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitType_isSpell",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitType_isSpell" "', argument " "1"" of type '" "BWAPI::UnitType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitType * >(argp1);
+  result = (bool)((BWAPI::UnitType const *)arg1)->isSpell();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_UnitType_producesLarva(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::UnitType *arg1 = (BWAPI::UnitType *) 0 ;
@@ -41737,6 +42465,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Marine_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Jim_Raynor_Marine_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Jim_Raynor_Marine is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Jim_Raynor_Marine_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Jim_Raynor_Marine), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Terran_Ghost_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Terran_Ghost is read-only.");
   return 1;
@@ -41747,6 +42489,62 @@ SWIGINTERN PyObject *Swig_var_Terran_Ghost_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Terran_Ghost), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Sarah_Kerrigan_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Sarah_Kerrigan is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Sarah_Kerrigan_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Sarah_Kerrigan), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Samir_Duran_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Samir_Duran is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Samir_Duran_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Samir_Duran), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Infested_Duran_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Infested_Duran is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Infested_Duran_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Infested_Duran), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Alexei_Stukov_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Alexei_Stukov is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Alexei_Stukov_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Alexei_Stukov), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -41765,6 +42563,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Vulture_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Jim_Raynor_Vulture_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Jim_Raynor_Vulture is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Jim_Raynor_Vulture_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Jim_Raynor_Vulture), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Terran_Goliath_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Terran_Goliath is read-only.");
   return 1;
@@ -41779,6 +42591,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Goliath_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Alan_Schezar_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Alan_Schezar is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Alan_Schezar_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Alan_Schezar), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Terran_Siege_Tank_Tank_Mode_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Terran_Siege_Tank_Tank_Mode is read-only.");
   return 1;
@@ -41789,6 +42615,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Siege_Tank_Tank_Mode_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Terran_Siege_Tank_Tank_Mode), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Edmund_Duke_Tank_Mode_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Edmund_Duke_Tank_Mode is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Edmund_Duke_Tank_Mode_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Edmund_Duke_Tank_Mode), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -41821,6 +42661,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Wraith_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Tom_Kazansky_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Tom_Kazansky is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Tom_Kazansky_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Tom_Kazansky), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Terran_Science_Vessel_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Terran_Science_Vessel is read-only.");
   return 1;
@@ -41831,6 +42685,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Science_Vessel_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Terran_Science_Vessel), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Magellan_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Magellan is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Magellan_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Magellan), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -41859,6 +42727,62 @@ SWIGINTERN PyObject *Swig_var_Terran_Battlecruiser_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Terran_Battlecruiser), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Arcturus_Mengsk_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Arcturus_Mengsk is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Arcturus_Mengsk_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Arcturus_Mengsk), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Hyperion_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Hyperion is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Hyperion_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Hyperion), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Norad_II_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Norad_II is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Norad_II_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Norad_II), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Gerard_DuGalle_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Gerard_DuGalle is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Gerard_DuGalle_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Gerard_DuGalle), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -41905,6 +42829,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Siege_Tank_Siege_Mode_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Edmund_Duke_Siege_Mode_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Edmund_Duke_Siege_Mode is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Edmund_Duke_Siege_Mode_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Edmund_Duke_Siege_Mode), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Terran_Firebat_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Terran_Firebat is read-only.");
   return 1;
@@ -41915,6 +42853,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Firebat_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Terran_Firebat), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Gui_Montag_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Gui_Montag is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Gui_Montag_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Gui_Montag), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -41943,6 +42895,20 @@ SWIGINTERN PyObject *Swig_var_Terran_Medic_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Terran_Medic), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Terran_Civilian_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Terran_Civilian is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Terran_Civilian_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Terran_Civilian), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -41989,6 +42955,34 @@ SWIGINTERN PyObject *Swig_var_Zerg_Zergling_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Devouring_One_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Devouring_One is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Devouring_One_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Devouring_One), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Infested_Kerrigan_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Infested_Kerrigan is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Infested_Kerrigan_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Infested_Kerrigan), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Zerg_Hydralisk_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Zerg_Hydralisk is read-only.");
   return 1;
@@ -42003,6 +42997,20 @@ SWIGINTERN PyObject *Swig_var_Zerg_Hydralisk_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Hunter_Killer_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Hunter_Killer is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Hunter_Killer_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Hunter_Killer), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Zerg_Ultralisk_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Zerg_Ultralisk is read-only.");
   return 1;
@@ -42013,6 +43021,20 @@ SWIGINTERN PyObject *Swig_var_Zerg_Ultralisk_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Zerg_Ultralisk), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Torrasque_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Torrasque is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Torrasque_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Torrasque), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -42059,6 +43081,20 @@ SWIGINTERN PyObject *Swig_var_Zerg_Overlord_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Yggdrasill_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Yggdrasill is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Yggdrasill_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Yggdrasill), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Zerg_Mutalisk_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Zerg_Mutalisk is read-only.");
   return 1;
@@ -42069,6 +43105,20 @@ SWIGINTERN PyObject *Swig_var_Zerg_Mutalisk_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Zerg_Mutalisk), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Kukulza_Mutalisk_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Kukulza_Mutalisk is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Kukulza_Mutalisk_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Kukulza_Mutalisk), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -42087,6 +43137,20 @@ SWIGINTERN PyObject *Swig_var_Zerg_Guardian_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Kukulza_Guardian_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Kukulza_Guardian is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Kukulza_Guardian_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Kukulza_Guardian), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Zerg_Queen_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Zerg_Queen is read-only.");
   return 1;
@@ -42101,6 +43165,20 @@ SWIGINTERN PyObject *Swig_var_Zerg_Queen_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Matriarch_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Matriarch is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Matriarch_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Matriarch), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Zerg_Defiler_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Zerg_Defiler is read-only.");
   return 1;
@@ -42111,6 +43189,20 @@ SWIGINTERN PyObject *Swig_var_Zerg_Defiler_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Zerg_Defiler), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Unclean_One_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Unclean_One is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Unclean_One_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Unclean_One), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -42185,6 +43277,20 @@ SWIGINTERN PyObject *Swig_var_Protoss_Corsair_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Raszagal_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Raszagal is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Raszagal_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Raszagal), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Protoss_Dark_Templar_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Protoss_Dark_Templar is read-only.");
   return 1;
@@ -42195,6 +43301,34 @@ SWIGINTERN PyObject *Swig_var_Protoss_Dark_Templar_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Protoss_Dark_Templar), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Dark_Templar_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Dark_Templar is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Dark_Templar_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Dark_Templar), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Zeratul_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Zeratul is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Zeratul_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Zeratul), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -42255,6 +43389,20 @@ SWIGINTERN PyObject *Swig_var_Protoss_Zealot_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Fenix_Zealot_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Fenix_Zealot is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Fenix_Zealot_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Fenix_Zealot), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Protoss_Dragoon_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Protoss_Dragoon is read-only.");
   return 1;
@@ -42265,6 +43413,20 @@ SWIGINTERN PyObject *Swig_var_Protoss_Dragoon_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Protoss_Dragoon), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Fenix_Dragoon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Fenix_Dragoon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Fenix_Dragoon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Fenix_Dragoon), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -42283,6 +43445,34 @@ SWIGINTERN PyObject *Swig_var_Protoss_High_Templar_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Tassadar_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Tassadar is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Tassadar_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Tassadar), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Aldaris_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Aldaris is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Aldaris_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Aldaris), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Protoss_Archon_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Protoss_Archon is read-only.");
   return 1;
@@ -42293,6 +43483,20 @@ SWIGINTERN PyObject *Swig_var_Protoss_Archon_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Protoss_Archon), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Tassadar_Zeratul_Archon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Tassadar_Zeratul_Archon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Tassadar_Zeratul_Archon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Tassadar_Zeratul_Archon), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -42325,6 +43529,34 @@ SWIGINTERN PyObject *Swig_var_Protoss_Scout_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Mojo_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Mojo is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Mojo_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Mojo), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Artanis_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Artanis is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Artanis_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Artanis), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Protoss_Arbiter_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Protoss_Arbiter is read-only.");
   return 1;
@@ -42339,6 +43571,20 @@ SWIGINTERN PyObject *Swig_var_Protoss_Arbiter_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hero_Danimoth_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Danimoth is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Danimoth_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Danimoth), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Protoss_Carrier_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Protoss_Carrier is read-only.");
   return 1;
@@ -42349,6 +43595,20 @@ SWIGINTERN PyObject *Swig_var_Protoss_Carrier_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Protoss_Carrier), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Gantrithor_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Gantrithor is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Gantrithor_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Gantrithor), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -42377,6 +43637,20 @@ SWIGINTERN PyObject *Swig_var_Protoss_Reaver_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Protoss_Reaver), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Hero_Warbringer_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hero_Warbringer is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hero_Warbringer_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Hero_Warbringer), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -43487,6 +44761,90 @@ SWIGINTERN PyObject *Swig_var_Special_Overmind_Cocoon_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Special_Zerg_Beacon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Special_Zerg_Beacon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Special_Zerg_Beacon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Special_Zerg_Beacon), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Special_Terran_Beacon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Special_Terran_Beacon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Special_Terran_Beacon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Special_Terran_Beacon), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Special_Protoss_Beacon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Special_Protoss_Beacon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Special_Protoss_Beacon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Special_Protoss_Beacon), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Special_Zerg_Flag_Beacon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Special_Zerg_Flag_Beacon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Special_Zerg_Flag_Beacon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Special_Zerg_Flag_Beacon), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Special_Terran_Flag_Beacon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Special_Terran_Flag_Beacon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Special_Terran_Flag_Beacon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Special_Terran_Flag_Beacon), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Special_Protoss_Flag_Beacon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Special_Protoss_Flag_Beacon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Special_Protoss_Flag_Beacon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Special_Protoss_Flag_Beacon), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Spell_Dark_Swarm_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Spell_Dark_Swarm is read-only.");
   return 1;
@@ -43497,6 +44855,104 @@ SWIGINTERN PyObject *Swig_var_Spell_Dark_Swarm_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Spell_Dark_Swarm), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Powerup_Uraj_Crystal_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Powerup_Uraj_Crystal is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Powerup_Uraj_Crystal_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Powerup_Uraj_Crystal), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Powerup_Khalis_Crystal_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Powerup_Khalis_Crystal is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Powerup_Khalis_Crystal_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Powerup_Khalis_Crystal), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Powerup_Flag_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Powerup_Flag is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Powerup_Flag_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Powerup_Flag), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Powerup_Young_Chrysalis_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Powerup_Young_Chrysalis is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Powerup_Young_Chrysalis_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Powerup_Young_Chrysalis), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Powerup_Psi_Emitter_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Powerup_Psi_Emitter is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Powerup_Psi_Emitter_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Powerup_Psi_Emitter), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Powerup_Data_Disk_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Powerup_Data_Disk is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Powerup_Data_Disk_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Powerup_Data_Disk), SWIGTYPE_p_BWAPI__UnitType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Powerup_Khaydarin_Crystal_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Powerup_Khaydarin_Crystal is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Powerup_Khaydarin_Crystal_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::UnitTypes::Powerup_Khaydarin_Crystal), SWIGTYPE_p_BWAPI__UnitType,  0 );
   return pyobj;
 }
 
@@ -45649,6 +47105,20 @@ SWIGINTERN PyObject *Swig_var_Gauss_Rifle_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Gauss_Rifle_Jim_Raynor_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Gauss_Rifle_Jim_Raynor is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Gauss_Rifle_Jim_Raynor_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Gauss_Rifle_Jim_Raynor), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_C_10_Canister_Rifle_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable C_10_Canister_Rifle is read-only.");
   return 1;
@@ -45663,6 +47133,62 @@ SWIGINTERN PyObject *Swig_var_C_10_Canister_Rifle_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_C_10_Canister_Rifle_Sarah_Kerrigan_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable C_10_Canister_Rifle_Sarah_Kerrigan is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_C_10_Canister_Rifle_Sarah_Kerrigan_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::C_10_Canister_Rifle_Sarah_Kerrigan), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_C_10_Canister_Rifle_Samir_Duran_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable C_10_Canister_Rifle_Samir_Duran is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_C_10_Canister_Rifle_Samir_Duran_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::C_10_Canister_Rifle_Samir_Duran), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_C_10_Canister_Rifle_Infested_Duran_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable C_10_Canister_Rifle_Infested_Duran is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_C_10_Canister_Rifle_Infested_Duran_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::C_10_Canister_Rifle_Infested_Duran), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_C_10_Canister_Rifle_Alexei_Stukov_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable C_10_Canister_Rifle_Alexei_Stukov is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_C_10_Canister_Rifle_Alexei_Stukov_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::C_10_Canister_Rifle_Alexei_Stukov), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_WeaponTypes_Fragmentation_Grenade_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable WeaponTypes_Fragmentation_Grenade is read-only.");
   return 1;
@@ -45673,6 +47199,20 @@ SWIGINTERN PyObject *Swig_var_WeaponTypes_Fragmentation_Grenade_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Fragmentation_Grenade), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Fragmentation_Grenade_Jim_Raynor_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Fragmentation_Grenade_Jim_Raynor is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Fragmentation_Grenade_Jim_Raynor_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Fragmentation_Grenade_Jim_Raynor), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -45705,6 +47245,20 @@ SWIGINTERN PyObject *Swig_var_Twin_Autocannons_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Twin_Autocannons_Alan_Schezar_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Twin_Autocannons_Alan_Schezar is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Twin_Autocannons_Alan_Schezar_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Twin_Autocannons_Alan_Schezar), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Hellfire_Missile_Pack_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Hellfire_Missile_Pack is read-only.");
   return 1;
@@ -45719,6 +47273,20 @@ SWIGINTERN PyObject *Swig_var_Hellfire_Missile_Pack_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Hellfire_Missile_Pack_Alan_Schezar_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Hellfire_Missile_Pack_Alan_Schezar is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Hellfire_Missile_Pack_Alan_Schezar_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Hellfire_Missile_Pack_Alan_Schezar), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Arclite_Cannon_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Arclite_Cannon is read-only.");
   return 1;
@@ -45729,6 +47297,20 @@ SWIGINTERN PyObject *Swig_var_Arclite_Cannon_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Arclite_Cannon), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Arclite_Cannon_Edmund_Duke_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Arclite_Cannon_Edmund_Duke is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Arclite_Cannon_Edmund_Duke_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Arclite_Cannon_Edmund_Duke), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -45761,6 +47343,20 @@ SWIGINTERN PyObject *Swig_var_WeaponTypes_Gemini_Missiles_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Gemini_Missiles_Tom_Kazansky_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Gemini_Missiles_Tom_Kazansky is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Gemini_Missiles_Tom_Kazansky_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Gemini_Missiles_Tom_Kazansky), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_WeaponTypes_Burst_Lasers_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable WeaponTypes_Burst_Lasers is read-only.");
   return 1;
@@ -45771,6 +47367,20 @@ SWIGINTERN PyObject *Swig_var_WeaponTypes_Burst_Lasers_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Burst_Lasers), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Burst_Lasers_Tom_Kazansky_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Burst_Lasers_Tom_Kazansky is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Burst_Lasers_Tom_Kazansky_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Burst_Lasers_Tom_Kazansky), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -45789,6 +47399,34 @@ SWIGINTERN PyObject *Swig_var_ATS_Laser_Battery_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_ATS_Laser_Battery_Hero_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable ATS_Laser_Battery_Hero is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_ATS_Laser_Battery_Hero_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::ATS_Laser_Battery_Hero), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_ATS_Laser_Battery_Hyperion_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable ATS_Laser_Battery_Hyperion is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_ATS_Laser_Battery_Hyperion_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::ATS_Laser_Battery_Hyperion), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_ATA_Laser_Battery_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable ATA_Laser_Battery is read-only.");
   return 1;
@@ -45799,6 +47437,34 @@ SWIGINTERN PyObject *Swig_var_ATA_Laser_Battery_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::ATA_Laser_Battery), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_ATA_Laser_Battery_Hero_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable ATA_Laser_Battery_Hero is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_ATA_Laser_Battery_Hero_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::ATA_Laser_Battery_Hero), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_ATA_Laser_Battery_Hyperion_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable ATA_Laser_Battery_Hyperion is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_ATA_Laser_Battery_Hyperion_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::ATA_Laser_Battery_Hyperion), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -45817,6 +47483,20 @@ SWIGINTERN PyObject *Swig_var_Flame_Thrower_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Flame_Thrower_Gui_Montag_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Flame_Thrower_Gui_Montag is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Flame_Thrower_Gui_Montag_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Flame_Thrower_Gui_Montag), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Arclite_Shock_Cannon_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Arclite_Shock_Cannon is read-only.");
   return 1;
@@ -45827,6 +47507,20 @@ SWIGINTERN PyObject *Swig_var_Arclite_Shock_Cannon_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Arclite_Shock_Cannon), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Arclite_Shock_Cannon_Edmund_Duke_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Arclite_Shock_Cannon_Edmund_Duke is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Arclite_Shock_Cannon_Edmund_Duke_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Arclite_Shock_Cannon_Edmund_Duke), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -45859,6 +47553,34 @@ SWIGINTERN PyObject *Swig_var_Claws_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Claws_Devouring_One_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Claws_Devouring_One is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Claws_Devouring_One_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Claws_Devouring_One), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Claws_Infested_Kerrigan_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Claws_Infested_Kerrigan is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Claws_Infested_Kerrigan_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Claws_Infested_Kerrigan), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Needle_Spines_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Needle_Spines is read-only.");
   return 1;
@@ -45873,6 +47595,20 @@ SWIGINTERN PyObject *Swig_var_Needle_Spines_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Needle_Spines_Hunter_Killer_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Needle_Spines_Hunter_Killer is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Needle_Spines_Hunter_Killer_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Needle_Spines_Hunter_Killer), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Kaiser_Blades_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Kaiser_Blades is read-only.");
   return 1;
@@ -45883,6 +47619,20 @@ SWIGINTERN PyObject *Swig_var_Kaiser_Blades_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Kaiser_Blades), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Kaiser_Blades_Torrasque_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Kaiser_Blades_Torrasque is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Kaiser_Blades_Torrasque_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Kaiser_Blades_Torrasque), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -45929,6 +47679,20 @@ SWIGINTERN PyObject *Swig_var_WeaponTypes_Acid_Spore_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Acid_Spore_Kukulza_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Acid_Spore_Kukulza is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Acid_Spore_Kukulza_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Acid_Spore_Kukulza), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_WeaponTypes_Glave_Wurm_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable WeaponTypes_Glave_Wurm is read-only.");
   return 1;
@@ -45939,6 +47703,20 @@ SWIGINTERN PyObject *Swig_var_WeaponTypes_Glave_Wurm_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Glave_Wurm), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Glave_Wurm_Kukulza_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Glave_Wurm_Kukulza is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Glave_Wurm_Kukulza_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Glave_Wurm_Kukulza), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -46027,6 +47805,20 @@ SWIGINTERN PyObject *Swig_var_Psi_Blades_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Psi_Blades_Fenix_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Psi_Blades_Fenix is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Psi_Blades_Fenix_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Psi_Blades_Fenix), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_WeaponTypes_Phase_Disruptor_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable WeaponTypes_Phase_Disruptor is read-only.");
   return 1;
@@ -46037,6 +47829,34 @@ SWIGINTERN PyObject *Swig_var_WeaponTypes_Phase_Disruptor_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Phase_Disruptor), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Phase_Disruptor_Fenix_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Phase_Disruptor_Fenix is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Phase_Disruptor_Fenix_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Phase_Disruptor_Fenix), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Psi_Assault_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Psi_Assault is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Psi_Assault_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Psi_Assault), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -46055,6 +47875,20 @@ SWIGINTERN PyObject *Swig_var_Psionic_Shockwave_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Psionic_Shockwave_TZ_Archon_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Psionic_Shockwave_TZ_Archon is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Psionic_Shockwave_TZ_Archon_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Psionic_Shockwave_TZ_Archon), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Dual_Photon_Blasters_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Dual_Photon_Blasters is read-only.");
   return 1;
@@ -46065,6 +47899,34 @@ SWIGINTERN PyObject *Swig_var_Dual_Photon_Blasters_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Dual_Photon_Blasters), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Dual_Photon_Blasters_Mojo_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Dual_Photon_Blasters_Mojo is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Dual_Photon_Blasters_Mojo_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Dual_Photon_Blasters_Mojo), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Dual_Photon_Blasters_Artanis_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Dual_Photon_Blasters_Artanis is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Dual_Photon_Blasters_Artanis_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Dual_Photon_Blasters_Artanis), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -46083,6 +47945,34 @@ SWIGINTERN PyObject *Swig_var_Anti_Matter_Missiles_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_Anti_Matter_Missiles_Mojo_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Anti_Matter_Missiles_Mojo is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Anti_Matter_Missiles_Mojo_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Anti_Matter_Missiles_Mojo), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Anti_Matter_Missiles_Artanis_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Anti_Matter_Missiles_Artanis is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Anti_Matter_Missiles_Artanis_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Anti_Matter_Missiles_Artanis), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Phase_Disruptor_Cannon_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Phase_Disruptor_Cannon is read-only.");
   return 1;
@@ -46093,6 +47983,20 @@ SWIGINTERN PyObject *Swig_var_Phase_Disruptor_Cannon_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Phase_Disruptor_Cannon), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Phase_Disruptor_Cannon_Danimoth_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Phase_Disruptor_Cannon_Danimoth is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Phase_Disruptor_Cannon_Danimoth_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Phase_Disruptor_Cannon_Danimoth), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -46219,6 +48123,34 @@ SWIGINTERN PyObject *Swig_var_Warp_Blades_get(void) {
   PyObject *pyobj = 0;
   
   pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Warp_Blades), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Warp_Blades_Hero_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Warp_Blades_Hero is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Warp_Blades_Hero_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Warp_Blades_Hero), SWIGTYPE_p_BWAPI__WeaponType,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Warp_Blades_Zeratul_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Warp_Blades_Zeratul is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Warp_Blades_Zeratul_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::WeaponTypes::Warp_Blades_Zeratul), SWIGTYPE_p_BWAPI__WeaponType,  0 );
   return pyobj;
 }
 
@@ -46723,6 +48655,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"getNearestTilePosition", _wrap_getNearestTilePosition, METH_VARARGS, NULL},
 	 { (char *)"getGroundDistances", _wrap_getGroundDistances, METH_VARARGS, NULL},
 	 { (char *)"getGroundDistanceMap", _wrap_getGroundDistanceMap, METH_VARARGS, NULL},
+	 { (char *)"getGroundWalkDistanceMap", _wrap_getGroundWalkDistanceMap, METH_VARARGS, NULL},
 	 { (char *)"getShortestPath", _wrap_getShortestPath, METH_VARARGS, NULL},
 	 { (char *)"TA_getRegions", _wrap_TA_getRegions, METH_VARARGS, NULL},
 	 { (char *)"TA_getChokepoints", _wrap_TA_getChokepoints, METH_VARARGS, NULL},
@@ -46860,6 +48793,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"delete_Force", _wrap_delete_Force, METH_VARARGS, NULL},
 	 { (char *)"Force_swigregister", Force_swigregister, METH_VARARGS, NULL},
 	 { (char *)"Game_getBullets", _wrap_Game_getBullets, METH_VARARGS, NULL},
+	 { (char *)"Game_getNukeDots", _wrap_Game_getNukeDots, METH_VARARGS, NULL},
 	 { (char *)"Game_getEvents", _wrap_Game_getEvents, METH_VARARGS, NULL},
 	 { (char *)"Game_getForce", _wrap_Game_getForce, METH_VARARGS, NULL},
 	 { (char *)"Game_getPlayer", _wrap_Game_getPlayer, METH_VARARGS, NULL},
@@ -46870,19 +48804,16 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Game_getFrameCount", _wrap_Game_getFrameCount, METH_VARARGS, NULL},
 	 { (char *)"Game_getFPS", _wrap_Game_getFPS, METH_VARARGS, NULL},
 	 { (char *)"Game_getAverageFPS", _wrap_Game_getAverageFPS, METH_VARARGS, NULL},
-	 { (char *)"Game_getMouseX", _wrap_Game_getMouseX, METH_VARARGS, NULL},
-	 { (char *)"Game_getMouseY", _wrap_Game_getMouseY, METH_VARARGS, NULL},
 	 { (char *)"Game_getMousePosition", _wrap_Game_getMousePosition, METH_VARARGS, NULL},
 	 { (char *)"Game_getMouseState", _wrap_Game_getMouseState, METH_VARARGS, NULL},
 	 { (char *)"Game_getKeyState", _wrap_Game_getKeyState, METH_VARARGS, NULL},
-	 { (char *)"Game_getScreenX", _wrap_Game_getScreenX, METH_VARARGS, NULL},
-	 { (char *)"Game_getScreenY", _wrap_Game_getScreenY, METH_VARARGS, NULL},
 	 { (char *)"Game_getScreenPosition", _wrap_Game_getScreenPosition, METH_VARARGS, NULL},
 	 { (char *)"Game_setScreenPosition", _wrap_Game_setScreenPosition, METH_VARARGS, NULL},
 	 { (char *)"Game_pingMinimap", _wrap_Game_pingMinimap, METH_VARARGS, NULL},
 	 { (char *)"Game_isFlagEnabled", _wrap_Game_isFlagEnabled, METH_VARARGS, NULL},
 	 { (char *)"Game_enableFlag", _wrap_Game_enableFlag, METH_VARARGS, NULL},
 	 { (char *)"Game_getLastError", _wrap_Game_getLastError, METH_VARARGS, NULL},
+	 { (char *)"Game_setLastError", _wrap_Game_setLastError, METH_VARARGS, NULL},
 	 { (char *)"Game_mapWidth", _wrap_Game_mapWidth, METH_VARARGS, NULL},
 	 { (char *)"Game_mapHeight", _wrap_Game_mapHeight, METH_VARARGS, NULL},
 	 { (char *)"Game_mapFileName", _wrap_Game_mapFileName, METH_VARARGS, NULL},
@@ -46914,6 +48845,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Game_leaveGame", _wrap_Game_leaveGame, METH_VARARGS, NULL},
 	 { (char *)"Game_restartGame", _wrap_Game_restartGame, METH_VARARGS, NULL},
 	 { (char *)"Game_setLocalSpeed", _wrap_Game_setLocalSpeed, METH_VARARGS, NULL},
+	 { (char *)"Game_issueCommand", _wrap_Game_issueCommand, METH_VARARGS, NULL},
 	 { (char *)"Game_self", _wrap_Game_self, METH_VARARGS, NULL},
 	 { (char *)"Game_enemy", _wrap_Game_enemy, METH_VARARGS, NULL},
 	 { (char *)"Game_setTextSize", _wrap_Game_setTextSize, METH_VARARGS, NULL},
@@ -46956,6 +48888,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Game_setLatCom", _wrap_Game_setLatCom, METH_VARARGS, NULL},
 	 { (char *)"Game_getReplayFrameCount", _wrap_Game_getReplayFrameCount, METH_VARARGS, NULL},
 	 { (char *)"Game_setGUI", _wrap_Game_setGUI, METH_VARARGS, NULL},
+	 { (char *)"Game_getInstanceNumber", _wrap_Game_getInstanceNumber, METH_VARARGS, NULL},
 	 { (char *)"Game_getAllUnits", _wrap_Game_getAllUnits, METH_VARARGS, NULL},
 	 { (char *)"Game_getMinerals", _wrap_Game_getMinerals, METH_VARARGS, NULL},
 	 { (char *)"Game_getGeysers", _wrap_Game_getGeysers, METH_VARARGS, NULL},
@@ -47016,9 +48949,15 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Player_hasResearched", _wrap_Player_hasResearched, METH_VARARGS, NULL},
 	 { (char *)"Player_isResearching", _wrap_Player_isResearching, METH_VARARGS, NULL},
 	 { (char *)"Player_isUpgrading", _wrap_Player_isUpgrading, METH_VARARGS, NULL},
-	 { (char *)"Player_maxEnergy", _wrap_Player_maxEnergy, METH_VARARGS, NULL},
 	 { (char *)"Player_getColor", _wrap_Player_getColor, METH_VARARGS, NULL},
 	 { (char *)"Player_getTextColor", _wrap_Player_getTextColor, METH_VARARGS, NULL},
+	 { (char *)"Player_maxEnergy", _wrap_Player_maxEnergy, METH_VARARGS, NULL},
+	 { (char *)"Player_topSpeed", _wrap_Player_topSpeed, METH_VARARGS, NULL},
+	 { (char *)"Player_groundWeaponMaxRange", _wrap_Player_groundWeaponMaxRange, METH_VARARGS, NULL},
+	 { (char *)"Player_airWeaponMaxRange", _wrap_Player_airWeaponMaxRange, METH_VARARGS, NULL},
+	 { (char *)"Player_sightRange", _wrap_Player_sightRange, METH_VARARGS, NULL},
+	 { (char *)"Player_groundWeaponDamageCooldown", _wrap_Player_groundWeaponDamageCooldown, METH_VARARGS, NULL},
+	 { (char *)"Player_armor", _wrap_Player_armor, METH_VARARGS, NULL},
 	 { (char *)"Player_getUnits", _wrap_Player_getUnits, METH_VARARGS, NULL},
 	 { (char *)"Player_getRace", _wrap_Player_getRace, METH_VARARGS, NULL},
 	 { (char *)"Player_getStartLocation", _wrap_Player_getStartLocation, METH_VARARGS, NULL},
@@ -47079,6 +49018,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"TechType_energyUsed", _wrap_TechType_energyUsed, METH_VARARGS, NULL},
 	 { (char *)"TechType_whatResearches", _wrap_TechType_whatResearches, METH_VARARGS, NULL},
 	 { (char *)"TechType_getWeapon", _wrap_TechType_getWeapon, METH_VARARGS, NULL},
+	 { (char *)"TechType_targetsUnit", _wrap_TechType_targetsUnit, METH_VARARGS, NULL},
+	 { (char *)"TechType_targetsPosition", _wrap_TechType_targetsPosition, METH_VARARGS, NULL},
 	 { (char *)"TechType_whatUses", _wrap_TechType_whatUses, METH_VARARGS, NULL},
 	 { (char *)"delete_TechType", _wrap_delete_TechType, METH_VARARGS, NULL},
 	 { (char *)"TechType_swigregister", TechType_swigregister, METH_VARARGS, NULL},
@@ -47112,7 +49053,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_getShields", _wrap_Unit_getShields, METH_VARARGS, NULL},
 	 { (char *)"Unit_getEnergy", _wrap_Unit_getEnergy, METH_VARARGS, NULL},
 	 { (char *)"Unit_getResources", _wrap_Unit_getResources, METH_VARARGS, NULL},
+	 { (char *)"Unit_getResourceGroup", _wrap_Unit_getResourceGroup, METH_VARARGS, NULL},
 	 { (char *)"Unit_getDistance", _wrap_Unit_getDistance, METH_VARARGS, NULL},
+	 { (char *)"Unit_hasPath", _wrap_Unit_hasPath, METH_VARARGS, NULL},
+	 { (char *)"Unit_getLastOrderFrame", _wrap_Unit_getLastOrderFrame, METH_VARARGS, NULL},
 	 { (char *)"Unit_getUpgradeLevel", _wrap_Unit_getUpgradeLevel, METH_VARARGS, NULL},
 	 { (char *)"Unit_getInitialType", _wrap_Unit_getInitialType, METH_VARARGS, NULL},
 	 { (char *)"Unit_getInitialPosition", _wrap_Unit_getInitialPosition, METH_VARARGS, NULL},
@@ -47154,10 +49098,12 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_getRallyUnit", _wrap_Unit_getRallyUnit, METH_VARARGS, NULL},
 	 { (char *)"Unit_getAddon", _wrap_Unit_getAddon, METH_VARARGS, NULL},
 	 { (char *)"Unit_getNydusExit", _wrap_Unit_getNydusExit, METH_VARARGS, NULL},
+	 { (char *)"Unit_getPowerUp", _wrap_Unit_getPowerUp, METH_VARARGS, NULL},
 	 { (char *)"Unit_getTransport", _wrap_Unit_getTransport, METH_VARARGS, NULL},
 	 { (char *)"Unit_getCarrier", _wrap_Unit_getCarrier, METH_VARARGS, NULL},
 	 { (char *)"Unit_getInterceptors", _wrap_Unit_getInterceptors, METH_VARARGS, NULL},
 	 { (char *)"Unit_getHatchery", _wrap_Unit_getHatchery, METH_VARARGS, NULL},
+	 { (char *)"Unit_getLarva", _wrap_Unit_getLarva, METH_VARARGS, NULL},
 	 { (char *)"Unit_exists", _wrap_Unit_exists, METH_VARARGS, NULL},
 	 { (char *)"Unit_hasNuke", _wrap_Unit_hasNuke, METH_VARARGS, NULL},
 	 { (char *)"Unit_isAccelerating", _wrap_Unit_isAccelerating, METH_VARARGS, NULL},
@@ -47182,6 +49128,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_isHallucination", _wrap_Unit_isHallucination, METH_VARARGS, NULL},
 	 { (char *)"Unit_isHoldingPosition", _wrap_Unit_isHoldingPosition, METH_VARARGS, NULL},
 	 { (char *)"Unit_isIdle", _wrap_Unit_isIdle, METH_VARARGS, NULL},
+	 { (char *)"Unit_isInterruptible", _wrap_Unit_isInterruptible, METH_VARARGS, NULL},
 	 { (char *)"Unit_isIrradiated", _wrap_Unit_isIrradiated, METH_VARARGS, NULL},
 	 { (char *)"Unit_isLifted", _wrap_Unit_isLifted, METH_VARARGS, NULL},
 	 { (char *)"Unit_isLoaded", _wrap_Unit_isLoaded, METH_VARARGS, NULL},
@@ -47199,11 +49146,13 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_isStartingAttack", _wrap_Unit_isStartingAttack, METH_VARARGS, NULL},
 	 { (char *)"Unit_isStasised", _wrap_Unit_isStasised, METH_VARARGS, NULL},
 	 { (char *)"Unit_isStimmed", _wrap_Unit_isStimmed, METH_VARARGS, NULL},
+	 { (char *)"Unit_isStuck", _wrap_Unit_isStuck, METH_VARARGS, NULL},
 	 { (char *)"Unit_isTraining", _wrap_Unit_isTraining, METH_VARARGS, NULL},
 	 { (char *)"Unit_isUnderStorm", _wrap_Unit_isUnderStorm, METH_VARARGS, NULL},
 	 { (char *)"Unit_isUnpowered", _wrap_Unit_isUnpowered, METH_VARARGS, NULL},
 	 { (char *)"Unit_isUpgrading", _wrap_Unit_isUpgrading, METH_VARARGS, NULL},
 	 { (char *)"Unit_isVisible", _wrap_Unit_isVisible, METH_VARARGS, NULL},
+	 { (char *)"Unit_canIssueCommand", _wrap_Unit_canIssueCommand, METH_VARARGS, NULL},
 	 { (char *)"Unit_issueCommand", _wrap_Unit_issueCommand, METH_VARARGS, NULL},
 	 { (char *)"Unit_attackMove", _wrap_Unit_attackMove, METH_VARARGS, NULL},
 	 { (char *)"Unit_attackUnit", _wrap_Unit_attackUnit, METH_VARARGS, NULL},
@@ -47213,8 +49162,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_morph", _wrap_Unit_morph, METH_VARARGS, NULL},
 	 { (char *)"Unit_research", _wrap_Unit_research, METH_VARARGS, NULL},
 	 { (char *)"Unit_upgrade", _wrap_Unit_upgrade, METH_VARARGS, NULL},
-	 { (char *)"Unit_setRallyPosition", _wrap_Unit_setRallyPosition, METH_VARARGS, NULL},
-	 { (char *)"Unit_setRallyUnit", _wrap_Unit_setRallyUnit, METH_VARARGS, NULL},
+	 { (char *)"Unit_setRallyPoint", _wrap_Unit_setRallyPoint, METH_VARARGS, NULL},
 	 { (char *)"Unit_move", _wrap_Unit_move, METH_VARARGS, NULL},
 	 { (char *)"Unit_patrol", _wrap_Unit_patrol, METH_VARARGS, NULL},
 	 { (char *)"Unit_holdPosition", _wrap_Unit_holdPosition, METH_VARARGS, NULL},
@@ -47243,13 +49191,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_cancelResearch", _wrap_Unit_cancelResearch, METH_VARARGS, NULL},
 	 { (char *)"Unit_cancelUpgrade", _wrap_Unit_cancelUpgrade, METH_VARARGS, NULL},
 	 { (char *)"Unit_useTech", _wrap_Unit_useTech, METH_VARARGS, NULL},
-	 { (char *)"Unit_hasPath", _wrap_Unit_hasPath, METH_VARARGS, NULL},
-	 { (char *)"Unit_getLastOrderFrame", _wrap_Unit_getLastOrderFrame, METH_VARARGS, NULL},
 	 { (char *)"Unit_setClientInfo", _wrap_Unit_setClientInfo, METH_VARARGS, NULL},
 	 { (char *)"Unit_getClientInfo", _wrap_Unit_getClientInfo, METH_VARARGS, NULL},
-	 { (char *)"Unit_getResourceGroup", _wrap_Unit_getResourceGroup, METH_VARARGS, NULL},
 	 { (char *)"Unit_getLoadedUnits", _wrap_Unit_getLoadedUnits, METH_VARARGS, NULL},
-	 { (char *)"Unit_getLarva", _wrap_Unit_getLarva, METH_VARARGS, NULL},
 	 { (char *)"Unit_getTrainingQueue", _wrap_Unit_getTrainingQueue, METH_VARARGS, NULL},
 	 { (char *)"delete_Unit", _wrap_delete_Unit, METH_VARARGS, NULL},
 	 { (char *)"Unit_swigregister", Unit_swigregister, METH_VARARGS, NULL},
@@ -47332,9 +49276,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UnitType___lt__", _wrap_UnitType___lt__, METH_VARARGS, NULL},
 	 { (char *)"UnitType_getID", _wrap_UnitType_getID, METH_VARARGS, NULL},
 	 { (char *)"UnitType_getName", _wrap_UnitType_getName, METH_VARARGS, NULL},
-	 { (char *)"UnitType_getSubLabel", _wrap_UnitType_getSubLabel, METH_VARARGS, NULL},
 	 { (char *)"UnitType_getRace", _wrap_UnitType_getRace, METH_VARARGS, NULL},
 	 { (char *)"UnitType_requiredTech", _wrap_UnitType_requiredTech, METH_VARARGS, NULL},
+	 { (char *)"UnitType_cloakingTech", _wrap_UnitType_cloakingTech, METH_VARARGS, NULL},
 	 { (char *)"UnitType_abilities", _wrap_UnitType_abilities, METH_VARARGS, NULL},
 	 { (char *)"UnitType_upgrades", _wrap_UnitType_upgrades, METH_VARARGS, NULL},
 	 { (char *)"UnitType_armorUpgrade", _wrap_UnitType_armorUpgrade, METH_VARARGS, NULL},
@@ -47393,6 +49337,12 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UnitType_isAddon", _wrap_UnitType_isAddon, METH_VARARGS, NULL},
 	 { (char *)"UnitType_isFlyingBuilding", _wrap_UnitType_isFlyingBuilding, METH_VARARGS, NULL},
 	 { (char *)"UnitType_isNeutral", _wrap_UnitType_isNeutral, METH_VARARGS, NULL},
+	 { (char *)"UnitType_isHero", _wrap_UnitType_isHero, METH_VARARGS, NULL},
+	 { (char *)"UnitType_isPowerup", _wrap_UnitType_isPowerup, METH_VARARGS, NULL},
+	 { (char *)"UnitType_isBeacon", _wrap_UnitType_isBeacon, METH_VARARGS, NULL},
+	 { (char *)"UnitType_isFlagBeacon", _wrap_UnitType_isFlagBeacon, METH_VARARGS, NULL},
+	 { (char *)"UnitType_isSpecialBuilding", _wrap_UnitType_isSpecialBuilding, METH_VARARGS, NULL},
+	 { (char *)"UnitType_isSpell", _wrap_UnitType_isSpell, METH_VARARGS, NULL},
 	 { (char *)"UnitType_producesLarva", _wrap_UnitType_producesLarva, METH_VARARGS, NULL},
 	 { (char *)"UnitType_whatBuilds", _wrap_UnitType_whatBuilds, METH_VARARGS, NULL},
 	 { (char *)"delete_UnitType", _wrap_delete_UnitType, METH_VARARGS, NULL},
@@ -47567,6 +49517,7 @@ static swig_type_info _swigt__p_std__setT_BWTA__Chokepoint_p_t = {"_p_std__setT_
 static swig_type_info _swigt__p_std__setT_BWTA__Region_p_t = {"_p_std__setT_BWTA__Region_p_t", "std::set< BWTA::Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BaseLocation_p_t = {"_p_std__setT_BaseLocation_p_t", "std::set< BaseLocation * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_Chokepoint_p_t = {"_p_std__setT_Chokepoint_p_t", "std::set< Chokepoint * > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__setT_Position_t = {"_p_std__setT_Position_t", "std::set< Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_Region_p_t = {"_p_std__setT_Region_p_t", "std::set< Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t", "std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *|std::vector< BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type", "std::vector< BWAPI::Position >::allocator_type *|std::allocator< BWAPI::Position > *", 0, 0, (void*)0, 0};
@@ -47685,6 +49636,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__setT_BWTA__Region_p_t,
   &_swigt__p_std__setT_BaseLocation_p_t,
   &_swigt__p_std__setT_Chokepoint_p_t,
+  &_swigt__p_std__setT_Position_t,
   &_swigt__p_std__setT_Region_p_t,
   &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,
   &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type,
@@ -47803,6 +49755,7 @@ static swig_cast_info _swigc__p_std__setT_BWTA__Chokepoint_p_t[] = {  {&_swigt__
 static swig_cast_info _swigc__p_std__setT_BWTA__Region_p_t[] = {  {&_swigt__p_std__setT_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BaseLocation_p_t[] = {  {&_swigt__p_std__setT_BaseLocation_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_Chokepoint_p_t[] = {  {&_swigt__p_std__setT_Chokepoint_p_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__setT_Position_t[] = {  {&_swigt__p_std__setT_Position_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_Region_p_t[] = {  {&_swigt__p_std__setT_Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t[] = {  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type[] = {  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type, 0, 0, 0},{0, 0, 0, 0}};
@@ -47921,6 +49874,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__setT_BWTA__Region_p_t,
   _swigc__p_std__setT_BaseLocation_p_t,
   _swigc__p_std__setT_Chokepoint_p_t,
+  _swigc__p_std__setT_Position_t,
   _swigc__p_std__setT_Region_p_t,
   _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,
   _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type,
@@ -48591,6 +50545,7 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char*)"Unit_Busy",Swig_var_Unit_Busy_get, Swig_var_Unit_Busy_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Incompatible_UnitType",Swig_var_Incompatible_UnitType_get, Swig_var_Incompatible_UnitType_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Incompatible_TechType",Swig_var_Incompatible_TechType_get, Swig_var_Incompatible_TechType_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Incompatible_State",Swig_var_Incompatible_State_get, Swig_var_Incompatible_State_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Already_Researched",Swig_var_Already_Researched_get, Swig_var_Already_Researched_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Fully_Upgraded",Swig_var_Fully_Upgraded_get, Swig_var_Fully_Upgraded_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Currently_Researching",Swig_var_Currently_Researching_get, Swig_var_Currently_Researching_set);
@@ -48602,7 +50557,9 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char*)"Insufficient_Tech",Swig_var_Insufficient_Tech_get, Swig_var_Insufficient_Tech_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Insufficient_Ammo",Swig_var_Insufficient_Ammo_get, Swig_var_Insufficient_Ammo_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Insufficient_Space",Swig_var_Insufficient_Space_get, Swig_var_Insufficient_Space_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Invalid_Tile_Position",Swig_var_Invalid_Tile_Position_get, Swig_var_Invalid_Tile_Position_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Unbuildable_Location",Swig_var_Unbuildable_Location_get, Swig_var_Unbuildable_Location_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Unreachable_Location",Swig_var_Unreachable_Location_get, Swig_var_Unreachable_Location_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Out_Of_Range",Swig_var_Out_Of_Range_get, Swig_var_Out_Of_Range_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Unable_To_Hit",Swig_var_Unable_To_Hit_get, Swig_var_Unable_To_Hit_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Access_Denied",Swig_var_Access_Denied_get, Swig_var_Access_Denied_set);
@@ -49145,52 +51102,91 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char*)"UnitSizeTypes_None",Swig_var_UnitSizeTypes_None_get, Swig_var_UnitSizeTypes_None_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"UnitSizeTypes_Unknown",Swig_var_UnitSizeTypes_Unknown_get, Swig_var_UnitSizeTypes_Unknown_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Marine",Swig_var_Terran_Marine_get, Swig_var_Terran_Marine_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Jim_Raynor_Marine",Swig_var_Hero_Jim_Raynor_Marine_get, Swig_var_Hero_Jim_Raynor_Marine_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Ghost",Swig_var_Terran_Ghost_get, Swig_var_Terran_Ghost_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Sarah_Kerrigan",Swig_var_Hero_Sarah_Kerrigan_get, Swig_var_Hero_Sarah_Kerrigan_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Samir_Duran",Swig_var_Hero_Samir_Duran_get, Swig_var_Hero_Samir_Duran_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Infested_Duran",Swig_var_Hero_Infested_Duran_get, Swig_var_Hero_Infested_Duran_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Alexei_Stukov",Swig_var_Hero_Alexei_Stukov_get, Swig_var_Hero_Alexei_Stukov_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Vulture",Swig_var_Terran_Vulture_get, Swig_var_Terran_Vulture_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Jim_Raynor_Vulture",Swig_var_Hero_Jim_Raynor_Vulture_get, Swig_var_Hero_Jim_Raynor_Vulture_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Goliath",Swig_var_Terran_Goliath_get, Swig_var_Terran_Goliath_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Alan_Schezar",Swig_var_Hero_Alan_Schezar_get, Swig_var_Hero_Alan_Schezar_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Siege_Tank_Tank_Mode",Swig_var_Terran_Siege_Tank_Tank_Mode_get, Swig_var_Terran_Siege_Tank_Tank_Mode_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Edmund_Duke_Tank_Mode",Swig_var_Hero_Edmund_Duke_Tank_Mode_get, Swig_var_Hero_Edmund_Duke_Tank_Mode_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_SCV",Swig_var_Terran_SCV_get, Swig_var_Terran_SCV_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Wraith",Swig_var_Terran_Wraith_get, Swig_var_Terran_Wraith_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Tom_Kazansky",Swig_var_Hero_Tom_Kazansky_get, Swig_var_Hero_Tom_Kazansky_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Science_Vessel",Swig_var_Terran_Science_Vessel_get, Swig_var_Terran_Science_Vessel_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Magellan",Swig_var_Hero_Magellan_get, Swig_var_Hero_Magellan_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Dropship",Swig_var_Terran_Dropship_get, Swig_var_Terran_Dropship_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Battlecruiser",Swig_var_Terran_Battlecruiser_get, Swig_var_Terran_Battlecruiser_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Arcturus_Mengsk",Swig_var_Hero_Arcturus_Mengsk_get, Swig_var_Hero_Arcturus_Mengsk_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Hyperion",Swig_var_Hero_Hyperion_get, Swig_var_Hero_Hyperion_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Norad_II",Swig_var_Hero_Norad_II_get, Swig_var_Hero_Norad_II_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Gerard_DuGalle",Swig_var_Hero_Gerard_DuGalle_get, Swig_var_Hero_Gerard_DuGalle_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Vulture_Spider_Mine",Swig_var_Terran_Vulture_Spider_Mine_get, Swig_var_Terran_Vulture_Spider_Mine_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Nuclear_Missile",Swig_var_Terran_Nuclear_Missile_get, Swig_var_Terran_Nuclear_Missile_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Siege_Tank_Siege_Mode",Swig_var_Terran_Siege_Tank_Siege_Mode_get, Swig_var_Terran_Siege_Tank_Siege_Mode_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Edmund_Duke_Siege_Mode",Swig_var_Hero_Edmund_Duke_Siege_Mode_get, Swig_var_Hero_Edmund_Duke_Siege_Mode_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Firebat",Swig_var_Terran_Firebat_get, Swig_var_Terran_Firebat_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Gui_Montag",Swig_var_Hero_Gui_Montag_get, Swig_var_Hero_Gui_Montag_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Spell_Scanner_Sweep",Swig_var_Spell_Scanner_Sweep_get, Swig_var_Spell_Scanner_Sweep_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Medic",Swig_var_Terran_Medic_get, Swig_var_Terran_Medic_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Civilian",Swig_var_Terran_Civilian_get, Swig_var_Terran_Civilian_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Larva",Swig_var_Zerg_Larva_get, Swig_var_Zerg_Larva_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Egg",Swig_var_Zerg_Egg_get, Swig_var_Zerg_Egg_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Zergling",Swig_var_Zerg_Zergling_get, Swig_var_Zerg_Zergling_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Devouring_One",Swig_var_Hero_Devouring_One_get, Swig_var_Hero_Devouring_One_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Infested_Kerrigan",Swig_var_Hero_Infested_Kerrigan_get, Swig_var_Hero_Infested_Kerrigan_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Hydralisk",Swig_var_Zerg_Hydralisk_get, Swig_var_Zerg_Hydralisk_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Hunter_Killer",Swig_var_Hero_Hunter_Killer_get, Swig_var_Hero_Hunter_Killer_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Ultralisk",Swig_var_Zerg_Ultralisk_get, Swig_var_Zerg_Ultralisk_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Torrasque",Swig_var_Hero_Torrasque_get, Swig_var_Hero_Torrasque_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Broodling",Swig_var_Zerg_Broodling_get, Swig_var_Zerg_Broodling_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Drone",Swig_var_Zerg_Drone_get, Swig_var_Zerg_Drone_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Overlord",Swig_var_Zerg_Overlord_get, Swig_var_Zerg_Overlord_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Yggdrasill",Swig_var_Hero_Yggdrasill_get, Swig_var_Hero_Yggdrasill_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Mutalisk",Swig_var_Zerg_Mutalisk_get, Swig_var_Zerg_Mutalisk_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Kukulza_Mutalisk",Swig_var_Hero_Kukulza_Mutalisk_get, Swig_var_Hero_Kukulza_Mutalisk_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Guardian",Swig_var_Zerg_Guardian_get, Swig_var_Zerg_Guardian_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Kukulza_Guardian",Swig_var_Hero_Kukulza_Guardian_get, Swig_var_Hero_Kukulza_Guardian_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Queen",Swig_var_Zerg_Queen_get, Swig_var_Zerg_Queen_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Matriarch",Swig_var_Hero_Matriarch_get, Swig_var_Hero_Matriarch_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Defiler",Swig_var_Zerg_Defiler_get, Swig_var_Zerg_Defiler_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Unclean_One",Swig_var_Hero_Unclean_One_get, Swig_var_Hero_Unclean_One_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Scourge",Swig_var_Zerg_Scourge_get, Swig_var_Zerg_Scourge_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Infested_Terran",Swig_var_Zerg_Infested_Terran_get, Swig_var_Zerg_Infested_Terran_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Valkyrie",Swig_var_Terran_Valkyrie_get, Swig_var_Terran_Valkyrie_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Cocoon",Swig_var_Zerg_Cocoon_get, Swig_var_Zerg_Cocoon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Corsair",Swig_var_Protoss_Corsair_get, Swig_var_Protoss_Corsair_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Raszagal",Swig_var_Hero_Raszagal_get, Swig_var_Hero_Raszagal_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Dark_Templar",Swig_var_Protoss_Dark_Templar_get, Swig_var_Protoss_Dark_Templar_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Dark_Templar",Swig_var_Hero_Dark_Templar_get, Swig_var_Hero_Dark_Templar_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Zeratul",Swig_var_Hero_Zeratul_get, Swig_var_Hero_Zeratul_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Zerg_Devourer",Swig_var_Zerg_Devourer_get, Swig_var_Zerg_Devourer_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Dark_Archon",Swig_var_Protoss_Dark_Archon_get, Swig_var_Protoss_Dark_Archon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Probe",Swig_var_Protoss_Probe_get, Swig_var_Protoss_Probe_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Zealot",Swig_var_Protoss_Zealot_get, Swig_var_Protoss_Zealot_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Fenix_Zealot",Swig_var_Hero_Fenix_Zealot_get, Swig_var_Hero_Fenix_Zealot_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Dragoon",Swig_var_Protoss_Dragoon_get, Swig_var_Protoss_Dragoon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Fenix_Dragoon",Swig_var_Hero_Fenix_Dragoon_get, Swig_var_Hero_Fenix_Dragoon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_High_Templar",Swig_var_Protoss_High_Templar_get, Swig_var_Protoss_High_Templar_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Tassadar",Swig_var_Hero_Tassadar_get, Swig_var_Hero_Tassadar_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Aldaris",Swig_var_Hero_Aldaris_get, Swig_var_Hero_Aldaris_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Archon",Swig_var_Protoss_Archon_get, Swig_var_Protoss_Archon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Tassadar_Zeratul_Archon",Swig_var_Hero_Tassadar_Zeratul_Archon_get, Swig_var_Hero_Tassadar_Zeratul_Archon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Shuttle",Swig_var_Protoss_Shuttle_get, Swig_var_Protoss_Shuttle_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Scout",Swig_var_Protoss_Scout_get, Swig_var_Protoss_Scout_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Mojo",Swig_var_Hero_Mojo_get, Swig_var_Hero_Mojo_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Artanis",Swig_var_Hero_Artanis_get, Swig_var_Hero_Artanis_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Arbiter",Swig_var_Protoss_Arbiter_get, Swig_var_Protoss_Arbiter_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Danimoth",Swig_var_Hero_Danimoth_get, Swig_var_Hero_Danimoth_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Carrier",Swig_var_Protoss_Carrier_get, Swig_var_Protoss_Carrier_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Gantrithor",Swig_var_Hero_Gantrithor_get, Swig_var_Hero_Gantrithor_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Interceptor",Swig_var_Protoss_Interceptor_get, Swig_var_Protoss_Interceptor_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Reaver",Swig_var_Protoss_Reaver_get, Swig_var_Protoss_Reaver_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hero_Warbringer",Swig_var_Hero_Warbringer_get, Swig_var_Hero_Warbringer_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Observer",Swig_var_Protoss_Observer_get, Swig_var_Protoss_Observer_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Protoss_Scarab",Swig_var_Protoss_Scarab_get, Swig_var_Protoss_Scarab_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Critter_Rhynadon",Swig_var_Critter_Rhynadon_get, Swig_var_Critter_Rhynadon_set);
@@ -49270,7 +51266,20 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char*)"Special_Psi_Disrupter",Swig_var_Special_Psi_Disrupter_get, Swig_var_Special_Psi_Disrupter_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Special_Power_Generator",Swig_var_Special_Power_Generator_get, Swig_var_Special_Power_Generator_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Special_Overmind_Cocoon",Swig_var_Special_Overmind_Cocoon_get, Swig_var_Special_Overmind_Cocoon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Special_Zerg_Beacon",Swig_var_Special_Zerg_Beacon_get, Swig_var_Special_Zerg_Beacon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Special_Terran_Beacon",Swig_var_Special_Terran_Beacon_get, Swig_var_Special_Terran_Beacon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Special_Protoss_Beacon",Swig_var_Special_Protoss_Beacon_get, Swig_var_Special_Protoss_Beacon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Special_Zerg_Flag_Beacon",Swig_var_Special_Zerg_Flag_Beacon_get, Swig_var_Special_Zerg_Flag_Beacon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Special_Terran_Flag_Beacon",Swig_var_Special_Terran_Flag_Beacon_get, Swig_var_Special_Terran_Flag_Beacon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Special_Protoss_Flag_Beacon",Swig_var_Special_Protoss_Flag_Beacon_get, Swig_var_Special_Protoss_Flag_Beacon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Spell_Dark_Swarm",Swig_var_Spell_Dark_Swarm_get, Swig_var_Spell_Dark_Swarm_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Powerup_Uraj_Crystal",Swig_var_Powerup_Uraj_Crystal_get, Swig_var_Powerup_Uraj_Crystal_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Powerup_Khalis_Crystal",Swig_var_Powerup_Khalis_Crystal_get, Swig_var_Powerup_Khalis_Crystal_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Powerup_Flag",Swig_var_Powerup_Flag_get, Swig_var_Powerup_Flag_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Powerup_Young_Chrysalis",Swig_var_Powerup_Young_Chrysalis_get, Swig_var_Powerup_Young_Chrysalis_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Powerup_Psi_Emitter",Swig_var_Powerup_Psi_Emitter_get, Swig_var_Powerup_Psi_Emitter_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Powerup_Data_Disk",Swig_var_Powerup_Data_Disk_get, Swig_var_Powerup_Data_Disk_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Powerup_Khaydarin_Crystal",Swig_var_Powerup_Khaydarin_Crystal_get, Swig_var_Powerup_Khaydarin_Crystal_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"UnitTypes_None",Swig_var_UnitTypes_None_get, Swig_var_UnitTypes_None_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"UnitTypes_Unknown",Swig_var_UnitTypes_Unknown_get, Swig_var_UnitTypes_Unknown_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Terran_Infantry_Armor",Swig_var_Terran_Infantry_Armor_get, Swig_var_Terran_Infantry_Armor_set);
@@ -49326,38 +51335,70 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char*)"UpgradeTypes_None",Swig_var_UpgradeTypes_None_get, Swig_var_UpgradeTypes_None_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"UpgradeTypes_Unknown",Swig_var_UpgradeTypes_Unknown_get, Swig_var_UpgradeTypes_Unknown_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Gauss_Rifle",Swig_var_Gauss_Rifle_get, Swig_var_Gauss_Rifle_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Gauss_Rifle_Jim_Raynor",Swig_var_Gauss_Rifle_Jim_Raynor_get, Swig_var_Gauss_Rifle_Jim_Raynor_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"C_10_Canister_Rifle",Swig_var_C_10_Canister_Rifle_get, Swig_var_C_10_Canister_Rifle_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"C_10_Canister_Rifle_Sarah_Kerrigan",Swig_var_C_10_Canister_Rifle_Sarah_Kerrigan_get, Swig_var_C_10_Canister_Rifle_Sarah_Kerrigan_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"C_10_Canister_Rifle_Samir_Duran",Swig_var_C_10_Canister_Rifle_Samir_Duran_get, Swig_var_C_10_Canister_Rifle_Samir_Duran_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"C_10_Canister_Rifle_Infested_Duran",Swig_var_C_10_Canister_Rifle_Infested_Duran_get, Swig_var_C_10_Canister_Rifle_Infested_Duran_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"C_10_Canister_Rifle_Alexei_Stukov",Swig_var_C_10_Canister_Rifle_Alexei_Stukov_get, Swig_var_C_10_Canister_Rifle_Alexei_Stukov_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Fragmentation_Grenade",Swig_var_WeaponTypes_Fragmentation_Grenade_get, Swig_var_WeaponTypes_Fragmentation_Grenade_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Fragmentation_Grenade_Jim_Raynor",Swig_var_Fragmentation_Grenade_Jim_Raynor_get, Swig_var_Fragmentation_Grenade_Jim_Raynor_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Spider_Mines",Swig_var_WeaponTypes_Spider_Mines_get, Swig_var_WeaponTypes_Spider_Mines_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Twin_Autocannons",Swig_var_Twin_Autocannons_get, Swig_var_Twin_Autocannons_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Twin_Autocannons_Alan_Schezar",Swig_var_Twin_Autocannons_Alan_Schezar_get, Swig_var_Twin_Autocannons_Alan_Schezar_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Hellfire_Missile_Pack",Swig_var_Hellfire_Missile_Pack_get, Swig_var_Hellfire_Missile_Pack_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Hellfire_Missile_Pack_Alan_Schezar",Swig_var_Hellfire_Missile_Pack_Alan_Schezar_get, Swig_var_Hellfire_Missile_Pack_Alan_Schezar_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Arclite_Cannon",Swig_var_Arclite_Cannon_get, Swig_var_Arclite_Cannon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Arclite_Cannon_Edmund_Duke",Swig_var_Arclite_Cannon_Edmund_Duke_get, Swig_var_Arclite_Cannon_Edmund_Duke_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Fusion_Cutter",Swig_var_Fusion_Cutter_get, Swig_var_Fusion_Cutter_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Gemini_Missiles",Swig_var_WeaponTypes_Gemini_Missiles_get, Swig_var_WeaponTypes_Gemini_Missiles_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Gemini_Missiles_Tom_Kazansky",Swig_var_Gemini_Missiles_Tom_Kazansky_get, Swig_var_Gemini_Missiles_Tom_Kazansky_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Burst_Lasers",Swig_var_WeaponTypes_Burst_Lasers_get, Swig_var_WeaponTypes_Burst_Lasers_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Burst_Lasers_Tom_Kazansky",Swig_var_Burst_Lasers_Tom_Kazansky_get, Swig_var_Burst_Lasers_Tom_Kazansky_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"ATS_Laser_Battery",Swig_var_ATS_Laser_Battery_get, Swig_var_ATS_Laser_Battery_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"ATS_Laser_Battery_Hero",Swig_var_ATS_Laser_Battery_Hero_get, Swig_var_ATS_Laser_Battery_Hero_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"ATS_Laser_Battery_Hyperion",Swig_var_ATS_Laser_Battery_Hyperion_get, Swig_var_ATS_Laser_Battery_Hyperion_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"ATA_Laser_Battery",Swig_var_ATA_Laser_Battery_get, Swig_var_ATA_Laser_Battery_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"ATA_Laser_Battery_Hero",Swig_var_ATA_Laser_Battery_Hero_get, Swig_var_ATA_Laser_Battery_Hero_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"ATA_Laser_Battery_Hyperion",Swig_var_ATA_Laser_Battery_Hyperion_get, Swig_var_ATA_Laser_Battery_Hyperion_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Flame_Thrower",Swig_var_Flame_Thrower_get, Swig_var_Flame_Thrower_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Flame_Thrower_Gui_Montag",Swig_var_Flame_Thrower_Gui_Montag_get, Swig_var_Flame_Thrower_Gui_Montag_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Arclite_Shock_Cannon",Swig_var_Arclite_Shock_Cannon_get, Swig_var_Arclite_Shock_Cannon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Arclite_Shock_Cannon_Edmund_Duke",Swig_var_Arclite_Shock_Cannon_Edmund_Duke_get, Swig_var_Arclite_Shock_Cannon_Edmund_Duke_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Longbolt_Missile",Swig_var_WeaponTypes_Longbolt_Missile_get, Swig_var_WeaponTypes_Longbolt_Missile_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Claws",Swig_var_Claws_get, Swig_var_Claws_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Claws_Devouring_One",Swig_var_Claws_Devouring_One_get, Swig_var_Claws_Devouring_One_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Claws_Infested_Kerrigan",Swig_var_Claws_Infested_Kerrigan_get, Swig_var_Claws_Infested_Kerrigan_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Needle_Spines",Swig_var_Needle_Spines_get, Swig_var_Needle_Spines_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Needle_Spines_Hunter_Killer",Swig_var_Needle_Spines_Hunter_Killer_get, Swig_var_Needle_Spines_Hunter_Killer_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Kaiser_Blades",Swig_var_Kaiser_Blades_get, Swig_var_Kaiser_Blades_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Kaiser_Blades_Torrasque",Swig_var_Kaiser_Blades_Torrasque_get, Swig_var_Kaiser_Blades_Torrasque_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Toxic_Spores",Swig_var_Toxic_Spores_get, Swig_var_Toxic_Spores_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Spines",Swig_var_Spines_get, Swig_var_Spines_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Acid_Spore",Swig_var_WeaponTypes_Acid_Spore_get, Swig_var_WeaponTypes_Acid_Spore_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Acid_Spore_Kukulza",Swig_var_Acid_Spore_Kukulza_get, Swig_var_Acid_Spore_Kukulza_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Glave_Wurm",Swig_var_WeaponTypes_Glave_Wurm_get, Swig_var_WeaponTypes_Glave_Wurm_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Glave_Wurm_Kukulza",Swig_var_Glave_Wurm_Kukulza_get, Swig_var_Glave_Wurm_Kukulza_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Seeker_Spores",Swig_var_WeaponTypes_Seeker_Spores_get, Swig_var_WeaponTypes_Seeker_Spores_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Subterranean_Tentacle",Swig_var_Subterranean_Tentacle_get, Swig_var_Subterranean_Tentacle_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Suicide_Infested_Terran",Swig_var_Suicide_Infested_Terran_get, Swig_var_Suicide_Infested_Terran_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Suicide_Scourge",Swig_var_Suicide_Scourge_get, Swig_var_Suicide_Scourge_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Particle_Beam",Swig_var_Particle_Beam_get, Swig_var_Particle_Beam_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Psi_Blades",Swig_var_Psi_Blades_get, Swig_var_Psi_Blades_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Psi_Blades_Fenix",Swig_var_Psi_Blades_Fenix_get, Swig_var_Psi_Blades_Fenix_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Phase_Disruptor",Swig_var_WeaponTypes_Phase_Disruptor_get, Swig_var_WeaponTypes_Phase_Disruptor_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Phase_Disruptor_Fenix",Swig_var_Phase_Disruptor_Fenix_get, Swig_var_Phase_Disruptor_Fenix_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Psi_Assault",Swig_var_Psi_Assault_get, Swig_var_Psi_Assault_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Psionic_Shockwave",Swig_var_Psionic_Shockwave_get, Swig_var_Psionic_Shockwave_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Psionic_Shockwave_TZ_Archon",Swig_var_Psionic_Shockwave_TZ_Archon_get, Swig_var_Psionic_Shockwave_TZ_Archon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Dual_Photon_Blasters",Swig_var_Dual_Photon_Blasters_get, Swig_var_Dual_Photon_Blasters_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Dual_Photon_Blasters_Mojo",Swig_var_Dual_Photon_Blasters_Mojo_get, Swig_var_Dual_Photon_Blasters_Mojo_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Dual_Photon_Blasters_Artanis",Swig_var_Dual_Photon_Blasters_Artanis_get, Swig_var_Dual_Photon_Blasters_Artanis_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Anti_Matter_Missiles",Swig_var_Anti_Matter_Missiles_get, Swig_var_Anti_Matter_Missiles_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Anti_Matter_Missiles_Mojo",Swig_var_Anti_Matter_Missiles_Mojo_get, Swig_var_Anti_Matter_Missiles_Mojo_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Anti_Matter_Missiles_Artanis",Swig_var_Anti_Matter_Missiles_Artanis_get, Swig_var_Anti_Matter_Missiles_Artanis_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Phase_Disruptor_Cannon",Swig_var_Phase_Disruptor_Cannon_get, Swig_var_Phase_Disruptor_Cannon_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Phase_Disruptor_Cannon_Danimoth",Swig_var_Phase_Disruptor_Cannon_Danimoth_get, Swig_var_Phase_Disruptor_Cannon_Danimoth_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Pulse_Cannon",Swig_var_WeaponTypes_Pulse_Cannon_get, Swig_var_WeaponTypes_Pulse_Cannon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"STS_Photon_Cannon",Swig_var_STS_Photon_Cannon_get, Swig_var_STS_Photon_Cannon_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"STA_Photon_Cannon",Swig_var_STA_Photon_Cannon_get, Swig_var_STA_Photon_Cannon_set);
@@ -49367,6 +51408,8 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Corrosive_Acid",Swig_var_WeaponTypes_Corrosive_Acid_get, Swig_var_WeaponTypes_Corrosive_Acid_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Subterranean_Spines",Swig_var_WeaponTypes_Subterranean_Spines_get, Swig_var_WeaponTypes_Subterranean_Spines_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Warp_Blades",Swig_var_Warp_Blades_get, Swig_var_Warp_Blades_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Warp_Blades_Hero",Swig_var_Warp_Blades_Hero_get, Swig_var_Warp_Blades_Hero_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Warp_Blades_Zeratul",Swig_var_Warp_Blades_Zeratul_get, Swig_var_Warp_Blades_Zeratul_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Yamato_Gun",Swig_var_WeaponTypes_Yamato_Gun_get, Swig_var_WeaponTypes_Yamato_Gun_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Nuclear_Strike",Swig_var_WeaponTypes_Nuclear_Strike_get, Swig_var_WeaponTypes_Nuclear_Strike_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"WeaponTypes_Lockdown",Swig_var_WeaponTypes_Lockdown_get, Swig_var_WeaponTypes_Lockdown_set);
