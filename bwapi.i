@@ -1,3 +1,10 @@
+%{
+#include "BWAPI.h"
+
+using namespace BWAPI;
+%}
+
+
 //%template(UnitType_int_Pair) PairWrapper_PtrFirst<BWAPI::UnitType, int>;
 /*%template(UnitType_int_Map) MapWrapper_PtrNext<BWAPI::UnitType, int>;
 %template(UnitType_int_MapIterator) MapIterator_PtrNext<BWAPI::UnitType, int>;
@@ -221,14 +228,7 @@
 %ignore BWAPI::TilePosition::y;
 
 
-%{
-#include "BWAPI.h"
-
-using namespace BWAPI;
-%}
-
-%include "BWAPI.h"
-
 %template(PositionVector) std::vector<BWAPI::Position>;
 
+%include "BWAPI.h"
 

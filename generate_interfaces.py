@@ -148,15 +148,15 @@ for m in bwapi_modules:
     
     f.write("""\t#include "BWAPI/%s.h"\n"""% ( m ) )
 
-#for m in bwta_modules:
-#    f.write("""\t#include "BWTA/%s.h"\n"""% ( m ) )
+for m in bwta_modules:
+    f.write("""\t#include "BWTA/%s.h"\n"""% ( m ) )
 f.write( "%}\n" )
 
 for m in bwapi_modules:
     f.write("""\t%%include "BWAPI/%s.h"\n"""% ( m ) )
 
-#for m in bwta_modules:
-#    f.write("""\t%%include "BWTA/%s.h"\n"""% ( m ) )
+for m in bwta_modules:
+    f.write("""\t%%include "BWTA/%s.h"\n"""% ( m ) )
 
 f.close()
 

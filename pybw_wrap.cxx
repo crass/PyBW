@@ -2715,96 +2715,97 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_BWAPI__WeaponType swig_types[26]
 #define SWIGTYPE_p_BWTA__BaseLocation swig_types[27]
 #define SWIGTYPE_p_BWTA__Chokepoint swig_types[28]
-#define SWIGTYPE_p_BWTA__Region swig_types[29]
-#define SWIGTYPE_p_BulletType swig_types[30]
-#define SWIGTYPE_p_Chokepoint swig_types[31]
-#define SWIGTYPE_p_EventType__Enum swig_types[32]
-#define SWIGTYPE_p_GameType swig_types[33]
-#define SWIGTYPE_p_Key swig_types[34]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Force_p_t swig_types[35]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Player_p_t swig_types[36]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Unit_p_t swig_types[37]
-#define SWIGTYPE_p_ListWrapperT_BWTA__BaseLocation_p_t swig_types[38]
-#define SWIGTYPE_p_ListWrapperT_BWTA__Chokepoint_p_t swig_types[39]
-#define SWIGTYPE_p_ListWrapperT_BWTA__Region_p_t swig_types[40]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__Position_t swig_types[41]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[42]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t swig_types[43]
-#define SWIGTYPE_p_MouseButton swig_types[44]
-#define SWIGTYPE_p_PlayerType swig_types[45]
-#define SWIGTYPE_p_Position swig_types[46]
-#define SWIGTYPE_p_Race swig_types[47]
-#define SWIGTYPE_p_RectangleArrayT_double_t swig_types[48]
-#define SWIGTYPE_p_Region swig_types[49]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Force_p_t swig_types[50]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Player_p_t swig_types[51]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t swig_types[52]
-#define SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t swig_types[53]
-#define SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t swig_types[54]
-#define SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t swig_types[55]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__Position_t swig_types[56]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[57]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__UnitType_t swig_types[58]
-#define SWIGTYPE_p_TechType swig_types[59]
-#define SWIGTYPE_p_TilePosition swig_types[60]
-#define SWIGTYPE_p_UnitCommand swig_types[61]
-#define SWIGTYPE_p_UnitCommandType swig_types[62]
-#define SWIGTYPE_p_UpgradeType swig_types[63]
-#define SWIGTYPE_p_allocator_type swig_types[64]
-#define SWIGTYPE_p_char swig_types[65]
-#define SWIGTYPE_p_difference_type swig_types[66]
-#define SWIGTYPE_p_p_PyObject swig_types[67]
-#define SWIGTYPE_p_size_type swig_types[68]
-#define SWIGTYPE_p_std__invalid_argument swig_types[69]
-#define SWIGTYPE_p_std__listT_BWAPI__Event_t swig_types[70]
-#define SWIGTYPE_p_std__listT_BWAPI__Force_p_t swig_types[71]
-#define SWIGTYPE_p_std__listT_BWAPI__Player_p_t swig_types[72]
-#define SWIGTYPE_p_std__listT_BWAPI__Position_t swig_types[73]
-#define SWIGTYPE_p_std__listT_BWAPI__TilePosition_t swig_types[74]
-#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[75]
-#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[76]
-#define SWIGTYPE_p_std__listT_BWTA__BaseLocation_p_t swig_types[77]
-#define SWIGTYPE_p_std__listT_BWTA__Chokepoint_p_t swig_types[78]
-#define SWIGTYPE_p_std__listT_BWTA__Region_p_t swig_types[79]
-#define SWIGTYPE_p_std__mapT_BWAPI__TilePosition_double_t swig_types[80]
-#define SWIGTYPE_p_std__pairT_BWAPI__TilePosition_double_t swig_types[81]
-#define SWIGTYPE_p_std__setT_BWAPI__BulletType_t swig_types[82]
-#define SWIGTYPE_p_std__setT_BWAPI__Bullet_p_t swig_types[83]
-#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[84]
-#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[85]
-#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[86]
-#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[87]
-#define SWIGTYPE_p_std__setT_BWAPI__GameType_t swig_types[88]
-#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[89]
-#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[90]
-#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[91]
-#define SWIGTYPE_p_std__setT_BWAPI__Position_t swig_types[92]
-#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[93]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[94]
-#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[95]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitCommandType_t swig_types[96]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[97]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[98]
-#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[99]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[100]
-#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[101]
-#define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[102]
-#define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[103]
-#define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[104]
-#define SWIGTYPE_p_std__setT_BaseLocation_p_t swig_types[105]
-#define SWIGTYPE_p_std__setT_Chokepoint_p_t swig_types[106]
-#define SWIGTYPE_p_std__setT_Position_t swig_types[107]
-#define SWIGTYPE_p_std__setT_Region_p_t swig_types[108]
+#define SWIGTYPE_p_BWTA__Polygon swig_types[29]
+#define SWIGTYPE_p_BWTA__Region swig_types[30]
+#define SWIGTYPE_p_BulletType swig_types[31]
+#define SWIGTYPE_p_Chokepoint swig_types[32]
+#define SWIGTYPE_p_EventType__Enum swig_types[33]
+#define SWIGTYPE_p_GameType swig_types[34]
+#define SWIGTYPE_p_Key swig_types[35]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Force_p_t swig_types[36]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Player_p_t swig_types[37]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Unit_p_t swig_types[38]
+#define SWIGTYPE_p_ListWrapperT_BWTA__BaseLocation_p_t swig_types[39]
+#define SWIGTYPE_p_ListWrapperT_BWTA__Chokepoint_p_t swig_types[40]
+#define SWIGTYPE_p_ListWrapperT_BWTA__Region_p_t swig_types[41]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__Position_t swig_types[42]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[43]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t swig_types[44]
+#define SWIGTYPE_p_MouseButton swig_types[45]
+#define SWIGTYPE_p_PlayerType swig_types[46]
+#define SWIGTYPE_p_Position swig_types[47]
+#define SWIGTYPE_p_Race swig_types[48]
+#define SWIGTYPE_p_RectangleArrayT_double_t swig_types[49]
+#define SWIGTYPE_p_Region swig_types[50]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Force_p_t swig_types[51]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Player_p_t swig_types[52]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t swig_types[53]
+#define SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t swig_types[54]
+#define SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t swig_types[55]
+#define SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t swig_types[56]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__Position_t swig_types[57]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[58]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__UnitType_t swig_types[59]
+#define SWIGTYPE_p_TechType swig_types[60]
+#define SWIGTYPE_p_TilePosition swig_types[61]
+#define SWIGTYPE_p_UnitCommand swig_types[62]
+#define SWIGTYPE_p_UnitCommandType swig_types[63]
+#define SWIGTYPE_p_UpgradeType swig_types[64]
+#define SWIGTYPE_p_allocator_type swig_types[65]
+#define SWIGTYPE_p_char swig_types[66]
+#define SWIGTYPE_p_difference_type swig_types[67]
+#define SWIGTYPE_p_p_PyObject swig_types[68]
+#define SWIGTYPE_p_size_type swig_types[69]
+#define SWIGTYPE_p_std__invalid_argument swig_types[70]
+#define SWIGTYPE_p_std__listT_BWAPI__Event_t swig_types[71]
+#define SWIGTYPE_p_std__listT_BWAPI__Force_p_t swig_types[72]
+#define SWIGTYPE_p_std__listT_BWAPI__Player_p_t swig_types[73]
+#define SWIGTYPE_p_std__listT_BWAPI__Position_t swig_types[74]
+#define SWIGTYPE_p_std__listT_BWAPI__TilePosition_t swig_types[75]
+#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[76]
+#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[77]
+#define SWIGTYPE_p_std__listT_BWTA__BaseLocation_p_t swig_types[78]
+#define SWIGTYPE_p_std__listT_BWTA__Chokepoint_p_t swig_types[79]
+#define SWIGTYPE_p_std__listT_BWTA__Region_p_t swig_types[80]
+#define SWIGTYPE_p_std__mapT_BWAPI__TilePosition_double_t swig_types[81]
+#define SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t swig_types[82]
+#define SWIGTYPE_p_std__pairT_BWAPI__TilePosition_double_t swig_types[83]
+#define SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t swig_types[84]
+#define SWIGTYPE_p_std__setT_BWAPI__BulletType_t swig_types[85]
+#define SWIGTYPE_p_std__setT_BWAPI__Bullet_p_t swig_types[86]
+#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[87]
+#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[88]
+#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[89]
+#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[90]
+#define SWIGTYPE_p_std__setT_BWAPI__GameType_t swig_types[91]
+#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[92]
+#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[93]
+#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[94]
+#define SWIGTYPE_p_std__setT_BWAPI__Position_t swig_types[95]
+#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[96]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[97]
+#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[98]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitCommandType_t swig_types[99]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[100]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[101]
+#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[102]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[103]
+#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[104]
+#define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[105]
+#define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[106]
+#define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[107]
+#define SWIGTYPE_p_std__setT_Position_t swig_types[108]
 #define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[109]
 #define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[110]
 #define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[111]
 #define SWIGTYPE_p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t swig_types[112]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[113]
-#define SWIGTYPE_p_unsigned_char swig_types[114]
-#define SWIGTYPE_p_value_type swig_types[115]
-#define SWIGTYPE_p_void swig_types[116]
-static swig_type_info *swig_types[118];
-static swig_module_info swig_module = {swig_types, 117, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t swig_types[113]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[114]
+#define SWIGTYPE_p_unsigned_char swig_types[115]
+#define SWIGTYPE_p_value_type swig_types[116]
+#define SWIGTYPE_p_void swig_types[117]
+static swig_type_info *swig_types[119];
+static swig_module_info swig_module = {swig_types, 118, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -4365,6 +4366,25 @@ using namespace BWTA;
 
 
 
+    SetWrapper<BWTA::Region*>* TA_getRegions()
+    {
+        return new SetWrapper<BWTA::Region*>( BWTA::getRegions() );
+    }
+    SetWrapper<BWTA::Chokepoint*>* TA_getChokepoints()
+    {
+        return new SetWrapper<BWTA::Chokepoint*>( BWTA::getChokepoints() );
+    }
+    SetWrapper<BWTA::BaseLocation*>* TA_getBaseLocations()
+    {
+        return new SetWrapper<BWTA::BaseLocation*>( BWTA::getBaseLocations() );
+    }
+    SetWrapper<BWTA::BaseLocation*>* TA_getStartLocations()
+    {
+        return new SetWrapper<BWTA::BaseLocation*>( BWTA::getStartLocations() );
+    }
+
+
+
 #include <limits.h>
 #if !defined(SWIG_NO_LLONG_MAX)
 # if !defined(LLONG_MAX) && defined(__GNUC__) && defined (__LONG_LONG_MAX__)
@@ -4394,114 +4414,9 @@ SWIG_AsVal_int (PyObject * obj, int *val)
   #define SWIG_From_double   PyFloat_FromDouble 
 
 
-    SetWrapper<BWTA::Region*>* TA_getRegions()
-    {
-        return new SetWrapper<BWTA::Region*>( BWTA::getRegions() );
-    }
-    SetWrapper<BWTA::Chokepoint*>* TA_getChokepoints()
-    {
-        return new SetWrapper<BWTA::Chokepoint*>( BWTA::getChokepoints() );
-    }
-    SetWrapper<BWTA::BaseLocation*>* TA_getBaseLocations()
-    {
-        return new SetWrapper<BWTA::BaseLocation*>( BWTA::getBaseLocations() );
-    }
-    SetWrapper<BWTA::BaseLocation*>* TA_getStartLocations()
-    {
-        return new SetWrapper<BWTA::BaseLocation*>( BWTA::getStartLocations() );
-    }
-
-
-
 #include "helper.h"
 
 using namespace BWTA;
-
-
-
-// Define our own init function, with a simple declaration.
-// Declare SWIG_init because it's not declared yet.
-#ifdef __cplusplus
-extern "C"
-#endif
-
-SWIGEXPORT 
-#if PY_VERSION_HEX >= 0x03000000
-PyObject*
-#else
-void
-#endif
-SWIG_init(void);
-
-void python_wrap_init()
-{
-	SWIG_init();
-}
-
-
-// Used for event-dispatcher callbacks
-PyObject* _getSwigUnit(BWAPI::Unit* unit)
-{
-  return SWIG_NewPointerObj(SWIG_as_voidptr(unit), SWIGTYPE_p_BWAPI__Unit, 0 );
-}
-
-PyObject* _getSwigPlayer(BWAPI::Player* player)
-{
-  return SWIG_NewPointerObj(SWIG_as_voidptr(player), SWIGTYPE_p_BWAPI__Player, 0 );
-}
-
-PyObject* _getSwigPosition(BWAPI::Position* position)
-{
-  return SWIG_NewPointerObj(SWIG_as_voidptr(position), SWIGTYPE_p_BWAPI__Position, 0 );
-}
-
-
-
-
-	#include "BWAPI/AIModule.h"
-	#include "BWAPI/Bitmap.h"
-	#include "BWAPI/Bullet.h"
-	#include "BWAPI/BulletType.h"
-	#include "BWAPI/Client.h"
-	#include "BWAPI/Color.h"
-	#include "BWAPI/Constants.h"
-	#include "BWAPI/CoordinateType.h"
-	#include "BWAPI/DamageType.h"
-	#include "BWAPI/Error.h"
-	#include "BWAPI/Event.h"
-	#include "BWAPI/EventType.h"
-	#include "BWAPI/ExplosionType.h"
-	#include "BWAPI/Flag.h"
-	#include "BWAPI/Force.h"
-	#include "BWAPI/Game.h"
-	#include "BWAPI/GameType.h"
-	#include "BWAPI/Input.h"
-	#include "BWAPI/Latency.h"
-	#include "BWAPI/Order.h"
-	#include "BWAPI/Player.h"
-	#include "BWAPI/PlayerType.h"
-	#include "BWAPI/Position.h"
-	#include "BWAPI/Race.h"
-	#include "BWAPI/TechType.h"
-	#include "BWAPI/TilePosition.h"
-	#include "BWAPI/Unit.h"
-	#include "BWAPI/UnitCommand.h"
-	#include "BWAPI/UnitCommandType.h"
-	#include "BWAPI/UnitSizeType.h"
-	#include "BWAPI/UnitType.h"
-	#include "BWAPI/UpgradeType.h"
-	#include "BWAPI/WeaponType.h"
-
-
-SWIGINTERN int
-SWIG_AsVal_bool (PyObject *obj, bool *val)
-{
-  int r = PyObject_IsTrue(obj);
-  if (r == -1)
-    return SWIG_ERROR;
-  if (val) *val = r ? true : false;
-  return SWIG_OK;
-}
 
 
 SWIGINTERN swig_type_info*
@@ -4593,6 +4508,100 @@ SWIG_AsCharPtrAndSize(PyObject *obj, char** cptr, size_t* psize, int *alloc)
 }
 
 
+
+
+
+
+// Define our own init function, with a simple declaration.
+// Declare SWIG_init because it's not declared yet.
+#ifdef __cplusplus
+extern "C"
+#endif
+
+SWIGEXPORT 
+#if PY_VERSION_HEX >= 0x03000000
+PyObject*
+#else
+void
+#endif
+SWIG_init(void);
+
+void python_wrap_init()
+{
+	SWIG_init();
+}
+
+
+// Used for event-dispatcher callbacks
+PyObject* _getSwigUnit(BWAPI::Unit* unit)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(unit), SWIGTYPE_p_BWAPI__Unit, 0 );
+}
+
+PyObject* _getSwigPlayer(BWAPI::Player* player)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(player), SWIGTYPE_p_BWAPI__Player, 0 );
+}
+
+PyObject* _getSwigPosition(BWAPI::Position* position)
+{
+  return SWIG_NewPointerObj(SWIG_as_voidptr(position), SWIGTYPE_p_BWAPI__Position, 0 );
+}
+
+
+
+
+	#include "BWAPI/AIModule.h"
+	#include "BWAPI/Bitmap.h"
+	#include "BWAPI/Bullet.h"
+	#include "BWAPI/BulletType.h"
+	#include "BWAPI/Client.h"
+	#include "BWAPI/Color.h"
+	#include "BWAPI/Constants.h"
+	#include "BWAPI/CoordinateType.h"
+	#include "BWAPI/DamageType.h"
+	#include "BWAPI/Error.h"
+	#include "BWAPI/Event.h"
+	#include "BWAPI/EventType.h"
+	#include "BWAPI/ExplosionType.h"
+	#include "BWAPI/Flag.h"
+	#include "BWAPI/Force.h"
+	#include "BWAPI/Game.h"
+	#include "BWAPI/GameType.h"
+	#include "BWAPI/Input.h"
+	#include "BWAPI/Latency.h"
+	#include "BWAPI/Order.h"
+	#include "BWAPI/Player.h"
+	#include "BWAPI/PlayerType.h"
+	#include "BWAPI/Position.h"
+	#include "BWAPI/Race.h"
+	#include "BWAPI/TechType.h"
+	#include "BWAPI/TilePosition.h"
+	#include "BWAPI/Unit.h"
+	#include "BWAPI/UnitCommand.h"
+	#include "BWAPI/UnitCommandType.h"
+	#include "BWAPI/UnitSizeType.h"
+	#include "BWAPI/UnitType.h"
+	#include "BWAPI/UpgradeType.h"
+	#include "BWAPI/WeaponType.h"
+	#include "BWTA/BaseLocation.h"
+	#include "BWTA/Chokepoint.h"
+	#include "BWTA/Polygon.h"
+	#include "BWTA/RectangleArray.h"
+	#include "BWTA/Region.h"
+
+
+SWIGINTERN int
+SWIG_AsVal_bool (PyObject *obj, bool *val)
+{
+  int r = PyObject_IsTrue(obj);
+  if (r == -1)
+    return SWIG_ERROR;
+  if (val) *val = r ? true : false;
+  return SWIG_OK;
+}
+
+
 SWIGINTERN int
 SWIG_AsPtr_std_string (PyObject * obj, std::string **val) 
 {
@@ -4681,9 +4690,6 @@ SWIG_From_std_string  (const std::string& s)
 SWIGINTERN SetWrapper< BWAPI::Player * > *BWAPI_Force_getPlayers(BWAPI::Force *self){
         return new SetWrapper<BWAPI::Player*>( self->getPlayers() );
     }
-
-
-
 SWIGINTERN SetWrapper< BWAPI::Unit * > *BWAPI_Game_getAllUnits(BWAPI::Game *self){
         return new SetWrapper<BWAPI::Unit*>( self->getAllUnits() );
     }
@@ -4752,6 +4758,21 @@ SWIGINTERN ListWrapper_PtrNext< BWAPI::UnitType > *BWAPI_Unit_getTrainingQueue(B
     }
 SWIGINTERN BWAPI::UnitType *BWAPI_UnitType_whatBuilds(BWAPI::UnitType *self){
         return new UnitType(self->whatBuilds().first);
+    }
+SWIGINTERN SetWrapper< BWAPI::Unit * > *BWTA_BaseLocation_getMinerals(BWTA::BaseLocation *self){
+        return new SetWrapper<BWAPI::Unit*>( self->getMinerals() );
+    }
+SWIGINTERN SetWrapper< BWAPI::Unit * > *BWTA_BaseLocation_getStaticMinerals(BWTA::BaseLocation *self){
+        return new SetWrapper<BWAPI::Unit*>( self->getStaticMinerals() );
+    }
+SWIGINTERN SetWrapper< BWAPI::Unit * > *BWTA_BaseLocation_getGeysers(BWTA::BaseLocation *self){
+        return new SetWrapper<BWAPI::Unit*>( self->getGeysers() );
+    }
+SWIGINTERN SetWrapper< BWTA::Chokepoint * > *BWTA_Region_getChokepoints(BWTA::Region *self){
+        return new SetWrapper<BWTA::Chokepoint*>( self->getChokepoints() );
+    }
+SWIGINTERN SetWrapper< BWTA::BaseLocation * > *BWTA_Region_getBaseLocations(BWTA::Region *self){
+        return new SetWrapper<BWTA::BaseLocation*>( self->getBaseLocations() );
     }
 #ifdef __cplusplus
 extern "C" {
@@ -7030,7 +7051,7 @@ SWIGINTERN PyObject *UnitTypeSet_swigregister(PyObject *SWIGUNUSEDPARM(self), Py
 
 SWIGINTERN PyObject *_wrap_new_RegionList(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  std::list< BWTA::Region * > arg1 ;
+  SwigValueWrapper< std::list< BWTA::Region * > > arg1 ;
   void *argp1 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
@@ -7213,7 +7234,7 @@ SWIGINTERN PyObject *RegionList_swigregister(PyObject *SWIGUNUSEDPARM(self), PyO
 
 SWIGINTERN PyObject *_wrap_new_ChokepointList(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  std::list< BWTA::Chokepoint * > arg1 ;
+  SwigValueWrapper< std::list< BWTA::Chokepoint * > > arg1 ;
   void *argp1 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
@@ -7396,7 +7417,7 @@ SWIGINTERN PyObject *ChokepointList_swigregister(PyObject *SWIGUNUSEDPARM(self),
 
 SWIGINTERN PyObject *_wrap_new_BaseLocationList(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  std::list< BWTA::BaseLocation * > arg1 ;
+  SwigValueWrapper< std::list< BWTA::BaseLocation * > > arg1 ;
   void *argp1 ;
   int res1 = 0 ;
   PyObject * obj0 = 0 ;
@@ -8698,18 +8719,6 @@ SWIGINTERN PyObject *UnitTypeList_swigregister(PyObject *SWIGUNUSEDPARM(self), P
   SWIG_TypeNewClientData(SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t, SWIG_NewClientData(obj));
   return SWIG_Py_Void();
 }
-
-SWIGINTERN PyObject *_wrap_BWAPI_init(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  
-  if (!PyArg_ParseTuple(args,(char *)":BWAPI_init")) SWIG_fail;
-  BWAPI::BWAPI_init();
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
 
 SWIGINTERN PyObject *_wrap_PositionVector_iterator(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
@@ -10423,6 +10432,18 @@ SWIGINTERN PyObject *PositionVector_swigregister(PyObject *SWIGUNUSEDPARM(self),
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_BWAPI_init(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  
+  if (!PyArg_ParseTuple(args,(char *)":BWAPI_init")) SWIG_fail;
+  BWAPI::BWAPI_init();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_TA_getStartLocation(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
@@ -10475,6 +10496,58 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_TA_getRegions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SetWrapper< BWTA::Region * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":TA_getRegions")) SWIG_fail;
+  result = (SetWrapper< BWTA::Region * > *)TA_getRegions();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_getChokepoints(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SetWrapper< BWTA::Chokepoint * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":TA_getChokepoints")) SWIG_fail;
+  result = (SetWrapper< BWTA::Chokepoint * > *)TA_getChokepoints();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_getBaseLocations(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SetWrapper< BWTA::BaseLocation * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":TA_getBaseLocations")) SWIG_fail;
+  result = (SetWrapper< BWTA::BaseLocation * > *)TA_getBaseLocations();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_getStartLocations(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SetWrapper< BWTA::BaseLocation * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":TA_getStartLocations")) SWIG_fail;
+  result = (SetWrapper< BWTA::BaseLocation * > *)TA_getStartLocations();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_readMap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   
@@ -10493,58 +10566,6 @@ SWIGINTERN PyObject *_wrap_analyze(PyObject *SWIGUNUSEDPARM(self), PyObject *arg
   if (!PyArg_ParseTuple(args,(char *)":analyze")) SWIG_fail;
   BWTA::analyze();
   resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_getRegions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  std::set< Region * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":getRegions")) SWIG_fail;
-  result = (std::set< Region * > *) &BWTA::getRegions();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_Region_p_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_getChokepoints(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  std::set< Chokepoint * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":getChokepoints")) SWIG_fail;
-  result = (std::set< Chokepoint * > *) &BWTA::getChokepoints();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_Chokepoint_p_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_getBaseLocations(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  std::set< BaseLocation * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":getBaseLocations")) SWIG_fail;
-  result = (std::set< BaseLocation * > *) &BWTA::getBaseLocations();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_BaseLocation_p_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_getStartLocations(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  std::set< BaseLocation * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":getStartLocations")) SWIG_fail;
-  result = (std::set< BaseLocation * > *) &BWTA::getStartLocations();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_BaseLocation_p_t, 0 |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -11333,58 +11354,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_TA_getRegions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  SetWrapper< BWTA::Region * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":TA_getRegions")) SWIG_fail;
-  result = (SetWrapper< BWTA::Region * > *)TA_getRegions();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TA_getChokepoints(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  SetWrapper< BWTA::Chokepoint * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":TA_getChokepoints")) SWIG_fail;
-  result = (SetWrapper< BWTA::Chokepoint * > *)TA_getChokepoints();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TA_getBaseLocations(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  SetWrapper< BWTA::BaseLocation * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":TA_getBaseLocations")) SWIG_fail;
-  result = (SetWrapper< BWTA::BaseLocation * > *)TA_getBaseLocations();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_TA_getStartLocations(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  SetWrapper< BWTA::BaseLocation * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":TA_getStartLocations")) SWIG_fail;
-  result = (SetWrapper< BWTA::BaseLocation * > *)TA_getStartLocations();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t, SWIG_POINTER_OWN |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_getGame(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *result = 0 ;
@@ -11394,6 +11363,67 @@ SWIGINTERN PyObject *_wrap_getGame(PyObject *SWIGUNUSEDPARM(self), PyObject *arg
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Game, 0 |  0 );
   return resultobj;
 fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_analyzeMap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  
+  if (!PyArg_ParseTuple(args,(char *)":analyzeMap")) SWIG_fail;
+  analyzeMap();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_analyzeMapThreaded(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  
+  if (!PyArg_ParseTuple(args,(char *)":analyzeMapThreaded")) SWIG_fail;
+  analyzeMapThreaded();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_isAnalyzed(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)":isAnalyzed")) SWIG_fail;
+  result = (bool)isAnalyzed();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_sendText(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  char *arg1 = (char *) 0 ;
+  int res1 ;
+  char *buf1 = 0 ;
+  int alloc1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:sendText",&obj0)) SWIG_fail;
+  res1 = SWIG_AsCharPtrAndSize(obj0, &buf1, NULL, &alloc1);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "sendText" "', argument " "1"" of type '" "char const *""'");
+  }
+  arg1 = reinterpret_cast< char * >(buf1);
+  sendText((char const *)arg1);
+  resultobj = SWIG_Py_Void();
+  if (alloc1 == SWIG_NEWOBJ) delete[] buf1;
+  return resultobj;
+fail:
+  if (alloc1 == SWIG_NEWOBJ) delete[] buf1;
   return NULL;
 }
 
@@ -48449,6 +48479,938 @@ SWIGINTERN PyObject *Swig_var_WeaponTypes_Unknown_get(void) {
 }
 
 
+SWIGINTERN PyObject *_wrap_BaseLocation_getPosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getPosition",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getPosition" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = ((BWTA::BaseLocation const *)arg1)->getPosition();
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getTilePosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::TilePosition result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getTilePosition",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getTilePosition" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = ((BWTA::BaseLocation const *)arg1)->getTilePosition();
+  resultobj = SWIG_NewPointerObj((new BWAPI::TilePosition(static_cast< const BWAPI::TilePosition& >(result))), SWIGTYPE_p_BWAPI__TilePosition, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getRegion(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWTA::Region *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getRegion",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getRegion" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (BWTA::Region *)((BWTA::BaseLocation const *)arg1)->getRegion();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_minerals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_minerals",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_minerals" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (int)((BWTA::BaseLocation const *)arg1)->minerals();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_gas(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_gas",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_gas" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (int)((BWTA::BaseLocation const *)arg1)->gas();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getGroundDistance(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  BWTA::BaseLocation *arg2 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  double result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:BaseLocation_getGroundDistance",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getGroundDistance" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "BaseLocation_getGroundDistance" "', argument " "2"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg2 = reinterpret_cast< BWTA::BaseLocation * >(argp2);
+  result = (double)((BWTA::BaseLocation const *)arg1)->getGroundDistance(arg2);
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getAirDistance(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  BWTA::BaseLocation *arg2 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  double result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:BaseLocation_getAirDistance",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getAirDistance" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "BaseLocation_getAirDistance" "', argument " "2"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg2 = reinterpret_cast< BWTA::BaseLocation * >(argp2);
+  result = (double)((BWTA::BaseLocation const *)arg1)->getAirDistance(arg2);
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_isIsland(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_isIsland",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_isIsland" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (bool)((BWTA::BaseLocation const *)arg1)->isIsland();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_isMineralOnly(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_isMineralOnly",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_isMineralOnly" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (bool)((BWTA::BaseLocation const *)arg1)->isMineralOnly();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_isStartLocation(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_isStartLocation",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_isStartLocation" "', argument " "1"" of type '" "BWTA::BaseLocation const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (bool)((BWTA::BaseLocation const *)arg1)->isStartLocation();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getMinerals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SetWrapper< BWAPI::Unit * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getMinerals",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getMinerals" "', argument " "1"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (SetWrapper< BWAPI::Unit * > *)BWTA_BaseLocation_getMinerals(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getStaticMinerals(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SetWrapper< BWAPI::Unit * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getStaticMinerals",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getStaticMinerals" "', argument " "1"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (SetWrapper< BWAPI::Unit * > *)BWTA_BaseLocation_getStaticMinerals(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_BaseLocation_getGeysers(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SetWrapper< BWAPI::Unit * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:BaseLocation_getGeysers",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "BaseLocation_getGeysers" "', argument " "1"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  result = (SetWrapper< BWAPI::Unit * > *)BWTA_BaseLocation_getGeysers(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_BaseLocation(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::BaseLocation *arg1 = (BWTA::BaseLocation *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_BaseLocation",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__BaseLocation, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_BaseLocation" "', argument " "1"" of type '" "BWTA::BaseLocation *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::BaseLocation * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *BaseLocation_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_BWTA__BaseLocation, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_Chokepoint_getRegions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::pair< BWTA::Region *,BWTA::Region * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getRegions",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getRegions" "', argument " "1"" of type '" "BWTA::Chokepoint const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  result = (std::pair< BWTA::Region *,BWTA::Region * > *) &((BWTA::Chokepoint const *)arg1)->getRegions();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Chokepoint_getSides(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::pair< BWAPI::Position,BWAPI::Position > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getSides",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getSides" "', argument " "1"" of type '" "BWTA::Chokepoint const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  result = (std::pair< BWAPI::Position,BWAPI::Position > *) &((BWTA::Chokepoint const *)arg1)->getSides();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Chokepoint_getCenter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getCenter",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getCenter" "', argument " "1"" of type '" "BWTA::Chokepoint const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  result = ((BWTA::Chokepoint const *)arg1)->getCenter();
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Chokepoint_getWidth(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getWidth",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getWidth" "', argument " "1"" of type '" "BWTA::Chokepoint const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  result = (double)((BWTA::Chokepoint const *)arg1)->getWidth();
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_Chokepoint(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_Chokepoint",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Chokepoint" "', argument " "1"" of type '" "BWTA::Chokepoint *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *Chokepoint_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_BWTA__Chokepoint, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_new_TA_Polygon__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_TA_Polygon")) SWIG_fail;
+  result = (BWTA::Polygon *)new BWTA::Polygon();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__Polygon, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TA_Polygon__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWTA::Polygon *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:new_TA_Polygon",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1, SWIGTYPE_p_BWTA__Polygon,  0  | 0);
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TA_Polygon" "', argument " "1"" of type '" "BWTA::Polygon const &""'"); 
+  }
+  if (!argp1) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TA_Polygon" "', argument " "1"" of type '" "BWTA::Polygon const &""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  result = (BWTA::Polygon *)new BWTA::Polygon((BWTA::Polygon const &)*arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__Polygon, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_TA_Polygon(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[2];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 1); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 0) {
+    return _wrap_new_TA_Polygon__SWIG_0(self, args);
+  }
+  if (argc == 1) {
+    int _v;
+    int res = SWIG_ConvertPtr(argv[0], 0, SWIGTYPE_p_BWTA__Polygon, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_new_TA_Polygon__SWIG_1(self, args);
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_TA_Polygon'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    BWTA::Polygon()\n"
+    "    BWTA::Polygon(BWTA::Polygon const &)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_Polygon_getArea(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TA_Polygon_getArea",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TA_Polygon_getArea" "', argument " "1"" of type '" "BWTA::Polygon const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  result = (double)((BWTA::Polygon const *)arg1)->getArea();
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_Polygon_getPerimeter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  double result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TA_Polygon_getPerimeter",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TA_Polygon_getPerimeter" "', argument " "1"" of type '" "BWTA::Polygon const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  result = (double)((BWTA::Polygon const *)arg1)->getPerimeter();
+  resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_Polygon_getCenter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TA_Polygon_getCenter",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TA_Polygon_getCenter" "', argument " "1"" of type '" "BWTA::Polygon const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  result = ((BWTA::Polygon const *)arg1)->getCenter();
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_Polygon_isInside(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  BWAPI::Position arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TA_Polygon_isInside",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TA_Polygon_isInside" "', argument " "1"" of type '" "BWTA::Polygon const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TA_Polygon_isInside" "', argument " "2"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TA_Polygon_isInside" "', argument " "2"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)((BWTA::Polygon const *)arg1)->isInside(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_Polygon_getNearestPoint(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  BWAPI::Position arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TA_Polygon_getNearestPoint",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TA_Polygon_getNearestPoint" "', argument " "1"" of type '" "BWTA::Polygon const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TA_Polygon_getNearestPoint" "', argument " "2"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TA_Polygon_getNearestPoint" "', argument " "2"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = ((BWTA::Polygon const *)arg1)->getNearestPoint(arg2);
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_Polygon_getHoles(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TA_Polygon_getHoles",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TA_Polygon_getHoles" "', argument " "1"" of type '" "BWTA::Polygon const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  result = (std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *) &((BWTA::Polygon const *)arg1)->getHoles();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_Polygon_holes_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *arg2 = (std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:TA_Polygon_holes_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TA_Polygon_holes_set" "', argument " "1"" of type '" "BWTA::Polygon *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TA_Polygon_holes_set" "', argument " "2"" of type '" "std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *""'"); 
+  }
+  arg2 = reinterpret_cast< std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > * >(argp2);
+  if (arg1) (arg1)->holes = *arg2;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_TA_Polygon_holes_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:TA_Polygon_holes_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TA_Polygon_holes_get" "', argument " "1"" of type '" "BWTA::Polygon *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  result = (std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *)& ((arg1)->holes);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_TA_Polygon(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Polygon *arg1 = (BWTA::Polygon *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_TA_Polygon",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Polygon, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TA_Polygon" "', argument " "1"" of type '" "BWTA::Polygon *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Polygon * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *TA_Polygon_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_BWTA__Polygon, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_Region_getPolygon(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWTA::Polygon *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Region_getPolygon",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getPolygon" "', argument " "1"" of type '" "BWTA::Region const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Region * >(argp1);
+  result = (BWTA::Polygon *) &((BWTA::Region const *)arg1)->getPolygon();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__Polygon, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Region_getCenter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Position *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Region_getCenter",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getCenter" "', argument " "1"" of type '" "BWTA::Region const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Region * >(argp1);
+  result = (BWAPI::Position *) &((BWTA::Region const *)arg1)->getCenter();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Position, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Region_isReachable(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  BWTA::Region *arg2 = (BWTA::Region *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Region_isReachable",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_isReachable" "', argument " "1"" of type '" "BWTA::Region const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Region * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Region_isReachable" "', argument " "2"" of type '" "BWTA::Region *""'"); 
+  }
+  arg2 = reinterpret_cast< BWTA::Region * >(argp2);
+  result = (bool)((BWTA::Region const *)arg1)->isReachable(arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Region_getReachableRegions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::set< BWTA::Region * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Region_getReachableRegions",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getReachableRegions" "', argument " "1"" of type '" "BWTA::Region const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Region * >(argp1);
+  result = (std::set< BWTA::Region * > *) &((BWTA::Region const *)arg1)->getReachableRegions();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__setT_BWTA__Region_p_t, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Region_getChokepoints(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SetWrapper< BWTA::Chokepoint * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Region_getChokepoints",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getChokepoints" "', argument " "1"" of type '" "BWTA::Region *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Region * >(argp1);
+  result = (SetWrapper< BWTA::Chokepoint * > *)BWTA_Region_getChokepoints(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Region_getBaseLocations(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SetWrapper< BWTA::BaseLocation * > *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Region_getBaseLocations",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Region_getBaseLocations" "', argument " "1"" of type '" "BWTA::Region *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Region * >(argp1);
+  result = (SetWrapper< BWTA::BaseLocation * > *)BWTA_Region_getBaseLocations(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_Region(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Region *arg1 = (BWTA::Region *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_Region",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Region, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Region" "', argument " "1"" of type '" "BWTA::Region *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Region * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *Region_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_BWTA__Region, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"delete_SwigPyIterator", _wrap_delete_SwigPyIterator, METH_VARARGS, NULL},
@@ -48604,7 +49566,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UnitTypeList___iter__", _wrap_UnitTypeList___iter__, METH_VARARGS, NULL},
 	 { (char *)"UnitTypeList_next", _wrap_UnitTypeList_next, METH_VARARGS, NULL},
 	 { (char *)"UnitTypeList_swigregister", UnitTypeList_swigregister, METH_VARARGS, NULL},
-	 { (char *)"BWAPI_init", _wrap_BWAPI_init, METH_VARARGS, NULL},
 	 { (char *)"PositionVector_iterator", _wrap_PositionVector_iterator, METH_VARARGS, NULL},
 	 { (char *)"PositionVector___nonzero__", _wrap_PositionVector___nonzero__, METH_VARARGS, NULL},
 	 { (char *)"PositionVector___bool__", _wrap_PositionVector___bool__, METH_VARARGS, NULL},
@@ -48639,14 +49600,15 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"PositionVector_capacity", _wrap_PositionVector_capacity, METH_VARARGS, NULL},
 	 { (char *)"delete_PositionVector", _wrap_delete_PositionVector, METH_VARARGS, NULL},
 	 { (char *)"PositionVector_swigregister", PositionVector_swigregister, METH_VARARGS, NULL},
+	 { (char *)"BWAPI_init", _wrap_BWAPI_init, METH_VARARGS, NULL},
 	 { (char *)"TA_getStartLocation", _wrap_TA_getStartLocation, METH_VARARGS, NULL},
 	 { (char *)"TA_getNearestBaseLocation", _wrap_TA_getNearestBaseLocation, METH_VARARGS, NULL},
+	 { (char *)"TA_getRegions", _wrap_TA_getRegions, METH_VARARGS, NULL},
+	 { (char *)"TA_getChokepoints", _wrap_TA_getChokepoints, METH_VARARGS, NULL},
+	 { (char *)"TA_getBaseLocations", _wrap_TA_getBaseLocations, METH_VARARGS, NULL},
+	 { (char *)"TA_getStartLocations", _wrap_TA_getStartLocations, METH_VARARGS, NULL},
 	 { (char *)"readMap", _wrap_readMap, METH_VARARGS, NULL},
 	 { (char *)"analyze", _wrap_analyze, METH_VARARGS, NULL},
-	 { (char *)"getRegions", _wrap_getRegions, METH_VARARGS, NULL},
-	 { (char *)"getChokepoints", _wrap_getChokepoints, METH_VARARGS, NULL},
-	 { (char *)"getBaseLocations", _wrap_getBaseLocations, METH_VARARGS, NULL},
-	 { (char *)"getStartLocations", _wrap_getStartLocations, METH_VARARGS, NULL},
 	 { (char *)"getRegion", _wrap_getRegion, METH_VARARGS, NULL},
 	 { (char *)"getNearestChokepoint", _wrap_getNearestChokepoint, METH_VARARGS, NULL},
 	 { (char *)"getNearestUnwalkablePosition", _wrap_getNearestUnwalkablePosition, METH_VARARGS, NULL},
@@ -48657,11 +49619,11 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"getGroundDistanceMap", _wrap_getGroundDistanceMap, METH_VARARGS, NULL},
 	 { (char *)"getGroundWalkDistanceMap", _wrap_getGroundWalkDistanceMap, METH_VARARGS, NULL},
 	 { (char *)"getShortestPath", _wrap_getShortestPath, METH_VARARGS, NULL},
-	 { (char *)"TA_getRegions", _wrap_TA_getRegions, METH_VARARGS, NULL},
-	 { (char *)"TA_getChokepoints", _wrap_TA_getChokepoints, METH_VARARGS, NULL},
-	 { (char *)"TA_getBaseLocations", _wrap_TA_getBaseLocations, METH_VARARGS, NULL},
-	 { (char *)"TA_getStartLocations", _wrap_TA_getStartLocations, METH_VARARGS, NULL},
 	 { (char *)"getGame", _wrap_getGame, METH_VARARGS, NULL},
+	 { (char *)"analyzeMap", _wrap_analyzeMap, METH_VARARGS, NULL},
+	 { (char *)"analyzeMapThreaded", _wrap_analyzeMapThreaded, METH_VARARGS, NULL},
+	 { (char *)"isAnalyzed", _wrap_isAnalyzed, METH_VARARGS, NULL},
+	 { (char *)"sendText", _wrap_sendText, METH_VARARGS, NULL},
 	 { (char *)"new_AIModule", _wrap_new_AIModule, METH_VARARGS, NULL},
 	 { (char *)"delete_AIModule", _wrap_delete_AIModule, METH_VARARGS, NULL},
 	 { (char *)"AIModule_onStart", _wrap_AIModule_onStart, METH_VARARGS, NULL},
@@ -49404,12 +50366,55 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"allWeaponTypes", _wrap_allWeaponTypes, METH_VARARGS, NULL},
 	 { (char *)"normalWeaponTypes", _wrap_normalWeaponTypes, METH_VARARGS, NULL},
 	 { (char *)"specialWeaponTypes", _wrap_specialWeaponTypes, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getPosition", _wrap_BaseLocation_getPosition, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getTilePosition", _wrap_BaseLocation_getTilePosition, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getRegion", _wrap_BaseLocation_getRegion, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_minerals", _wrap_BaseLocation_minerals, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_gas", _wrap_BaseLocation_gas, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getGroundDistance", _wrap_BaseLocation_getGroundDistance, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getAirDistance", _wrap_BaseLocation_getAirDistance, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_isIsland", _wrap_BaseLocation_isIsland, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_isMineralOnly", _wrap_BaseLocation_isMineralOnly, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_isStartLocation", _wrap_BaseLocation_isStartLocation, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getMinerals", _wrap_BaseLocation_getMinerals, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getStaticMinerals", _wrap_BaseLocation_getStaticMinerals, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_getGeysers", _wrap_BaseLocation_getGeysers, METH_VARARGS, NULL},
+	 { (char *)"delete_BaseLocation", _wrap_delete_BaseLocation, METH_VARARGS, NULL},
+	 { (char *)"BaseLocation_swigregister", BaseLocation_swigregister, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_getRegions", _wrap_Chokepoint_getRegions, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_getSides", _wrap_Chokepoint_getSides, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_getCenter", _wrap_Chokepoint_getCenter, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_getWidth", _wrap_Chokepoint_getWidth, METH_VARARGS, NULL},
+	 { (char *)"delete_Chokepoint", _wrap_delete_Chokepoint, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_swigregister", Chokepoint_swigregister, METH_VARARGS, NULL},
+	 { (char *)"new_TA_Polygon", _wrap_new_TA_Polygon, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_getArea", _wrap_TA_Polygon_getArea, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_getPerimeter", _wrap_TA_Polygon_getPerimeter, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_getCenter", _wrap_TA_Polygon_getCenter, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_isInside", _wrap_TA_Polygon_isInside, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_getNearestPoint", _wrap_TA_Polygon_getNearestPoint, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_getHoles", _wrap_TA_Polygon_getHoles, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_holes_set", _wrap_TA_Polygon_holes_set, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_holes_get", _wrap_TA_Polygon_holes_get, METH_VARARGS, NULL},
+	 { (char *)"delete_TA_Polygon", _wrap_delete_TA_Polygon, METH_VARARGS, NULL},
+	 { (char *)"TA_Polygon_swigregister", TA_Polygon_swigregister, METH_VARARGS, NULL},
+	 { (char *)"Region_getPolygon", _wrap_Region_getPolygon, METH_VARARGS, NULL},
+	 { (char *)"Region_getCenter", _wrap_Region_getCenter, METH_VARARGS, NULL},
+	 { (char *)"Region_isReachable", _wrap_Region_isReachable, METH_VARARGS, NULL},
+	 { (char *)"Region_getReachableRegions", _wrap_Region_getReachableRegions, METH_VARARGS, NULL},
+	 { (char *)"Region_getChokepoints", _wrap_Region_getChokepoints, METH_VARARGS, NULL},
+	 { (char *)"Region_getBaseLocations", _wrap_Region_getBaseLocations, METH_VARARGS, NULL},
+	 { (char *)"delete_Region", _wrap_delete_Region, METH_VARARGS, NULL},
+	 { (char *)"Region_swigregister", Region_swigregister, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static void *_p_BWTA__PolygonTo_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *)  ((BWTA::Polygon *) x));
+}
 static swig_type_info _swigt__p_BWAPI__AIModule = {"_p_BWAPI__AIModule", "BWAPI::AIModule *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWAPI__Bitmap = {"_p_BWAPI__Bitmap", "BWAPI::Bitmap *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWAPI__BitmapProxy = {"_p_BWAPI__BitmapProxy", "BWAPI::BitmapProxy *", 0, 0, (void*)0, 0};
@@ -49439,6 +50444,7 @@ static swig_type_info _swigt__p_BWAPI__UpgradeType = {"_p_BWAPI__UpgradeType", "
 static swig_type_info _swigt__p_BWAPI__WeaponType = {"_p_BWAPI__WeaponType", "BWAPI::WeaponType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWTA__BaseLocation = {"_p_BWTA__BaseLocation", "BWTA::BaseLocation *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWTA__Chokepoint = {"_p_BWTA__Chokepoint", "BWTA::Chokepoint *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_BWTA__Polygon = {"_p_BWTA__Polygon", "BWTA::Polygon *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWTA__Region = {"_p_BWTA__Region", "BWTA::Region *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BulletType = {"_p_BulletType", "BulletType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Chokepoint = {"_p_Chokepoint", "Chokepoint *", 0, 0, (void*)0, 0};
@@ -49491,7 +50497,9 @@ static swig_type_info _swigt__p_std__listT_BWTA__BaseLocation_p_t = {"_p_std__li
 static swig_type_info _swigt__p_std__listT_BWTA__Chokepoint_p_t = {"_p_std__listT_BWTA__Chokepoint_p_t", "std::list< BWTA::Chokepoint * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__listT_BWTA__Region_p_t = {"_p_std__listT_BWTA__Region_p_t", "std::list< BWTA::Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_BWAPI__TilePosition_double_t = {"_p_std__mapT_BWAPI__TilePosition_double_t", "std::map< BWAPI::TilePosition,double > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t = {"_p_std__pairT_BWAPI__Position_BWAPI__Position_t", "std::pair< BWAPI::Position,BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_BWAPI__TilePosition_double_t = {"_p_std__pairT_BWAPI__TilePosition_double_t", "std::pair< BWAPI::TilePosition,double > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t = {"_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t", "std::pair< BWTA::Region *,BWTA::Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWAPI__BulletType_t = {"_p_std__setT_BWAPI__BulletType_t", "std::set< BWAPI::BulletType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWAPI__Bullet_p_t = {"_p_std__setT_BWAPI__Bullet_p_t", "std::set< BWAPI::Bullet * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWAPI__DamageType_t = {"_p_std__setT_BWAPI__DamageType_t", "std::set< BWAPI::DamageType > *", 0, 0, (void*)0, 0};
@@ -49515,14 +50523,12 @@ static swig_type_info _swigt__p_std__setT_BWAPI__WeaponType_t = {"_p_std__setT_B
 static swig_type_info _swigt__p_std__setT_BWTA__BaseLocation_p_t = {"_p_std__setT_BWTA__BaseLocation_p_t", "std::set< BWTA::BaseLocation * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWTA__Chokepoint_p_t = {"_p_std__setT_BWTA__Chokepoint_p_t", "std::set< BWTA::Chokepoint * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWTA__Region_p_t = {"_p_std__setT_BWTA__Region_p_t", "std::set< BWTA::Region * > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__setT_BaseLocation_p_t = {"_p_std__setT_BaseLocation_p_t", "std::set< BaseLocation * > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__setT_Chokepoint_p_t = {"_p_std__setT_Chokepoint_p_t", "std::set< Chokepoint * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_Position_t = {"_p_std__setT_Position_t", "std::set< Position > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__setT_Region_p_t = {"_p_std__setT_Region_p_t", "std::set< Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t", "std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *|std::vector< BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type", "std::vector< BWAPI::Position >::allocator_type *|std::allocator< BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type = {"_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type", "std::vector< BWAPI::Position >::value_type *|BWAPI::Position *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t = {"_p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t", "std::vector< BWAPI::TilePosition,std::allocator< BWAPI::TilePosition > > *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t = {"_p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t", "std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0, 0, (void*)0, 0};
@@ -49558,6 +50564,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_BWAPI__WeaponType,
   &_swigt__p_BWTA__BaseLocation,
   &_swigt__p_BWTA__Chokepoint,
+  &_swigt__p_BWTA__Polygon,
   &_swigt__p_BWTA__Region,
   &_swigt__p_BulletType,
   &_swigt__p_Chokepoint,
@@ -49610,7 +50617,9 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__listT_BWTA__Chokepoint_p_t,
   &_swigt__p_std__listT_BWTA__Region_p_t,
   &_swigt__p_std__mapT_BWAPI__TilePosition_double_t,
+  &_swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t,
   &_swigt__p_std__pairT_BWAPI__TilePosition_double_t,
+  &_swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t,
   &_swigt__p_std__setT_BWAPI__BulletType_t,
   &_swigt__p_std__setT_BWAPI__Bullet_p_t,
   &_swigt__p_std__setT_BWAPI__DamageType_t,
@@ -49634,14 +50643,12 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__setT_BWTA__BaseLocation_p_t,
   &_swigt__p_std__setT_BWTA__Chokepoint_p_t,
   &_swigt__p_std__setT_BWTA__Region_p_t,
-  &_swigt__p_std__setT_BaseLocation_p_t,
-  &_swigt__p_std__setT_Chokepoint_p_t,
   &_swigt__p_std__setT_Position_t,
-  &_swigt__p_std__setT_Region_p_t,
   &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,
   &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type,
   &_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,
   &_swigt__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t,
+  &_swigt__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t,
   &_swigt__p_swig__SwigPyIterator,
   &_swigt__p_unsigned_char,
   &_swigt__p_value_type,
@@ -49677,6 +50684,7 @@ static swig_cast_info _swigc__p_BWAPI__UpgradeType[] = {  {&_swigt__p_BWAPI__Upg
 static swig_cast_info _swigc__p_BWAPI__WeaponType[] = {  {&_swigt__p_BWAPI__WeaponType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWTA__BaseLocation[] = {  {&_swigt__p_BWTA__BaseLocation, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWTA__Chokepoint[] = {  {&_swigt__p_BWTA__Chokepoint, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_BWTA__Polygon[] = {  {&_swigt__p_BWTA__Polygon, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWTA__Region[] = {  {&_swigt__p_BWTA__Region, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BulletType[] = {  {&_swigt__p_BulletType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Chokepoint[] = {  {&_swigt__p_Chokepoint, 0, 0, 0},{0, 0, 0, 0}};
@@ -49729,7 +50737,9 @@ static swig_cast_info _swigc__p_std__listT_BWTA__BaseLocation_p_t[] = {  {&_swig
 static swig_cast_info _swigc__p_std__listT_BWTA__Chokepoint_p_t[] = {  {&_swigt__p_std__listT_BWTA__Chokepoint_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__listT_BWTA__Region_p_t[] = {  {&_swigt__p_std__listT_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_BWAPI__TilePosition_double_t[] = {  {&_swigt__p_std__mapT_BWAPI__TilePosition_double_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__pairT_BWAPI__Position_BWAPI__Position_t[] = {  {&_swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_BWAPI__TilePosition_double_t[] = {  {&_swigt__p_std__pairT_BWAPI__TilePosition_double_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t[] = {  {&_swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWAPI__BulletType_t[] = {  {&_swigt__p_std__setT_BWAPI__BulletType_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWAPI__Bullet_p_t[] = {  {&_swigt__p_std__setT_BWAPI__Bullet_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWAPI__DamageType_t[] = {  {&_swigt__p_std__setT_BWAPI__DamageType_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -49753,14 +50763,12 @@ static swig_cast_info _swigc__p_std__setT_BWAPI__WeaponType_t[] = {  {&_swigt__p
 static swig_cast_info _swigc__p_std__setT_BWTA__BaseLocation_p_t[] = {  {&_swigt__p_std__setT_BWTA__BaseLocation_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWTA__Chokepoint_p_t[] = {  {&_swigt__p_std__setT_BWTA__Chokepoint_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWTA__Region_p_t[] = {  {&_swigt__p_std__setT_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__setT_BaseLocation_p_t[] = {  {&_swigt__p_std__setT_BaseLocation_p_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__setT_Chokepoint_p_t[] = {  {&_swigt__p_std__setT_Chokepoint_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_Position_t[] = {  {&_swigt__p_std__setT_Position_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__setT_Region_p_t[] = {  {&_swigt__p_std__setT_Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t[] = {  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t[] = {  {&_swigt__p_BWTA__Polygon, _p_BWTA__PolygonTo_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0, 0},  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type[] = {  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type[] = {  {&_swigt__p_BWAPI__Position, 0, 0, 0},  {&_swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t[] = {  {&_swigt__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t[] = {  {&_swigt__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__SwigPyIterator[] = {  {&_swigt__p_swig__SwigPyIterator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 0},{0, 0, 0, 0}};
@@ -49796,6 +50804,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_BWAPI__WeaponType,
   _swigc__p_BWTA__BaseLocation,
   _swigc__p_BWTA__Chokepoint,
+  _swigc__p_BWTA__Polygon,
   _swigc__p_BWTA__Region,
   _swigc__p_BulletType,
   _swigc__p_Chokepoint,
@@ -49848,7 +50857,9 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__listT_BWTA__Chokepoint_p_t,
   _swigc__p_std__listT_BWTA__Region_p_t,
   _swigc__p_std__mapT_BWAPI__TilePosition_double_t,
+  _swigc__p_std__pairT_BWAPI__Position_BWAPI__Position_t,
   _swigc__p_std__pairT_BWAPI__TilePosition_double_t,
+  _swigc__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t,
   _swigc__p_std__setT_BWAPI__BulletType_t,
   _swigc__p_std__setT_BWAPI__Bullet_p_t,
   _swigc__p_std__setT_BWAPI__DamageType_t,
@@ -49872,14 +50883,12 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__setT_BWTA__BaseLocation_p_t,
   _swigc__p_std__setT_BWTA__Chokepoint_p_t,
   _swigc__p_std__setT_BWTA__Region_p_t,
-  _swigc__p_std__setT_BaseLocation_p_t,
-  _swigc__p_std__setT_Chokepoint_p_t,
   _swigc__p_std__setT_Position_t,
-  _swigc__p_std__setT_Region_p_t,
   _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t,
   _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type,
   _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type,
   _swigc__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t,
+  _swigc__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t,
   _swigc__p_swig__SwigPyIterator,
   _swigc__p_unsigned_char,
   _swigc__p_value_type,

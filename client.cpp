@@ -27,8 +27,6 @@ bool show_visibility_data;
 
 bool analyzed;
 bool analysis_just_finished;
-BWTA::Region* home;
-BWTA::Region* enemy_base;
 DWORD WINAPI AnalyzeThread();
 
 void reconnect()
@@ -73,7 +71,6 @@ void uninit()
 		printf("Python not initialized on uninit!");
 	}
 }
-
 
 int main(int argc, const char* argv[])
 {
@@ -141,7 +138,7 @@ int main(int argc, const char* argv[])
             }
 			else
 			{
-				Broodwar->sendText("%s", e->text);
+				Broodwar->sendText("%s", e->text.c_str());
 			}
             break;
         }
@@ -185,16 +182,6 @@ DWORD WINAPI AnalyzeThread()
 {
   BWTA::analyze();
 
-  //self start location only available if the map has base locations
-  if (BWTA::getStartLocation(BWAPI::Broodwar->self())!=NULL)
-  {
-    home       = BWTA::getStartLocation(BWAPI::Broodwar->self())->getRegion();
-  }
-  //enemy start location only available if Complete Map Information is enabled.
-  if (BWTA::getStartLocation(BWAPI::Broodwar->enemy())!=NULL)
-  {
-    enemy_base = BWTA::getStartLocation(BWAPI::Broodwar->enemy())->getRegion();
-  }
   analyzed   = true;
   analysis_just_finished = true;
   return 0;

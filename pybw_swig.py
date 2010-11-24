@@ -446,10 +446,6 @@ class UnitTypeList(_object):
 UnitTypeList_swigregister = _pybw_swig.UnitTypeList_swigregister
 UnitTypeList_swigregister(UnitTypeList)
 
-
-def BWAPI_init():
-  return _pybw_swig.BWAPI_init()
-BWAPI_init = _pybw_swig.BWAPI_init
 class PositionVector(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, PositionVector, name, value)
@@ -498,6 +494,10 @@ PositionVector_swigregister = _pybw_swig.PositionVector_swigregister
 PositionVector_swigregister(PositionVector)
 
 
+def BWAPI_init():
+  return _pybw_swig.BWAPI_init()
+BWAPI_init = _pybw_swig.BWAPI_init
+
 def TA_getStartLocation(*args):
   return _pybw_swig.TA_getStartLocation(*args)
 TA_getStartLocation = _pybw_swig.TA_getStartLocation
@@ -506,6 +506,22 @@ def TA_getNearestBaseLocation(*args):
   return _pybw_swig.TA_getNearestBaseLocation(*args)
 TA_getNearestBaseLocation = _pybw_swig.TA_getNearestBaseLocation
 
+def TA_getRegions():
+  return _pybw_swig.TA_getRegions()
+TA_getRegions = _pybw_swig.TA_getRegions
+
+def TA_getChokepoints():
+  return _pybw_swig.TA_getChokepoints()
+TA_getChokepoints = _pybw_swig.TA_getChokepoints
+
+def TA_getBaseLocations():
+  return _pybw_swig.TA_getBaseLocations()
+TA_getBaseLocations = _pybw_swig.TA_getBaseLocations
+
+def TA_getStartLocations():
+  return _pybw_swig.TA_getStartLocations()
+TA_getStartLocations = _pybw_swig.TA_getStartLocations
+
 def readMap():
   return _pybw_swig.readMap()
 readMap = _pybw_swig.readMap
@@ -513,22 +529,6 @@ readMap = _pybw_swig.readMap
 def analyze():
   return _pybw_swig.analyze()
 analyze = _pybw_swig.analyze
-
-def getRegions():
-  return _pybw_swig.getRegions()
-getRegions = _pybw_swig.getRegions
-
-def getChokepoints():
-  return _pybw_swig.getChokepoints()
-getChokepoints = _pybw_swig.getChokepoints
-
-def getBaseLocations():
-  return _pybw_swig.getBaseLocations()
-getBaseLocations = _pybw_swig.getBaseLocations
-
-def getStartLocations():
-  return _pybw_swig.getStartLocations()
-getStartLocations = _pybw_swig.getStartLocations
 
 def getNearestUnwalkablePosition(*args):
   return _pybw_swig.getNearestUnwalkablePosition(*args)
@@ -554,25 +554,25 @@ def getGroundWalkDistanceMap(*args):
   return _pybw_swig.getGroundWalkDistanceMap(*args)
 getGroundWalkDistanceMap = _pybw_swig.getGroundWalkDistanceMap
 
-def TA_getRegions():
-  return _pybw_swig.TA_getRegions()
-TA_getRegions = _pybw_swig.TA_getRegions
-
-def TA_getChokepoints():
-  return _pybw_swig.TA_getChokepoints()
-TA_getChokepoints = _pybw_swig.TA_getChokepoints
-
-def TA_getBaseLocations():
-  return _pybw_swig.TA_getBaseLocations()
-TA_getBaseLocations = _pybw_swig.TA_getBaseLocations
-
-def TA_getStartLocations():
-  return _pybw_swig.TA_getStartLocations()
-TA_getStartLocations = _pybw_swig.TA_getStartLocations
-
 def getGame():
   return _pybw_swig.getGame()
 getGame = _pybw_swig.getGame
+
+def analyzeMap():
+  return _pybw_swig.analyzeMap()
+analyzeMap = _pybw_swig.analyzeMap
+
+def analyzeMapThreaded():
+  return _pybw_swig.analyzeMapThreaded()
+analyzeMapThreaded = _pybw_swig.analyzeMapThreaded
+
+def isAnalyzed():
+  return _pybw_swig.isAnalyzed()
+isAnalyzed = _pybw_swig.isAnalyzed
+
+def sendText(*args):
+  return _pybw_swig.sendText(*args)
+sendText = _pybw_swig.sendText
 class AIModule(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, AIModule, name, value)
@@ -2878,7 +2878,30 @@ normalWeaponTypes = _pybw_swig.normalWeaponTypes
 def specialWeaponTypes():
   return _pybw_swig.specialWeaponTypes()
 specialWeaponTypes = _pybw_swig.specialWeaponTypes
-
+class BaseLocation(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, BaseLocation, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, BaseLocation, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    def getPosition(self): return _pybw_swig.BaseLocation_getPosition(self)
+    def getTilePosition(self): return _pybw_swig.BaseLocation_getTilePosition(self)
+    def getRegion(self): return _pybw_swig.BaseLocation_getRegion(self)
+    def minerals(self): return _pybw_swig.BaseLocation_minerals(self)
+    def gas(self): return _pybw_swig.BaseLocation_gas(self)
+    def getGroundDistance(self, *args): return _pybw_swig.BaseLocation_getGroundDistance(self, *args)
+    def getAirDistance(self, *args): return _pybw_swig.BaseLocation_getAirDistance(self, *args)
+    def isIsland(self): return _pybw_swig.BaseLocation_isIsland(self)
+    def isMineralOnly(self): return _pybw_swig.BaseLocation_isMineralOnly(self)
+    def isStartLocation(self): return _pybw_swig.BaseLocation_isStartLocation(self)
+    def getMinerals(self): return _pybw_swig.BaseLocation_getMinerals(self)
+    def getStaticMinerals(self): return _pybw_swig.BaseLocation_getStaticMinerals(self)
+    def getGeysers(self): return _pybw_swig.BaseLocation_getGeysers(self)
+    __swig_destroy__ = _pybw_swig.delete_BaseLocation
+    __del__ = lambda self : None;
+BaseLocation_swigregister = _pybw_swig.BaseLocation_swigregister
+BaseLocation_swigregister(BaseLocation)
 Gauss_Rifle = cvar.Gauss_Rifle
 Gauss_Rifle_Jim_Raynor = cvar.Gauss_Rifle_Jim_Raynor
 C_10_Canister_Rifle = cvar.C_10_Canister_Rifle
@@ -2976,4 +2999,66 @@ WeaponTypes_Optical_Flare = cvar.WeaponTypes_Optical_Flare
 WeaponTypes_Maelstrom = cvar.WeaponTypes_Maelstrom
 WeaponTypes_None = cvar.WeaponTypes_None
 WeaponTypes_Unknown = cvar.WeaponTypes_Unknown
+
+class Chokepoint(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Chokepoint, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Chokepoint, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    def getRegions(self): return _pybw_swig.Chokepoint_getRegions(self)
+    def getSides(self): return _pybw_swig.Chokepoint_getSides(self)
+    def getCenter(self): return _pybw_swig.Chokepoint_getCenter(self)
+    def getWidth(self): return _pybw_swig.Chokepoint_getWidth(self)
+    __swig_destroy__ = _pybw_swig.delete_Chokepoint
+    __del__ = lambda self : None;
+Chokepoint_swigregister = _pybw_swig.Chokepoint_swigregister
+Chokepoint_swigregister(Chokepoint)
+
+class TA_Polygon(PositionVector):
+    __swig_setmethods__ = {}
+    for _s in [PositionVector]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TA_Polygon, name, value)
+    __swig_getmethods__ = {}
+    for _s in [PositionVector]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, TA_Polygon, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_TA_Polygon(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def getArea(self): return _pybw_swig.TA_Polygon_getArea(self)
+    def getPerimeter(self): return _pybw_swig.TA_Polygon_getPerimeter(self)
+    def getCenter(self): return _pybw_swig.TA_Polygon_getCenter(self)
+    def isInside(self, *args): return _pybw_swig.TA_Polygon_isInside(self, *args)
+    def getNearestPoint(self, *args): return _pybw_swig.TA_Polygon_getNearestPoint(self, *args)
+    def getHoles(self): return _pybw_swig.TA_Polygon_getHoles(self)
+    __swig_setmethods__["holes"] = _pybw_swig.TA_Polygon_holes_set
+    __swig_getmethods__["holes"] = _pybw_swig.TA_Polygon_holes_get
+    if _newclass:holes = _swig_property(_pybw_swig.TA_Polygon_holes_get, _pybw_swig.TA_Polygon_holes_set)
+    __swig_destroy__ = _pybw_swig.delete_TA_Polygon
+    __del__ = lambda self : None;
+TA_Polygon_swigregister = _pybw_swig.TA_Polygon_swigregister
+TA_Polygon_swigregister(TA_Polygon)
+
+class Region(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Region, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Region, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    def getPolygon(self): return _pybw_swig.Region_getPolygon(self)
+    def getCenter(self): return _pybw_swig.Region_getCenter(self)
+    def isReachable(self, *args): return _pybw_swig.Region_isReachable(self, *args)
+    def getReachableRegions(self): return _pybw_swig.Region_getReachableRegions(self)
+    def getChokepoints(self): return _pybw_swig.Region_getChokepoints(self)
+    def getBaseLocations(self): return _pybw_swig.Region_getBaseLocations(self)
+    __swig_destroy__ = _pybw_swig.delete_Region
+    __del__ = lambda self : None;
+Region_swigregister = _pybw_swig.Region_swigregister
+Region_swigregister(Region)
+
+
 

@@ -1,8 +1,12 @@
 import pybw_swig
 import random
 import time
+import traceback
 
 class VerboseEventHandler(object):
+    def _announce(self, text):
+        #pybw_swig.sendText(text)
+        print '>',text
     def onConnect(self):
         self.game = pybw_swig.getGame() 
         print "Connected to broodwar!"
@@ -10,14 +14,14 @@ class VerboseEventHandler(object):
         print "Disconnected from broodwar!"
     
     def onMatchStart(self):
-        self.game.sendText("The map is %s, a %d player map"%(self.game.mapName, len(list(self.game.startLocations))) )
+        self._announce("The map is %s, a %d player map"%(self.game.mapName, len(list(self.game.startLocations))) )
         if self.game.isReplay:
-            self.game.sendText("List of players in this replay:")
+            self._announce("List of players in this replay:")
             for p in self.game.players:
                 if not p.isNeutral and not len(list(p.units)) == 0:
-                    self.game.sendText("* %s, playing %s"%(p.name, p.race.name))
+                    self._announce("* %s, playing %s"%(p.name, p.race.name))
         else:
-            self.game.sendText("", "*Match started, %r vs %r"%(self.game.self, self.game.enemy))
+            self._announce("*Match started, %r vs %r"%(self.game.self, self.game.enemy))
     def onMatchEnd(self, is_winner):
         print "Match ended%s" % ( ['.', ', I won!'][is_winner] )
     def onSendText(self, text):
@@ -32,11 +36,11 @@ class VerboseEventHandler(object):
             if self.game.isReplay:
                 if (unit.type.isBuilding and unit.player.isNeutral == False):
                     seconds = self.game.frameCount / 24
-                    self.game.sendText("", "%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
+                    self._announce("%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
             else:
-                self.game.sendText("onUnitCreate: %r" % unit)
+                self._announce("onUnitCreate: %r" % unit)
     def onUnitDestroy(self, unit):
-        self.game.sendText("onUnitDestroy: %r" % unit)
+        self._announce("onUnitDestroy: %r" % unit)
     def onSaveGame(self, gameName):
         print "onSaveGame to", gameName
     def onUnitMorph(self, unit):
@@ -44,7 +48,7 @@ class VerboseEventHandler(object):
         if self.game.isReplay:
             if (unit.type.isBuilding and unit.player.isNeutral == False):
                 seconds = self.game.frameCount / 24
-                self.game.sendText("%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
+                self._announce("%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
 
 
 class PyBW_EventHandler(object):
@@ -58,7 +62,8 @@ class PyBW_EventHandler(object):
                 try:
                     getattr(listener, event)(*args)
                 except Exception, e:
-                    print "Error dispatching event %s to %s: %s"%( event, listener, e)
+                    print "Error dispatching event %s to %s:"%( event, listener )
+                    traceback.print_exc()
 
     def onConnect(self):
         self._dispatchEvent("onConnect")
