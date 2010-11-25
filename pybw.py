@@ -1,24 +1,4 @@
-import sys
-import types
 import inspect
-
-class FileFlusher:
-    def __init__(self, *args):
-        self.f = file(*args)
-    def write(self, *args):
-        self.f.write(*args)
-        self.f.flush()
-    def writelines(self, *args):
-        self.f.write(*args)
-        self.f.flush()
-
-#sys.stdout = FileFlusher("c:\\pybw_out.txt",'w')
-#sys.stderr = FileFlusher("c:\\pybw_err.txt",'w')
-
-
-print "Importing built-in module (provided by DLL, needed for debugging only)"
-import _pybw_swig
-
 
 print "Importing swig module (python file)"
 import pybw_swig
@@ -55,7 +35,7 @@ def get_all_classes(m):
         if inspect.isclass(obj) and not name.startswith('_'):
             yield obj
 
-print "Adding __repr__ method to classes"
+print "Adding __repr__ and __str__ method to classes"
 
 def Position_repr(self):
     return "Position(%s, %s)" % (self.x, self.y)
@@ -71,8 +51,11 @@ def Force_repr(self):
 pybw_swig.Force.__repr__ = Force_repr
 
 def Player_repr(self):
-    return "<Player: %s, race=%s>" % (self.name, self.race)
+    return "<Player: %s, race=%s>" % (self.name, self.race.name)
+def Player_str(self):
+    return "P:%s(%s)" % (self.name, self.race.name)
 pybw_swig.Player.__repr__ = Player_repr
+pybw_swig.Player.__str__ = Player_str
 
 def repr_by_class_and_name(self):
     return "<%s: %s>" % (self.__class__.__name__, self.name)
@@ -108,10 +91,15 @@ print "Fixing __eq__ and __hash__ methods in classes"
 
 
 def eq_by_id(self, other):
+    if self is None or other is None:
+        return self is other
     return self.id == other.id
 def ne_by_id(self, other):
+    if self is None or other is None:
+        return self is not other
     return self.id != other.id
 def hash_by_id(self):
+    assert self is not None
     return hash(self.id)
 
 
@@ -246,9 +234,15 @@ class consoleManager(object):
 consoleManager = consoleManager()
 event_handler.listeners.append( consoleManager )
 
-import exampleai
-event_handler.listeners.append( exampleai.ExampleAI() )
-
+try:
+    import exampleai
+    event_handler.listeners.append( exampleai.ExampleAI() )
+    #import erezai
+    #event_handler.listeners.append( erezai.ErezAI() )
+except ImportError, e:
+    print "Error importing AI:", e
+except Exception, e:
+    print "Error running AI:", e
 
 print "PyBW module Initialization complete"
 

@@ -1,12 +1,10 @@
 import pybw_swig
-import random
-import time
 import traceback
 
 class VerboseEventHandler(object):
     def _announce(self, text):
-        #pybw_swig.sendText(text)
-        print '>',text
+        pybw_swig.sendText(text[:80])
+        #print '>',text
     def onConnect(self):
         self.game = pybw_swig.getGame() 
         print "Connected to broodwar!"
@@ -21,7 +19,7 @@ class VerboseEventHandler(object):
                 if not p.isNeutral and not len(list(p.units)) == 0:
                     self._announce("* %s, playing %s"%(p.name, p.race.name))
         else:
-            self._announce("*Match started, %r vs %r"%(self.game.self, self.game.enemy))
+            self._announce("*Match started, %s vs %s"%(self.game.self, self.game.enemy))
     def onMatchEnd(self, is_winner):
         print "Match ended%s" % ( ['.', ', I won!'][is_winner] )
     def onSendText(self, text):

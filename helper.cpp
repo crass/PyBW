@@ -39,5 +39,21 @@ bool isAnalyzed()
 void sendText(const char* text)
 {
 	//BWAPI::Broodwar->sendText("%s", text);
-	printf("%s", text);
+	if (!BWAPI::Broodwar)
+	{
+		printf("Error: Trying to sendText when game not initialized yet!\n[%s]\n", text);
+		return;
+	}
+	if (strlen(text) >= 80)
+	{
+		printf("Error: Trying to print text longer than 80 characters (this will crash revisions 3208 or less)\n[%s]\n", text);
+		return;
+	}
+
+	BWAPI::Broodwar->sendText("%s", text);
+	//MessageBoxA(0, "*Match started, <Player: Erez, race=<Race: Protoss>> vs <Player: Auriga Tribe, race=<Race: Protoss>>", 0,0);
+  //BWAPI::Broodwar->sendText("%s", "*Match started, <Player: Erez, race=<Race: Protoss>> vs <Player: Auriga Tribe, race=<Race: Protoss>>");
+  //BWAPI::Broodwar->sendText("%s", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB");
+  //BWAPI::Broodwar->sendText("%s", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB");
+	                                 
 }

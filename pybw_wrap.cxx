@@ -28837,6 +28837,45 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Player_visibleUnitCount(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
+  BWAPI::UnitType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Player_visibleUnitCount",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Player_visibleUnitCount" "', argument " "1"" of type '" "BWAPI::Player const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Player * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitType,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Player_visibleUnitCount" "', argument " "2"" of type '" "BWAPI::UnitType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Player_visibleUnitCount" "', argument " "2"" of type '" "BWAPI::UnitType""'");
+    } else {
+      BWAPI::UnitType * temp = reinterpret_cast< BWAPI::UnitType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (int)((BWAPI::Player const *)arg1)->visibleUnitCount(arg2);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Player_completedUnitCount(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Player *arg1 = (BWAPI::Player *) 0 ;
@@ -30470,7 +30509,7 @@ SWIGINTERN PyObject *_wrap_Position_getApproxDistance(PyObject *SWIGUNUSEDPARM(s
   int res2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  double result;
+  int result;
   
   if (!PyArg_ParseTuple(args,(char *)"OO:Position_getApproxDistance",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Position, 0 |  0 );
@@ -30486,8 +30525,8 @@ SWIGINTERN PyObject *_wrap_Position_getApproxDistance(PyObject *SWIGUNUSEDPARM(s
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Position_getApproxDistance" "', argument " "2"" of type '" "BWAPI::Position const &""'"); 
   }
   arg2 = reinterpret_cast< BWAPI::Position * >(argp2);
-  result = (double)((BWAPI::Position const *)arg1)->getApproxDistance((BWAPI::Position const &)*arg2);
-  resultobj = SWIG_From_double(static_cast< double >(result));
+  result = (int)((BWAPI::Position const *)arg1)->getApproxDistance((BWAPI::Position const &)*arg2);
+  resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
   return NULL;
@@ -34893,6 +34932,37 @@ SWIGINTERN PyObject *_wrap_Unit_isInterruptible(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   result = (bool)((BWAPI::Unit const *)arg1)->isInterruptible();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_isInWeaponRange(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_isInWeaponRange",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_isInWeaponRange" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_isInWeaponRange" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::Unit * >(argp2);
+  result = (bool)((BWAPI::Unit const *)arg1)->isInWeaponRange(arg2);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -49903,6 +49973,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Player_supplyTotal", _wrap_Player_supplyTotal, METH_VARARGS, NULL},
 	 { (char *)"Player_supplyUsed", _wrap_Player_supplyUsed, METH_VARARGS, NULL},
 	 { (char *)"Player_allUnitCount", _wrap_Player_allUnitCount, METH_VARARGS, NULL},
+	 { (char *)"Player_visibleUnitCount", _wrap_Player_visibleUnitCount, METH_VARARGS, NULL},
 	 { (char *)"Player_completedUnitCount", _wrap_Player_completedUnitCount, METH_VARARGS, NULL},
 	 { (char *)"Player_incompleteUnitCount", _wrap_Player_incompleteUnitCount, METH_VARARGS, NULL},
 	 { (char *)"Player_deadUnitCount", _wrap_Player_deadUnitCount, METH_VARARGS, NULL},
@@ -50091,6 +50162,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_isHoldingPosition", _wrap_Unit_isHoldingPosition, METH_VARARGS, NULL},
 	 { (char *)"Unit_isIdle", _wrap_Unit_isIdle, METH_VARARGS, NULL},
 	 { (char *)"Unit_isInterruptible", _wrap_Unit_isInterruptible, METH_VARARGS, NULL},
+	 { (char *)"Unit_isInWeaponRange", _wrap_Unit_isInWeaponRange, METH_VARARGS, NULL},
 	 { (char *)"Unit_isIrradiated", _wrap_Unit_isIrradiated, METH_VARARGS, NULL},
 	 { (char *)"Unit_isLifted", _wrap_Unit_isLifted, METH_VARARGS, NULL},
 	 { (char *)"Unit_isLoaded", _wrap_Unit_isLoaded, METH_VARARGS, NULL},
