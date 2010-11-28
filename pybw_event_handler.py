@@ -47,6 +47,9 @@ class VerboseEventHandler(object):
             if (unit.type.isBuilding and unit.player.isNeutral == False):
                 seconds = self.game.frameCount / 24
                 self._announce("%.2d:%.2d: %s builds a %s"%(seconds/60, seconds%60, unit.player.name, unit.type.name))
+        else:
+            self._announce("onUnitMorph: %r" % unit)
+
 
 
 class PyBW_EventHandler(object):

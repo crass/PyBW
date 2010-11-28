@@ -174,6 +174,16 @@ def TilePosition_hash(self):
     return hash((self.x, self.y))
 pybw_swig.TilePosition.__hash__ = TilePosition_hash
 
+def BaseLocation_eq(self, other):
+    return self.tilePosition == other.tilePosition
+def BaseLocation_ne(self, other):
+    return self.tilePosition != other.tilePosition
+def BaseLocation_hash(self):
+    return hash(self.tilePosition)
+pybw_swig.BaseLocation.__eq__ = BaseLocation_eq
+pybw_swig.BaseLocation.__ne__ = BaseLocation_ne
+pybw_swig.BaseLocation.__hash__ = BaseLocation_hash
+
 # ToDo ?
 # * BaseLocation
 # * Chokepoint
@@ -237,8 +247,8 @@ event_handler.listeners.append( consoleManager )
 try:
     import exampleai
     event_handler.listeners.append( exampleai.ExampleAI() )
-    #import erezai
-    #event_handler.listeners.append( erezai.ErezAI() )
+    #import erezai.main
+    #event_handler.listeners.append( erezai.main.ErezAI() )
 except ImportError, e:
     print "Error importing AI:", e
 except Exception, e:

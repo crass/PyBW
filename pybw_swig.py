@@ -2043,7 +2043,6 @@ class Unit(_object):
     def train(self, *args): return _pybw_swig.Unit_train(self, *args)
     def morph(self, *args): return _pybw_swig.Unit_morph(self, *args)
     def research(self, *args): return _pybw_swig.Unit_research(self, *args)
-    def upgrade(self, *args): return _pybw_swig.Unit_upgrade(self, *args)
     def setRallyPoint(self, *args): return _pybw_swig.Unit_setRallyPoint(self, *args)
     def move(self, *args): return _pybw_swig.Unit_move(self, *args)
     def patrol(self, *args): return _pybw_swig.Unit_patrol(self, *args)
@@ -2077,6 +2076,7 @@ class Unit(_object):
     def getClientInfo(self): return _pybw_swig.Unit_getClientInfo(self)
     def getLoadedUnits(self): return _pybw_swig.Unit_getLoadedUnits(self)
     def getTrainingQueue(self): return _pybw_swig.Unit_getTrainingQueue(self)
+    def upgrade(self, *args): return _pybw_swig.Unit_upgrade(self, *args)
     __swig_destroy__ = _pybw_swig.delete_Unit
     __del__ = lambda self : None;
 Unit_swigregister = _pybw_swig.Unit_swigregister

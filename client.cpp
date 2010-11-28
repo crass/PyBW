@@ -23,6 +23,7 @@ void drawTerrainData();
 void showPlayers();
 void showForces();
 bool show_bullets;
+bool show_terrain_data;
 bool show_visibility_data;
 
 bool analyzed;
@@ -106,6 +107,7 @@ int main(int argc, const char* argv[])
 
     show_bullets=false;
     show_visibility_data=false;
+    show_terrain_data=true;
 
     while(Broodwar->isInGame())
     {
@@ -128,6 +130,9 @@ int main(int argc, const char* argv[])
             } else if (e->text=="/show visibility")
             {
               show_visibility_data=!show_visibility_data;
+            } else if (e->text=="/show terrain")
+            {
+              show_terrain_data=!show_terrain_data;
             } else if (e->text=="/analyze")
             {
               if (analyzed == false)
@@ -159,7 +164,7 @@ int main(int argc, const char* argv[])
           Broodwar->printf("Finished analyzing map.");
           analysis_just_finished=false;
         }
-        if (analyzed)
+        if (analyzed && show_terrain_data)
           drawTerrainData();
       }
 

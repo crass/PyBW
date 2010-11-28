@@ -4756,6 +4756,9 @@ SWIGINTERN SetWrapper< BWAPI::Unit * > *BWAPI_Unit_getLoadedUnits(BWAPI::Unit *s
 SWIGINTERN ListWrapper_PtrNext< BWAPI::UnitType > *BWAPI_Unit_getTrainingQueue(BWAPI::Unit *self){
         return new ListWrapper_PtrNext<BWAPI::UnitType>( self->getTrainingQueue() );
     }
+SWIGINTERN bool BWAPI_Unit_upgrade(BWAPI::Unit *self,BWAPI::UpgradeType upgrade){
+        return self->upgrade(upgrade);
+    }
 SWIGINTERN BWAPI::UnitType *BWAPI_UnitType_whatBuilds(BWAPI::UnitType *self){
         return new UnitType(self->whatBuilds().first);
     }
@@ -35910,45 +35913,6 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Unit_upgrade(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
-  UpgradeType arg2 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  void *argp2 ;
-  int res2 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  bool result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_upgrade",&obj0,&obj1)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_upgrade" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  {
-    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_UpgradeType,  0  | 0);
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_upgrade" "', argument " "2"" of type '" "UpgradeType""'"); 
-    }  
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Unit_upgrade" "', argument " "2"" of type '" "UpgradeType""'");
-    } else {
-      UpgradeType * temp = reinterpret_cast< UpgradeType * >(argp2);
-      arg2 = *temp;
-      if (SWIG_IsNewObj(res2)) delete temp;
-    }
-  }
-  result = (bool)(arg1)->upgrade(arg2);
-  resultobj = SWIG_From_bool(static_cast< bool >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_Unit_setRallyPoint__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -37307,6 +37271,45 @@ SWIGINTERN PyObject *_wrap_Unit_getTrainingQueue(PyObject *SWIGUNUSEDPARM(self),
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   result = (ListWrapper_PtrNext< BWAPI::UnitType > *)BWAPI_Unit_getTrainingQueue(arg1);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_upgrade(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  BWAPI::UpgradeType arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Unit_upgrade",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_upgrade" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UpgradeType,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Unit_upgrade" "', argument " "2"" of type '" "BWAPI::UpgradeType""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Unit_upgrade" "', argument " "2"" of type '" "BWAPI::UpgradeType""'");
+    } else {
+      BWAPI::UpgradeType * temp = reinterpret_cast< BWAPI::UpgradeType * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  result = (bool)BWAPI_Unit_upgrade(arg1,arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
   return NULL;
@@ -50195,7 +50198,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_train", _wrap_Unit_train, METH_VARARGS, NULL},
 	 { (char *)"Unit_morph", _wrap_Unit_morph, METH_VARARGS, NULL},
 	 { (char *)"Unit_research", _wrap_Unit_research, METH_VARARGS, NULL},
-	 { (char *)"Unit_upgrade", _wrap_Unit_upgrade, METH_VARARGS, NULL},
 	 { (char *)"Unit_setRallyPoint", _wrap_Unit_setRallyPoint, METH_VARARGS, NULL},
 	 { (char *)"Unit_move", _wrap_Unit_move, METH_VARARGS, NULL},
 	 { (char *)"Unit_patrol", _wrap_Unit_patrol, METH_VARARGS, NULL},
@@ -50229,6 +50231,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_getClientInfo", _wrap_Unit_getClientInfo, METH_VARARGS, NULL},
 	 { (char *)"Unit_getLoadedUnits", _wrap_Unit_getLoadedUnits, METH_VARARGS, NULL},
 	 { (char *)"Unit_getTrainingQueue", _wrap_Unit_getTrainingQueue, METH_VARARGS, NULL},
+	 { (char *)"Unit_upgrade", _wrap_Unit_upgrade, METH_VARARGS, NULL},
 	 { (char *)"delete_Unit", _wrap_delete_Unit, METH_VARARGS, NULL},
 	 { (char *)"Unit_swigregister", Unit_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_UnitCommand", _wrap_new_UnitCommand, METH_VARARGS, NULL},

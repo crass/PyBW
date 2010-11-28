@@ -46,6 +46,7 @@ using namespace BWAPI;
 %newobject BWAPI::Unit::getTrainingQueue;
 
 // Unit
+
 %extend BWAPI::Unit {
     SetWrapper<BWAPI::Unit*>* getLoadedUnits()
     {
@@ -56,9 +57,16 @@ using namespace BWAPI;
     {
         return new ListWrapper_PtrNext<BWAPI::UnitType>( self->getTrainingQueue() );
     }
+
+    bool upgrade(BWAPI::UpgradeType upgrade)
+    {
+        return self->upgrade(upgrade);
+    }
+
 }
 %ignore BWAPI::Unit::getLoadedUnits;
 %ignore BWAPI::Unit::getTrainingQueue;
+%ignore BWAPI::Unit::upgrade;
 
 // UnitType
 %newobject BWAPI::UnitType::whatBuilds;
