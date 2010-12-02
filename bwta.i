@@ -1,3 +1,14 @@
+/*
+TODO
+-bwta::getRegion
+-bwta::getNearestChokepoint
+bwta::getShortestPath
+
+Chokepoint
+	-> regions
+	-> sides
+*/
+
 %{
 #include "BWTA.h"
 
@@ -5,6 +16,7 @@ using namespace BWTA;
 
 %}
 
+%rename(TA_Polygon) BWTA::Polygon;
 
 %newobject BWTA::Region::getChokepoints;
 %newobject BWTA::Region::getBaseLocations;
@@ -51,30 +63,13 @@ using namespace BWTA;
 
 
 
-%rename(TA_getStartLocation) getStartLocation;
-%rename(TA_getNearestBaseLocation) getNearestBaseLocation;
-
-BWTA::BaseLocation* getStartLocation(BWAPI::Player* player);
-BWTA::BaseLocation* getNearestBaseLocation(BWAPI::TilePosition position);
-
-%ignore BWTA::getStartLocation;
-%ignore BWTA::getNearestBaseLocation;
-
-
-%rename(TA_Polygon) BWTA::Polygon;
-const std::set<BWTA::Polygon*>& BWTA::getUnwalkablePolygons();  // TODO: SetWrapper
-BWTA::Polygon* BWTA::getNearestUnwalkablePolygon(int x, int y);
-BWTA::Polygon* BWTA::getNearestUnwalkablePolygon(BWAPI::TilePosition tileposition);
-%ignore BWTA::getNearestUnwalkablePolygon;
-%ignore BWTA::getUnwalkablePolygons;
-
-
 
 
 %newobject TA_getRegions;
 %newobject TA_getChokepoints;
 %newobject TA_getBaseLocations;
 %newobject TA_getStartLocations;
+%newobject TA_getUnwalkablePolygons;
 %{
     SetWrapper<BWTA::Region*>* TA_getRegions()
     {
@@ -93,16 +88,80 @@ BWTA::Polygon* BWTA::getNearestUnwalkablePolygon(BWAPI::TilePosition tilepositio
         return new SetWrapper<BWTA::BaseLocation*>( BWTA::getStartLocations() );
     }
 
+    SetWrapper<BWTA::Polygon*>* TA_getUnwalkablePolygons()
+    {
+        return new SetWrapper<BWTA::Polygon*>( BWTA::getUnwalkablePolygons() );
+    }
+
+    BWTA::Region* TA_getRegion(int x, int y)
+    {
+        return BWTA::getRegion(x, y);
+    }
+    BWTA::Region* TA_getRegion(BWAPI::TilePosition tileposition)
+    {
+        return BWTA::getRegion(tileposition);
+    }
+
+    BWTA::Chokepoint* TA_getNearestChokepoint(int x, int y)
+    {
+        return BWTA::getNearestChokepoint(x, y);
+    }
+
+    BWTA::Chokepoint* TA_getNearestChokepoint(BWAPI::TilePosition tileposition)
+    {
+        return BWTA::getNearestChokepoint(tileposition);
+    }
+
+    BWTA::Chokepoint* TA_getNearestChokepoint(BWAPI::Position position)
+    {
+        return BWTA::getNearestChokepoint(position);
+    }
+        
+    BWTA::BaseLocation* TA_getStartLocation(BWAPI::Player* player)
+    {
+        return BWTA::getStartLocation(player);
+    }
+    BWTA::BaseLocation* TA_getNearestBaseLocation(BWAPI::TilePosition position)
+    {
+        return BWTA::getNearestBaseLocation(position);
+    }
+
+    BWTA::Polygon* TA_getNearestUnwalkablePolygon(int x, int y)
+    {
+        return BWTA::getNearestUnwalkablePolygon(x,y);
+    }
+    BWTA::Polygon* TA_getNearestUnwalkablePolygon(BWAPI::TilePosition tileposition)
+    {
+        return BWTA::getNearestUnwalkablePolygon(tileposition);
+    }
+
+
 %}
 SetWrapper<BWTA::Region*>* TA_getRegions();
 SetWrapper<BWTA::Chokepoint*>* TA_getChokepoints();
 SetWrapper<BWTA::BaseLocation*>* TA_getBaseLocations();
 SetWrapper<BWTA::BaseLocation*>* TA_getStartLocations();
+BWTA::Region* TA_getRegion(int x, int y);
+BWTA::Region* TA_getRegion(BWAPI::TilePosition tileposition);
+BWTA::Chokepoint* TA_getNearestChokepoint(int x, int y);
+BWTA::Chokepoint* TA_getNearestChokepoint(BWAPI::TilePosition tileposition);
+BWTA::Chokepoint* TA_getNearestChokepoint(BWAPI::Position position);
+BWTA::BaseLocation* TA_getStartLocation(BWAPI::Player* player);
+BWTA::BaseLocation* TA_getNearestBaseLocation(BWAPI::TilePosition position);
+BWTA::Polygon* TA_getNearestUnwalkablePolygon(int x, int y);
+BWTA::Polygon* TA_getNearestUnwalkablePolygon(BWAPI::TilePosition tileposition);
 
 %ignore BWTA::getRegions;
 %ignore BWTA::getChokepoints;
 %ignore BWTA::getBaseLocations;
 %ignore BWTA::getStartLocations;
+%ignore BWTA::getRegion;
+%ignore BWTA::getNearestChokepoint;
+%ignore BWTA::getStartLocation;
+%ignore BWTA::getNearestBaseLocation;
+%ignore BWTA::getNearestUnwalkablePolygon;
+%ignore BWTA::getUnwalkablePolygons;
+
 
 %include "BWTA.h"
 

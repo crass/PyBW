@@ -139,14 +139,15 @@ class ConsoleClient(object):
                     sys.stderr = FakeFile()
                     try:
                         self.exec_env.runsource(command)
-                        result = ''.join( sys.stdout.buffer ) + ''.join( sys.stderr.buffer )
                     except Exception, e:
                         result = "Exception: %s" % e
                     finally:
+                        result = ''.join( sys.stdout.buffer ) + ''.join( sys.stderr.buffer )
                         sys.stdout = old_stdout
                         sys.stderr = old_stderr
 
                     self.proxy.write_to_console( result )
 
             except socket.error:
+                print "Socket Error"
                 self.proxy = None

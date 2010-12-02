@@ -34,11 +34,18 @@ using namespace BWAPI;
     {
         return self->getStartLocation();
     }
+
+    bool isUpgrading(BWAPI::UpgradeType upgrade)
+    {
+        return self->isUpgrading(upgrade);
+    }
+    
 }
 %ignore BWAPI::Player::getUnits;
 //%ignore BWAPI::Player::playerType;
 %ignore BWAPI::Player::getStartLocation;
 %ignore BWAPI::Player::getRace;
+%ignore BWAPI::Player::isUpgrading;
 
 
 
@@ -177,6 +184,15 @@ using namespace BWAPI;
         return self->canBuildHere(builder, position, type);
     }
 
+    bool isExplored(BWAPI::TilePosition position)
+    {
+        return self->isExplored(position);
+    }
+    bool isExplored(int x, int y)
+    {
+        return self->isExplored(x, y);
+    }
+
 }
 %ignore BWAPI::Game::getAllUnits;
 %ignore BWAPI::Game::getMinerals;
@@ -191,6 +207,7 @@ using namespace BWAPI;
 %ignore BWAPI::Game::unitsOnTile;
 %ignore BWAPI::Game::getStartLocations;
 %ignore BWAPI::Game::canBuildHere;
+%ignore BWAPI::Game::isExplored;
 
 
 // Force

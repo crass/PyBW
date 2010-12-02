@@ -1,5 +1,6 @@
 import pybw_swig
 import traceback
+import hotshot
 
 class VerboseEventHandler(object):
     def _announce(self, text):
@@ -53,23 +54,32 @@ class VerboseEventHandler(object):
 
 
 class PyBW_EventHandler(object):
-    def __init__(self, broodwar):
+    def __init__(self, broodwar, profile=False):
         self.broodwar = broodwar
         self.listeners = []
+        self.profile = profile
 
     def _dispatchEvent(self, event, *args):
         for listener in self.listeners:
             if hasattr(listener, event):
                 try:
-                    getattr(listener, event)(*args)
+                    f = getattr(listener, event)#(*args)
+                    if self.profile and event=='onMatchFrame':
+                        self.prof.runcall(f, *args)
+                    else:
+                        f(*args)
                 except Exception, e:
                     print "Error dispatching event %s to %s:"%( event, listener )
                     traceback.print_exc()
 
     def onConnect(self):
+        if self.profile:
+            self.prof = hotshot.Profile("pybw.prof")
         self._dispatchEvent("onConnect")
     def onDisconnect(self):
         self._dispatchEvent("onDisconnect")
+        if self.profile:
+            self.prof.close()
 
     def onMatchStart(self):
         self._dispatchEvent("onMatchStart")
