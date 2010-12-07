@@ -14,6 +14,8 @@
 
 #include "event_dispatcher.h"
 
+#include "helper.h"
+
 using namespace BWAPI;
 
 void drawStats();
@@ -111,6 +113,7 @@ int main(int argc, const char* argv[])
 
     while(Broodwar->isInGame())
     {
+
       for(std::list<Event>::iterator e=Broodwar->getEvents().begin();e!=Broodwar->getEvents().end();e++)
       {
 	    event_dispatcher.dispatchEvent(&*e);
@@ -158,15 +161,15 @@ int main(int argc, const char* argv[])
       if (!Broodwar->isReplay())
       {
         drawStats();
-
-        if (analysis_just_finished)
-        {
-          Broodwar->printf("Finished analyzing map.");
-          analysis_just_finished=false;
-        }
-        if (analyzed && show_terrain_data)
-          drawTerrainData();
       }
+
+		if (analysis_just_finished)
+		{
+		  Broodwar->printf("Finished analyzing map.");
+		  analysis_just_finished=false;
+		}
+		if (analyzed && show_terrain_data)
+		  drawTerrainData();
 
       BWAPI::BWAPIClient.update();
       if (!BWAPI::BWAPIClient.isConnected())

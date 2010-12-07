@@ -581,6 +581,55 @@ isAnalyzed = _pybw_swig.isAnalyzed
 def sendText(*args):
   return _pybw_swig.sendText(*args)
 sendText = _pybw_swig.sendText
+class HeatMap(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, HeatMap, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, HeatMap, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _pybw_swig.new_HeatMap()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _pybw_swig.delete_HeatMap
+    __del__ = lambda self : None;
+    def init(self): return _pybw_swig.HeatMap_init(self)
+    def map_xy_into_z(self, *args): return _pybw_swig.HeatMap_map_xy_into_z(self, *args)
+    def map_z_into_xy(self, *args): return _pybw_swig.HeatMap_map_z_into_xy(self, *args)
+    def reset(self): return _pybw_swig.HeatMap_reset(self)
+    def addCircle(self, *args): return _pybw_swig.HeatMap_addCircle(self, *args)
+    def addArray(self, *args): return _pybw_swig.HeatMap_addArray(self, *args)
+    def addPixel(self, *args): return _pybw_swig.HeatMap_addPixel(self, *args)
+    def getPixel(self, *args): return _pybw_swig.HeatMap_getPixel(self, *args)
+    def draw(self): return _pybw_swig.HeatMap_draw(self)
+    def pathFind(self, *args): return _pybw_swig.HeatMap_pathFind(self, *args)
+HeatMap_swigregister = _pybw_swig.HeatMap_swigregister
+HeatMap_swigregister(HeatMap)
+
+def TA_getRegion(*args):
+  return _pybw_swig.TA_getRegion(*args)
+TA_getRegion = _pybw_swig.TA_getRegion
+
+def TA_getNearestChokepoint(*args):
+  return _pybw_swig.TA_getNearestChokepoint(*args)
+TA_getNearestChokepoint = _pybw_swig.TA_getNearestChokepoint
+
+def TA_getNearestUnwalkablePolygon(*args):
+  return _pybw_swig.TA_getNearestUnwalkablePolygon(*args)
+TA_getNearestUnwalkablePolygon = _pybw_swig.TA_getNearestUnwalkablePolygon
+
+def isConnected(*args):
+  return _pybw_swig.isConnected(*args)
+isConnected = _pybw_swig.isConnected
+
+def getShortestPath(*args):
+  return _pybw_swig.getShortestPath(*args)
+getShortestPath = _pybw_swig.getShortestPath
+
+
+def HeatMap_get():
+  return _pybw_swig.HeatMap_get()
+HeatMap_get = _pybw_swig.HeatMap_get
 class AIModule(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, AIModule, name, value)
@@ -611,26 +660,6 @@ class AIModule(_object):
     def onSaveGame(self, *args): return _pybw_swig.AIModule_onSaveGame(self, *args)
 AIModule_swigregister = _pybw_swig.AIModule_swigregister
 AIModule_swigregister(AIModule)
-
-def TA_getRegion(*args):
-  return _pybw_swig.TA_getRegion(*args)
-TA_getRegion = _pybw_swig.TA_getRegion
-
-def TA_getNearestChokepoint(*args):
-  return _pybw_swig.TA_getNearestChokepoint(*args)
-TA_getNearestChokepoint = _pybw_swig.TA_getNearestChokepoint
-
-def TA_getNearestUnwalkablePolygon(*args):
-  return _pybw_swig.TA_getNearestUnwalkablePolygon(*args)
-TA_getNearestUnwalkablePolygon = _pybw_swig.TA_getNearestUnwalkablePolygon
-
-def isConnected(*args):
-  return _pybw_swig.isConnected(*args)
-isConnected = _pybw_swig.isConnected
-
-def getShortestPath(*args):
-  return _pybw_swig.getShortestPath(*args)
-getShortestPath = _pybw_swig.getShortestPath
 
 class BitmapProxy(_object):
     __swig_setmethods__ = {}
@@ -3048,10 +3077,12 @@ class Chokepoint(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, Chokepoint, name)
     def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
-    def getRegions(self): return _pybw_swig.Chokepoint_getRegions(self)
-    def getSides(self): return _pybw_swig.Chokepoint_getSides(self)
     def getCenter(self): return _pybw_swig.Chokepoint_getCenter(self)
     def getWidth(self): return _pybw_swig.Chokepoint_getWidth(self)
+    def getRegionA(self): return _pybw_swig.Chokepoint_getRegionA(self)
+    def getRegionB(self): return _pybw_swig.Chokepoint_getRegionB(self)
+    def getSideA(self): return _pybw_swig.Chokepoint_getSideA(self)
+    def getSideB(self): return _pybw_swig.Chokepoint_getSideB(self)
     __swig_destroy__ = _pybw_swig.delete_Chokepoint
     __del__ = lambda self : None;
 Chokepoint_swigregister = _pybw_swig.Chokepoint_swigregister

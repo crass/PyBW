@@ -1,5 +1,7 @@
 //#include <Python.h>
 #include <BWAPI.h>
+#include "heatmap.h"
+
 
 BWAPI::Game* getGame();
 void analyzeMap();
@@ -11,4 +13,3 @@ void sendText(const char* text);
 /*PyObject* _getSwigUnit(BWAPI::Unit* unit);
 PyObject* _getSwigPlayer(BWAPI::Player* player);
 PyObject* _getSwigPosition(BWAPI::Position* position);*/
-

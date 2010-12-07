@@ -5,6 +5,9 @@
 #include <BWTA.h>
 #include <BWAPI.h>
 
+#include "micropather.h"
+#include "heatmap.h"
+
 
 BWAPI::Game* getGame()
 {
@@ -36,9 +39,10 @@ bool isAnalyzed()
 	return analyzed;
 }
 
+
+
 void sendText(const char* text)
 {
-	//BWAPI::Broodwar->sendText("%s", text);
 	if (!BWAPI::Broodwar)
 	{
 		printf("Error: Trying to sendText when game not initialized yet!\n[%s]\n", text);
@@ -51,9 +55,5 @@ void sendText(const char* text)
 	}
 
 	BWAPI::Broodwar->sendText("%s", text);
-	//MessageBoxA(0, "*Match started, <Player: Erez, race=<Race: Protoss>> vs <Player: Auriga Tribe, race=<Race: Protoss>>", 0,0);
-  //BWAPI::Broodwar->sendText("%s", "*Match started, <Player: Erez, race=<Race: Protoss>> vs <Player: Auriga Tribe, race=<Race: Protoss>>");
-  //BWAPI::Broodwar->sendText("%s", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB");
-  //BWAPI::Broodwar->sendText("%s", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB");
-	                                 
 }
+

@@ -32,10 +32,12 @@
 
 %{
 #include "helper.h"
+#include "heatmap.h"
 
 using namespace BWTA;
 %}
 %include "helper.h"
+%include "heatmap.h"
 
 
 %{

@@ -36,6 +36,28 @@ using namespace BWTA;
 %ignore BWTA::Region::getBaseLocations;
 
 
+%extend BWTA::Chokepoint
+{
+    BWTA::Region* getRegionA()
+    {
+        return self->getRegions().first;
+    }
+    BWTA::Region* getRegionB()
+    {
+        return self->getRegions().second;
+    }
+    BWAPI::Position getSideA()
+    {
+        return self->getSides().first;
+    }
+    BWAPI::Position getSideB()
+    {
+        return self->getSides().second;
+    }
+}
+%ignore BWTA::Chokepoint::getRegions;
+%ignore BWTA::Chokepoint::getSides;
+
 
 %newobject BWTA::BaseLocation::getMinerals;
 %newobject BWTA::BaseLocation::getStaticMinerals;

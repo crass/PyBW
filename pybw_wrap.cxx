@@ -2720,55 +2720,55 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_BulletType swig_types[31]
 #define SWIGTYPE_p_EventType__Enum swig_types[32]
 #define SWIGTYPE_p_GameType swig_types[33]
-#define SWIGTYPE_p_Key swig_types[34]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Force_p_t swig_types[35]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Player_p_t swig_types[36]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Unit_p_t swig_types[37]
-#define SWIGTYPE_p_ListWrapperT_BWTA__BaseLocation_p_t swig_types[38]
-#define SWIGTYPE_p_ListWrapperT_BWTA__Chokepoint_p_t swig_types[39]
-#define SWIGTYPE_p_ListWrapperT_BWTA__Region_p_t swig_types[40]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__Position_t swig_types[41]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[42]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t swig_types[43]
-#define SWIGTYPE_p_MouseButton swig_types[44]
-#define SWIGTYPE_p_PlayerType swig_types[45]
-#define SWIGTYPE_p_Position swig_types[46]
-#define SWIGTYPE_p_Race swig_types[47]
-#define SWIGTYPE_p_RectangleArrayT_double_t swig_types[48]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Force_p_t swig_types[49]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Player_p_t swig_types[50]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t swig_types[51]
-#define SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t swig_types[52]
-#define SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t swig_types[53]
-#define SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t swig_types[54]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__Position_t swig_types[55]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[56]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__UnitType_t swig_types[57]
-#define SWIGTYPE_p_TechType swig_types[58]
-#define SWIGTYPE_p_TilePosition swig_types[59]
-#define SWIGTYPE_p_UnitCommand swig_types[60]
-#define SWIGTYPE_p_UnitCommandType swig_types[61]
-#define SWIGTYPE_p_UpgradeType swig_types[62]
-#define SWIGTYPE_p_allocator_type swig_types[63]
-#define SWIGTYPE_p_char swig_types[64]
-#define SWIGTYPE_p_difference_type swig_types[65]
-#define SWIGTYPE_p_p_PyObject swig_types[66]
-#define SWIGTYPE_p_size_type swig_types[67]
-#define SWIGTYPE_p_std__invalid_argument swig_types[68]
-#define SWIGTYPE_p_std__listT_BWAPI__Event_t swig_types[69]
-#define SWIGTYPE_p_std__listT_BWAPI__Force_p_t swig_types[70]
-#define SWIGTYPE_p_std__listT_BWAPI__Player_p_t swig_types[71]
-#define SWIGTYPE_p_std__listT_BWAPI__Position_t swig_types[72]
-#define SWIGTYPE_p_std__listT_BWAPI__TilePosition_t swig_types[73]
-#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[74]
-#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[75]
-#define SWIGTYPE_p_std__listT_BWTA__BaseLocation_p_t swig_types[76]
-#define SWIGTYPE_p_std__listT_BWTA__Chokepoint_p_t swig_types[77]
-#define SWIGTYPE_p_std__listT_BWTA__Region_p_t swig_types[78]
-#define SWIGTYPE_p_std__mapT_BWAPI__TilePosition_double_t swig_types[79]
-#define SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t swig_types[80]
-#define SWIGTYPE_p_std__pairT_BWAPI__TilePosition_double_t swig_types[81]
-#define SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t swig_types[82]
+#define SWIGTYPE_p_HeatMap swig_types[34]
+#define SWIGTYPE_p_Key swig_types[35]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Force_p_t swig_types[36]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Player_p_t swig_types[37]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Unit_p_t swig_types[38]
+#define SWIGTYPE_p_ListWrapperT_BWTA__BaseLocation_p_t swig_types[39]
+#define SWIGTYPE_p_ListWrapperT_BWTA__Chokepoint_p_t swig_types[40]
+#define SWIGTYPE_p_ListWrapperT_BWTA__Region_p_t swig_types[41]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__Position_t swig_types[42]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[43]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t swig_types[44]
+#define SWIGTYPE_p_MouseButton swig_types[45]
+#define SWIGTYPE_p_PlayerType swig_types[46]
+#define SWIGTYPE_p_Position swig_types[47]
+#define SWIGTYPE_p_Race swig_types[48]
+#define SWIGTYPE_p_RectangleArrayT_double_t swig_types[49]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Force_p_t swig_types[50]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Player_p_t swig_types[51]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t swig_types[52]
+#define SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t swig_types[53]
+#define SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t swig_types[54]
+#define SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t swig_types[55]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__Position_t swig_types[56]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[57]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__UnitType_t swig_types[58]
+#define SWIGTYPE_p_TechType swig_types[59]
+#define SWIGTYPE_p_TilePosition swig_types[60]
+#define SWIGTYPE_p_UnitCommand swig_types[61]
+#define SWIGTYPE_p_UnitCommandType swig_types[62]
+#define SWIGTYPE_p_UpgradeType swig_types[63]
+#define SWIGTYPE_p_allocator_type swig_types[64]
+#define SWIGTYPE_p_char swig_types[65]
+#define SWIGTYPE_p_difference_type swig_types[66]
+#define SWIGTYPE_p_int swig_types[67]
+#define SWIGTYPE_p_p_PyObject swig_types[68]
+#define SWIGTYPE_p_size_type swig_types[69]
+#define SWIGTYPE_p_std__invalid_argument swig_types[70]
+#define SWIGTYPE_p_std__listT_BWAPI__Event_t swig_types[71]
+#define SWIGTYPE_p_std__listT_BWAPI__Force_p_t swig_types[72]
+#define SWIGTYPE_p_std__listT_BWAPI__Player_p_t swig_types[73]
+#define SWIGTYPE_p_std__listT_BWAPI__Position_t swig_types[74]
+#define SWIGTYPE_p_std__listT_BWAPI__TilePosition_t swig_types[75]
+#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[76]
+#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[77]
+#define SWIGTYPE_p_std__listT_BWTA__BaseLocation_p_t swig_types[78]
+#define SWIGTYPE_p_std__listT_BWTA__Chokepoint_p_t swig_types[79]
+#define SWIGTYPE_p_std__listT_BWTA__Region_p_t swig_types[80]
+#define SWIGTYPE_p_std__mapT_BWAPI__TilePosition_double_t swig_types[81]
+#define SWIGTYPE_p_std__pairT_BWAPI__TilePosition_double_t swig_types[82]
 #define SWIGTYPE_p_std__setT_BWAPI__BulletType_t swig_types[83]
 #define SWIGTYPE_p_std__setT_BWAPI__Bullet_p_t swig_types[84]
 #define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[85]
@@ -4461,6 +4461,7 @@ SWIG_AsVal_int (PyObject * obj, int *val)
 
 
 #include "helper.h"
+#include "heatmap.h"
 
 using namespace BWTA;
 
@@ -4825,6 +4826,18 @@ SWIGINTERN SetWrapper< BWAPI::Unit * > *BWTA_BaseLocation_getStaticMinerals(BWTA
     }
 SWIGINTERN SetWrapper< BWAPI::Unit * > *BWTA_BaseLocation_getGeysers(BWTA::BaseLocation *self){
         return new SetWrapper<BWAPI::Unit*>( self->getGeysers() );
+    }
+SWIGINTERN BWTA::Region *BWTA_Chokepoint_getRegionA(BWTA::Chokepoint *self){
+        return self->getRegions().first;
+    }
+SWIGINTERN BWTA::Region *BWTA_Chokepoint_getRegionB(BWTA::Chokepoint *self){
+        return self->getRegions().second;
+    }
+SWIGINTERN BWAPI::Position BWTA_Chokepoint_getSideA(BWTA::Chokepoint *self){
+        return self->getSides().first;
+    }
+SWIGINTERN BWAPI::Position BWTA_Chokepoint_getSideB(BWTA::Chokepoint *self){
+        return self->getSides().second;
     }
 SWIGINTERN SetWrapper< BWTA::Chokepoint * > *BWTA_Region_getChokepoints(BWTA::Region *self){
         return new SetWrapper<BWTA::Chokepoint*>( self->getChokepoints() );
@@ -11613,6 +11626,477 @@ SWIGINTERN PyObject *_wrap_sendText(PyObject *SWIGUNUSEDPARM(self), PyObject *ar
   return resultobj;
 fail:
   if (alloc1 == SWIG_NEWOBJ) delete[] buf1;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_HeatMap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_HeatMap")) SWIG_fail;
+  result = (HeatMap *)new HeatMap();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_HeatMap, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_HeatMap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_HeatMap",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_HeatMap" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_init(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:HeatMap_init",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_init" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  (arg1)->init();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_map_xy_into_z(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:HeatMap_map_xy_into_z",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_map_xy_into_z" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "HeatMap_map_xy_into_z" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HeatMap_map_xy_into_z" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  result = (int)(arg1)->map_xy_into_z(arg2,arg3);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_map_z_into_xy(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  int arg2 ;
+  int *arg3 = (int *) 0 ;
+  int *arg4 = (int *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  void *argp4 = 0 ;
+  int res4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:HeatMap_map_z_into_xy",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_map_z_into_xy" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "HeatMap_map_z_into_xy" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3,SWIGTYPE_p_int, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "HeatMap_map_z_into_xy" "', argument " "3"" of type '" "int *""'"); 
+  }
+  arg3 = reinterpret_cast< int * >(argp3);
+  res4 = SWIG_ConvertPtr(obj3, &argp4,SWIGTYPE_p_int, 0 |  0 );
+  if (!SWIG_IsOK(res4)) {
+    SWIG_exception_fail(SWIG_ArgError(res4), "in method '" "HeatMap_map_z_into_xy" "', argument " "4"" of type '" "int *""'"); 
+  }
+  arg4 = reinterpret_cast< int * >(argp4);
+  (arg1)->map_z_into_xy(arg2,arg3,arg4);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_reset(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:HeatMap_reset",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_reset" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  (arg1)->reset();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_addCircle(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOOO:HeatMap_addCircle",&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_addCircle" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "HeatMap_addCircle" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HeatMap_addCircle" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  ecode4 = SWIG_AsVal_int(obj3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HeatMap_addCircle" "', argument " "4"" of type '" "int""'");
+  } 
+  arg4 = static_cast< int >(val4);
+  ecode5 = SWIG_AsVal_int(obj4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HeatMap_addCircle" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = static_cast< int >(val5);
+  (arg1)->addCircle(arg2,arg3,arg4,arg5);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_addArray(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  int *arg6 = (int *) 0 ;
+  int arg7 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  void *argp6 = 0 ;
+  int res6 = 0 ;
+  int val7 ;
+  int ecode7 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
+  PyObject * obj5 = 0 ;
+  PyObject * obj6 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOOO:HeatMap_addArray",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_addArray" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "HeatMap_addArray" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HeatMap_addArray" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  ecode4 = SWIG_AsVal_int(obj3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HeatMap_addArray" "', argument " "4"" of type '" "int""'");
+  } 
+  arg4 = static_cast< int >(val4);
+  ecode5 = SWIG_AsVal_int(obj4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "HeatMap_addArray" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = static_cast< int >(val5);
+  res6 = SWIG_ConvertPtr(obj5, &argp6,SWIGTYPE_p_int, 0 |  0 );
+  if (!SWIG_IsOK(res6)) {
+    SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "HeatMap_addArray" "', argument " "6"" of type '" "int *""'"); 
+  }
+  arg6 = reinterpret_cast< int * >(argp6);
+  ecode7 = SWIG_AsVal_int(obj6, &val7);
+  if (!SWIG_IsOK(ecode7)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode7), "in method '" "HeatMap_addArray" "', argument " "7"" of type '" "int""'");
+  } 
+  arg7 = static_cast< int >(val7);
+  (arg1)->addArray(arg2,arg3,arg4,arg5,arg6,arg7);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_addPixel(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  int arg4 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOO:HeatMap_addPixel",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_addPixel" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "HeatMap_addPixel" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HeatMap_addPixel" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  ecode4 = SWIG_AsVal_int(obj3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "HeatMap_addPixel" "', argument " "4"" of type '" "int""'");
+  } 
+  arg4 = static_cast< int >(val4);
+  (arg1)->addPixel(arg2,arg3,arg4);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_getPixel(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:HeatMap_getPixel",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_getPixel" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "HeatMap_getPixel" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "HeatMap_getPixel" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  result = (int)(arg1)->getPixel(arg2,arg3);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_draw(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:HeatMap_draw",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_draw" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  (arg1)->draw();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_HeatMap_pathFind(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *arg1 = (HeatMap *) 0 ;
+  BWAPI::TilePosition *arg2 = 0 ;
+  BWAPI::TilePosition *arg3 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:HeatMap_pathFind",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_HeatMap, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "HeatMap_pathFind" "', argument " "1"" of type '" "HeatMap *""'"); 
+  }
+  arg1 = reinterpret_cast< HeatMap * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__TilePosition,  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "HeatMap_pathFind" "', argument " "2"" of type '" "BWAPI::TilePosition &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "HeatMap_pathFind" "', argument " "2"" of type '" "BWAPI::TilePosition &""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::TilePosition * >(argp2);
+  res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_BWAPI__TilePosition,  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "HeatMap_pathFind" "', argument " "3"" of type '" "BWAPI::TilePosition &""'"); 
+  }
+  if (!argp3) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "HeatMap_pathFind" "', argument " "3"" of type '" "BWAPI::TilePosition &""'"); 
+  }
+  arg3 = reinterpret_cast< BWAPI::TilePosition * >(argp3);
+  result = (PyObject *)(arg1)->pathFind(*arg2,*arg3);
+  resultobj = result;
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *HeatMap_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_HeatMap, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
+SWIGINTERN PyObject *_wrap_HeatMap_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  HeatMap *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":HeatMap_get")) SWIG_fail;
+  result = (HeatMap *)HeatMap_get();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_HeatMap, 0 |  0 );
+  return resultobj;
+fail:
   return NULL;
 }
 
@@ -49429,50 +49913,6 @@ SWIGINTERN PyObject *BaseLocation_swigregister(PyObject *SWIGUNUSEDPARM(self), P
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_Chokepoint_getRegions(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::pair< BWTA::Region *,BWTA::Region * > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getRegions",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getRegions" "', argument " "1"" of type '" "BWTA::Chokepoint const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
-  result = (std::pair< BWTA::Region *,BWTA::Region * > *) &((BWTA::Chokepoint const *)arg1)->getRegions();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Chokepoint_getSides(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  std::pair< BWAPI::Position,BWAPI::Position > *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getSides",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getSides" "', argument " "1"" of type '" "BWTA::Chokepoint const *""'"); 
-  }
-  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
-  result = (std::pair< BWAPI::Position,BWAPI::Position > *) &((BWTA::Chokepoint const *)arg1)->getSides();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_std__pairT_BWAPI__Position_BWAPI__Position_t, 0 |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_Chokepoint_getCenter(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
@@ -49511,6 +49951,94 @@ SWIGINTERN PyObject *_wrap_Chokepoint_getWidth(PyObject *SWIGUNUSEDPARM(self), P
   arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
   result = (double)((BWTA::Chokepoint const *)arg1)->getWidth();
   resultobj = SWIG_From_double(static_cast< double >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Chokepoint_getRegionA(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWTA::Region *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getRegionA",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getRegionA" "', argument " "1"" of type '" "BWTA::Chokepoint *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  result = (BWTA::Region *)BWTA_Chokepoint_getRegionA(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Chokepoint_getRegionB(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWTA::Region *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getRegionB",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getRegionB" "', argument " "1"" of type '" "BWTA::Chokepoint *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  result = (BWTA::Region *)BWTA_Chokepoint_getRegionB(arg1);
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWTA__Region, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Chokepoint_getSideA(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getSideA",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getSideA" "', argument " "1"" of type '" "BWTA::Chokepoint *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  result = BWTA_Chokepoint_getSideA(arg1);
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Chokepoint_getSideB(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWTA::Chokepoint *arg1 = (BWTA::Chokepoint *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Chokepoint_getSideB",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWTA__Chokepoint, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Chokepoint_getSideB" "', argument " "1"" of type '" "BWTA::Chokepoint *""'"); 
+  }
+  arg1 = reinterpret_cast< BWTA::Chokepoint * >(argp1);
+  result = BWTA_Chokepoint_getSideB(arg1);
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -50245,6 +50773,20 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"analyzeMapThreaded", _wrap_analyzeMapThreaded, METH_VARARGS, NULL},
 	 { (char *)"isAnalyzed", _wrap_isAnalyzed, METH_VARARGS, NULL},
 	 { (char *)"sendText", _wrap_sendText, METH_VARARGS, NULL},
+	 { (char *)"new_HeatMap", _wrap_new_HeatMap, METH_VARARGS, NULL},
+	 { (char *)"delete_HeatMap", _wrap_delete_HeatMap, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_init", _wrap_HeatMap_init, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_map_xy_into_z", _wrap_HeatMap_map_xy_into_z, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_map_z_into_xy", _wrap_HeatMap_map_z_into_xy, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_reset", _wrap_HeatMap_reset, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_addCircle", _wrap_HeatMap_addCircle, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_addArray", _wrap_HeatMap_addArray, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_addPixel", _wrap_HeatMap_addPixel, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_getPixel", _wrap_HeatMap_getPixel, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_draw", _wrap_HeatMap_draw, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_pathFind", _wrap_HeatMap_pathFind, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_swigregister", HeatMap_swigregister, METH_VARARGS, NULL},
+	 { (char *)"HeatMap_get", _wrap_HeatMap_get, METH_VARARGS, NULL},
 	 { (char *)"new_AIModule", _wrap_new_AIModule, METH_VARARGS, NULL},
 	 { (char *)"delete_AIModule", _wrap_delete_AIModule, METH_VARARGS, NULL},
 	 { (char *)"AIModule_onStart", _wrap_AIModule_onStart, METH_VARARGS, NULL},
@@ -51016,10 +51558,12 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"BaseLocation_getGeysers", _wrap_BaseLocation_getGeysers, METH_VARARGS, NULL},
 	 { (char *)"delete_BaseLocation", _wrap_delete_BaseLocation, METH_VARARGS, NULL},
 	 { (char *)"BaseLocation_swigregister", BaseLocation_swigregister, METH_VARARGS, NULL},
-	 { (char *)"Chokepoint_getRegions", _wrap_Chokepoint_getRegions, METH_VARARGS, NULL},
-	 { (char *)"Chokepoint_getSides", _wrap_Chokepoint_getSides, METH_VARARGS, NULL},
 	 { (char *)"Chokepoint_getCenter", _wrap_Chokepoint_getCenter, METH_VARARGS, NULL},
 	 { (char *)"Chokepoint_getWidth", _wrap_Chokepoint_getWidth, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_getRegionA", _wrap_Chokepoint_getRegionA, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_getRegionB", _wrap_Chokepoint_getRegionB, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_getSideA", _wrap_Chokepoint_getSideA, METH_VARARGS, NULL},
+	 { (char *)"Chokepoint_getSideB", _wrap_Chokepoint_getSideB, METH_VARARGS, NULL},
 	 { (char *)"delete_Chokepoint", _wrap_delete_Chokepoint, METH_VARARGS, NULL},
 	 { (char *)"Chokepoint_swigregister", Chokepoint_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_TA_Polygon", _wrap_new_TA_Polygon, METH_VARARGS, NULL},
@@ -51084,6 +51628,7 @@ static swig_type_info _swigt__p_BWTA__Region = {"_p_BWTA__Region", "BWTA::Region
 static swig_type_info _swigt__p_BulletType = {"_p_BulletType", "BulletType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_EventType__Enum = {"_p_EventType__Enum", "EventType::Enum *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_GameType = {"_p_GameType", "GameType *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_HeatMap = {"_p_HeatMap", "HeatMap *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Key = {"_p_Key", "Key *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ListWrapperT_BWAPI__Force_p_t = {"_p_ListWrapperT_BWAPI__Force_p_t", "ListWrapper< BWAPI::Force * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_ListWrapperT_BWAPI__Player_p_t = {"_p_ListWrapperT_BWAPI__Player_p_t", "ListWrapper< BWAPI::Player * > *", 0, 0, (void*)0, 0};
@@ -51116,6 +51661,7 @@ static swig_type_info _swigt__p_UpgradeType = {"_p_UpgradeType", "UpgradeType *"
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_int = {"_p_int", "int *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_PyObject = {"_p_p_PyObject", "PyObject **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
@@ -51130,9 +51676,7 @@ static swig_type_info _swigt__p_std__listT_BWTA__BaseLocation_p_t = {"_p_std__li
 static swig_type_info _swigt__p_std__listT_BWTA__Chokepoint_p_t = {"_p_std__listT_BWTA__Chokepoint_p_t", "std::list< BWTA::Chokepoint * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__listT_BWTA__Region_p_t = {"_p_std__listT_BWTA__Region_p_t", "std::list< BWTA::Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__mapT_BWAPI__TilePosition_double_t = {"_p_std__mapT_BWAPI__TilePosition_double_t", "std::map< BWAPI::TilePosition,double > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t = {"_p_std__pairT_BWAPI__Position_BWAPI__Position_t", "std::pair< BWAPI::Position,BWAPI::Position > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__pairT_BWAPI__TilePosition_double_t = {"_p_std__pairT_BWAPI__TilePosition_double_t", "std::pair< BWAPI::TilePosition,double > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t = {"_p_std__pairT_BWTA__Region_p_BWTA__Region_p_t", "std::pair< BWTA::Region *,BWTA::Region * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWAPI__BulletType_t = {"_p_std__setT_BWAPI__BulletType_t", "std::set< BWAPI::BulletType > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWAPI__Bullet_p_t = {"_p_std__setT_BWAPI__Bullet_p_t", "std::set< BWAPI::Bullet * > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_BWAPI__DamageType_t = {"_p_std__setT_BWAPI__DamageType_t", "std::set< BWAPI::DamageType > *", 0, 0, (void*)0, 0};
@@ -51202,6 +51746,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_BulletType,
   &_swigt__p_EventType__Enum,
   &_swigt__p_GameType,
+  &_swigt__p_HeatMap,
   &_swigt__p_Key,
   &_swigt__p_ListWrapperT_BWAPI__Force_p_t,
   &_swigt__p_ListWrapperT_BWAPI__Player_p_t,
@@ -51234,6 +51779,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_allocator_type,
   &_swigt__p_char,
   &_swigt__p_difference_type,
+  &_swigt__p_int,
   &_swigt__p_p_PyObject,
   &_swigt__p_size_type,
   &_swigt__p_std__invalid_argument,
@@ -51248,9 +51794,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__listT_BWTA__Chokepoint_p_t,
   &_swigt__p_std__listT_BWTA__Region_p_t,
   &_swigt__p_std__mapT_BWAPI__TilePosition_double_t,
-  &_swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t,
   &_swigt__p_std__pairT_BWAPI__TilePosition_double_t,
-  &_swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t,
   &_swigt__p_std__setT_BWAPI__BulletType_t,
   &_swigt__p_std__setT_BWAPI__Bullet_p_t,
   &_swigt__p_std__setT_BWAPI__DamageType_t,
@@ -51320,6 +51864,7 @@ static swig_cast_info _swigc__p_BWTA__Region[] = {  {&_swigt__p_BWTA__Region, 0,
 static swig_cast_info _swigc__p_BulletType[] = {  {&_swigt__p_BulletType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_EventType__Enum[] = {  {&_swigt__p_EventType__Enum, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_GameType[] = {  {&_swigt__p_GameType, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_HeatMap[] = {  {&_swigt__p_HeatMap, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Key[] = {  {&_swigt__p_Key, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ListWrapperT_BWAPI__Force_p_t[] = {  {&_swigt__p_ListWrapperT_BWAPI__Force_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ListWrapperT_BWAPI__Player_p_t[] = {  {&_swigt__p_ListWrapperT_BWAPI__Player_p_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -51352,6 +51897,7 @@ static swig_cast_info _swigc__p_UpgradeType[] = {  {&_swigt__p_UpgradeType, 0, 0
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_int[] = {  {&_swigt__p_int, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_PyObject[] = {  {&_swigt__p_p_PyObject, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__invalid_argument[] = {  {&_swigt__p_std__invalid_argument, 0, 0, 0},{0, 0, 0, 0}};
@@ -51366,9 +51912,7 @@ static swig_cast_info _swigc__p_std__listT_BWTA__BaseLocation_p_t[] = {  {&_swig
 static swig_cast_info _swigc__p_std__listT_BWTA__Chokepoint_p_t[] = {  {&_swigt__p_std__listT_BWTA__Chokepoint_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__listT_BWTA__Region_p_t[] = {  {&_swigt__p_std__listT_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_BWAPI__TilePosition_double_t[] = {  {&_swigt__p_std__mapT_BWAPI__TilePosition_double_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__pairT_BWAPI__Position_BWAPI__Position_t[] = {  {&_swigt__p_std__pairT_BWAPI__Position_BWAPI__Position_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__pairT_BWAPI__TilePosition_double_t[] = {  {&_swigt__p_std__pairT_BWAPI__TilePosition_double_t, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t[] = {  {&_swigt__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWAPI__BulletType_t[] = {  {&_swigt__p_std__setT_BWAPI__BulletType_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWAPI__Bullet_p_t[] = {  {&_swigt__p_std__setT_BWAPI__Bullet_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__setT_BWAPI__DamageType_t[] = {  {&_swigt__p_std__setT_BWAPI__DamageType_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -51438,6 +51982,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_BulletType,
   _swigc__p_EventType__Enum,
   _swigc__p_GameType,
+  _swigc__p_HeatMap,
   _swigc__p_Key,
   _swigc__p_ListWrapperT_BWAPI__Force_p_t,
   _swigc__p_ListWrapperT_BWAPI__Player_p_t,
@@ -51470,6 +52015,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_allocator_type,
   _swigc__p_char,
   _swigc__p_difference_type,
+  _swigc__p_int,
   _swigc__p_p_PyObject,
   _swigc__p_size_type,
   _swigc__p_std__invalid_argument,
@@ -51484,9 +52030,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__listT_BWTA__Chokepoint_p_t,
   _swigc__p_std__listT_BWTA__Region_p_t,
   _swigc__p_std__mapT_BWAPI__TilePosition_double_t,
-  _swigc__p_std__pairT_BWAPI__Position_BWAPI__Position_t,
   _swigc__p_std__pairT_BWAPI__TilePosition_double_t,
-  _swigc__p_std__pairT_BWTA__Region_p_BWTA__Region_p_t,
   _swigc__p_std__setT_BWAPI__BulletType_t,
   _swigc__p_std__setT_BWAPI__Bullet_p_t,
   _swigc__p_std__setT_BWAPI__DamageType_t,

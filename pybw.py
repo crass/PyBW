@@ -3,6 +3,38 @@ import inspect
 print "Importing swig module (python file)"
 import pybw_swig
 
+
+keep_as_methods = set([
+'next', 
+'resumeGame',
+'startGame',
+'leaveGame',
+'restartGame',
+'pauseGame',
+'fromWalkable',
+'toWalkable',
+'makeValid',
+'onFrame',
+'onStart',
+'returnCargo',
+'siege',
+'cancelAddon',
+'cancelConstruction',
+'cancelUpgrade',
+'lift',
+'holdPosition',
+'haltConstruction',
+'burrow',
+'stop',
+'unburrow',
+'cancelMorph',
+'cancelResearch',
+'decloak',
+'unsiege',
+'reset',
+'init',
+'draw',
+    ])
 print "Converting all 'getSomething' into 'something'..."
 def deget_class(c):
     for name in c.__dict__.keys():
@@ -14,13 +46,16 @@ def deget_class(c):
             continue
         if argspec.varargs != None or argspec.keywords != None: # not really get?
             continue
-        if name.startswith('_') or name == 'next':  # kinda hackish..
+        if name.startswith('_'):  # kinda hackish..
             continue
         if name == 'getID':
             prop_name = 'id'
-        elif name.startswith('get'):            
+        elif name.startswith('get'):
             prop_name = name[3].lower() + name[4:]
+        elif name in keep_as_methods:
+            continue
         else:
+            #print '&', name
             prop_name = name
 
         if prop_name!=name and hasattr(c, prop_name):
@@ -201,9 +236,15 @@ def TilePosition_toWalkable(self):
     return self.__class__( self.x*4, self.y*4 )
 def TilePosition_fromWalkable(self):
     return self.__class__( self.x/4, self.y/4 )
+def Position_toWalkable(self):
+    return self.__class__( self.x/8, self.y/8 )
+def Position_fromWalkable(self):
+    return self.__class__( self.x*8, self.y*8 )
 
 pybw_swig.TilePosition.toWalkable = TilePosition_toWalkable
 pybw_swig.TilePosition.fromWalkable = TilePosition_fromWalkable
+pybw_swig.Position.toWalkable = Position_toWalkable
+pybw_swig.Position.fromWalkable = Position_fromWalkable
 
 for c in set(get_all_classes(pybw_swig)):
     deget_class(c)
@@ -249,6 +290,8 @@ try:
     event_handler.listeners.append( exampleai.ExampleAI() )
     #import erezai.main
     #event_handler.listeners.append( erezai.main.ErezAI() )
+    #import cannonai
+    #event_handler.listeners.append( cannonai.CannonAI() )
 except ImportError, e:
     print "Error importing AI:", e
 except Exception, e:
