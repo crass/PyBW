@@ -2687,123 +2687,120 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 /* -------- TYPES TABLE (BEGIN) -------- */
 
 #define SWIGTYPE_p_BWAPI__AIModule swig_types[0]
-#define SWIGTYPE_p_BWAPI__Bitmap swig_types[1]
-#define SWIGTYPE_p_BWAPI__BitmapProxy swig_types[2]
-#define SWIGTYPE_p_BWAPI__Bullet swig_types[3]
-#define SWIGTYPE_p_BWAPI__BulletType swig_types[4]
-#define SWIGTYPE_p_BWAPI__Color swig_types[5]
-#define SWIGTYPE_p_BWAPI__DamageType swig_types[6]
-#define SWIGTYPE_p_BWAPI__Error swig_types[7]
-#define SWIGTYPE_p_BWAPI__Event swig_types[8]
-#define SWIGTYPE_p_BWAPI__ExplosionType swig_types[9]
-#define SWIGTYPE_p_BWAPI__Force swig_types[10]
-#define SWIGTYPE_p_BWAPI__Game swig_types[11]
-#define SWIGTYPE_p_BWAPI__GameType swig_types[12]
-#define SWIGTYPE_p_BWAPI__Order swig_types[13]
-#define SWIGTYPE_p_BWAPI__Player swig_types[14]
-#define SWIGTYPE_p_BWAPI__PlayerType swig_types[15]
-#define SWIGTYPE_p_BWAPI__Position swig_types[16]
-#define SWIGTYPE_p_BWAPI__Race swig_types[17]
-#define SWIGTYPE_p_BWAPI__TechType swig_types[18]
-#define SWIGTYPE_p_BWAPI__TilePosition swig_types[19]
-#define SWIGTYPE_p_BWAPI__Unit swig_types[20]
-#define SWIGTYPE_p_BWAPI__UnitCommand swig_types[21]
-#define SWIGTYPE_p_BWAPI__UnitCommandType swig_types[22]
-#define SWIGTYPE_p_BWAPI__UnitSizeType swig_types[23]
-#define SWIGTYPE_p_BWAPI__UnitType swig_types[24]
-#define SWIGTYPE_p_BWAPI__UpgradeType swig_types[25]
-#define SWIGTYPE_p_BWAPI__WeaponType swig_types[26]
-#define SWIGTYPE_p_BWTA__BaseLocation swig_types[27]
-#define SWIGTYPE_p_BWTA__Chokepoint swig_types[28]
-#define SWIGTYPE_p_BWTA__Polygon swig_types[29]
-#define SWIGTYPE_p_BWTA__Region swig_types[30]
-#define SWIGTYPE_p_BulletType swig_types[31]
-#define SWIGTYPE_p_EventType__Enum swig_types[32]
-#define SWIGTYPE_p_GameType swig_types[33]
-#define SWIGTYPE_p_HeatMap swig_types[34]
-#define SWIGTYPE_p_Key swig_types[35]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Force_p_t swig_types[36]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Player_p_t swig_types[37]
-#define SWIGTYPE_p_ListWrapperT_BWAPI__Unit_p_t swig_types[38]
-#define SWIGTYPE_p_ListWrapperT_BWTA__BaseLocation_p_t swig_types[39]
-#define SWIGTYPE_p_ListWrapperT_BWTA__Chokepoint_p_t swig_types[40]
-#define SWIGTYPE_p_ListWrapperT_BWTA__Region_p_t swig_types[41]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__Position_t swig_types[42]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[43]
-#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t swig_types[44]
-#define SWIGTYPE_p_MouseButton swig_types[45]
-#define SWIGTYPE_p_PlayerType swig_types[46]
-#define SWIGTYPE_p_Position swig_types[47]
-#define SWIGTYPE_p_Race swig_types[48]
-#define SWIGTYPE_p_RectangleArrayT_double_t swig_types[49]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Force_p_t swig_types[50]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Player_p_t swig_types[51]
-#define SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t swig_types[52]
-#define SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t swig_types[53]
-#define SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t swig_types[54]
-#define SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t swig_types[55]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__Position_t swig_types[56]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[57]
-#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__UnitType_t swig_types[58]
-#define SWIGTYPE_p_TechType swig_types[59]
-#define SWIGTYPE_p_TilePosition swig_types[60]
-#define SWIGTYPE_p_UnitCommand swig_types[61]
-#define SWIGTYPE_p_UnitCommandType swig_types[62]
-#define SWIGTYPE_p_UpgradeType swig_types[63]
-#define SWIGTYPE_p_allocator_type swig_types[64]
-#define SWIGTYPE_p_char swig_types[65]
-#define SWIGTYPE_p_difference_type swig_types[66]
-#define SWIGTYPE_p_int swig_types[67]
-#define SWIGTYPE_p_p_PyObject swig_types[68]
-#define SWIGTYPE_p_size_type swig_types[69]
-#define SWIGTYPE_p_std__invalid_argument swig_types[70]
-#define SWIGTYPE_p_std__listT_BWAPI__Event_t swig_types[71]
-#define SWIGTYPE_p_std__listT_BWAPI__Force_p_t swig_types[72]
-#define SWIGTYPE_p_std__listT_BWAPI__Player_p_t swig_types[73]
-#define SWIGTYPE_p_std__listT_BWAPI__Position_t swig_types[74]
-#define SWIGTYPE_p_std__listT_BWAPI__TilePosition_t swig_types[75]
-#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[76]
-#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[77]
-#define SWIGTYPE_p_std__listT_BWTA__BaseLocation_p_t swig_types[78]
-#define SWIGTYPE_p_std__listT_BWTA__Chokepoint_p_t swig_types[79]
-#define SWIGTYPE_p_std__listT_BWTA__Region_p_t swig_types[80]
-#define SWIGTYPE_p_std__mapT_BWAPI__TilePosition_double_t swig_types[81]
-#define SWIGTYPE_p_std__pairT_BWAPI__TilePosition_double_t swig_types[82]
-#define SWIGTYPE_p_std__setT_BWAPI__BulletType_t swig_types[83]
-#define SWIGTYPE_p_std__setT_BWAPI__Bullet_p_t swig_types[84]
-#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[85]
-#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[86]
-#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[87]
-#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[88]
-#define SWIGTYPE_p_std__setT_BWAPI__GameType_t swig_types[89]
-#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[90]
-#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[91]
-#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[92]
-#define SWIGTYPE_p_std__setT_BWAPI__Position_t swig_types[93]
-#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[94]
-#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[95]
-#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[96]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitCommandType_t swig_types[97]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[98]
-#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[99]
-#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[100]
-#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[101]
-#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[102]
-#define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[103]
-#define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[104]
-#define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[105]
-#define SWIGTYPE_p_std__setT_Position_t swig_types[106]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[107]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[108]
-#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[109]
-#define SWIGTYPE_p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t swig_types[110]
-#define SWIGTYPE_p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t swig_types[111]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[112]
-#define SWIGTYPE_p_unsigned_char swig_types[113]
-#define SWIGTYPE_p_value_type swig_types[114]
-#define SWIGTYPE_p_void swig_types[115]
-static swig_type_info *swig_types[117];
-static swig_module_info swig_module = {swig_types, 116, 0, 0, 0, 0};
+#define SWIGTYPE_p_BWAPI__Bullet swig_types[1]
+#define SWIGTYPE_p_BWAPI__BulletType swig_types[2]
+#define SWIGTYPE_p_BWAPI__Color swig_types[3]
+#define SWIGTYPE_p_BWAPI__DamageType swig_types[4]
+#define SWIGTYPE_p_BWAPI__Error swig_types[5]
+#define SWIGTYPE_p_BWAPI__Event swig_types[6]
+#define SWIGTYPE_p_BWAPI__ExplosionType swig_types[7]
+#define SWIGTYPE_p_BWAPI__Force swig_types[8]
+#define SWIGTYPE_p_BWAPI__Game swig_types[9]
+#define SWIGTYPE_p_BWAPI__GameType swig_types[10]
+#define SWIGTYPE_p_BWAPI__Order swig_types[11]
+#define SWIGTYPE_p_BWAPI__Player swig_types[12]
+#define SWIGTYPE_p_BWAPI__PlayerType swig_types[13]
+#define SWIGTYPE_p_BWAPI__Position swig_types[14]
+#define SWIGTYPE_p_BWAPI__Race swig_types[15]
+#define SWIGTYPE_p_BWAPI__TechType swig_types[16]
+#define SWIGTYPE_p_BWAPI__TilePosition swig_types[17]
+#define SWIGTYPE_p_BWAPI__Unit swig_types[18]
+#define SWIGTYPE_p_BWAPI__UnitCommand swig_types[19]
+#define SWIGTYPE_p_BWAPI__UnitCommandType swig_types[20]
+#define SWIGTYPE_p_BWAPI__UnitSizeType swig_types[21]
+#define SWIGTYPE_p_BWAPI__UnitType swig_types[22]
+#define SWIGTYPE_p_BWAPI__UpgradeType swig_types[23]
+#define SWIGTYPE_p_BWAPI__WeaponType swig_types[24]
+#define SWIGTYPE_p_BWTA__BaseLocation swig_types[25]
+#define SWIGTYPE_p_BWTA__Chokepoint swig_types[26]
+#define SWIGTYPE_p_BWTA__Polygon swig_types[27]
+#define SWIGTYPE_p_BWTA__Region swig_types[28]
+#define SWIGTYPE_p_BulletType swig_types[29]
+#define SWIGTYPE_p_EventType__Enum swig_types[30]
+#define SWIGTYPE_p_GameType swig_types[31]
+#define SWIGTYPE_p_HeatMap swig_types[32]
+#define SWIGTYPE_p_Key swig_types[33]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Force_p_t swig_types[34]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Player_p_t swig_types[35]
+#define SWIGTYPE_p_ListWrapperT_BWAPI__Unit_p_t swig_types[36]
+#define SWIGTYPE_p_ListWrapperT_BWTA__BaseLocation_p_t swig_types[37]
+#define SWIGTYPE_p_ListWrapperT_BWTA__Chokepoint_p_t swig_types[38]
+#define SWIGTYPE_p_ListWrapperT_BWTA__Region_p_t swig_types[39]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__Position_t swig_types[40]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[41]
+#define SWIGTYPE_p_ListWrapper_PtrNextT_BWAPI__UnitType_t swig_types[42]
+#define SWIGTYPE_p_MouseButton swig_types[43]
+#define SWIGTYPE_p_PlayerType swig_types[44]
+#define SWIGTYPE_p_Position swig_types[45]
+#define SWIGTYPE_p_Race swig_types[46]
+#define SWIGTYPE_p_RectangleArrayT_double_t swig_types[47]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Force_p_t swig_types[48]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Player_p_t swig_types[49]
+#define SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t swig_types[50]
+#define SWIGTYPE_p_SetWrapperT_BWTA__BaseLocation_p_t swig_types[51]
+#define SWIGTYPE_p_SetWrapperT_BWTA__Chokepoint_p_t swig_types[52]
+#define SWIGTYPE_p_SetWrapperT_BWTA__Region_p_t swig_types[53]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__Position_t swig_types[54]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__TilePosition_t swig_types[55]
+#define SWIGTYPE_p_SetWrapper_PtrNextT_BWAPI__UnitType_t swig_types[56]
+#define SWIGTYPE_p_TechType swig_types[57]
+#define SWIGTYPE_p_TilePosition swig_types[58]
+#define SWIGTYPE_p_UnitCommand swig_types[59]
+#define SWIGTYPE_p_UnitCommandType swig_types[60]
+#define SWIGTYPE_p_UpgradeType swig_types[61]
+#define SWIGTYPE_p_allocator_type swig_types[62]
+#define SWIGTYPE_p_char swig_types[63]
+#define SWIGTYPE_p_difference_type swig_types[64]
+#define SWIGTYPE_p_int swig_types[65]
+#define SWIGTYPE_p_p_PyObject swig_types[66]
+#define SWIGTYPE_p_size_type swig_types[67]
+#define SWIGTYPE_p_std__invalid_argument swig_types[68]
+#define SWIGTYPE_p_std__listT_BWAPI__Event_t swig_types[69]
+#define SWIGTYPE_p_std__listT_BWAPI__Force_p_t swig_types[70]
+#define SWIGTYPE_p_std__listT_BWAPI__Player_p_t swig_types[71]
+#define SWIGTYPE_p_std__listT_BWAPI__Position_t swig_types[72]
+#define SWIGTYPE_p_std__listT_BWAPI__TilePosition_t swig_types[73]
+#define SWIGTYPE_p_std__listT_BWAPI__UnitType_t swig_types[74]
+#define SWIGTYPE_p_std__listT_BWAPI__Unit_p_t swig_types[75]
+#define SWIGTYPE_p_std__listT_BWTA__BaseLocation_p_t swig_types[76]
+#define SWIGTYPE_p_std__listT_BWTA__Chokepoint_p_t swig_types[77]
+#define SWIGTYPE_p_std__listT_BWTA__Region_p_t swig_types[78]
+#define SWIGTYPE_p_std__mapT_BWAPI__TilePosition_double_t swig_types[79]
+#define SWIGTYPE_p_std__pairT_BWAPI__TilePosition_double_t swig_types[80]
+#define SWIGTYPE_p_std__setT_BWAPI__BulletType_t swig_types[81]
+#define SWIGTYPE_p_std__setT_BWAPI__Bullet_p_t swig_types[82]
+#define SWIGTYPE_p_std__setT_BWAPI__DamageType_t swig_types[83]
+#define SWIGTYPE_p_std__setT_BWAPI__Error_t swig_types[84]
+#define SWIGTYPE_p_std__setT_BWAPI__ExplosionType_t swig_types[85]
+#define SWIGTYPE_p_std__setT_BWAPI__Force_p_t swig_types[86]
+#define SWIGTYPE_p_std__setT_BWAPI__GameType_t swig_types[87]
+#define SWIGTYPE_p_std__setT_BWAPI__Order_t swig_types[88]
+#define SWIGTYPE_p_std__setT_BWAPI__PlayerType_t swig_types[89]
+#define SWIGTYPE_p_std__setT_BWAPI__Player_p_t swig_types[90]
+#define SWIGTYPE_p_std__setT_BWAPI__Position_t swig_types[91]
+#define SWIGTYPE_p_std__setT_BWAPI__Race_t swig_types[92]
+#define SWIGTYPE_p_std__setT_BWAPI__TechType_t swig_types[93]
+#define SWIGTYPE_p_std__setT_BWAPI__TilePosition_t swig_types[94]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitCommandType_t swig_types[95]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitSizeType_t swig_types[96]
+#define SWIGTYPE_p_std__setT_BWAPI__UnitType_t swig_types[97]
+#define SWIGTYPE_p_std__setT_BWAPI__Unit_p_t swig_types[98]
+#define SWIGTYPE_p_std__setT_BWAPI__UpgradeType_t swig_types[99]
+#define SWIGTYPE_p_std__setT_BWAPI__WeaponType_t swig_types[100]
+#define SWIGTYPE_p_std__setT_BWTA__BaseLocation_p_t swig_types[101]
+#define SWIGTYPE_p_std__setT_BWTA__Chokepoint_p_t swig_types[102]
+#define SWIGTYPE_p_std__setT_BWTA__Region_p_t swig_types[103]
+#define SWIGTYPE_p_std__setT_Position_t swig_types[104]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t swig_types[105]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__allocator_type swig_types[106]
+#define SWIGTYPE_p_std__vectorT_BWAPI__Position_std__allocatorT_BWAPI__Position_t_t__value_type swig_types[107]
+#define SWIGTYPE_p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t swig_types[108]
+#define SWIGTYPE_p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t swig_types[109]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[110]
+#define SWIGTYPE_p_value_type swig_types[111]
+#define SWIGTYPE_p_void swig_types[112]
+static swig_type_info *swig_types[114];
+static swig_module_info swig_module = {swig_types, 113, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -4599,7 +4596,6 @@ PyObject* _getSwigPosition(BWAPI::Position* position)
 
 
 	#include "BWAPI/AIModule.h"
-	#include "BWAPI/Bitmap.h"
 	#include "BWAPI/Bullet.h"
 	#include "BWAPI/BulletType.h"
 	#include "BWAPI/Client.h"
@@ -4680,29 +4676,6 @@ SWIG_AsPtr_std_string (PyObject * obj, std::string **val)
 }
 
 
-SWIGINTERN int
-SWIG_AsVal_unsigned_SS_short (PyObject * obj, unsigned short *val)
-{
-  unsigned long v;
-  int res = SWIG_AsVal_unsigned_SS_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v > USHRT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = static_cast< unsigned short >(v);
-    }
-  }  
-  return res;
-}
-
-
-SWIGINTERNINLINE PyObject *
-SWIG_From_unsigned_SS_short  (unsigned short value)
-{    
-  return SWIG_From_unsigned_SS_long  (value);
-}
-
-
 SWIGINTERNINLINE PyObject *
 SWIG_FromCharPtrAndSize(const char* carray, size_t size)
 {
@@ -4767,8 +4740,8 @@ SWIGINTERN SetWrapper< BWAPI::Player * > *BWAPI_Game_getPlayers(BWAPI::Game *sel
 SWIGINTERN SetWrapper< BWAPI::Force * > *BWAPI_Game_getForces(BWAPI::Game *self){
         return new SetWrapper<BWAPI::Force*>( self->getForces() );
     }
-SWIGINTERN SetWrapper< BWAPI::Unit * > *BWAPI_Game_unitsOnTile(BWAPI::Game *self,int x,int y){
-        return new SetWrapper<BWAPI::Unit*>( self->unitsOnTile(x, y) );
+SWIGINTERN SetWrapper< BWAPI::Unit * > *BWAPI_Game_getUnitsOnTile(BWAPI::Game *self,int x,int y){
+        return new SetWrapper<BWAPI::Unit*>( self->getUnitsOnTile(x, y) );
     }
 SWIGINTERN SetWrapper_PtrNext< BWAPI::TilePosition > *BWAPI_Game_getStartLocations(BWAPI::Game *self){
         return new SetWrapper_PtrNext<BWAPI::TilePosition>( self->getStartLocations() );
@@ -12627,168 +12600,6 @@ SWIGINTERN PyObject *AIModule_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObj
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_new_BitmapProxy(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  unsigned char *arg1 = (unsigned char *) 0 ;
-  unsigned short arg2 ;
-  unsigned short arg3 ;
-  int arg4 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  unsigned short val2 ;
-  int ecode2 = 0 ;
-  unsigned short val3 ;
-  int ecode3 = 0 ;
-  int val4 ;
-  int ecode4 = 0 ;
-  PyObject * obj0 = 0 ;
-  PyObject * obj1 = 0 ;
-  PyObject * obj2 = 0 ;
-  PyObject * obj3 = 0 ;
-  BWAPI::BitmapProxy *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"OOOO:new_BitmapProxy",&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_unsigned_char, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_BitmapProxy" "', argument " "1"" of type '" "unsigned char *""'"); 
-  }
-  arg1 = reinterpret_cast< unsigned char * >(argp1);
-  ecode2 = SWIG_AsVal_unsigned_SS_short(obj1, &val2);
-  if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "new_BitmapProxy" "', argument " "2"" of type '" "unsigned short""'");
-  } 
-  arg2 = static_cast< unsigned short >(val2);
-  ecode3 = SWIG_AsVal_unsigned_SS_short(obj2, &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_BitmapProxy" "', argument " "3"" of type '" "unsigned short""'");
-  } 
-  arg3 = static_cast< unsigned short >(val3);
-  ecode4 = SWIG_AsVal_int(obj3, &val4);
-  if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "new_BitmapProxy" "', argument " "4"" of type '" "int""'");
-  } 
-  arg4 = static_cast< int >(val4);
-  result = (BWAPI::BitmapProxy *)new BWAPI::BitmapProxy(arg1,arg2,arg3,arg4);
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__BitmapProxy, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_BitmapProxy(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::BitmapProxy *arg1 = (BWAPI::BitmapProxy *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_BitmapProxy",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__BitmapProxy, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_BitmapProxy" "', argument " "1"" of type '" "BWAPI::BitmapProxy *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::BitmapProxy * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *BitmapProxy_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_BWAPI__BitmapProxy, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
-SWIGINTERN PyObject *_wrap_Bitmap_getWidth(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Bitmap *arg1 = (BWAPI::Bitmap *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  unsigned short result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Bitmap_getWidth",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Bitmap, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Bitmap_getWidth" "', argument " "1"" of type '" "BWAPI::Bitmap *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Bitmap * >(argp1);
-  result = (unsigned short)(arg1)->getWidth();
-  resultobj = SWIG_From_unsigned_SS_short(static_cast< unsigned short >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_Bitmap_getHeight(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Bitmap *arg1 = (BWAPI::Bitmap *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  unsigned short result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:Bitmap_getHeight",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Bitmap, 0 |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Bitmap_getHeight" "', argument " "1"" of type '" "BWAPI::Bitmap *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Bitmap * >(argp1);
-  result = (unsigned short)(arg1)->getHeight();
-  resultobj = SWIG_From_unsigned_SS_short(static_cast< unsigned short >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_new_Bitmap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Bitmap *result = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)":new_Bitmap")) SWIG_fail;
-  result = (BWAPI::Bitmap *)new BWAPI::Bitmap();
-  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Bitmap, SWIG_POINTER_NEW |  0 );
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *_wrap_delete_Bitmap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  BWAPI::Bitmap *arg1 = (BWAPI::Bitmap *) 0 ;
-  void *argp1 = 0 ;
-  int res1 = 0 ;
-  PyObject * obj0 = 0 ;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:delete_Bitmap",&obj0)) SWIG_fail;
-  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Bitmap, SWIG_POINTER_DISOWN |  0 );
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_Bitmap" "', argument " "1"" of type '" "BWAPI::Bitmap *""'"); 
-  }
-  arg1 = reinterpret_cast< BWAPI::Bitmap * >(argp1);
-  delete arg1;
-  resultobj = SWIG_Py_Void();
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
-SWIGINTERN PyObject *Bitmap_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *obj;
-  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
-  SWIG_TypeNewClientData(SWIGTYPE_p_BWAPI__Bitmap, SWIG_NewClientData(obj));
-  return SWIG_Py_Void();
-}
-
 SWIGINTERN PyObject *_wrap_Bullet_getID(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Bullet *arg1 = (BWAPI::Bullet *) 0 ;
@@ -15605,6 +15416,34 @@ SWIGINTERN PyObject *Swig_var_Access_Denied_get(void) {
 }
 
 
+SWIGINTERN int Swig_var_File_Not_Found_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable File_Not_Found is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_File_Not_Found_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::Errors::File_Not_Found), SWIGTYPE_p_BWAPI__Error,  0 );
+  return pyobj;
+}
+
+
+SWIGINTERN int Swig_var_Invalid_Parameter_set(PyObject *) {
+  SWIG_Error(SWIG_AttributeError,"Variable Invalid_Parameter is read-only.");
+  return 1;
+}
+
+
+SWIGINTERN PyObject *Swig_var_Invalid_Parameter_get(void) {
+  PyObject *pyobj = 0;
+  
+  pyobj = SWIG_NewPointerObj(SWIG_as_voidptr(&BWAPI::Errors::Invalid_Parameter), SWIGTYPE_p_BWAPI__Error,  0 );
+  return pyobj;
+}
+
+
 SWIGINTERN int Swig_var_Errors_None_set(PyObject *) {
   SWIG_Error(SWIG_AttributeError,"Variable Errors_None is read-only.");
   return 1;
@@ -18067,6 +17906,238 @@ SWIGINTERN PyObject *_wrap_Game_enableFlag(PyObject *SWIGUNUSEDPARM(self), PyObj
   arg2 = static_cast< int >(val2);
   (arg1)->enableFlag(arg2);
   resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_getUnitsInRectangle__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int arg2 ;
+  int arg3 ;
+  int arg4 ;
+  int arg5 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  int val3 ;
+  int ecode3 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
+  SwigValueWrapper< std::set< BWAPI::Unit * > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOOO:Game_getUnitsInRectangle",&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getUnitsInRectangle" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_getUnitsInRectangle" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_getUnitsInRectangle" "', argument " "3"" of type '" "int""'");
+  } 
+  arg3 = static_cast< int >(val3);
+  ecode4 = SWIG_AsVal_int(obj3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "Game_getUnitsInRectangle" "', argument " "4"" of type '" "int""'");
+  } 
+  arg4 = static_cast< int >(val4);
+  ecode5 = SWIG_AsVal_int(obj4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "Game_getUnitsInRectangle" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = static_cast< int >(val5);
+  result = (arg1)->getUnitsInRectangle(arg2,arg3,arg4,arg5);
+  resultobj = SWIG_NewPointerObj((new std::set< BWAPI::Unit * >(static_cast< const std::set< BWAPI::Unit * >& >(result))), SWIGTYPE_p_std__setT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_getUnitsInRectangle__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Position arg2 ;
+  BWAPI::Position arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  void *argp3 ;
+  int res3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  SwigValueWrapper< std::set< BWAPI::Unit * > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_getUnitsInRectangle",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getUnitsInRectangle" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_getUnitsInRectangle" "', argument " "2"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_getUnitsInRectangle" "', argument " "2"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  {
+    res3 = SWIG_ConvertPtr(obj2, &argp3, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res3)) {
+      SWIG_exception_fail(SWIG_ArgError(res3), "in method '" "Game_getUnitsInRectangle" "', argument " "3"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp3) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_getUnitsInRectangle" "', argument " "3"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp3);
+      arg3 = *temp;
+      if (SWIG_IsNewObj(res3)) delete temp;
+    }
+  }
+  result = (arg1)->getUnitsInRectangle(arg2,arg3);
+  resultobj = SWIG_NewPointerObj((new std::set< BWAPI::Unit * >(static_cast< const std::set< BWAPI::Unit * >& >(result))), SWIGTYPE_p_std__setT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_getUnitsInRectangle(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[6];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 5); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 3) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_BWAPI__Position, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        int res = SWIG_ConvertPtr(argv[2], 0, SWIGTYPE_p_BWAPI__Position, 0);
+        _v = SWIG_CheckState(res);
+        if (_v) {
+          return _wrap_Game_getUnitsInRectangle__SWIG_1(self, args);
+        }
+      }
+    }
+  }
+  if (argc == 5) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        {
+          int res = SWIG_AsVal_int(argv[2], NULL);
+          _v = SWIG_CheckState(res);
+        }
+        if (_v) {
+          {
+            int res = SWIG_AsVal_int(argv[3], NULL);
+            _v = SWIG_CheckState(res);
+          }
+          if (_v) {
+            {
+              int res = SWIG_AsVal_int(argv[4], NULL);
+              _v = SWIG_CheckState(res);
+            }
+            if (_v) {
+              return _wrap_Game_getUnitsInRectangle__SWIG_0(self, args);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Game_getUnitsInRectangle'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    getUnitsInRectangle(BWAPI::Game *,int,int,int,int)\n"
+    "    getUnitsInRectangle(BWAPI::Game *,BWAPI::Position,BWAPI::Position)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_getUnitsInRadius(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  BWAPI::Position arg2 ;
+  double arg3 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  double val3 ;
+  int ecode3 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  SwigValueWrapper< std::set< BWAPI::Unit * > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_getUnitsInRadius",&obj0,&obj1,&obj2)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getUnitsInRadius" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_getUnitsInRadius" "', argument " "2"" of type '" "BWAPI::Position""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Game_getUnitsInRadius" "', argument " "2"" of type '" "BWAPI::Position""'");
+    } else {
+      BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  ecode3 = SWIG_AsVal_double(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_getUnitsInRadius" "', argument " "3"" of type '" "double""'");
+  } 
+  arg3 = static_cast< double >(val3);
+  result = (arg1)->getUnitsInRadius(arg2,arg3);
+  resultobj = SWIG_NewPointerObj((new std::set< BWAPI::Unit * >(static_cast< const std::set< BWAPI::Unit * >& >(result))), SWIGTYPE_p_std__setT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -25440,6 +25511,232 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Game_getAPM__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  bool arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  bool val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Game_getAPM",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getAPM" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  ecode2 = SWIG_AsVal_bool(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_getAPM" "', argument " "2"" of type '" "bool""'");
+  } 
+  arg2 = static_cast< bool >(val2);
+  result = (int)(arg1)->getAPM(arg2);
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_getAPM__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Game_getAPM",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getAPM" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  result = (int)(arg1)->getAPM();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_getAPM(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_Game_getAPM__SWIG_1(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_bool(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_Game_getAPM__SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Game_getAPM'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    getAPM(BWAPI::Game *,bool)\n"
+    "    getAPM(BWAPI::Game *)\n");
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_setMap(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  char *arg2 = (char *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 ;
+  char *buf2 = 0 ;
+  int alloc2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Game_setMap",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_setMap" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Game_setMap" "', argument " "2"" of type '" "char const *""'");
+  }
+  arg2 = reinterpret_cast< char * >(buf2);
+  result = (bool)(arg1)->setMap((char const *)arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  if (alloc2 == SWIG_NEWOBJ) delete[] buf2;
+  return resultobj;
+fail:
+  if (alloc2 == SWIG_NEWOBJ) delete[] buf2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_setFrameSkip__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  int arg2 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:Game_setFrameSkip",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_setFrameSkip" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_setFrameSkip" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = static_cast< int >(val2);
+  (arg1)->setFrameSkip(arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_setFrameSkip__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Game_setFrameSkip",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_setFrameSkip" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
+  (arg1)->setFrameSkip();
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Game_setFrameSkip(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 1) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      return _wrap_Game_setFrameSkip__SWIG_1(self, args);
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Game, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      {
+        int res = SWIG_AsVal_int(argv[1], NULL);
+        _v = SWIG_CheckState(res);
+      }
+      if (_v) {
+        return _wrap_Game_setFrameSkip__SWIG_0(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'Game_setFrameSkip'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    setFrameSkip(BWAPI::Game *,int)\n"
+    "    setFrameSkip(BWAPI::Game *)\n");
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Game_getAllUnits(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
@@ -25660,7 +25957,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Game_unitsOnTile(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Game_getUnitsOnTile(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Game *arg1 = (BWAPI::Game *) 0 ;
   int arg2 ;
@@ -25676,23 +25973,23 @@ SWIGINTERN PyObject *_wrap_Game_unitsOnTile(PyObject *SWIGUNUSEDPARM(self), PyOb
   PyObject * obj2 = 0 ;
   SetWrapper< BWAPI::Unit * > *result = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_unitsOnTile",&obj0,&obj1,&obj2)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOO:Game_getUnitsOnTile",&obj0,&obj1,&obj2)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Game, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_unitsOnTile" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Game_getUnitsOnTile" "', argument " "1"" of type '" "BWAPI::Game *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Game * >(argp1);
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_unitsOnTile" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Game_getUnitsOnTile" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_unitsOnTile" "', argument " "3"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Game_getUnitsOnTile" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
-  result = (SetWrapper< BWAPI::Unit * > *)BWAPI_Game_unitsOnTile(arg1,arg2,arg3);
+  result = (SetWrapper< BWAPI::Unit * > *)BWAPI_Game_getUnitsOnTile(arg1,arg2,arg3);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_SetWrapperT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -34165,7 +34462,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_Unit_getLastOrderFrame(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_Unit_getLastCommandFrame(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   void *argp1 = 0 ;
@@ -34173,14 +34470,36 @@ SWIGINTERN PyObject *_wrap_Unit_getLastOrderFrame(PyObject *SWIGUNUSEDPARM(self)
   PyObject * obj0 = 0 ;
   int result;
   
-  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getLastOrderFrame",&obj0)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getLastCommandFrame",&obj0)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getLastOrderFrame" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getLastCommandFrame" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
-  result = (int)((BWAPI::Unit const *)arg1)->getLastOrderFrame();
+  result = (int)((BWAPI::Unit const *)arg1)->getLastCommandFrame();
   resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_getLastCommand(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  UnitCommand result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getLastCommand",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getLastCommand" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = ((BWAPI::Unit const *)arg1)->getLastCommand();
+  resultobj = SWIG_NewPointerObj((new UnitCommand(static_cast< const UnitCommand& >(result))), SWIGTYPE_p_UnitCommand, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
   return NULL;
@@ -34351,6 +34670,28 @@ SWIGINTERN PyObject *_wrap_Unit_getKillCount(PyObject *SWIGUNUSEDPARM(self), PyO
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   result = (int)((BWAPI::Unit const *)arg1)->getKillCount();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_getAcidSporeCount(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getAcidSporeCount",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getAcidSporeCount" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (int)((BWAPI::Unit const *)arg1)->getAcidSporeCount();
   resultobj = SWIG_From_int(static_cast< int >(result));
   return resultobj;
 fail:
@@ -35238,6 +35579,28 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Unit_getUnitsInWeaponRange(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  SwigValueWrapper< std::set< BWAPI::Unit * > > result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getUnitsInWeaponRange",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getUnitsInWeaponRange" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = ((BWAPI::Unit const *)arg1)->getUnitsInWeaponRange();
+  resultobj = SWIG_NewPointerObj((new std::set< BWAPI::Unit * >(static_cast< const std::set< BWAPI::Unit * >& >(result))), SWIGTYPE_p_std__setT_BWAPI__Unit_p_t, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Unit_exists(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -35803,6 +36166,28 @@ SWIGINTERN PyObject *_wrap_Unit_isInterruptible(PyObject *SWIGUNUSEDPARM(self), 
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   result = (bool)((BWAPI::Unit const *)arg1)->isInterruptible();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_isInvincible(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_isInvincible",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_isInvincible" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (bool)((BWAPI::Unit const *)arg1)->isInvincible();
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -38140,6 +38525,50 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_Unit_isUnderAttack(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_isUnderAttack",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_isUnderAttack" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (bool)((BWAPI::Unit const *)arg1)->isUnderAttack();
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_Unit_getLastAttackingPlayer(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Player *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:Unit_getLastAttackingPlayer",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Unit_getLastAttackingPlayer" "', argument " "1"" of type '" "BWAPI::Unit const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
+  result = (BWAPI::Player *)((BWAPI::Unit const *)arg1)->getLastAttackingPlayer();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Player, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_Unit_getLoadedUnits(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
@@ -38719,7 +39148,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_UnitCommand_setRallyPosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_UnitCommand_setRallyPoint__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   BWAPI::Position arg2 ;
@@ -38731,26 +39160,26 @@ SWIGINTERN PyObject *_wrap_UnitCommand_setRallyPosition(PyObject *SWIGUNUSEDPARM
   PyObject * obj1 = 0 ;
   BWAPI::UnitCommand result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommand_setRallyPosition",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommand_setRallyPoint",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_setRallyPosition" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_setRallyPoint" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   {
     res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__Position,  0  | 0);
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommand_setRallyPosition" "', argument " "2"" of type '" "BWAPI::Position""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommand_setRallyPoint" "', argument " "2"" of type '" "BWAPI::Position""'"); 
     }  
     if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UnitCommand_setRallyPosition" "', argument " "2"" of type '" "BWAPI::Position""'");
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UnitCommand_setRallyPoint" "', argument " "2"" of type '" "BWAPI::Position""'");
     } else {
       BWAPI::Position * temp = reinterpret_cast< BWAPI::Position * >(argp2);
       arg2 = *temp;
       if (SWIG_IsNewObj(res2)) delete temp;
     }
   }
-  result = BWAPI::UnitCommand::setRallyPosition(arg1,arg2);
+  result = BWAPI::UnitCommand::setRallyPoint(arg1,arg2);
   resultobj = SWIG_NewPointerObj((new BWAPI::UnitCommand(static_cast< const BWAPI::UnitCommand& >(result))), SWIGTYPE_p_BWAPI__UnitCommand, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
@@ -38758,7 +39187,7 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_UnitCommand_setRallyUnit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_UnitCommand_setRallyPoint__SWIG_1(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::Unit *arg1 = (BWAPI::Unit *) 0 ;
   BWAPI::Unit *arg2 = (BWAPI::Unit *) 0 ;
@@ -38770,21 +39199,68 @@ SWIGINTERN PyObject *_wrap_UnitCommand_setRallyUnit(PyObject *SWIGUNUSEDPARM(sel
   PyObject * obj1 = 0 ;
   BWAPI::UnitCommand result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommand_setRallyUnit",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommand_setRallyPoint",&obj0,&obj1)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_setRallyUnit" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_setRallyPoint" "', argument " "1"" of type '" "BWAPI::Unit *""'"); 
   }
   arg1 = reinterpret_cast< BWAPI::Unit * >(argp1);
   res2 = SWIG_ConvertPtr(obj1, &argp2,SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
   if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommand_setRallyUnit" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommand_setRallyPoint" "', argument " "2"" of type '" "BWAPI::Unit *""'"); 
   }
   arg2 = reinterpret_cast< BWAPI::Unit * >(argp2);
-  result = BWAPI::UnitCommand::setRallyUnit(arg1,arg2);
+  result = BWAPI::UnitCommand::setRallyPoint(arg1,arg2);
   resultobj = SWIG_NewPointerObj((new BWAPI::UnitCommand(static_cast< const BWAPI::UnitCommand& >(result))), SWIGTYPE_p_BWAPI__UnitCommand, SWIG_POINTER_OWN |  0 );
   return resultobj;
 fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_setRallyPoint(PyObject *self, PyObject *args) {
+  int argc;
+  PyObject *argv[3];
+  int ii;
+  
+  if (!PyTuple_Check(args)) SWIG_fail;
+  argc = (int)PyObject_Length(args);
+  for (ii = 0; (ii < argc) && (ii < 2); ii++) {
+    argv[ii] = PyTuple_GET_ITEM(args,ii);
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      int res = SWIG_ConvertPtr(argv[1], 0, SWIGTYPE_p_BWAPI__Position, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_UnitCommand_setRallyPoint__SWIG_0(self, args);
+      }
+    }
+  }
+  if (argc == 2) {
+    int _v;
+    void *vptr = 0;
+    int res = SWIG_ConvertPtr(argv[0], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+    _v = SWIG_CheckState(res);
+    if (_v) {
+      void *vptr = 0;
+      int res = SWIG_ConvertPtr(argv[1], &vptr, SWIGTYPE_p_BWAPI__Unit, 0);
+      _v = SWIG_CheckState(res);
+      if (_v) {
+        return _wrap_UnitCommand_setRallyPoint__SWIG_1(self, args);
+      }
+    }
+  }
+  
+fail:
+  SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'UnitCommand_setRallyPoint'.\n"
+    "  Possible C/C++ prototypes are:\n"
+    "    setRallyPoint(BWAPI::Unit *,BWAPI::Position)\n"
+    "    BWAPI::UnitCommand::setRallyPoint(BWAPI::Unit *,BWAPI::Unit *)\n");
   return NULL;
 }
 
@@ -39981,6 +40457,340 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_UnitCommand_getType(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  UnitCommandType result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getType",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getType" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = ((BWAPI::UnitCommand const *)arg1)->getType();
+  resultobj = SWIG_NewPointerObj((new UnitCommandType(static_cast< const UnitCommandType& >(result))), SWIGTYPE_p_UnitCommandType, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_getUnit(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Unit *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getUnit",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getUnit" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = (BWAPI::Unit *)((BWAPI::UnitCommand const *)arg1)->getUnit();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_getTarget(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Unit *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getTarget",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getTarget" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = (BWAPI::Unit *)((BWAPI::UnitCommand const *)arg1)->getTarget();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_BWAPI__Unit, 0 |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_getTargetPosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::Position result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getTargetPosition",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getTargetPosition" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = ((BWAPI::UnitCommand const *)arg1)->getTargetPosition();
+  resultobj = SWIG_NewPointerObj((new BWAPI::Position(static_cast< const BWAPI::Position& >(result))), SWIGTYPE_p_BWAPI__Position, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_getTargetTilePosition(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::TilePosition result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getTargetTilePosition",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getTargetTilePosition" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = ((BWAPI::UnitCommand const *)arg1)->getTargetTilePosition();
+  resultobj = SWIG_NewPointerObj((new BWAPI::TilePosition(static_cast< const BWAPI::TilePosition& >(result))), SWIGTYPE_p_BWAPI__TilePosition, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_getUnitType(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::UnitType result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getUnitType",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getUnitType" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = ((BWAPI::UnitCommand const *)arg1)->getUnitType();
+  resultobj = SWIG_NewPointerObj((new BWAPI::UnitType(static_cast< const BWAPI::UnitType& >(result))), SWIGTYPE_p_BWAPI__UnitType, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_getTechType(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  BWAPI::TechType result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getTechType",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getTechType" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = ((BWAPI::UnitCommand const *)arg1)->getTechType();
+  resultobj = SWIG_NewPointerObj((new BWAPI::TechType(static_cast< const BWAPI::TechType& >(result))), SWIGTYPE_p_BWAPI__TechType, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_getUpgradeType(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  UpgradeType result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getUpgradeType",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getUpgradeType" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = ((BWAPI::UnitCommand const *)arg1)->getUpgradeType();
+  resultobj = SWIG_NewPointerObj((new UpgradeType(static_cast< const UpgradeType& >(result))), SWIGTYPE_p_UpgradeType, SWIG_POINTER_OWN |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand_getSlot(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:UnitCommand_getSlot",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand_getSlot" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  result = (int)((BWAPI::UnitCommand const *)arg1)->getSlot();
+  resultobj = SWIG_From_int(static_cast< int >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand___eq__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommand *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommand___eq__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand___eq__" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitCommand,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommand___eq__" "', argument " "2"" of type '" "BWAPI::UnitCommand const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UnitCommand___eq__" "', argument " "2"" of type '" "BWAPI::UnitCommand const &""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::UnitCommand * >(argp2);
+  result = (bool)((BWAPI::UnitCommand const *)arg1)->operator ==((BWAPI::UnitCommand const &)*arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand___ne__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommand *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommand___ne__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand___ne__" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitCommand,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommand___ne__" "', argument " "2"" of type '" "BWAPI::UnitCommand const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UnitCommand___ne__" "', argument " "2"" of type '" "BWAPI::UnitCommand const &""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::UnitCommand * >(argp2);
+  result = (bool)((BWAPI::UnitCommand const *)arg1)->operator !=((BWAPI::UnitCommand const &)*arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand___lt__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommand *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommand___lt__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand___lt__" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitCommand,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommand___lt__" "', argument " "2"" of type '" "BWAPI::UnitCommand const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UnitCommand___lt__" "', argument " "2"" of type '" "BWAPI::UnitCommand const &""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::UnitCommand * >(argp2);
+  result = (bool)((BWAPI::UnitCommand const *)arg1)->operator <((BWAPI::UnitCommand const &)*arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommand___gt__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
+  BWAPI::UnitCommand *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommand___gt__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommand, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommand___gt__" "', argument " "1"" of type '" "BWAPI::UnitCommand const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommand * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitCommand,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommand___gt__" "', argument " "2"" of type '" "BWAPI::UnitCommand const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UnitCommand___gt__" "', argument " "2"" of type '" "BWAPI::UnitCommand const &""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::UnitCommand * >(argp2);
+  result = (bool)((BWAPI::UnitCommand const *)arg1)->operator >((BWAPI::UnitCommand const &)*arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 SWIGINTERN PyObject *_wrap_UnitCommand_unit_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   BWAPI::UnitCommand *arg1 = (BWAPI::UnitCommand *) 0 ;
@@ -40526,6 +41336,40 @@ SWIGINTERN PyObject *_wrap_UnitCommandType___lt__(PyObject *SWIGUNUSEDPARM(self)
   }
   arg2 = reinterpret_cast< BWAPI::UnitCommandType * >(argp2);
   result = (bool)((BWAPI::UnitCommandType const *)arg1)->operator <((BWAPI::UnitCommandType const &)*arg2);
+  resultobj = SWIG_From_bool(static_cast< bool >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_UnitCommandType___gt__(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  BWAPI::UnitCommandType *arg1 = (BWAPI::UnitCommandType *) 0 ;
+  BWAPI::UnitCommandType *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  bool result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:UnitCommandType___gt__",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_BWAPI__UnitCommandType, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "UnitCommandType___gt__" "', argument " "1"" of type '" "BWAPI::UnitCommandType const *""'"); 
+  }
+  arg1 = reinterpret_cast< BWAPI::UnitCommandType * >(argp1);
+  res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_BWAPI__UnitCommandType,  0  | 0);
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "UnitCommandType___gt__" "', argument " "2"" of type '" "BWAPI::UnitCommandType const &""'"); 
+  }
+  if (!argp2) {
+    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "UnitCommandType___gt__" "', argument " "2"" of type '" "BWAPI::UnitCommandType const &""'"); 
+  }
+  arg2 = reinterpret_cast< BWAPI::UnitCommandType * >(argp2);
+  result = (bool)((BWAPI::UnitCommandType const *)arg1)->operator >((BWAPI::UnitCommandType const &)*arg2);
   resultobj = SWIG_From_bool(static_cast< bool >(result));
   return resultobj;
 fail:
@@ -50806,14 +51650,6 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"AIModule_onUnitRenegade", _wrap_AIModule_onUnitRenegade, METH_VARARGS, NULL},
 	 { (char *)"AIModule_onSaveGame", _wrap_AIModule_onSaveGame, METH_VARARGS, NULL},
 	 { (char *)"AIModule_swigregister", AIModule_swigregister, METH_VARARGS, NULL},
-	 { (char *)"new_BitmapProxy", _wrap_new_BitmapProxy, METH_VARARGS, NULL},
-	 { (char *)"delete_BitmapProxy", _wrap_delete_BitmapProxy, METH_VARARGS, NULL},
-	 { (char *)"BitmapProxy_swigregister", BitmapProxy_swigregister, METH_VARARGS, NULL},
-	 { (char *)"Bitmap_getWidth", _wrap_Bitmap_getWidth, METH_VARARGS, NULL},
-	 { (char *)"Bitmap_getHeight", _wrap_Bitmap_getHeight, METH_VARARGS, NULL},
-	 { (char *)"new_Bitmap", _wrap_new_Bitmap, METH_VARARGS, NULL},
-	 { (char *)"delete_Bitmap", _wrap_delete_Bitmap, METH_VARARGS, NULL},
-	 { (char *)"Bitmap_swigregister", Bitmap_swigregister, METH_VARARGS, NULL},
 	 { (char *)"Bullet_getID", _wrap_Bullet_getID, METH_VARARGS, NULL},
 	 { (char *)"Bullet_getPlayer", _wrap_Bullet_getPlayer, METH_VARARGS, NULL},
 	 { (char *)"Bullet_getType", _wrap_Bullet_getType, METH_VARARGS, NULL},
@@ -50937,6 +51773,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Game_pingMinimap", _wrap_Game_pingMinimap, METH_VARARGS, NULL},
 	 { (char *)"Game_isFlagEnabled", _wrap_Game_isFlagEnabled, METH_VARARGS, NULL},
 	 { (char *)"Game_enableFlag", _wrap_Game_enableFlag, METH_VARARGS, NULL},
+	 { (char *)"Game_getUnitsInRectangle", _wrap_Game_getUnitsInRectangle, METH_VARARGS, NULL},
+	 { (char *)"Game_getUnitsInRadius", _wrap_Game_getUnitsInRadius, METH_VARARGS, NULL},
 	 { (char *)"Game_getLastError", _wrap_Game_getLastError, METH_VARARGS, NULL},
 	 { (char *)"Game_setLastError", _wrap_Game_setLastError, METH_VARARGS, NULL},
 	 { (char *)"Game_mapWidth", _wrap_Game_mapWidth, METH_VARARGS, NULL},
@@ -51016,6 +51854,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Game_getReplayFrameCount", _wrap_Game_getReplayFrameCount, METH_VARARGS, NULL},
 	 { (char *)"Game_setGUI", _wrap_Game_setGUI, METH_VARARGS, NULL},
 	 { (char *)"Game_getInstanceNumber", _wrap_Game_getInstanceNumber, METH_VARARGS, NULL},
+	 { (char *)"Game_getAPM", _wrap_Game_getAPM, METH_VARARGS, NULL},
+	 { (char *)"Game_setMap", _wrap_Game_setMap, METH_VARARGS, NULL},
+	 { (char *)"Game_setFrameSkip", _wrap_Game_setFrameSkip, METH_VARARGS, NULL},
 	 { (char *)"Game_getAllUnits", _wrap_Game_getAllUnits, METH_VARARGS, NULL},
 	 { (char *)"Game_getMinerals", _wrap_Game_getMinerals, METH_VARARGS, NULL},
 	 { (char *)"Game_getGeysers", _wrap_Game_getGeysers, METH_VARARGS, NULL},
@@ -51026,7 +51867,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Game_getSelectedUnits", _wrap_Game_getSelectedUnits, METH_VARARGS, NULL},
 	 { (char *)"Game_getPlayers", _wrap_Game_getPlayers, METH_VARARGS, NULL},
 	 { (char *)"Game_getForces", _wrap_Game_getForces, METH_VARARGS, NULL},
-	 { (char *)"Game_unitsOnTile", _wrap_Game_unitsOnTile, METH_VARARGS, NULL},
+	 { (char *)"Game_getUnitsOnTile", _wrap_Game_getUnitsOnTile, METH_VARARGS, NULL},
 	 { (char *)"Game_getStartLocations", _wrap_Game_getStartLocations, METH_VARARGS, NULL},
 	 { (char *)"Game_canBuildHere", _wrap_Game_canBuildHere, METH_VARARGS, NULL},
 	 { (char *)"Game_isExplored", _wrap_Game_isExplored, METH_VARARGS, NULL},
@@ -51190,7 +52031,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_getResourceGroup", _wrap_Unit_getResourceGroup, METH_VARARGS, NULL},
 	 { (char *)"Unit_getDistance", _wrap_Unit_getDistance, METH_VARARGS, NULL},
 	 { (char *)"Unit_hasPath", _wrap_Unit_hasPath, METH_VARARGS, NULL},
-	 { (char *)"Unit_getLastOrderFrame", _wrap_Unit_getLastOrderFrame, METH_VARARGS, NULL},
+	 { (char *)"Unit_getLastCommandFrame", _wrap_Unit_getLastCommandFrame, METH_VARARGS, NULL},
+	 { (char *)"Unit_getLastCommand", _wrap_Unit_getLastCommand, METH_VARARGS, NULL},
 	 { (char *)"Unit_getUpgradeLevel", _wrap_Unit_getUpgradeLevel, METH_VARARGS, NULL},
 	 { (char *)"Unit_getInitialType", _wrap_Unit_getInitialType, METH_VARARGS, NULL},
 	 { (char *)"Unit_getInitialPosition", _wrap_Unit_getInitialPosition, METH_VARARGS, NULL},
@@ -51198,6 +52040,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_getInitialHitPoints", _wrap_Unit_getInitialHitPoints, METH_VARARGS, NULL},
 	 { (char *)"Unit_getInitialResources", _wrap_Unit_getInitialResources, METH_VARARGS, NULL},
 	 { (char *)"Unit_getKillCount", _wrap_Unit_getKillCount, METH_VARARGS, NULL},
+	 { (char *)"Unit_getAcidSporeCount", _wrap_Unit_getAcidSporeCount, METH_VARARGS, NULL},
 	 { (char *)"Unit_getInterceptorCount", _wrap_Unit_getInterceptorCount, METH_VARARGS, NULL},
 	 { (char *)"Unit_getScarabCount", _wrap_Unit_getScarabCount, METH_VARARGS, NULL},
 	 { (char *)"Unit_getSpiderMineCount", _wrap_Unit_getSpiderMineCount, METH_VARARGS, NULL},
@@ -51238,6 +52081,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_getInterceptors", _wrap_Unit_getInterceptors, METH_VARARGS, NULL},
 	 { (char *)"Unit_getHatchery", _wrap_Unit_getHatchery, METH_VARARGS, NULL},
 	 { (char *)"Unit_getLarva", _wrap_Unit_getLarva, METH_VARARGS, NULL},
+	 { (char *)"Unit_getUnitsInWeaponRange", _wrap_Unit_getUnitsInWeaponRange, METH_VARARGS, NULL},
 	 { (char *)"Unit_exists", _wrap_Unit_exists, METH_VARARGS, NULL},
 	 { (char *)"Unit_hasNuke", _wrap_Unit_hasNuke, METH_VARARGS, NULL},
 	 { (char *)"Unit_isAccelerating", _wrap_Unit_isAccelerating, METH_VARARGS, NULL},
@@ -51264,6 +52108,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_isHoldingPosition", _wrap_Unit_isHoldingPosition, METH_VARARGS, NULL},
 	 { (char *)"Unit_isIdle", _wrap_Unit_isIdle, METH_VARARGS, NULL},
 	 { (char *)"Unit_isInterruptible", _wrap_Unit_isInterruptible, METH_VARARGS, NULL},
+	 { (char *)"Unit_isInvincible", _wrap_Unit_isInvincible, METH_VARARGS, NULL},
 	 { (char *)"Unit_isInWeaponRange", _wrap_Unit_isInWeaponRange, METH_VARARGS, NULL},
 	 { (char *)"Unit_isIrradiated", _wrap_Unit_isIrradiated, METH_VARARGS, NULL},
 	 { (char *)"Unit_isLifted", _wrap_Unit_isLifted, METH_VARARGS, NULL},
@@ -51329,6 +52174,8 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Unit_setClientInfo", _wrap_Unit_setClientInfo, METH_VARARGS, NULL},
 	 { (char *)"Unit_getClientInfo", _wrap_Unit_getClientInfo, METH_VARARGS, NULL},
 	 { (char *)"Unit_placeCOP", _wrap_Unit_placeCOP, METH_VARARGS, NULL},
+	 { (char *)"Unit_isUnderAttack", _wrap_Unit_isUnderAttack, METH_VARARGS, NULL},
+	 { (char *)"Unit_getLastAttackingPlayer", _wrap_Unit_getLastAttackingPlayer, METH_VARARGS, NULL},
 	 { (char *)"Unit_getLoadedUnits", _wrap_Unit_getLoadedUnits, METH_VARARGS, NULL},
 	 { (char *)"Unit_getTrainingQueue", _wrap_Unit_getTrainingQueue, METH_VARARGS, NULL},
 	 { (char *)"Unit_upgrade", _wrap_Unit_upgrade, METH_VARARGS, NULL},
@@ -51343,8 +52190,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UnitCommand_morph", _wrap_UnitCommand_morph, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_research", _wrap_UnitCommand_research, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_upgrade", _wrap_UnitCommand_upgrade, METH_VARARGS, NULL},
-	 { (char *)"UnitCommand_setRallyPosition", _wrap_UnitCommand_setRallyPosition, METH_VARARGS, NULL},
-	 { (char *)"UnitCommand_setRallyUnit", _wrap_UnitCommand_setRallyUnit, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_setRallyPoint", _wrap_UnitCommand_setRallyPoint, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_move", _wrap_UnitCommand_move, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_patrol", _wrap_UnitCommand_patrol, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_holdPosition", _wrap_UnitCommand_holdPosition, METH_VARARGS, NULL},
@@ -51374,6 +52220,19 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UnitCommand_cancelUpgrade", _wrap_UnitCommand_cancelUpgrade, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_useTech", _wrap_UnitCommand_useTech, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_placeCOP", _wrap_UnitCommand_placeCOP, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getType", _wrap_UnitCommand_getType, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getUnit", _wrap_UnitCommand_getUnit, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getTarget", _wrap_UnitCommand_getTarget, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getTargetPosition", _wrap_UnitCommand_getTargetPosition, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getTargetTilePosition", _wrap_UnitCommand_getTargetTilePosition, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getUnitType", _wrap_UnitCommand_getUnitType, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getTechType", _wrap_UnitCommand_getTechType, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getUpgradeType", _wrap_UnitCommand_getUpgradeType, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand_getSlot", _wrap_UnitCommand_getSlot, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand___eq__", _wrap_UnitCommand___eq__, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand___ne__", _wrap_UnitCommand___ne__, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand___lt__", _wrap_UnitCommand___lt__, METH_VARARGS, NULL},
+	 { (char *)"UnitCommand___gt__", _wrap_UnitCommand___gt__, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_unit_set", _wrap_UnitCommand_unit_set, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_unit_get", _wrap_UnitCommand_unit_get, METH_VARARGS, NULL},
 	 { (char *)"UnitCommand_type_set", _wrap_UnitCommand_type_set, METH_VARARGS, NULL},
@@ -51392,6 +52251,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"UnitCommandType___eq__", _wrap_UnitCommandType___eq__, METH_VARARGS, NULL},
 	 { (char *)"UnitCommandType___ne__", _wrap_UnitCommandType___ne__, METH_VARARGS, NULL},
 	 { (char *)"UnitCommandType___lt__", _wrap_UnitCommandType___lt__, METH_VARARGS, NULL},
+	 { (char *)"UnitCommandType___gt__", _wrap_UnitCommandType___gt__, METH_VARARGS, NULL},
 	 { (char *)"UnitCommandType_getID", _wrap_UnitCommandType_getID, METH_VARARGS, NULL},
 	 { (char *)"UnitCommandType_getName", _wrap_UnitCommandType_getName, METH_VARARGS, NULL},
 	 { (char *)"delete_UnitCommandType", _wrap_delete_UnitCommandType, METH_VARARGS, NULL},
@@ -51595,8 +52455,6 @@ static void *_p_BWTA__PolygonTo_p_std__vectorT_BWAPI__Position_std__allocatorT_B
     return (void *)((std::vector< BWAPI::Position,std::allocator< BWAPI::Position > > *)  ((BWTA::Polygon *) x));
 }
 static swig_type_info _swigt__p_BWAPI__AIModule = {"_p_BWAPI__AIModule", "BWAPI::AIModule *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_BWAPI__Bitmap = {"_p_BWAPI__Bitmap", "BWAPI::Bitmap *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_BWAPI__BitmapProxy = {"_p_BWAPI__BitmapProxy", "BWAPI::BitmapProxy *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWAPI__Bullet = {"_p_BWAPI__Bullet", "BWAPI::Bullet *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWAPI__BulletType = {"_p_BWAPI__BulletType", "BWAPI::BulletType *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_BWAPI__Color = {"_p_BWAPI__Color", "BWAPI::Color *", 0, 0, (void*)0, 0};
@@ -51707,14 +52565,11 @@ static swig_type_info _swigt__p_std__vectorT_BWAPI__Position_std__allocatorT_BWA
 static swig_type_info _swigt__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t = {"_p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t", "std::vector< BWAPI::TilePosition,std::allocator< BWAPI::TilePosition > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t = {"_p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t", "std::vector< BWTA::Polygon,std::allocator< BWTA::Polygon > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_unsigned_char = {"_p_unsigned_char", "unsigned char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_void = {"_p_void", "void *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_BWAPI__AIModule,
-  &_swigt__p_BWAPI__Bitmap,
-  &_swigt__p_BWAPI__BitmapProxy,
   &_swigt__p_BWAPI__Bullet,
   &_swigt__p_BWAPI__BulletType,
   &_swigt__p_BWAPI__Color,
@@ -51825,14 +52680,11 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t,
   &_swigt__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t,
   &_swigt__p_swig__SwigPyIterator,
-  &_swigt__p_unsigned_char,
   &_swigt__p_value_type,
   &_swigt__p_void,
 };
 
 static swig_cast_info _swigc__p_BWAPI__AIModule[] = {  {&_swigt__p_BWAPI__AIModule, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_BWAPI__Bitmap[] = {  {&_swigt__p_BWAPI__Bitmap, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_BWAPI__BitmapProxy[] = {  {&_swigt__p_BWAPI__BitmapProxy, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWAPI__Bullet[] = {  {&_swigt__p_BWAPI__Bullet, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWAPI__BulletType[] = {  {&_swigt__p_BWAPI__BulletType, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_BWAPI__Color[] = {  {&_swigt__p_BWAPI__Color, 0, 0, 0},{0, 0, 0, 0}};
@@ -51943,14 +52795,11 @@ static swig_cast_info _swigc__p_std__vectorT_BWAPI__Position_std__allocatorT_BWA
 static swig_cast_info _swigc__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t[] = {  {&_swigt__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t[] = {  {&_swigt__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_swig__SwigPyIterator[] = {  {&_swigt__p_swig__SwigPyIterator, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_unsigned_char[] = {  {&_swigt__p_unsigned_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_value_type[] = {  {&_swigt__p_value_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_void[] = {  {&_swigt__p_void, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_BWAPI__AIModule,
-  _swigc__p_BWAPI__Bitmap,
-  _swigc__p_BWAPI__BitmapProxy,
   _swigc__p_BWAPI__Bullet,
   _swigc__p_BWAPI__BulletType,
   _swigc__p_BWAPI__Color,
@@ -52061,7 +52910,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__vectorT_BWAPI__TilePosition_std__allocatorT_BWAPI__TilePosition_t_t,
   _swigc__p_std__vectorT_BWTA__Polygon_std__allocatorT_BWTA__Polygon_t_t,
   _swigc__p_swig__SwigPyIterator,
-  _swigc__p_unsigned_char,
   _swigc__p_value_type,
   _swigc__p_void,
 };
@@ -52743,6 +53591,8 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char*)"Out_Of_Range",Swig_var_Out_Of_Range_get, Swig_var_Out_Of_Range_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Unable_To_Hit",Swig_var_Unable_To_Hit_get, Swig_var_Unable_To_Hit_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Access_Denied",Swig_var_Access_Denied_get, Swig_var_Access_Denied_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"File_Not_Found",Swig_var_File_Not_Found_get, Swig_var_File_Not_Found_set);
+  SWIG_addvarlink(SWIG_globals(),(char*)"Invalid_Parameter",Swig_var_Invalid_Parameter_get, Swig_var_Invalid_Parameter_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Errors_None",Swig_var_Errors_None_get, Swig_var_Errors_None_set);
   SWIG_addvarlink(SWIG_globals(),(char*)"Errors_Unknown",Swig_var_Errors_Unknown_get, Swig_var_Errors_Unknown_set);
   SWIG_Python_SetConstant(d, "EventTypes_MatchStart",SWIG_From_int(static_cast< int >(BWAPI::EventType::MatchStart)));

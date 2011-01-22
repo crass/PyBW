@@ -661,38 +661,6 @@ class AIModule(_object):
 AIModule_swigregister = _pybw_swig.AIModule_swigregister
 AIModule_swigregister(AIModule)
 
-class BitmapProxy(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, BitmapProxy, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, BitmapProxy, name)
-    __repr__ = _swig_repr
-    def __init__(self, *args): 
-        this = _pybw_swig.new_BitmapProxy(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    __swig_destroy__ = _pybw_swig.delete_BitmapProxy
-    __del__ = lambda self : None;
-BitmapProxy_swigregister = _pybw_swig.BitmapProxy_swigregister
-BitmapProxy_swigregister(BitmapProxy)
-
-class Bitmap(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Bitmap, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Bitmap, name)
-    __repr__ = _swig_repr
-    def getWidth(self): return _pybw_swig.Bitmap_getWidth(self)
-    def getHeight(self): return _pybw_swig.Bitmap_getHeight(self)
-    def __init__(self): 
-        this = _pybw_swig.new_Bitmap()
-        try: self.this.append(this)
-        except: self.this = this
-    __swig_destroy__ = _pybw_swig.delete_Bitmap
-    __del__ = lambda self : None;
-Bitmap_swigregister = _pybw_swig.Bitmap_swigregister
-Bitmap_swigregister(Bitmap)
-
 class Bullet(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Bullet, name, value)
@@ -977,6 +945,8 @@ Unreachable_Location = cvar.Unreachable_Location
 Out_Of_Range = cvar.Out_Of_Range
 Unable_To_Hit = cvar.Unable_To_Hit
 Access_Denied = cvar.Access_Denied
+File_Not_Found = cvar.File_Not_Found
+Invalid_Parameter = cvar.Invalid_Parameter
 Errors_None = cvar.Errors_None
 Errors_Unknown = cvar.Errors_Unknown
 
@@ -1164,6 +1134,8 @@ class Game(_object):
     def pingMinimap(self, *args): return _pybw_swig.Game_pingMinimap(self, *args)
     def isFlagEnabled(self, *args): return _pybw_swig.Game_isFlagEnabled(self, *args)
     def enableFlag(self, *args): return _pybw_swig.Game_enableFlag(self, *args)
+    def getUnitsInRectangle(self, *args): return _pybw_swig.Game_getUnitsInRectangle(self, *args)
+    def getUnitsInRadius(self, *args): return _pybw_swig.Game_getUnitsInRadius(self, *args)
     def getLastError(self): return _pybw_swig.Game_getLastError(self)
     def setLastError(self, *args): return _pybw_swig.Game_setLastError(self, *args)
     def mapWidth(self): return _pybw_swig.Game_mapWidth(self)
@@ -1243,6 +1215,9 @@ class Game(_object):
     def getReplayFrameCount(self): return _pybw_swig.Game_getReplayFrameCount(self)
     def setGUI(self, enabled = True): return _pybw_swig.Game_setGUI(self, enabled)
     def getInstanceNumber(self): return _pybw_swig.Game_getInstanceNumber(self)
+    def getAPM(self, includeSelects = False): return _pybw_swig.Game_getAPM(self, includeSelects)
+    def setMap(self, *args): return _pybw_swig.Game_setMap(self, *args)
+    def setFrameSkip(self, frameSkip = 1): return _pybw_swig.Game_setFrameSkip(self, frameSkip)
     def getAllUnits(self): return _pybw_swig.Game_getAllUnits(self)
     def getMinerals(self): return _pybw_swig.Game_getMinerals(self)
     def getGeysers(self): return _pybw_swig.Game_getGeysers(self)
@@ -1253,7 +1228,7 @@ class Game(_object):
     def getSelectedUnits(self): return _pybw_swig.Game_getSelectedUnits(self)
     def getPlayers(self): return _pybw_swig.Game_getPlayers(self)
     def getForces(self): return _pybw_swig.Game_getForces(self)
-    def unitsOnTile(self, *args): return _pybw_swig.Game_unitsOnTile(self, *args)
+    def getUnitsOnTile(self, *args): return _pybw_swig.Game_getUnitsOnTile(self, *args)
     def getStartLocations(self): return _pybw_swig.Game_getStartLocations(self)
     def canBuildHere(self, *args): return _pybw_swig.Game_canBuildHere(self, *args)
     def isExplored(self, *args): return _pybw_swig.Game_isExplored(self, *args)
@@ -1986,7 +1961,8 @@ class Unit(_object):
     def getResourceGroup(self): return _pybw_swig.Unit_getResourceGroup(self)
     def getDistance(self, *args): return _pybw_swig.Unit_getDistance(self, *args)
     def hasPath(self, *args): return _pybw_swig.Unit_hasPath(self, *args)
-    def getLastOrderFrame(self): return _pybw_swig.Unit_getLastOrderFrame(self)
+    def getLastCommandFrame(self): return _pybw_swig.Unit_getLastCommandFrame(self)
+    def getLastCommand(self): return _pybw_swig.Unit_getLastCommand(self)
     def getUpgradeLevel(self, *args): return _pybw_swig.Unit_getUpgradeLevel(self, *args)
     def getInitialType(self): return _pybw_swig.Unit_getInitialType(self)
     def getInitialPosition(self): return _pybw_swig.Unit_getInitialPosition(self)
@@ -1994,6 +1970,7 @@ class Unit(_object):
     def getInitialHitPoints(self): return _pybw_swig.Unit_getInitialHitPoints(self)
     def getInitialResources(self): return _pybw_swig.Unit_getInitialResources(self)
     def getKillCount(self): return _pybw_swig.Unit_getKillCount(self)
+    def getAcidSporeCount(self): return _pybw_swig.Unit_getAcidSporeCount(self)
     def getInterceptorCount(self): return _pybw_swig.Unit_getInterceptorCount(self)
     def getScarabCount(self): return _pybw_swig.Unit_getScarabCount(self)
     def getSpiderMineCount(self): return _pybw_swig.Unit_getSpiderMineCount(self)
@@ -2034,6 +2011,7 @@ class Unit(_object):
     def getInterceptors(self): return _pybw_swig.Unit_getInterceptors(self)
     def getHatchery(self): return _pybw_swig.Unit_getHatchery(self)
     def getLarva(self): return _pybw_swig.Unit_getLarva(self)
+    def getUnitsInWeaponRange(self): return _pybw_swig.Unit_getUnitsInWeaponRange(self)
     def exists(self): return _pybw_swig.Unit_exists(self)
     def hasNuke(self): return _pybw_swig.Unit_hasNuke(self)
     def isAccelerating(self): return _pybw_swig.Unit_isAccelerating(self)
@@ -2060,6 +2038,7 @@ class Unit(_object):
     def isHoldingPosition(self): return _pybw_swig.Unit_isHoldingPosition(self)
     def isIdle(self): return _pybw_swig.Unit_isIdle(self)
     def isInterruptible(self): return _pybw_swig.Unit_isInterruptible(self)
+    def isInvincible(self): return _pybw_swig.Unit_isInvincible(self)
     def isInWeaponRange(self, *args): return _pybw_swig.Unit_isInWeaponRange(self, *args)
     def isIrradiated(self): return _pybw_swig.Unit_isIrradiated(self)
     def isLifted(self): return _pybw_swig.Unit_isLifted(self)
@@ -2125,6 +2104,8 @@ class Unit(_object):
     def setClientInfo(self, *args): return _pybw_swig.Unit_setClientInfo(self, *args)
     def getClientInfo(self): return _pybw_swig.Unit_getClientInfo(self)
     def placeCOP(self, *args): return _pybw_swig.Unit_placeCOP(self, *args)
+    def isUnderAttack(self): return _pybw_swig.Unit_isUnderAttack(self)
+    def getLastAttackingPlayer(self): return _pybw_swig.Unit_getLastAttackingPlayer(self)
     def getLoadedUnits(self): return _pybw_swig.Unit_getLoadedUnits(self)
     def getTrainingQueue(self): return _pybw_swig.Unit_getTrainingQueue(self)
     def upgrade(self, *args): return _pybw_swig.Unit_upgrade(self, *args)
@@ -2162,10 +2143,8 @@ class UnitCommand(_object):
     if _newclass:research = staticmethod(_pybw_swig.UnitCommand_research)
     __swig_getmethods__["upgrade"] = lambda x: _pybw_swig.UnitCommand_upgrade
     if _newclass:upgrade = staticmethod(_pybw_swig.UnitCommand_upgrade)
-    __swig_getmethods__["setRallyPosition"] = lambda x: _pybw_swig.UnitCommand_setRallyPosition
-    if _newclass:setRallyPosition = staticmethod(_pybw_swig.UnitCommand_setRallyPosition)
-    __swig_getmethods__["setRallyUnit"] = lambda x: _pybw_swig.UnitCommand_setRallyUnit
-    if _newclass:setRallyUnit = staticmethod(_pybw_swig.UnitCommand_setRallyUnit)
+    __swig_getmethods__["setRallyPoint"] = lambda x: _pybw_swig.UnitCommand_setRallyPoint
+    if _newclass:setRallyPoint = staticmethod(_pybw_swig.UnitCommand_setRallyPoint)
     __swig_getmethods__["move"] = lambda x: _pybw_swig.UnitCommand_move
     if _newclass:move = staticmethod(_pybw_swig.UnitCommand_move)
     __swig_getmethods__["patrol"] = lambda x: _pybw_swig.UnitCommand_patrol
@@ -2224,6 +2203,19 @@ class UnitCommand(_object):
     if _newclass:useTech = staticmethod(_pybw_swig.UnitCommand_useTech)
     __swig_getmethods__["placeCOP"] = lambda x: _pybw_swig.UnitCommand_placeCOP
     if _newclass:placeCOP = staticmethod(_pybw_swig.UnitCommand_placeCOP)
+    def getType(self): return _pybw_swig.UnitCommand_getType(self)
+    def getUnit(self): return _pybw_swig.UnitCommand_getUnit(self)
+    def getTarget(self): return _pybw_swig.UnitCommand_getTarget(self)
+    def getTargetPosition(self): return _pybw_swig.UnitCommand_getTargetPosition(self)
+    def getTargetTilePosition(self): return _pybw_swig.UnitCommand_getTargetTilePosition(self)
+    def getUnitType(self): return _pybw_swig.UnitCommand_getUnitType(self)
+    def getTechType(self): return _pybw_swig.UnitCommand_getTechType(self)
+    def getUpgradeType(self): return _pybw_swig.UnitCommand_getUpgradeType(self)
+    def getSlot(self): return _pybw_swig.UnitCommand_getSlot(self)
+    def __eq__(self, *args): return _pybw_swig.UnitCommand___eq__(self, *args)
+    def __ne__(self, *args): return _pybw_swig.UnitCommand___ne__(self, *args)
+    def __lt__(self, *args): return _pybw_swig.UnitCommand___lt__(self, *args)
+    def __gt__(self, *args): return _pybw_swig.UnitCommand___gt__(self, *args)
     __swig_setmethods__["unit"] = _pybw_swig.UnitCommand_unit_set
     __swig_getmethods__["unit"] = _pybw_swig.UnitCommand_unit_get
     if _newclass:unit = _swig_property(_pybw_swig.UnitCommand_unit_get, _pybw_swig.UnitCommand_unit_set)
@@ -2279,13 +2271,9 @@ def UnitCommand_upgrade(*args):
   return _pybw_swig.UnitCommand_upgrade(*args)
 UnitCommand_upgrade = _pybw_swig.UnitCommand_upgrade
 
-def UnitCommand_setRallyPosition(*args):
-  return _pybw_swig.UnitCommand_setRallyPosition(*args)
-UnitCommand_setRallyPosition = _pybw_swig.UnitCommand_setRallyPosition
-
-def UnitCommand_setRallyUnit(*args):
-  return _pybw_swig.UnitCommand_setRallyUnit(*args)
-UnitCommand_setRallyUnit = _pybw_swig.UnitCommand_setRallyUnit
+def UnitCommand_setRallyPoint(*args):
+  return _pybw_swig.UnitCommand_setRallyPoint(*args)
+UnitCommand_setRallyPoint = _pybw_swig.UnitCommand_setRallyPoint
 
 def UnitCommand_move(*args):
   return _pybw_swig.UnitCommand_move(*args)
@@ -2417,6 +2405,7 @@ class UnitCommandType(_object):
     def __eq__(self, *args): return _pybw_swig.UnitCommandType___eq__(self, *args)
     def __ne__(self, *args): return _pybw_swig.UnitCommandType___ne__(self, *args)
     def __lt__(self, *args): return _pybw_swig.UnitCommandType___lt__(self, *args)
+    def __gt__(self, *args): return _pybw_swig.UnitCommandType___gt__(self, *args)
     def getID(self): return _pybw_swig.UnitCommandType_getID(self)
     def getName(self): return _pybw_swig.UnitCommandType_getName(self)
     __swig_destroy__ = _pybw_swig.delete_UnitCommandType

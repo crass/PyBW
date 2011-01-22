@@ -1,6 +1,6 @@
 bwapi_modules = [
     "AIModule",
-    "Bitmap",
+#    "Bitmap",
     "Bullet",
     "BulletType",
     "Client",

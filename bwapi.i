@@ -104,7 +104,7 @@ using namespace BWAPI;
 // Game
 
 
-%newobject BWAPI::Game::unitsOnTile;
+%newobject BWAPI::Game::getUnitsOnTile;
 %newobject BWAPI::Game::getAllUnits;
 %newobject BWAPI::Game::getMinerals;
 %newobject BWAPI::Game::getGeysers;
@@ -169,9 +169,9 @@ using namespace BWAPI;
         return new SetWrapper<BWAPI::Force*>( self->getForces() );
     }
 
-    SetWrapper<BWAPI::Unit*>* unitsOnTile(int x, int y) // TODO: deallocate!
+    SetWrapper<BWAPI::Unit*>* getUnitsOnTile(int x, int y) // TODO: deallocate!
     {
-        return new SetWrapper<BWAPI::Unit*>( self->unitsOnTile(x, y) );
+        return new SetWrapper<BWAPI::Unit*>( self->getUnitsOnTile(x, y) );
     }
 
     SetWrapper_PtrNext<BWAPI::TilePosition>* getStartLocations()
@@ -204,7 +204,7 @@ using namespace BWAPI;
 %ignore BWAPI::Game::getSelectedUnits;
 %ignore BWAPI::Game::getPlayers;
 %ignore BWAPI::Game::getForces;
-%ignore BWAPI::Game::unitsOnTile;
+%ignore BWAPI::Game::getUnitsOnTile;
 %ignore BWAPI::Game::getStartLocations;
 %ignore BWAPI::Game::canBuildHere;
 %ignore BWAPI::Game::isExplored;
