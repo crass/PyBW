@@ -118,25 +118,25 @@ int main(int argc, const char* argv[])
       {
 	    event_dispatcher.dispatchEvent(&*e);
 
-        switch(e->type)
+        switch(e->getType())
         {
           case EventType::SendText:
-            if (e->text=="/show bullets")
+            if (e->getText()=="/show bullets")
             {
               show_bullets=!show_bullets;
-            } else if (e->text=="/show players")
+            } else if (e->getText()=="/show players")
             {
               showPlayers();
-            } else if (e->text=="/show forces")
+            } else if (e->getText()=="/show forces")
             {
               showForces();
-            } else if (e->text=="/show visibility")
+            } else if (e->getText()=="/show visibility")
             {
               show_visibility_data=!show_visibility_data;
-            } else if (e->text=="/show terrain")
+            } else if (e->getText()=="/show terrain")
             {
               show_terrain_data=!show_terrain_data;
-            } else if (e->text=="/analyze")
+            } else if (e->getText()=="/analyze")
             {
               if (analyzed == false)
               {
@@ -146,7 +146,7 @@ int main(int argc, const char* argv[])
             }
 			else
 			{
-				Broodwar->sendText("%s", e->text.c_str());
+				Broodwar->sendText("%s", e->getText().c_str());
 			}
             break;
         }

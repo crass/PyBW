@@ -81,13 +81,13 @@ void EventDispatcher::reload()
 
 void EventDispatcher::dispatchEvent(BWAPI::Event* e)
 {
-    switch(e->type)
+    switch(e->getType())
 	{
 	case BWAPI::EventType::MatchStart:
 		onMatchStart();
 		break;
 	case BWAPI::EventType::MatchEnd:
-		onMatchEnd(e->isWinner);
+		onMatchEnd(e->isWinner());
 		break;
     case BWAPI::EventType::MatchFrame:
         onMatchFrame();
@@ -96,48 +96,51 @@ void EventDispatcher::dispatchEvent(BWAPI::Event* e)
         onMenuFrame();
         break;
     case BWAPI::EventType::SendText:
-		onSendText(e->text);
+		onSendText(e->getText());
         break;
     case BWAPI::EventType::ReceiveText:
-		onReceiveText(e->player, e->text);
+		onReceiveText(e->getPlayer(), e->getText());
         break;
     case BWAPI::EventType::PlayerLeft:
-        onPlayerLeft(e->player);
+        onPlayerLeft(e->getPlayer());
         break;
     case BWAPI::EventType::NukeDetect:
-		onNukeDetect(e->position);
+		onNukeDetect(e->getPosition());
         break;
     case BWAPI::EventType::UnitDiscover:
-        onUnitDiscover(e->unit);
+        onUnitDiscover(e->getUnit());
         break;
     case BWAPI::EventType::UnitEvade:
-        onUnitEvade(e->unit);
+        onUnitEvade(e->getUnit());
         break;
     case BWAPI::EventType::UnitShow:
-        onUnitShow(e->unit);
+        onUnitShow(e->getUnit());
         break;
     case BWAPI::EventType::UnitHide:
-        onUnitHide(e->unit);
+        onUnitHide(e->getUnit());
         break;
     case BWAPI::EventType::UnitCreate:
-        onUnitCreate(e->unit);
+        onUnitCreate(e->getUnit());
         break;
     case BWAPI::EventType::UnitDestroy:
-        onUnitDestroy(e->unit);
+        onUnitDestroy(e->getUnit());
         break;
     case BWAPI::EventType::UnitMorph:
-        onUnitMorph(e->unit);
+        onUnitMorph(e->getUnit());
         break;
     case BWAPI::EventType::UnitRenegade:
-        onUnitRenegade(e->unit);
+        onUnitRenegade(e->getUnit());
         break;
     case BWAPI::EventType::SaveGame:
-        onSaveGame(e->text);
+        onSaveGame(e->getText());
+        break;
+    case BWAPI::EventType::UnitComplete:
+        onUnitComplete(e->getUnit());
         break;
     case BWAPI::EventType::None:
         break;
     default:
-        printf("error: Unknown event");
+        printf("error: Unknown event: %d\n", e->getType());
         break;
 	}
 }
@@ -276,6 +279,14 @@ void EventDispatcher::onUnitRenegade(BWAPI::Unit* unit)
 	if (event_handler != NULL)
 	{
 		python_func_cleanup( PyObject_CallMethod(event_handler, "onUnitRenegade", "O", _getSwigUnit(unit)) );
+	}
+}
+
+void EventDispatcher::onUnitComplete(BWAPI::Unit* unit)
+{
+	if (event_handler != NULL)
+	{
+		python_func_cleanup( PyObject_CallMethod(event_handler, "onUnitComplete", "O", _getSwigUnit(unit)) );
 	}
 }
 

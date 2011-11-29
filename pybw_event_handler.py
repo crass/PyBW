@@ -60,6 +60,7 @@ class PyBW_EventHandler(object):
         self.profile = profile
 
     def _dispatchEvent(self, event, *args):
+        #~ print "_dispatchEvent:", event
         for listener in self.listeners:
             if hasattr(listener, event):
                 try:
@@ -113,6 +114,8 @@ class PyBW_EventHandler(object):
         self._dispatchEvent("onUnitMorph", unit)
     def onUnitRenegade(self, unit):
         self._dispatchEvent("onUnitRenegade", unit)
+    def onUnitComplete(self, unit):
+        self._dispatchEvent("onUnitComplete", unit)
     def onSaveGame(self, gameName):
         self._dispatchEvent("onSaveGame", gameName)
 
