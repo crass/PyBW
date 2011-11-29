@@ -271,10 +271,11 @@ def reload_event_handler():
 
 print "Creating console"
 
+import threading
+import code
 import pybw_repl
 
-
-class consoleManager(object):
+class ConsoleManagerXMLRPC(object):
     def onConnect(self):
         game = pybw_swig.getGame()
         self.consoleClient = pybw_repl.ConsoleClient()
@@ -282,7 +283,23 @@ class consoleManager(object):
     def onMatchFrame(self):
         self.consoleClient.on_frame()
 
-consoleManager = consoleManager()
+class ConsoleManagerThreaded(object):
+    locals={}
+    
+    def onConnect(self):
+        t = threading.Thread( target=self.thread, args=(self.locals,) )
+        t.start()
+    
+    def thread(self, *args):
+        print "Started interp thread"
+        locals = args[0]
+        game = pybw_swig.getGame()
+        locals.update(dict(game=game, swig=pybw_swig))
+        i = code.InteractiveConsole(locals=locals)
+        i.interact()
+
+#~ consoleManager = ConsoleManagerXMLRPC()
+consoleManager = ConsoleManagerThreaded()
 event_handler.listeners.append( consoleManager )
 
 try:
