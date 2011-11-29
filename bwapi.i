@@ -1,7 +1,5 @@
 %{
 #include "BWAPI.h"
-
-using namespace BWAPI;
 %}
 
 
@@ -82,7 +80,7 @@ using namespace BWAPI;
 %extend BWAPI::UnitType {
     BWAPI::UnitType* whatBuilds()
     {
-        return new UnitType(self->whatBuilds().first);
+        return new BWAPI::UnitType(self->whatBuilds().first);
     }
     
     /*PairWrapper_PtrFirst<BWAPI::UnitType, int>* whatBuilds()

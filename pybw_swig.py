@@ -530,38 +530,6 @@ def TA_getNearestBaseLocation(*args):
   return _pybw_swig.TA_getNearestBaseLocation(*args)
 TA_getNearestBaseLocation = _pybw_swig.TA_getNearestBaseLocation
 
-def readMap():
-  return _pybw_swig.readMap()
-readMap = _pybw_swig.readMap
-
-def analyze():
-  return _pybw_swig.analyze()
-analyze = _pybw_swig.analyze
-
-def getNearestUnwalkablePosition(*args):
-  return _pybw_swig.getNearestUnwalkablePosition(*args)
-getNearestUnwalkablePosition = _pybw_swig.getNearestUnwalkablePosition
-
-def getGroundDistance(*args):
-  return _pybw_swig.getGroundDistance(*args)
-getGroundDistance = _pybw_swig.getGroundDistance
-
-def getNearestTilePosition(*args):
-  return _pybw_swig.getNearestTilePosition(*args)
-getNearestTilePosition = _pybw_swig.getNearestTilePosition
-
-def getGroundDistances(*args):
-  return _pybw_swig.getGroundDistances(*args)
-getGroundDistances = _pybw_swig.getGroundDistances
-
-def getGroundDistanceMap(*args):
-  return _pybw_swig.getGroundDistanceMap(*args)
-getGroundDistanceMap = _pybw_swig.getGroundDistanceMap
-
-def getGroundWalkDistanceMap(*args):
-  return _pybw_swig.getGroundWalkDistanceMap(*args)
-getGroundWalkDistanceMap = _pybw_swig.getGroundWalkDistanceMap
-
 def getGame():
   return _pybw_swig.getGame()
 getGame = _pybw_swig.getGame
@@ -618,18 +586,61 @@ def TA_getNearestUnwalkablePolygon(*args):
   return _pybw_swig.TA_getNearestUnwalkablePolygon(*args)
 TA_getNearestUnwalkablePolygon = _pybw_swig.TA_getNearestUnwalkablePolygon
 
-def isConnected(*args):
-  return _pybw_swig.isConnected(*args)
-isConnected = _pybw_swig.isConnected
-
-def getShortestPath(*args):
-  return _pybw_swig.getShortestPath(*args)
-getShortestPath = _pybw_swig.getShortestPath
-
 
 def HeatMap_get():
   return _pybw_swig.HeatMap_get()
 HeatMap_get = _pybw_swig.HeatMap_get
+class Type(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Type, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Type, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_Type(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def getID(self): return _pybw_swig.Type_getID(self)
+    __swig_destroy__ = _pybw_swig.delete_Type
+    __del__ = lambda self : None;
+Type_swigregister = _pybw_swig.Type_swigregister
+Type_swigregister(Type)
+
+class Position(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Position, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Position, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_Position(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def __eq__(self, *args): return _pybw_swig.Position___eq__(self, *args)
+    def __ne__(self, *args): return _pybw_swig.Position___ne__(self, *args)
+    def __lt__(self, *args): return _pybw_swig.Position___lt__(self, *args)
+    def __nonzero__(self):
+        return _pybw_swig.Position___nonzero__(self)
+    __bool__ = __nonzero__
+
+
+    def isValid(self): return _pybw_swig.Position_isValid(self)
+    def __add__(self, *args): return _pybw_swig.Position___add__(self, *args)
+    def __sub__(self, *args): return _pybw_swig.Position___sub__(self, *args)
+    def makeValid(self): return _pybw_swig.Position_makeValid(self)
+    def __iadd__(self, *args): return _pybw_swig.Position___iadd__(self, *args)
+    def __isub__(self, *args): return _pybw_swig.Position___isub__(self, *args)
+    def getDistance(self, *args): return _pybw_swig.Position_getDistance(self, *args)
+    def getApproxDistance(self, *args): return _pybw_swig.Position_getApproxDistance(self, *args)
+    def getLength(self): return _pybw_swig.Position_getLength(self)
+    def hasPath(self, *args): return _pybw_swig.Position_hasPath(self, *args)
+    def getX(self): return _pybw_swig.Position_getX(self)
+    def getY(self): return _pybw_swig.Position_getY(self)
+    __swig_destroy__ = _pybw_swig.delete_Position
+    __del__ = lambda self : None;
+Position_swigregister = _pybw_swig.Position_swigregister
+Position_swigregister(Position)
+
 class AIModule(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, AIModule, name, value)
@@ -658,9 +669,58 @@ class AIModule(_object):
     def onUnitMorph(self, *args): return _pybw_swig.AIModule_onUnitMorph(self, *args)
     def onUnitRenegade(self, *args): return _pybw_swig.AIModule_onUnitRenegade(self, *args)
     def onSaveGame(self, *args): return _pybw_swig.AIModule_onSaveGame(self, *args)
+    def onUnitComplete(self, *args): return _pybw_swig.AIModule_onUnitComplete(self, *args)
 AIModule_swigregister = _pybw_swig.AIModule_swigregister
 AIModule_swigregister(AIModule)
+cvar = _pybw_swig.cvar
+Positions_Invalid = cvar.Positions_Invalid
+Positions_None = cvar.Positions_None
+Positions_Unknown = cvar.Positions_Unknown
 
+class TournamentModule(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TournamentModule, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TournamentModule, name)
+    __repr__ = _swig_repr
+    def __init__(self): 
+        this = _pybw_swig.new_TournamentModule()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _pybw_swig.delete_TournamentModule
+    __del__ = lambda self : None;
+    def onAction(self, *args): return _pybw_swig.TournamentModule_onAction(self, *args)
+    def onFirstAdvertisement(self): return _pybw_swig.TournamentModule_onFirstAdvertisement(self)
+TournamentModule_swigregister = _pybw_swig.TournamentModule_swigregister
+TournamentModule_swigregister(TournamentModule)
+
+class BulletType(Type):
+    __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, BulletType, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, BulletType, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_BulletType(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def getName(self): return _pybw_swig.BulletType_getName(self)
+    def c_str(self): return _pybw_swig.BulletType_c_str(self)
+    __swig_destroy__ = _pybw_swig.delete_BulletType
+    __del__ = lambda self : None;
+BulletType_swigregister = _pybw_swig.BulletType_swigregister
+BulletType_swigregister(BulletType)
+
+
+def getBulletType(*args):
+  return _pybw_swig.getBulletType(*args)
+getBulletType = _pybw_swig.getBulletType
+
+def allBulletTypes():
+  return _pybw_swig.allBulletTypes()
+allBulletTypes = _pybw_swig.allBulletTypes
 class Bullet(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Bullet, name, value)
@@ -681,61 +741,8 @@ class Bullet(_object):
     def getRemoveTimer(self): return _pybw_swig.Bullet_getRemoveTimer(self)
     def exists(self): return _pybw_swig.Bullet_exists(self)
     def isVisible(self, *args): return _pybw_swig.Bullet_isVisible(self, *args)
-    __swig_destroy__ = _pybw_swig.delete_Bullet
-    __del__ = lambda self : None;
 Bullet_swigregister = _pybw_swig.Bullet_swigregister
 Bullet_swigregister(Bullet)
-
-class BulletType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, BulletType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, BulletType, name)
-    __repr__ = _swig_repr
-    def __init__(self, *args): 
-        this = _pybw_swig.new_BulletType(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.BulletType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.BulletType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.BulletType___lt__(self, *args)
-    def getID(self): return _pybw_swig.BulletType_getID(self)
-    def getName(self): return _pybw_swig.BulletType_getName(self)
-    __swig_destroy__ = _pybw_swig.delete_BulletType
-    __del__ = lambda self : None;
-BulletType_swigregister = _pybw_swig.BulletType_swigregister
-BulletType_swigregister(BulletType)
-
-
-def getBulletType(*args):
-  return _pybw_swig.getBulletType(*args)
-getBulletType = _pybw_swig.getBulletType
-
-def allBulletTypes():
-  return _pybw_swig.allBulletTypes()
-allBulletTypes = _pybw_swig.allBulletTypes
-class Color(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Color, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Color, name)
-    __repr__ = _swig_repr
-    def __init__(self, *args): 
-        this = _pybw_swig.new_Color(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    def getID(self): return _pybw_swig.Color_getID(self)
-    def red(self): return _pybw_swig.Color_red(self)
-    def green(self): return _pybw_swig.Color_green(self)
-    def blue(self): return _pybw_swig.Color_blue(self)
-    def __eq__(self, *args): return _pybw_swig.Color___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.Color___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.Color___lt__(self, *args)
-    __swig_destroy__ = _pybw_swig.delete_Color
-    __del__ = lambda self : None;
-Color_swigregister = _pybw_swig.Color_swigregister
-Color_swigregister(Color)
-cvar = _pybw_swig.cvar
 BulletTypes_Melee = cvar.BulletTypes_Melee
 Fusion_Cutter_Hit = cvar.Fusion_Cutter_Hit
 Gauss_Rifle_Hit = cvar.Gauss_Rifle_Hit
@@ -763,6 +770,7 @@ BulletTypes_Seeker_Spores = cvar.BulletTypes_Seeker_Spores
 Queen_Spell_Carrier = cvar.Queen_Spell_Carrier
 Plague_Cloud = cvar.Plague_Cloud
 BulletTypes_Consume = cvar.BulletTypes_Consume
+BulletTypes_Ensnare = cvar.BulletTypes_Ensnare
 Needle_Spine_Hit = cvar.Needle_Spine_Hit
 Invisible = cvar.Invisible
 Optical_Flare_Grenade = cvar.Optical_Flare_Grenade
@@ -773,27 +781,44 @@ BulletTypes_Neutron_Flare = cvar.BulletTypes_Neutron_Flare
 BulletTypes_None = cvar.BulletTypes_None
 BulletTypes_Unknown = cvar.BulletTypes_Unknown
 
+class Color(Type):
+    __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Color, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, Color, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_Color(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def red(self): return _pybw_swig.Color_red(self)
+    def green(self): return _pybw_swig.Color_green(self)
+    def blue(self): return _pybw_swig.Color_blue(self)
+    __swig_destroy__ = _pybw_swig.delete_Color
+    __del__ = lambda self : None;
+Color_swigregister = _pybw_swig.Color_swigregister
+Color_swigregister(Color)
+
 TILE_SIZE = _pybw_swig.TILE_SIZE
-PYLON_X_RADIUS = _pybw_swig.PYLON_X_RADIUS
-PYLON_Y_RADIUS = _pybw_swig.PYLON_Y_RADIUS
 Screen = _pybw_swig.Screen
 Map = _pybw_swig.Map
 Mouse = _pybw_swig.Mouse
-class DamageType(_object):
+class DamageType(Type):
     __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, DamageType, name, value)
     __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, DamageType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
         this = _pybw_swig.new_DamageType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.DamageType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.DamageType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.DamageType___lt__(self, *args)
-    def getID(self): return _pybw_swig.DamageType_getID(self)
     def getName(self): return _pybw_swig.DamageType_getName(self)
+    def c_str(self): return _pybw_swig.DamageType_c_str(self)
     __swig_destroy__ = _pybw_swig.delete_DamageType
     __del__ = lambda self : None;
 DamageType_swigregister = _pybw_swig.DamageType_swigregister
@@ -819,21 +844,20 @@ getDamageType = _pybw_swig.getDamageType
 def allDamageTypes():
   return _pybw_swig.allDamageTypes()
 allDamageTypes = _pybw_swig.allDamageTypes
-class Error(_object):
+class Error(Type):
     __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, Error, name, value)
     __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, Error, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
         this = _pybw_swig.new_Error(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.Error___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.Error___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.Error___lt__(self, *args)
-    def getID(self): return _pybw_swig.Error_getID(self)
     def toString(self): return _pybw_swig.Error_toString(self)
+    def c_str(self): return _pybw_swig.Error_c_str(self)
     __swig_destroy__ = _pybw_swig.delete_Error
     __del__ = lambda self : None;
 Error_swigregister = _pybw_swig.Error_swigregister
@@ -854,14 +878,35 @@ getError = _pybw_swig.getError
 def allErrors():
   return _pybw_swig.allErrors()
 allErrors = _pybw_swig.allErrors
+EventTypes_MatchStart = _pybw_swig.EventTypes_MatchStart
+EventTypes_MatchEnd = _pybw_swig.EventTypes_MatchEnd
+EventTypes_MatchFrame = _pybw_swig.EventTypes_MatchFrame
+EventTypes_MenuFrame = _pybw_swig.EventTypes_MenuFrame
+EventTypes_SendText = _pybw_swig.EventTypes_SendText
+EventTypes_ReceiveText = _pybw_swig.EventTypes_ReceiveText
+EventTypes_PlayerLeft = _pybw_swig.EventTypes_PlayerLeft
+EventTypes_NukeDetect = _pybw_swig.EventTypes_NukeDetect
+EventTypes_UnitDiscover = _pybw_swig.EventTypes_UnitDiscover
+EventTypes_UnitEvade = _pybw_swig.EventTypes_UnitEvade
+EventTypes_UnitShow = _pybw_swig.EventTypes_UnitShow
+EventTypes_UnitHide = _pybw_swig.EventTypes_UnitHide
+EventTypes_UnitCreate = _pybw_swig.EventTypes_UnitCreate
+EventTypes_UnitDestroy = _pybw_swig.EventTypes_UnitDestroy
+EventTypes_UnitMorph = _pybw_swig.EventTypes_UnitMorph
+EventTypes_UnitRenegade = _pybw_swig.EventTypes_UnitRenegade
+EventTypes_SaveGame = _pybw_swig.EventTypes_SaveGame
+UnitComplete = _pybw_swig.UnitComplete
+EventTypes_None = _pybw_swig.EventTypes_None
 class Event(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, Event, name, value)
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, Event, name)
     __repr__ = _swig_repr
-    def __init__(self): 
-        this = _pybw_swig.new_Event()
+    __swig_destroy__ = _pybw_swig.delete_Event
+    __del__ = lambda self : None;
+    def __init__(self, *args): 
+        this = _pybw_swig.new_Event(*args)
         try: self.this.append(this)
         except: self.this = this
     def __eq__(self, *args): return _pybw_swig.Event___eq__(self, *args)
@@ -899,26 +944,20 @@ class Event(_object):
     if _newclass:UnitRenegade = staticmethod(_pybw_swig.Event_UnitRenegade)
     __swig_getmethods__["SaveGame"] = lambda x: _pybw_swig.Event_SaveGame
     if _newclass:SaveGame = staticmethod(_pybw_swig.Event_SaveGame)
-    __swig_setmethods__["type"] = _pybw_swig.Event_type_set
-    __swig_getmethods__["type"] = _pybw_swig.Event_type_get
-    if _newclass:type = _swig_property(_pybw_swig.Event_type_get, _pybw_swig.Event_type_set)
-    __swig_setmethods__["position"] = _pybw_swig.Event_position_set
-    __swig_getmethods__["position"] = _pybw_swig.Event_position_get
-    if _newclass:position = _swig_property(_pybw_swig.Event_position_get, _pybw_swig.Event_position_set)
-    __swig_setmethods__["text"] = _pybw_swig.Event_text_set
-    __swig_getmethods__["text"] = _pybw_swig.Event_text_get
-    if _newclass:text = _swig_property(_pybw_swig.Event_text_get, _pybw_swig.Event_text_set)
-    __swig_setmethods__["unit"] = _pybw_swig.Event_unit_set
-    __swig_getmethods__["unit"] = _pybw_swig.Event_unit_get
-    if _newclass:unit = _swig_property(_pybw_swig.Event_unit_get, _pybw_swig.Event_unit_set)
-    __swig_setmethods__["player"] = _pybw_swig.Event_player_set
-    __swig_getmethods__["player"] = _pybw_swig.Event_player_get
-    if _newclass:player = _swig_property(_pybw_swig.Event_player_get, _pybw_swig.Event_player_set)
-    __swig_setmethods__["isWinner"] = _pybw_swig.Event_isWinner_set
-    __swig_getmethods__["isWinner"] = _pybw_swig.Event_isWinner_get
-    if _newclass:isWinner = _swig_property(_pybw_swig.Event_isWinner_get, _pybw_swig.Event_isWinner_set)
-    __swig_destroy__ = _pybw_swig.delete_Event
-    __del__ = lambda self : None;
+    __swig_getmethods__["UnitComplete"] = lambda x: _pybw_swig.Event_UnitComplete
+    if _newclass:UnitComplete = staticmethod(_pybw_swig.Event_UnitComplete)
+    def getType(self): return _pybw_swig.Event_getType(self)
+    def getPosition(self): return _pybw_swig.Event_getPosition(self)
+    def getText(self): return _pybw_swig.Event_getText(self)
+    def getUnit(self): return _pybw_swig.Event_getUnit(self)
+    def getPlayer(self): return _pybw_swig.Event_getPlayer(self)
+    def isWinner(self): return _pybw_swig.Event_isWinner(self)
+    def setType(self, *args): return _pybw_swig.Event_setType(self, *args)
+    def setPosition(self, *args): return _pybw_swig.Event_setPosition(self, *args)
+    def setText(self, *args): return _pybw_swig.Event_setText(self, *args)
+    def setUnit(self, *args): return _pybw_swig.Event_setUnit(self, *args)
+    def setPlayer(self, *args): return _pybw_swig.Event_setPlayer(self, *args)
+    def setWinner(self, *args): return _pybw_swig.Event_setWinner(self, *args)
 Event_swigregister = _pybw_swig.Event_swigregister
 Event_swigregister(Event)
 Unit_Does_Not_Exist = cvar.Unit_Does_Not_Exist
@@ -966,8 +1005,8 @@ def Event_MenuFrame():
   return _pybw_swig.Event_MenuFrame()
 Event_MenuFrame = _pybw_swig.Event_MenuFrame
 
-def Event_SendText(*args):
-  return _pybw_swig.Event_SendText(*args)
+def Event_SendText(text = None):
+  return _pybw_swig.Event_SendText(text)
 Event_SendText = _pybw_swig.Event_SendText
 
 def Event_ReceiveText(*args):
@@ -1014,43 +1053,28 @@ def Event_UnitRenegade(*args):
   return _pybw_swig.Event_UnitRenegade(*args)
 Event_UnitRenegade = _pybw_swig.Event_UnitRenegade
 
-def Event_SaveGame(*args):
-  return _pybw_swig.Event_SaveGame(*args)
+def Event_SaveGame(gameName = None):
+  return _pybw_swig.Event_SaveGame(gameName)
 Event_SaveGame = _pybw_swig.Event_SaveGame
 
-EventTypes_MatchStart = _pybw_swig.EventTypes_MatchStart
-EventTypes_MatchEnd = _pybw_swig.EventTypes_MatchEnd
-EventTypes_MatchFrame = _pybw_swig.EventTypes_MatchFrame
-EventTypes_MenuFrame = _pybw_swig.EventTypes_MenuFrame
-EventTypes_SendText = _pybw_swig.EventTypes_SendText
-EventTypes_ReceiveText = _pybw_swig.EventTypes_ReceiveText
-EventTypes_PlayerLeft = _pybw_swig.EventTypes_PlayerLeft
-EventTypes_NukeDetect = _pybw_swig.EventTypes_NukeDetect
-EventTypes_UnitDiscover = _pybw_swig.EventTypes_UnitDiscover
-EventTypes_UnitEvade = _pybw_swig.EventTypes_UnitEvade
-EventTypes_UnitShow = _pybw_swig.EventTypes_UnitShow
-EventTypes_UnitHide = _pybw_swig.EventTypes_UnitHide
-EventTypes_UnitCreate = _pybw_swig.EventTypes_UnitCreate
-EventTypes_UnitDestroy = _pybw_swig.EventTypes_UnitDestroy
-EventTypes_UnitMorph = _pybw_swig.EventTypes_UnitMorph
-EventTypes_UnitRenegade = _pybw_swig.EventTypes_UnitRenegade
-EventTypes_SaveGame = _pybw_swig.EventTypes_SaveGame
-EventTypes_None = _pybw_swig.EventTypes_None
-class ExplosionType(_object):
+def Event_UnitComplete(*args):
+  return _pybw_swig.Event_UnitComplete(*args)
+Event_UnitComplete = _pybw_swig.Event_UnitComplete
+
+class ExplosionType(Type):
     __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, ExplosionType, name, value)
     __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, ExplosionType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
         this = _pybw_swig.new_ExplosionType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.ExplosionType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.ExplosionType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.ExplosionType___lt__(self, *args)
-    def getID(self): return _pybw_swig.ExplosionType_getID(self)
     def getName(self): return _pybw_swig.ExplosionType_getName(self)
+    def c_str(self): return _pybw_swig.ExplosionType_c_str(self)
     __swig_destroy__ = _pybw_swig.delete_ExplosionType
     __del__ = lambda self : None;
 ExplosionType_swigregister = _pybw_swig.ExplosionType_swigregister
@@ -1077,8 +1101,6 @@ class Force(_object):
     def getID(self): return _pybw_swig.Force_getID(self)
     def getName(self): return _pybw_swig.Force_getName(self)
     def getPlayers(self): return _pybw_swig.Force_getPlayers(self)
-    __swig_destroy__ = _pybw_swig.delete_Force
-    __del__ = lambda self : None;
 Force_swigregister = _pybw_swig.Force_swigregister
 Force_swigregister(Force)
 ExplosionTypes_None = cvar.ExplosionTypes_None
@@ -1107,151 +1129,20 @@ ExplosionTypes_Maelstrom = cvar.ExplosionTypes_Maelstrom
 Air_Splash = cvar.Air_Splash
 ExplosionTypes_Unknown = cvar.ExplosionTypes_Unknown
 
-class Game(_object):
+class GameType(Type):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Game, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Game, name)
-    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
-    __repr__ = _swig_repr
-    def getBullets(self): return _pybw_swig.Game_getBullets(self)
-    def getNukeDots(self): return _pybw_swig.Game_getNukeDots(self)
-    def getEvents(self): return _pybw_swig.Game_getEvents(self)
-    def getForce(self, *args): return _pybw_swig.Game_getForce(self, *args)
-    def getPlayer(self, *args): return _pybw_swig.Game_getPlayer(self, *args)
-    def getUnit(self, *args): return _pybw_swig.Game_getUnit(self, *args)
-    def indexToUnit(self, *args): return _pybw_swig.Game_indexToUnit(self, *args)
-    def getGameType(self): return _pybw_swig.Game_getGameType(self)
-    def getLatency(self): return _pybw_swig.Game_getLatency(self)
-    def getFrameCount(self): return _pybw_swig.Game_getFrameCount(self)
-    def getFPS(self): return _pybw_swig.Game_getFPS(self)
-    def getAverageFPS(self): return _pybw_swig.Game_getAverageFPS(self)
-    def getMousePosition(self): return _pybw_swig.Game_getMousePosition(self)
-    def getMouseState(self, *args): return _pybw_swig.Game_getMouseState(self, *args)
-    def getKeyState(self, *args): return _pybw_swig.Game_getKeyState(self, *args)
-    def getScreenPosition(self): return _pybw_swig.Game_getScreenPosition(self)
-    def setScreenPosition(self, *args): return _pybw_swig.Game_setScreenPosition(self, *args)
-    def pingMinimap(self, *args): return _pybw_swig.Game_pingMinimap(self, *args)
-    def isFlagEnabled(self, *args): return _pybw_swig.Game_isFlagEnabled(self, *args)
-    def enableFlag(self, *args): return _pybw_swig.Game_enableFlag(self, *args)
-    def getUnitsInRectangle(self, *args): return _pybw_swig.Game_getUnitsInRectangle(self, *args)
-    def getUnitsInRadius(self, *args): return _pybw_swig.Game_getUnitsInRadius(self, *args)
-    def getLastError(self): return _pybw_swig.Game_getLastError(self)
-    def setLastError(self, *args): return _pybw_swig.Game_setLastError(self, *args)
-    def mapWidth(self): return _pybw_swig.Game_mapWidth(self)
-    def mapHeight(self): return _pybw_swig.Game_mapHeight(self)
-    def mapFileName(self): return _pybw_swig.Game_mapFileName(self)
-    def mapPathName(self): return _pybw_swig.Game_mapPathName(self)
-    def mapName(self): return _pybw_swig.Game_mapName(self)
-    def mapHash(self): return _pybw_swig.Game_mapHash(self)
-    def isWalkable(self, *args): return _pybw_swig.Game_isWalkable(self, *args)
-    def getGroundHeight(self, *args): return _pybw_swig.Game_getGroundHeight(self, *args)
-    def isBuildable(self, *args): return _pybw_swig.Game_isBuildable(self, *args)
-    def isVisible(self, *args): return _pybw_swig.Game_isVisible(self, *args)
-    def hasCreep(self, *args): return _pybw_swig.Game_hasCreep(self, *args)
-    def hasPower(self, *args): return _pybw_swig.Game_hasPower(self, *args)
-    def canMake(self, *args): return _pybw_swig.Game_canMake(self, *args)
-    def canResearch(self, *args): return _pybw_swig.Game_canResearch(self, *args)
-    def canUpgrade(self, *args): return _pybw_swig.Game_canUpgrade(self, *args)
-    def printf(self, *args): return _pybw_swig.Game_printf(self, *args)
-    def sendText(self, *args): return _pybw_swig.Game_sendText(self, *args)
-    def sendTextEx(self, *args): return _pybw_swig.Game_sendTextEx(self, *args)
-    def changeRace(self, *args): return _pybw_swig.Game_changeRace(self, *args)
-    def isInGame(self): return _pybw_swig.Game_isInGame(self)
-    def isMultiplayer(self): return _pybw_swig.Game_isMultiplayer(self)
-    def isBattleNet(self): return _pybw_swig.Game_isBattleNet(self)
-    def isPaused(self): return _pybw_swig.Game_isPaused(self)
-    def isReplay(self): return _pybw_swig.Game_isReplay(self)
-    def startGame(self): return _pybw_swig.Game_startGame(self)
-    def pauseGame(self): return _pybw_swig.Game_pauseGame(self)
-    def resumeGame(self): return _pybw_swig.Game_resumeGame(self)
-    def leaveGame(self): return _pybw_swig.Game_leaveGame(self)
-    def restartGame(self): return _pybw_swig.Game_restartGame(self)
-    def setLocalSpeed(self, *args): return _pybw_swig.Game_setLocalSpeed(self, *args)
-    def issueCommand(self, *args): return _pybw_swig.Game_issueCommand(self, *args)
-    def self(self): return _pybw_swig.Game_self(self)
-    def enemy(self): return _pybw_swig.Game_enemy(self)
-    def neutral(self): return _pybw_swig.Game_neutral(self)
-    def allies(self): return _pybw_swig.Game_allies(self)
-    def enemies(self): return _pybw_swig.Game_enemies(self)
-    def setTextSize(self, size = 1): return _pybw_swig.Game_setTextSize(self, size)
-    def drawText(self, *args): return _pybw_swig.Game_drawText(self, *args)
-    def drawTextMap(self, *args): return _pybw_swig.Game_drawTextMap(self, *args)
-    def drawTextMouse(self, *args): return _pybw_swig.Game_drawTextMouse(self, *args)
-    def drawTextScreen(self, *args): return _pybw_swig.Game_drawTextScreen(self, *args)
-    def drawBox(self, *args): return _pybw_swig.Game_drawBox(self, *args)
-    def drawBoxMap(self, *args): return _pybw_swig.Game_drawBoxMap(self, *args)
-    def drawBoxMouse(self, *args): return _pybw_swig.Game_drawBoxMouse(self, *args)
-    def drawBoxScreen(self, *args): return _pybw_swig.Game_drawBoxScreen(self, *args)
-    def drawTriangle(self, *args): return _pybw_swig.Game_drawTriangle(self, *args)
-    def drawTriangleMap(self, *args): return _pybw_swig.Game_drawTriangleMap(self, *args)
-    def drawTriangleMouse(self, *args): return _pybw_swig.Game_drawTriangleMouse(self, *args)
-    def drawTriangleScreen(self, *args): return _pybw_swig.Game_drawTriangleScreen(self, *args)
-    def drawCircle(self, *args): return _pybw_swig.Game_drawCircle(self, *args)
-    def drawCircleMap(self, *args): return _pybw_swig.Game_drawCircleMap(self, *args)
-    def drawCircleMouse(self, *args): return _pybw_swig.Game_drawCircleMouse(self, *args)
-    def drawCircleScreen(self, *args): return _pybw_swig.Game_drawCircleScreen(self, *args)
-    def drawEllipse(self, *args): return _pybw_swig.Game_drawEllipse(self, *args)
-    def drawEllipseMap(self, *args): return _pybw_swig.Game_drawEllipseMap(self, *args)
-    def drawEllipseMouse(self, *args): return _pybw_swig.Game_drawEllipseMouse(self, *args)
-    def drawEllipseScreen(self, *args): return _pybw_swig.Game_drawEllipseScreen(self, *args)
-    def drawDot(self, *args): return _pybw_swig.Game_drawDot(self, *args)
-    def drawDotMap(self, *args): return _pybw_swig.Game_drawDotMap(self, *args)
-    def drawDotMouse(self, *args): return _pybw_swig.Game_drawDotMouse(self, *args)
-    def drawDotScreen(self, *args): return _pybw_swig.Game_drawDotScreen(self, *args)
-    def drawLine(self, *args): return _pybw_swig.Game_drawLine(self, *args)
-    def drawLineMap(self, *args): return _pybw_swig.Game_drawLineMap(self, *args)
-    def drawLineMouse(self, *args): return _pybw_swig.Game_drawLineMouse(self, *args)
-    def drawLineScreen(self, *args): return _pybw_swig.Game_drawLineScreen(self, *args)
-    def getScreenBuffer(self): return _pybw_swig.Game_getScreenBuffer(self)
-    def getLatencyFrames(self): return _pybw_swig.Game_getLatencyFrames(self)
-    def getLatencyTime(self): return _pybw_swig.Game_getLatencyTime(self)
-    def getRemainingLatencyFrames(self): return _pybw_swig.Game_getRemainingLatencyFrames(self)
-    def getRemainingLatencyTime(self): return _pybw_swig.Game_getRemainingLatencyTime(self)
-    def getRevision(self): return _pybw_swig.Game_getRevision(self)
-    def isDebug(self): return _pybw_swig.Game_isDebug(self)
-    def isLatComEnabled(self): return _pybw_swig.Game_isLatComEnabled(self)
-    def setLatCom(self, *args): return _pybw_swig.Game_setLatCom(self, *args)
-    def getReplayFrameCount(self): return _pybw_swig.Game_getReplayFrameCount(self)
-    def setGUI(self, enabled = True): return _pybw_swig.Game_setGUI(self, enabled)
-    def getInstanceNumber(self): return _pybw_swig.Game_getInstanceNumber(self)
-    def getAPM(self, includeSelects = False): return _pybw_swig.Game_getAPM(self, includeSelects)
-    def setMap(self, *args): return _pybw_swig.Game_setMap(self, *args)
-    def setFrameSkip(self, frameSkip = 1): return _pybw_swig.Game_setFrameSkip(self, frameSkip)
-    def getAllUnits(self): return _pybw_swig.Game_getAllUnits(self)
-    def getMinerals(self): return _pybw_swig.Game_getMinerals(self)
-    def getGeysers(self): return _pybw_swig.Game_getGeysers(self)
-    def getNeutralUnits(self): return _pybw_swig.Game_getNeutralUnits(self)
-    def getStaticMinerals(self): return _pybw_swig.Game_getStaticMinerals(self)
-    def getStaticGeysers(self): return _pybw_swig.Game_getStaticGeysers(self)
-    def getStaticNeutralUnits(self): return _pybw_swig.Game_getStaticNeutralUnits(self)
-    def getSelectedUnits(self): return _pybw_swig.Game_getSelectedUnits(self)
-    def getPlayers(self): return _pybw_swig.Game_getPlayers(self)
-    def getForces(self): return _pybw_swig.Game_getForces(self)
-    def getUnitsOnTile(self, *args): return _pybw_swig.Game_getUnitsOnTile(self, *args)
-    def getStartLocations(self): return _pybw_swig.Game_getStartLocations(self)
-    def canBuildHere(self, *args): return _pybw_swig.Game_canBuildHere(self, *args)
-    def isExplored(self, *args): return _pybw_swig.Game_isExplored(self, *args)
-    __swig_destroy__ = _pybw_swig.delete_Game
-    __del__ = lambda self : None;
-Game_swigregister = _pybw_swig.Game_swigregister
-Game_swigregister(Game)
-
-class GameType(_object):
-    __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, GameType, name, value)
     __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, GameType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
         this = _pybw_swig.new_GameType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.GameType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.GameType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.GameType___lt__(self, *args)
-    def getID(self): return _pybw_swig.GameType_getID(self)
     def getName(self): return _pybw_swig.GameType_getName(self)
+    def c_str(self): return _pybw_swig.GameType_c_str(self)
     __swig_destroy__ = _pybw_swig.delete_GameType
     __del__ = lambda self : None;
 GameType_swigregister = _pybw_swig.GameType_swigregister
@@ -1268,6 +1159,7 @@ allGameTypes = _pybw_swig.allGameTypes
 M_LEFT = _pybw_swig.M_LEFT
 M_RIGHT = _pybw_swig.M_RIGHT
 M_MIDDLE = _pybw_swig.M_MIDDLE
+M_MAX = _pybw_swig.M_MAX
 K_LBUTTON = _pybw_swig.K_LBUTTON
 K_RBUTTON = _pybw_swig.K_RBUTTON
 K_CANCEL = _pybw_swig.K_CANCEL
@@ -1464,28 +1356,21 @@ K_ZOOM = _pybw_swig.K_ZOOM
 K_NONAME = _pybw_swig.K_NONAME
 K_PA1 = _pybw_swig.K_PA1
 K_OEM_CLEAR = _pybw_swig.K_OEM_CLEAR
-SinglePlayer = _pybw_swig.SinglePlayer
-LanLow = _pybw_swig.LanLow
-LanMedium = _pybw_swig.LanMedium
-LanHigh = _pybw_swig.LanHigh
-BattlenetLow = _pybw_swig.BattlenetLow
-BattlenetMedium = _pybw_swig.BattlenetMedium
-BattlenetHigh = _pybw_swig.BattlenetHigh
-class Order(_object):
+K_MAX = _pybw_swig.K_MAX
+class Order(Type):
     __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, Order, name, value)
     __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, Order, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
         this = _pybw_swig.new_Order(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.Order___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.Order___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.Order___lt__(self, *args)
-    def getID(self): return _pybw_swig.Order_getID(self)
     def getName(self): return _pybw_swig.Order_getName(self)
+    def c_str(self): return _pybw_swig.Order_c_str(self)
     __swig_destroy__ = _pybw_swig.delete_Order
     __del__ = lambda self : None;
 Order_swigregister = _pybw_swig.Order_swigregister
@@ -1515,60 +1400,29 @@ getOrder = _pybw_swig.getOrder
 def allOrders():
   return _pybw_swig.allOrders()
 allOrders = _pybw_swig.allOrders
-class Player(_object):
+class Race(Type):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Player, name, value)
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Race, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Player, name)
-    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, Race, name)
     __repr__ = _swig_repr
-    def getID(self): return _pybw_swig.Player_getID(self)
-    def getName(self): return _pybw_swig.Player_getName(self)
-    def getType(self): return _pybw_swig.Player_getType(self)
-    def getForce(self): return _pybw_swig.Player_getForce(self)
-    def isAlly(self, *args): return _pybw_swig.Player_isAlly(self, *args)
-    def isEnemy(self, *args): return _pybw_swig.Player_isEnemy(self, *args)
-    def isNeutral(self): return _pybw_swig.Player_isNeutral(self)
-    def isVictorious(self): return _pybw_swig.Player_isVictorious(self)
-    def isDefeated(self): return _pybw_swig.Player_isDefeated(self)
-    def leftGame(self): return _pybw_swig.Player_leftGame(self)
-    def minerals(self): return _pybw_swig.Player_minerals(self)
-    def gas(self): return _pybw_swig.Player_gas(self)
-    def cumulativeMinerals(self): return _pybw_swig.Player_cumulativeMinerals(self)
-    def cumulativeGas(self): return _pybw_swig.Player_cumulativeGas(self)
-    def supplyTotal(self, *args): return _pybw_swig.Player_supplyTotal(self, *args)
-    def supplyUsed(self, *args): return _pybw_swig.Player_supplyUsed(self, *args)
-    def allUnitCount(self, *args): return _pybw_swig.Player_allUnitCount(self, *args)
-    def visibleUnitCount(self, *args): return _pybw_swig.Player_visibleUnitCount(self, *args)
-    def completedUnitCount(self, *args): return _pybw_swig.Player_completedUnitCount(self, *args)
-    def incompleteUnitCount(self, *args): return _pybw_swig.Player_incompleteUnitCount(self, *args)
-    def deadUnitCount(self, *args): return _pybw_swig.Player_deadUnitCount(self, *args)
-    def killedUnitCount(self, *args): return _pybw_swig.Player_killedUnitCount(self, *args)
-    def getUpgradeLevel(self, *args): return _pybw_swig.Player_getUpgradeLevel(self, *args)
-    def hasResearched(self, *args): return _pybw_swig.Player_hasResearched(self, *args)
-    def isResearching(self, *args): return _pybw_swig.Player_isResearching(self, *args)
-    def getColor(self): return _pybw_swig.Player_getColor(self)
-    def getTextColor(self): return _pybw_swig.Player_getTextColor(self)
-    def maxEnergy(self, *args): return _pybw_swig.Player_maxEnergy(self, *args)
-    def topSpeed(self, *args): return _pybw_swig.Player_topSpeed(self, *args)
-    def groundWeaponMaxRange(self, *args): return _pybw_swig.Player_groundWeaponMaxRange(self, *args)
-    def airWeaponMaxRange(self, *args): return _pybw_swig.Player_airWeaponMaxRange(self, *args)
-    def sightRange(self, *args): return _pybw_swig.Player_sightRange(self, *args)
-    def groundWeaponDamageCooldown(self, *args): return _pybw_swig.Player_groundWeaponDamageCooldown(self, *args)
-    def armor(self, *args): return _pybw_swig.Player_armor(self, *args)
-    def getUnitScore(self): return _pybw_swig.Player_getUnitScore(self)
-    def getKillScore(self): return _pybw_swig.Player_getKillScore(self)
-    def getBuildingScore(self): return _pybw_swig.Player_getBuildingScore(self)
-    def getRazingScore(self): return _pybw_swig.Player_getRazingScore(self)
-    def getCustomScore(self): return _pybw_swig.Player_getCustomScore(self)
-    def getUnits(self): return _pybw_swig.Player_getUnits(self)
-    def getRace(self): return _pybw_swig.Player_getRace(self)
-    def getStartLocation(self): return _pybw_swig.Player_getStartLocation(self)
-    def isUpgrading(self, *args): return _pybw_swig.Player_isUpgrading(self, *args)
-    __swig_destroy__ = _pybw_swig.delete_Player
+    def __init__(self, *args): 
+        this = _pybw_swig.new_Race(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def getName(self): return _pybw_swig.Race_getName(self)
+    def c_str(self): return _pybw_swig.Race_c_str(self)
+    def getWorker(self): return _pybw_swig.Race_getWorker(self)
+    def getCenter(self): return _pybw_swig.Race_getCenter(self)
+    def getRefinery(self): return _pybw_swig.Race_getRefinery(self)
+    def getTransport(self): return _pybw_swig.Race_getTransport(self)
+    def getSupplyProvider(self): return _pybw_swig.Race_getSupplyProvider(self)
+    __swig_destroy__ = _pybw_swig.delete_Race
     __del__ = lambda self : None;
-Player_swigregister = _pybw_swig.Player_swigregister
-Player_swigregister(Player)
+Race_swigregister = _pybw_swig.Race_swigregister
+Race_swigregister(Race)
 Die = cvar.Die
 Orders_Stop = cvar.Orders_Stop
 Guard = cvar.Guard
@@ -1668,6 +1522,7 @@ CastEMPShockwave = cvar.CastEMPShockwave
 NukeWait = cvar.NukeWait
 NukeTrain = cvar.NukeTrain
 NukeLaunch = cvar.NukeLaunch
+NukePaint = cvar.NukePaint
 NukeUnit = cvar.NukeUnit
 CastNuclearStrike = cvar.CastNuclearStrike
 NukeTrack = cvar.NukeTrack
@@ -1726,102 +1581,6 @@ Fatal = cvar.Fatal
 Orders_None = cvar.Orders_None
 Orders_Unknown = cvar.Orders_Unknown
 
-class PlayerType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PlayerType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PlayerType, name)
-    __repr__ = _swig_repr
-    def __init__(self, *args): 
-        this = _pybw_swig.new_PlayerType(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.PlayerType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.PlayerType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.PlayerType___lt__(self, *args)
-    def getID(self): return _pybw_swig.PlayerType_getID(self)
-    def getName(self): return _pybw_swig.PlayerType_getName(self)
-    __swig_destroy__ = _pybw_swig.delete_PlayerType
-    __del__ = lambda self : None;
-PlayerType_swigregister = _pybw_swig.PlayerType_swigregister
-PlayerType_swigregister(PlayerType)
-
-
-def getPlayerType(*args):
-  return _pybw_swig.getPlayerType(*args)
-getPlayerType = _pybw_swig.getPlayerType
-
-def allPlayerTypes():
-  return _pybw_swig.allPlayerTypes()
-allPlayerTypes = _pybw_swig.allPlayerTypes
-class Position(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Position, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Position, name)
-    __repr__ = _swig_repr
-    def __init__(self, *args): 
-        this = _pybw_swig.new_Position(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.Position___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.Position___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.Position___lt__(self, *args)
-    def isValid(self): return _pybw_swig.Position_isValid(self)
-    def __add__(self, *args): return _pybw_swig.Position___add__(self, *args)
-    def __sub__(self, *args): return _pybw_swig.Position___sub__(self, *args)
-    def makeValid(self): return _pybw_swig.Position_makeValid(self)
-    def __iadd__(self, *args): return _pybw_swig.Position___iadd__(self, *args)
-    def __isub__(self, *args): return _pybw_swig.Position___isub__(self, *args)
-    def getDistance(self, *args): return _pybw_swig.Position_getDistance(self, *args)
-    def getApproxDistance(self, *args): return _pybw_swig.Position_getApproxDistance(self, *args)
-    def getLength(self): return _pybw_swig.Position_getLength(self)
-    def getX(self): return _pybw_swig.Position_getX(self)
-    def getY(self): return _pybw_swig.Position_getY(self)
-    __swig_destroy__ = _pybw_swig.delete_Position
-    __del__ = lambda self : None;
-Position_swigregister = _pybw_swig.Position_swigregister
-Position_swigregister(Position)
-PlayerTypes_None = cvar.PlayerTypes_None
-Computer = cvar.Computer
-PlayerTypes_Player = cvar.PlayerTypes_Player
-PlayerTypes_RescuePassive = cvar.PlayerTypes_RescuePassive
-EitherPreferComputer = cvar.EitherPreferComputer
-EitherPreferHuman = cvar.EitherPreferHuman
-PlayerTypes_Neutral = cvar.PlayerTypes_Neutral
-Closed = cvar.Closed
-PlayerTypes_PlayerLeft = cvar.PlayerTypes_PlayerLeft
-ComputerLeft = cvar.ComputerLeft
-PlayerTypes_Unknown = cvar.PlayerTypes_Unknown
-
-class Race(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Race, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Race, name)
-    __repr__ = _swig_repr
-    def __init__(self, *args): 
-        this = _pybw_swig.new_Race(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.Race___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.Race___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.Race___lt__(self, *args)
-    def getID(self): return _pybw_swig.Race_getID(self)
-    def getName(self): return _pybw_swig.Race_getName(self)
-    def getWorker(self): return _pybw_swig.Race_getWorker(self)
-    def getCenter(self): return _pybw_swig.Race_getCenter(self)
-    def getRefinery(self): return _pybw_swig.Race_getRefinery(self)
-    def getTransport(self): return _pybw_swig.Race_getTransport(self)
-    def getSupplyProvider(self): return _pybw_swig.Race_getSupplyProvider(self)
-    __swig_destroy__ = _pybw_swig.delete_Race
-    __del__ = lambda self : None;
-Race_swigregister = _pybw_swig.Race_swigregister
-Race_swigregister(Race)
-Positions_Invalid = cvar.Positions_Invalid
-Positions_None = cvar.Positions_None
-Positions_Unknown = cvar.Positions_Unknown
-
 
 def getRace(*args):
   return _pybw_swig.getRace(*args)
@@ -1830,21 +1589,89 @@ getRace = _pybw_swig.getRace
 def allRaces():
   return _pybw_swig.allRaces()
 allRaces = _pybw_swig.allRaces
-class TechType(_object):
+class Region(_object):
     __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Region, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Region, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    def getID(self): return _pybw_swig.Region_getID(self)
+    def getRegionGroupID(self): return _pybw_swig.Region_getRegionGroupID(self)
+    def getCenter(self): return _pybw_swig.Region_getCenter(self)
+    def isHigherGround(self): return _pybw_swig.Region_isHigherGround(self)
+    def getDefensePriority(self): return _pybw_swig.Region_getDefensePriority(self)
+    def isWalkable(self): return _pybw_swig.Region_isWalkable(self)
+    def getNeighbors(self): return _pybw_swig.Region_getNeighbors(self)
+    def getBoundsLeft(self): return _pybw_swig.Region_getBoundsLeft(self)
+    def getBoundsTop(self): return _pybw_swig.Region_getBoundsTop(self)
+    def getBoundsRight(self): return _pybw_swig.Region_getBoundsRight(self)
+    def getBoundsBottom(self): return _pybw_swig.Region_getBoundsBottom(self)
+    def getClosestAccessibleRegion(self): return _pybw_swig.Region_getClosestAccessibleRegion(self)
+    def getClosestInaccessibleRegion(self): return _pybw_swig.Region_getClosestInaccessibleRegion(self)
+    def getDistance(self, *args): return _pybw_swig.Region_getDistance(self, *args)
+Region_swigregister = _pybw_swig.Region_swigregister
+Region_swigregister(Region)
+Zerg = cvar.Zerg
+Terran = cvar.Terran
+Protoss = cvar.Protoss
+Random = cvar.Random
+Other = cvar.Other
+Races_None = cvar.Races_None
+Races_Unknown = cvar.Races_Unknown
+
+class UpgradeType(Type):
+    __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, UpgradeType, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, UpgradeType, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_UpgradeType(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def getName(self): return _pybw_swig.UpgradeType_getName(self)
+    def c_str(self): return _pybw_swig.UpgradeType_c_str(self)
+    def getRace(self): return _pybw_swig.UpgradeType_getRace(self)
+    def mineralPrice(self, level = 1): return _pybw_swig.UpgradeType_mineralPrice(self, level)
+    def mineralPriceFactor(self): return _pybw_swig.UpgradeType_mineralPriceFactor(self)
+    def gasPrice(self, level = 1): return _pybw_swig.UpgradeType_gasPrice(self, level)
+    def gasPriceFactor(self): return _pybw_swig.UpgradeType_gasPriceFactor(self)
+    def upgradeTime(self, level = 1): return _pybw_swig.UpgradeType_upgradeTime(self, level)
+    def upgradeTimeFactor(self): return _pybw_swig.UpgradeType_upgradeTimeFactor(self)
+    def maxRepeats(self): return _pybw_swig.UpgradeType_maxRepeats(self)
+    def whatUpgrades(self): return _pybw_swig.UpgradeType_whatUpgrades(self)
+    def whatsRequired(self, level = 1): return _pybw_swig.UpgradeType_whatsRequired(self, level)
+    def whatUses(self): return _pybw_swig.UpgradeType_whatUses(self)
+    __swig_destroy__ = _pybw_swig.delete_UpgradeType
+    __del__ = lambda self : None;
+UpgradeType_swigregister = _pybw_swig.UpgradeType_swigregister
+UpgradeType_swigregister(UpgradeType)
+
+
+def getUpgradeType(*args):
+  return _pybw_swig.getUpgradeType(*args)
+getUpgradeType = _pybw_swig.getUpgradeType
+
+def allUpgradeTypes():
+  return _pybw_swig.allUpgradeTypes()
+allUpgradeTypes = _pybw_swig.allUpgradeTypes
+class TechType(Type):
+    __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, TechType, name, value)
     __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, TechType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
         this = _pybw_swig.new_TechType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.TechType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.TechType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.TechType___lt__(self, *args)
-    def getID(self): return _pybw_swig.TechType_getID(self)
     def getName(self): return _pybw_swig.TechType_getName(self)
+    def c_str(self): return _pybw_swig.TechType_c_str(self)
     def getRace(self): return _pybw_swig.TechType_getRace(self)
     def mineralPrice(self): return _pybw_swig.TechType_mineralPrice(self)
     def gasPrice(self): return _pybw_swig.TechType_gasPrice(self)
@@ -1855,17 +1682,63 @@ class TechType(_object):
     def targetsUnit(self): return _pybw_swig.TechType_targetsUnit(self)
     def targetsPosition(self): return _pybw_swig.TechType_targetsPosition(self)
     def whatUses(self): return _pybw_swig.TechType_whatUses(self)
+    def getOrder(self): return _pybw_swig.TechType_getOrder(self)
     __swig_destroy__ = _pybw_swig.delete_TechType
     __del__ = lambda self : None;
 TechType_swigregister = _pybw_swig.TechType_swigregister
 TechType_swigregister(TechType)
-Zerg = cvar.Zerg
-Terran = cvar.Terran
-Protoss = cvar.Protoss
-Random = cvar.Random
-Other = cvar.Other
-Races_None = cvar.Races_None
-Races_Unknown = cvar.Races_Unknown
+Terran_Infantry_Armor = cvar.Terran_Infantry_Armor
+Terran_Vehicle_Plating = cvar.Terran_Vehicle_Plating
+Terran_Ship_Plating = cvar.Terran_Ship_Plating
+Zerg_Carapace = cvar.Zerg_Carapace
+Zerg_Flyer_Carapace = cvar.Zerg_Flyer_Carapace
+Protoss_Ground_Armor = cvar.Protoss_Ground_Armor
+Protoss_Air_Armor = cvar.Protoss_Air_Armor
+Terran_Infantry_Weapons = cvar.Terran_Infantry_Weapons
+Terran_Vehicle_Weapons = cvar.Terran_Vehicle_Weapons
+Terran_Ship_Weapons = cvar.Terran_Ship_Weapons
+Zerg_Melee_Attacks = cvar.Zerg_Melee_Attacks
+Zerg_Missile_Attacks = cvar.Zerg_Missile_Attacks
+Zerg_Flyer_Attacks = cvar.Zerg_Flyer_Attacks
+Protoss_Ground_Weapons = cvar.Protoss_Ground_Weapons
+Protoss_Air_Weapons = cvar.Protoss_Air_Weapons
+Protoss_Plasma_Shields = cvar.Protoss_Plasma_Shields
+U_238_Shells = cvar.U_238_Shells
+Ion_Thrusters = cvar.Ion_Thrusters
+Titan_Reactor = cvar.Titan_Reactor
+Ocular_Implants = cvar.Ocular_Implants
+Moebius_Reactor = cvar.Moebius_Reactor
+Apollo_Reactor = cvar.Apollo_Reactor
+Colossus_Reactor = cvar.Colossus_Reactor
+Ventral_Sacs = cvar.Ventral_Sacs
+Antennae = cvar.Antennae
+Pneumatized_Carapace = cvar.Pneumatized_Carapace
+Metabolic_Boost = cvar.Metabolic_Boost
+Adrenal_Glands = cvar.Adrenal_Glands
+Muscular_Augments = cvar.Muscular_Augments
+Grooved_Spines = cvar.Grooved_Spines
+Gamete_Meiosis = cvar.Gamete_Meiosis
+Metasynaptic_Node = cvar.Metasynaptic_Node
+Singularity_Charge = cvar.Singularity_Charge
+Leg_Enhancements = cvar.Leg_Enhancements
+Scarab_Damage = cvar.Scarab_Damage
+Reaver_Capacity = cvar.Reaver_Capacity
+Gravitic_Drive = cvar.Gravitic_Drive
+Sensor_Array = cvar.Sensor_Array
+Gravitic_Boosters = cvar.Gravitic_Boosters
+Khaydarin_Amulet = cvar.Khaydarin_Amulet
+Apial_Sensors = cvar.Apial_Sensors
+Gravitic_Thrusters = cvar.Gravitic_Thrusters
+Carrier_Capacity = cvar.Carrier_Capacity
+Khaydarin_Core = cvar.Khaydarin_Core
+Argus_Jewel = cvar.Argus_Jewel
+Argus_Talisman = cvar.Argus_Talisman
+Caduceus_Reactor = cvar.Caduceus_Reactor
+Chitinous_Plating = cvar.Chitinous_Plating
+Anabolic_Synthesis = cvar.Anabolic_Synthesis
+Charon_Boosters = cvar.Charon_Boosters
+UpgradeTypes_None = cvar.UpgradeTypes_None
+UpgradeTypes_Unknown = cvar.UpgradeTypes_Unknown
 
 
 def getTechType(*args):
@@ -1875,33 +1748,25 @@ getTechType = _pybw_swig.getTechType
 def allTechTypes():
   return _pybw_swig.allTechTypes()
 allTechTypes = _pybw_swig.allTechTypes
-class TilePosition(_object):
+BWAPI_UNIT_COMMAND_TYPE_COUNT = _pybw_swig.BWAPI_UNIT_COMMAND_TYPE_COUNT
+class UnitCommandType(Type):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, TilePosition, name, value)
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, UnitCommandType, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, TilePosition, name)
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, UnitCommandType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
-        this = _pybw_swig.new_TilePosition(*args)
+        this = _pybw_swig.new_UnitCommandType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.TilePosition___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.TilePosition___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.TilePosition___lt__(self, *args)
-    def isValid(self): return _pybw_swig.TilePosition_isValid(self)
-    def __add__(self, *args): return _pybw_swig.TilePosition___add__(self, *args)
-    def __sub__(self, *args): return _pybw_swig.TilePosition___sub__(self, *args)
-    def makeValid(self): return _pybw_swig.TilePosition_makeValid(self)
-    def __iadd__(self, *args): return _pybw_swig.TilePosition___iadd__(self, *args)
-    def __isub__(self, *args): return _pybw_swig.TilePosition___isub__(self, *args)
-    def getDistance(self, *args): return _pybw_swig.TilePosition_getDistance(self, *args)
-    def getLength(self): return _pybw_swig.TilePosition_getLength(self)
-    def getX(self): return _pybw_swig.TilePosition_getX(self)
-    def getY(self): return _pybw_swig.TilePosition_getY(self)
-    __swig_destroy__ = _pybw_swig.delete_TilePosition
+    def getName(self): return _pybw_swig.UnitCommandType_getName(self)
+    def c_str(self): return _pybw_swig.UnitCommandType_c_str(self)
+    __swig_destroy__ = _pybw_swig.delete_UnitCommandType
     __del__ = lambda self : None;
-TilePosition_swigregister = _pybw_swig.TilePosition_swigregister
-TilePosition_swigregister(TilePosition)
+UnitCommandType_swigregister = _pybw_swig.UnitCommandType_swigregister
+UnitCommandType_swigregister(UnitCommandType)
 Stim_Packs = cvar.Stim_Packs
 TechTypes_Lockdown = cvar.TechTypes_Lockdown
 TechTypes_EMP_Shockwave = cvar.TechTypes_EMP_Shockwave
@@ -1939,184 +1804,14 @@ TechTypes_None = cvar.TechTypes_None
 TechTypes_Unknown = cvar.TechTypes_Unknown
 TechTypes_Nuclear_Strike = cvar.TechTypes_Nuclear_Strike
 
-class Unit(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Unit, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Unit, name)
-    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
-    __repr__ = _swig_repr
-    def getID(self): return _pybw_swig.Unit_getID(self)
-    def getPlayer(self): return _pybw_swig.Unit_getPlayer(self)
-    def getType(self): return _pybw_swig.Unit_getType(self)
-    def getPosition(self): return _pybw_swig.Unit_getPosition(self)
-    def getTilePosition(self): return _pybw_swig.Unit_getTilePosition(self)
-    def getAngle(self): return _pybw_swig.Unit_getAngle(self)
-    def getVelocityX(self): return _pybw_swig.Unit_getVelocityX(self)
-    def getVelocityY(self): return _pybw_swig.Unit_getVelocityY(self)
-    def getHitPoints(self): return _pybw_swig.Unit_getHitPoints(self)
-    def getShields(self): return _pybw_swig.Unit_getShields(self)
-    def getEnergy(self): return _pybw_swig.Unit_getEnergy(self)
-    def getResources(self): return _pybw_swig.Unit_getResources(self)
-    def getResourceGroup(self): return _pybw_swig.Unit_getResourceGroup(self)
-    def getDistance(self, *args): return _pybw_swig.Unit_getDistance(self, *args)
-    def hasPath(self, *args): return _pybw_swig.Unit_hasPath(self, *args)
-    def getLastCommandFrame(self): return _pybw_swig.Unit_getLastCommandFrame(self)
-    def getLastCommand(self): return _pybw_swig.Unit_getLastCommand(self)
-    def getUpgradeLevel(self, *args): return _pybw_swig.Unit_getUpgradeLevel(self, *args)
-    def getInitialType(self): return _pybw_swig.Unit_getInitialType(self)
-    def getInitialPosition(self): return _pybw_swig.Unit_getInitialPosition(self)
-    def getInitialTilePosition(self): return _pybw_swig.Unit_getInitialTilePosition(self)
-    def getInitialHitPoints(self): return _pybw_swig.Unit_getInitialHitPoints(self)
-    def getInitialResources(self): return _pybw_swig.Unit_getInitialResources(self)
-    def getKillCount(self): return _pybw_swig.Unit_getKillCount(self)
-    def getAcidSporeCount(self): return _pybw_swig.Unit_getAcidSporeCount(self)
-    def getInterceptorCount(self): return _pybw_swig.Unit_getInterceptorCount(self)
-    def getScarabCount(self): return _pybw_swig.Unit_getScarabCount(self)
-    def getSpiderMineCount(self): return _pybw_swig.Unit_getSpiderMineCount(self)
-    def getGroundWeaponCooldown(self): return _pybw_swig.Unit_getGroundWeaponCooldown(self)
-    def getAirWeaponCooldown(self): return _pybw_swig.Unit_getAirWeaponCooldown(self)
-    def getSpellCooldown(self): return _pybw_swig.Unit_getSpellCooldown(self)
-    def getDefenseMatrixPoints(self): return _pybw_swig.Unit_getDefenseMatrixPoints(self)
-    def getDefenseMatrixTimer(self): return _pybw_swig.Unit_getDefenseMatrixTimer(self)
-    def getEnsnareTimer(self): return _pybw_swig.Unit_getEnsnareTimer(self)
-    def getIrradiateTimer(self): return _pybw_swig.Unit_getIrradiateTimer(self)
-    def getLockdownTimer(self): return _pybw_swig.Unit_getLockdownTimer(self)
-    def getMaelstromTimer(self): return _pybw_swig.Unit_getMaelstromTimer(self)
-    def getOrderTimer(self): return _pybw_swig.Unit_getOrderTimer(self)
-    def getPlagueTimer(self): return _pybw_swig.Unit_getPlagueTimer(self)
-    def getRemoveTimer(self): return _pybw_swig.Unit_getRemoveTimer(self)
-    def getStasisTimer(self): return _pybw_swig.Unit_getStasisTimer(self)
-    def getStimTimer(self): return _pybw_swig.Unit_getStimTimer(self)
-    def getBuildType(self): return _pybw_swig.Unit_getBuildType(self)
-    def getTech(self): return _pybw_swig.Unit_getTech(self)
-    def getUpgrade(self): return _pybw_swig.Unit_getUpgrade(self)
-    def getRemainingBuildTime(self): return _pybw_swig.Unit_getRemainingBuildTime(self)
-    def getRemainingTrainTime(self): return _pybw_swig.Unit_getRemainingTrainTime(self)
-    def getRemainingResearchTime(self): return _pybw_swig.Unit_getRemainingResearchTime(self)
-    def getRemainingUpgradeTime(self): return _pybw_swig.Unit_getRemainingUpgradeTime(self)
-    def getBuildUnit(self): return _pybw_swig.Unit_getBuildUnit(self)
-    def getTarget(self): return _pybw_swig.Unit_getTarget(self)
-    def getTargetPosition(self): return _pybw_swig.Unit_getTargetPosition(self)
-    def getOrder(self): return _pybw_swig.Unit_getOrder(self)
-    def getOrderTarget(self): return _pybw_swig.Unit_getOrderTarget(self)
-    def getSecondaryOrder(self): return _pybw_swig.Unit_getSecondaryOrder(self)
-    def getRallyPosition(self): return _pybw_swig.Unit_getRallyPosition(self)
-    def getRallyUnit(self): return _pybw_swig.Unit_getRallyUnit(self)
-    def getAddon(self): return _pybw_swig.Unit_getAddon(self)
-    def getNydusExit(self): return _pybw_swig.Unit_getNydusExit(self)
-    def getPowerUp(self): return _pybw_swig.Unit_getPowerUp(self)
-    def getTransport(self): return _pybw_swig.Unit_getTransport(self)
-    def getCarrier(self): return _pybw_swig.Unit_getCarrier(self)
-    def getInterceptors(self): return _pybw_swig.Unit_getInterceptors(self)
-    def getHatchery(self): return _pybw_swig.Unit_getHatchery(self)
-    def getLarva(self): return _pybw_swig.Unit_getLarva(self)
-    def getUnitsInWeaponRange(self): return _pybw_swig.Unit_getUnitsInWeaponRange(self)
-    def exists(self): return _pybw_swig.Unit_exists(self)
-    def hasNuke(self): return _pybw_swig.Unit_hasNuke(self)
-    def isAccelerating(self): return _pybw_swig.Unit_isAccelerating(self)
-    def isAttacking(self): return _pybw_swig.Unit_isAttacking(self)
-    def isAttackFrame(self): return _pybw_swig.Unit_isAttackFrame(self)
-    def isBeingConstructed(self): return _pybw_swig.Unit_isBeingConstructed(self)
-    def isBeingGathered(self): return _pybw_swig.Unit_isBeingGathered(self)
-    def isBeingHealed(self): return _pybw_swig.Unit_isBeingHealed(self)
-    def isBlind(self): return _pybw_swig.Unit_isBlind(self)
-    def isBraking(self): return _pybw_swig.Unit_isBraking(self)
-    def isBurrowed(self): return _pybw_swig.Unit_isBurrowed(self)
-    def isCarryingGas(self): return _pybw_swig.Unit_isCarryingGas(self)
-    def isCarryingMinerals(self): return _pybw_swig.Unit_isCarryingMinerals(self)
-    def isCloaked(self): return _pybw_swig.Unit_isCloaked(self)
-    def isCompleted(self): return _pybw_swig.Unit_isCompleted(self)
-    def isConstructing(self): return _pybw_swig.Unit_isConstructing(self)
-    def isDefenseMatrixed(self): return _pybw_swig.Unit_isDefenseMatrixed(self)
-    def isDetected(self): return _pybw_swig.Unit_isDetected(self)
-    def isEnsnared(self): return _pybw_swig.Unit_isEnsnared(self)
-    def isFollowing(self): return _pybw_swig.Unit_isFollowing(self)
-    def isGatheringGas(self): return _pybw_swig.Unit_isGatheringGas(self)
-    def isGatheringMinerals(self): return _pybw_swig.Unit_isGatheringMinerals(self)
-    def isHallucination(self): return _pybw_swig.Unit_isHallucination(self)
-    def isHoldingPosition(self): return _pybw_swig.Unit_isHoldingPosition(self)
-    def isIdle(self): return _pybw_swig.Unit_isIdle(self)
-    def isInterruptible(self): return _pybw_swig.Unit_isInterruptible(self)
-    def isInvincible(self): return _pybw_swig.Unit_isInvincible(self)
-    def isInWeaponRange(self, *args): return _pybw_swig.Unit_isInWeaponRange(self, *args)
-    def isIrradiated(self): return _pybw_swig.Unit_isIrradiated(self)
-    def isLifted(self): return _pybw_swig.Unit_isLifted(self)
-    def isLoaded(self): return _pybw_swig.Unit_isLoaded(self)
-    def isLockedDown(self): return _pybw_swig.Unit_isLockedDown(self)
-    def isMaelstrommed(self): return _pybw_swig.Unit_isMaelstrommed(self)
-    def isMorphing(self): return _pybw_swig.Unit_isMorphing(self)
-    def isMoving(self): return _pybw_swig.Unit_isMoving(self)
-    def isParasited(self): return _pybw_swig.Unit_isParasited(self)
-    def isPatrolling(self): return _pybw_swig.Unit_isPatrolling(self)
-    def isPlagued(self): return _pybw_swig.Unit_isPlagued(self)
-    def isRepairing(self): return _pybw_swig.Unit_isRepairing(self)
-    def isResearching(self): return _pybw_swig.Unit_isResearching(self)
-    def isSelected(self): return _pybw_swig.Unit_isSelected(self)
-    def isSieged(self): return _pybw_swig.Unit_isSieged(self)
-    def isStartingAttack(self): return _pybw_swig.Unit_isStartingAttack(self)
-    def isStasised(self): return _pybw_swig.Unit_isStasised(self)
-    def isStimmed(self): return _pybw_swig.Unit_isStimmed(self)
-    def isStuck(self): return _pybw_swig.Unit_isStuck(self)
-    def isTraining(self): return _pybw_swig.Unit_isTraining(self)
-    def isUnderStorm(self): return _pybw_swig.Unit_isUnderStorm(self)
-    def isUnpowered(self): return _pybw_swig.Unit_isUnpowered(self)
-    def isUpgrading(self): return _pybw_swig.Unit_isUpgrading(self)
-    def isVisible(self, *args): return _pybw_swig.Unit_isVisible(self, *args)
-    def canIssueCommand(self, *args): return _pybw_swig.Unit_canIssueCommand(self, *args)
-    def issueCommand(self, *args): return _pybw_swig.Unit_issueCommand(self, *args)
-    def attackMove(self, *args): return _pybw_swig.Unit_attackMove(self, *args)
-    def attackUnit(self, *args): return _pybw_swig.Unit_attackUnit(self, *args)
-    def build(self, *args): return _pybw_swig.Unit_build(self, *args)
-    def buildAddon(self, *args): return _pybw_swig.Unit_buildAddon(self, *args)
-    def train(self, *args): return _pybw_swig.Unit_train(self, *args)
-    def morph(self, *args): return _pybw_swig.Unit_morph(self, *args)
-    def research(self, *args): return _pybw_swig.Unit_research(self, *args)
-    def setRallyPoint(self, *args): return _pybw_swig.Unit_setRallyPoint(self, *args)
-    def move(self, *args): return _pybw_swig.Unit_move(self, *args)
-    def patrol(self, *args): return _pybw_swig.Unit_patrol(self, *args)
-    def holdPosition(self): return _pybw_swig.Unit_holdPosition(self)
-    def stop(self): return _pybw_swig.Unit_stop(self)
-    def follow(self, *args): return _pybw_swig.Unit_follow(self, *args)
-    def gather(self, *args): return _pybw_swig.Unit_gather(self, *args)
-    def returnCargo(self): return _pybw_swig.Unit_returnCargo(self)
-    def repair(self, *args): return _pybw_swig.Unit_repair(self, *args)
-    def burrow(self): return _pybw_swig.Unit_burrow(self)
-    def unburrow(self): return _pybw_swig.Unit_unburrow(self)
-    def cloak(self): return _pybw_swig.Unit_cloak(self)
-    def decloak(self): return _pybw_swig.Unit_decloak(self)
-    def siege(self): return _pybw_swig.Unit_siege(self)
-    def unsiege(self): return _pybw_swig.Unit_unsiege(self)
-    def lift(self): return _pybw_swig.Unit_lift(self)
-    def land(self, *args): return _pybw_swig.Unit_land(self, *args)
-    def load(self, *args): return _pybw_swig.Unit_load(self, *args)
-    def unload(self, *args): return _pybw_swig.Unit_unload(self, *args)
-    def unloadAll(self, *args): return _pybw_swig.Unit_unloadAll(self, *args)
-    def rightClick(self, *args): return _pybw_swig.Unit_rightClick(self, *args)
-    def haltConstruction(self): return _pybw_swig.Unit_haltConstruction(self)
-    def cancelConstruction(self): return _pybw_swig.Unit_cancelConstruction(self)
-    def cancelAddon(self): return _pybw_swig.Unit_cancelAddon(self)
-    def cancelTrain(self, *args): return _pybw_swig.Unit_cancelTrain(self, *args)
-    def cancelMorph(self): return _pybw_swig.Unit_cancelMorph(self)
-    def cancelResearch(self): return _pybw_swig.Unit_cancelResearch(self)
-    def cancelUpgrade(self): return _pybw_swig.Unit_cancelUpgrade(self)
-    def useTech(self, *args): return _pybw_swig.Unit_useTech(self, *args)
-    def setClientInfo(self, *args): return _pybw_swig.Unit_setClientInfo(self, *args)
-    def getClientInfo(self): return _pybw_swig.Unit_getClientInfo(self)
-    def placeCOP(self, *args): return _pybw_swig.Unit_placeCOP(self, *args)
-    def isUnderAttack(self): return _pybw_swig.Unit_isUnderAttack(self)
-    def getLastAttackingPlayer(self): return _pybw_swig.Unit_getLastAttackingPlayer(self)
-    def getLoadedUnits(self): return _pybw_swig.Unit_getLoadedUnits(self)
-    def getTrainingQueue(self): return _pybw_swig.Unit_getTrainingQueue(self)
-    def upgrade(self, *args): return _pybw_swig.Unit_upgrade(self, *args)
-    __swig_destroy__ = _pybw_swig.delete_Unit
-    __del__ = lambda self : None;
-Unit_swigregister = _pybw_swig.Unit_swigregister
-Unit_swigregister(Unit)
-TilePositions_Invalid = cvar.TilePositions_Invalid
-TilePositions_None = cvar.TilePositions_None
-TilePositions_Unknown = cvar.TilePositions_Unknown
 
+def getUnitCommandType(*args):
+  return _pybw_swig.getUnitCommandType(*args)
+getUnitCommandType = _pybw_swig.getUnitCommandType
+
+def allUnitCommandTypes():
+  return _pybw_swig.allUnitCommandTypes()
+allUnitCommandTypes = _pybw_swig.allUnitCommandTypes
 class UnitCommand(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, UnitCommand, name, value)
@@ -2127,10 +1822,8 @@ class UnitCommand(_object):
         this = _pybw_swig.new_UnitCommand(*args)
         try: self.this.append(this)
         except: self.this = this
-    __swig_getmethods__["attackMove"] = lambda x: _pybw_swig.UnitCommand_attackMove
-    if _newclass:attackMove = staticmethod(_pybw_swig.UnitCommand_attackMove)
-    __swig_getmethods__["attackUnit"] = lambda x: _pybw_swig.UnitCommand_attackUnit
-    if _newclass:attackUnit = staticmethod(_pybw_swig.UnitCommand_attackUnit)
+    __swig_getmethods__["attack"] = lambda x: _pybw_swig.UnitCommand_attack
+    if _newclass:attack = staticmethod(_pybw_swig.UnitCommand_attack)
     __swig_getmethods__["build"] = lambda x: _pybw_swig.UnitCommand_build
     if _newclass:build = staticmethod(_pybw_swig.UnitCommand_build)
     __swig_getmethods__["buildAddon"] = lambda x: _pybw_swig.UnitCommand_buildAddon
@@ -2212,6 +1905,7 @@ class UnitCommand(_object):
     def getTechType(self): return _pybw_swig.UnitCommand_getTechType(self)
     def getUpgradeType(self): return _pybw_swig.UnitCommand_getUpgradeType(self)
     def getSlot(self): return _pybw_swig.UnitCommand_getSlot(self)
+    def isQueued(self): return _pybw_swig.UnitCommand_isQueued(self)
     def __eq__(self, *args): return _pybw_swig.UnitCommand___eq__(self, *args)
     def __ne__(self, *args): return _pybw_swig.UnitCommand___ne__(self, *args)
     def __lt__(self, *args): return _pybw_swig.UnitCommand___lt__(self, *args)
@@ -2238,14 +1932,56 @@ class UnitCommand(_object):
     __del__ = lambda self : None;
 UnitCommand_swigregister = _pybw_swig.UnitCommand_swigregister
 UnitCommand_swigregister(UnitCommand)
+UnitCommandTypes_Attack_Move = cvar.UnitCommandTypes_Attack_Move
+UnitCommandTypes_Attack_Unit = cvar.UnitCommandTypes_Attack_Unit
+UnitCommandTypes_Build = cvar.UnitCommandTypes_Build
+UnitCommandTypes_Build_Addon = cvar.UnitCommandTypes_Build_Addon
+UnitCommandTypes_Train = cvar.UnitCommandTypes_Train
+UnitCommandTypes_Morph = cvar.UnitCommandTypes_Morph
+UnitCommandTypes_Research = cvar.UnitCommandTypes_Research
+UnitCommandTypes_Upgrade = cvar.UnitCommandTypes_Upgrade
+UnitCommandTypes_Set_Rally_Position = cvar.UnitCommandTypes_Set_Rally_Position
+UnitCommandTypes_Set_Rally_Unit = cvar.UnitCommandTypes_Set_Rally_Unit
+UnitCommandTypes_Move = cvar.UnitCommandTypes_Move
+UnitCommandTypes_Patrol = cvar.UnitCommandTypes_Patrol
+UnitCommandTypes_Hold_Position = cvar.UnitCommandTypes_Hold_Position
+UnitCommandTypes_Stop = cvar.UnitCommandTypes_Stop
+UnitCommandTypes_Follow = cvar.UnitCommandTypes_Follow
+UnitCommandTypes_Gather = cvar.UnitCommandTypes_Gather
+UnitCommandTypes_Return_Cargo = cvar.UnitCommandTypes_Return_Cargo
+UnitCommandTypes_Repair = cvar.UnitCommandTypes_Repair
+UnitCommandTypes_Burrow = cvar.UnitCommandTypes_Burrow
+UnitCommandTypes_Unburrow = cvar.UnitCommandTypes_Unburrow
+UnitCommandTypes_Cloak = cvar.UnitCommandTypes_Cloak
+UnitCommandTypes_Decloak = cvar.UnitCommandTypes_Decloak
+UnitCommandTypes_Siege = cvar.UnitCommandTypes_Siege
+UnitCommandTypes_Unsiege = cvar.UnitCommandTypes_Unsiege
+UnitCommandTypes_Lift = cvar.UnitCommandTypes_Lift
+UnitCommandTypes_Land = cvar.UnitCommandTypes_Land
+UnitCommandTypes_Load = cvar.UnitCommandTypes_Load
+UnitCommandTypes_Unload = cvar.UnitCommandTypes_Unload
+UnitCommandTypes_Unload_All = cvar.UnitCommandTypes_Unload_All
+UnitCommandTypes_Unload_All_Position = cvar.UnitCommandTypes_Unload_All_Position
+UnitCommandTypes_Right_Click_Position = cvar.UnitCommandTypes_Right_Click_Position
+UnitCommandTypes_Right_Click_Unit = cvar.UnitCommandTypes_Right_Click_Unit
+UnitCommandTypes_Halt_Construction = cvar.UnitCommandTypes_Halt_Construction
+UnitCommandTypes_Cancel_Construction = cvar.UnitCommandTypes_Cancel_Construction
+UnitCommandTypes_Cancel_Addon = cvar.UnitCommandTypes_Cancel_Addon
+UnitCommandTypes_Cancel_Train = cvar.UnitCommandTypes_Cancel_Train
+UnitCommandTypes_Cancel_Train_Slot = cvar.UnitCommandTypes_Cancel_Train_Slot
+UnitCommandTypes_Cancel_Morph = cvar.UnitCommandTypes_Cancel_Morph
+UnitCommandTypes_Cancel_Research = cvar.UnitCommandTypes_Cancel_Research
+UnitCommandTypes_Cancel_Upgrade = cvar.UnitCommandTypes_Cancel_Upgrade
+UnitCommandTypes_Use_Tech = cvar.UnitCommandTypes_Use_Tech
+UnitCommandTypes_Use_Tech_Position = cvar.UnitCommandTypes_Use_Tech_Position
+UnitCommandTypes_Use_Tech_Unit = cvar.UnitCommandTypes_Use_Tech_Unit
+Place_COP = cvar.Place_COP
+UnitCommandTypes_None = cvar.UnitCommandTypes_None
+UnitCommandTypes_Unknown = cvar.UnitCommandTypes_Unknown
 
-def UnitCommand_attackMove(*args):
-  return _pybw_swig.UnitCommand_attackMove(*args)
-UnitCommand_attackMove = _pybw_swig.UnitCommand_attackMove
-
-def UnitCommand_attackUnit(*args):
-  return _pybw_swig.UnitCommand_attackUnit(*args)
-UnitCommand_attackUnit = _pybw_swig.UnitCommand_attackUnit
+def UnitCommand_attack(*args):
+  return _pybw_swig.UnitCommand_attack(*args)
+UnitCommand_attack = _pybw_swig.UnitCommand_attack
 
 def UnitCommand_build(*args):
   return _pybw_swig.UnitCommand_build(*args)
@@ -2391,101 +2127,510 @@ def UnitCommand_placeCOP(*args):
   return _pybw_swig.UnitCommand_placeCOP(*args)
 UnitCommand_placeCOP = _pybw_swig.UnitCommand_placeCOP
 
-BWAPI_UNIT_COMMAND_TYPE_COUNT = _pybw_swig.BWAPI_UNIT_COMMAND_TYPE_COUNT
-class UnitCommandType(_object):
+class Game(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, UnitCommandType, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Game, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, UnitCommandType, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, Game, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    def getBullets(self): return _pybw_swig.Game_getBullets(self)
+    def getNukeDots(self): return _pybw_swig.Game_getNukeDots(self)
+    def getEvents(self): return _pybw_swig.Game_getEvents(self)
+    def getForce(self, *args): return _pybw_swig.Game_getForce(self, *args)
+    def getPlayer(self, *args): return _pybw_swig.Game_getPlayer(self, *args)
+    def getUnit(self, *args): return _pybw_swig.Game_getUnit(self, *args)
+    def indexToUnit(self, *args): return _pybw_swig.Game_indexToUnit(self, *args)
+    def getRegion(self, *args): return _pybw_swig.Game_getRegion(self, *args)
+    def getGameType(self): return _pybw_swig.Game_getGameType(self)
+    def getLatency(self): return _pybw_swig.Game_getLatency(self)
+    def getFrameCount(self): return _pybw_swig.Game_getFrameCount(self)
+    def getFPS(self): return _pybw_swig.Game_getFPS(self)
+    def getAverageFPS(self): return _pybw_swig.Game_getAverageFPS(self)
+    def getMousePosition(self): return _pybw_swig.Game_getMousePosition(self)
+    def getMouseState(self, *args): return _pybw_swig.Game_getMouseState(self, *args)
+    def getKeyState(self, *args): return _pybw_swig.Game_getKeyState(self, *args)
+    def getScreenPosition(self): return _pybw_swig.Game_getScreenPosition(self)
+    def setScreenPosition(self, *args): return _pybw_swig.Game_setScreenPosition(self, *args)
+    def pingMinimap(self, *args): return _pybw_swig.Game_pingMinimap(self, *args)
+    def isFlagEnabled(self, *args): return _pybw_swig.Game_isFlagEnabled(self, *args)
+    def enableFlag(self, *args): return _pybw_swig.Game_enableFlag(self, *args)
+    def getUnitsInRectangle(self, *args): return _pybw_swig.Game_getUnitsInRectangle(self, *args)
+    def getUnitsInRadius(self, *args): return _pybw_swig.Game_getUnitsInRadius(self, *args)
+    def getLastError(self): return _pybw_swig.Game_getLastError(self)
+    def setLastError(self, *args): return _pybw_swig.Game_setLastError(self, *args)
+    def mapWidth(self): return _pybw_swig.Game_mapWidth(self)
+    def mapHeight(self): return _pybw_swig.Game_mapHeight(self)
+    def mapFileName(self): return _pybw_swig.Game_mapFileName(self)
+    def mapPathName(self): return _pybw_swig.Game_mapPathName(self)
+    def mapName(self): return _pybw_swig.Game_mapName(self)
+    def mapHash(self): return _pybw_swig.Game_mapHash(self)
+    def isWalkable(self, *args): return _pybw_swig.Game_isWalkable(self, *args)
+    def getGroundHeight(self, *args): return _pybw_swig.Game_getGroundHeight(self, *args)
+    def isBuildable(self, *args): return _pybw_swig.Game_isBuildable(self, *args)
+    def isVisible(self, *args): return _pybw_swig.Game_isVisible(self, *args)
+    def hasCreep(self, *args): return _pybw_swig.Game_hasCreep(self, *args)
+    def hasPower(self, *args): return _pybw_swig.Game_hasPower(self, *args)
+    def hasPowerPrecise(self, *args): return _pybw_swig.Game_hasPowerPrecise(self, *args)
+    def canMake(self, *args): return _pybw_swig.Game_canMake(self, *args)
+    def canResearch(self, *args): return _pybw_swig.Game_canResearch(self, *args)
+    def canUpgrade(self, *args): return _pybw_swig.Game_canUpgrade(self, *args)
+    def printf(self, *args): return _pybw_swig.Game_printf(self, *args)
+    def sendText(self, *args): return _pybw_swig.Game_sendText(self, *args)
+    def sendTextEx(self, *args): return _pybw_swig.Game_sendTextEx(self, *args)
+    def changeRace(self, *args): return _pybw_swig.Game_changeRace(self, *args)
+    def isInGame(self): return _pybw_swig.Game_isInGame(self)
+    def isMultiplayer(self): return _pybw_swig.Game_isMultiplayer(self)
+    def isBattleNet(self): return _pybw_swig.Game_isBattleNet(self)
+    def isPaused(self): return _pybw_swig.Game_isPaused(self)
+    def isReplay(self): return _pybw_swig.Game_isReplay(self)
+    def startGame(self): return _pybw_swig.Game_startGame(self)
+    def pauseGame(self): return _pybw_swig.Game_pauseGame(self)
+    def resumeGame(self): return _pybw_swig.Game_resumeGame(self)
+    def leaveGame(self): return _pybw_swig.Game_leaveGame(self)
+    def restartGame(self): return _pybw_swig.Game_restartGame(self)
+    def setLocalSpeed(self, *args): return _pybw_swig.Game_setLocalSpeed(self, *args)
+    def issueCommand(self, *args): return _pybw_swig.Game_issueCommand(self, *args)
+    def self(self): return _pybw_swig.Game_self(self)
+    def enemy(self): return _pybw_swig.Game_enemy(self)
+    def neutral(self): return _pybw_swig.Game_neutral(self)
+    def allies(self): return _pybw_swig.Game_allies(self)
+    def enemies(self): return _pybw_swig.Game_enemies(self)
+    def observers(self): return _pybw_swig.Game_observers(self)
+    def setTextSize(self, size = 1): return _pybw_swig.Game_setTextSize(self, size)
+    def drawText(self, *args): return _pybw_swig.Game_drawText(self, *args)
+    def drawTextMap(self, *args): return _pybw_swig.Game_drawTextMap(self, *args)
+    def drawTextMouse(self, *args): return _pybw_swig.Game_drawTextMouse(self, *args)
+    def drawTextScreen(self, *args): return _pybw_swig.Game_drawTextScreen(self, *args)
+    def drawBox(self, *args): return _pybw_swig.Game_drawBox(self, *args)
+    def drawBoxMap(self, *args): return _pybw_swig.Game_drawBoxMap(self, *args)
+    def drawBoxMouse(self, *args): return _pybw_swig.Game_drawBoxMouse(self, *args)
+    def drawBoxScreen(self, *args): return _pybw_swig.Game_drawBoxScreen(self, *args)
+    def drawTriangle(self, *args): return _pybw_swig.Game_drawTriangle(self, *args)
+    def drawTriangleMap(self, *args): return _pybw_swig.Game_drawTriangleMap(self, *args)
+    def drawTriangleMouse(self, *args): return _pybw_swig.Game_drawTriangleMouse(self, *args)
+    def drawTriangleScreen(self, *args): return _pybw_swig.Game_drawTriangleScreen(self, *args)
+    def drawCircle(self, *args): return _pybw_swig.Game_drawCircle(self, *args)
+    def drawCircleMap(self, *args): return _pybw_swig.Game_drawCircleMap(self, *args)
+    def drawCircleMouse(self, *args): return _pybw_swig.Game_drawCircleMouse(self, *args)
+    def drawCircleScreen(self, *args): return _pybw_swig.Game_drawCircleScreen(self, *args)
+    def drawEllipse(self, *args): return _pybw_swig.Game_drawEllipse(self, *args)
+    def drawEllipseMap(self, *args): return _pybw_swig.Game_drawEllipseMap(self, *args)
+    def drawEllipseMouse(self, *args): return _pybw_swig.Game_drawEllipseMouse(self, *args)
+    def drawEllipseScreen(self, *args): return _pybw_swig.Game_drawEllipseScreen(self, *args)
+    def drawDot(self, *args): return _pybw_swig.Game_drawDot(self, *args)
+    def drawDotMap(self, *args): return _pybw_swig.Game_drawDotMap(self, *args)
+    def drawDotMouse(self, *args): return _pybw_swig.Game_drawDotMouse(self, *args)
+    def drawDotScreen(self, *args): return _pybw_swig.Game_drawDotScreen(self, *args)
+    def drawLine(self, *args): return _pybw_swig.Game_drawLine(self, *args)
+    def drawLineMap(self, *args): return _pybw_swig.Game_drawLineMap(self, *args)
+    def drawLineMouse(self, *args): return _pybw_swig.Game_drawLineMouse(self, *args)
+    def drawLineScreen(self, *args): return _pybw_swig.Game_drawLineScreen(self, *args)
+    def getScreenBuffer(self): return _pybw_swig.Game_getScreenBuffer(self)
+    def getLatencyFrames(self): return _pybw_swig.Game_getLatencyFrames(self)
+    def getLatencyTime(self): return _pybw_swig.Game_getLatencyTime(self)
+    def getRemainingLatencyFrames(self): return _pybw_swig.Game_getRemainingLatencyFrames(self)
+    def getRemainingLatencyTime(self): return _pybw_swig.Game_getRemainingLatencyTime(self)
+    def getRevision(self): return _pybw_swig.Game_getRevision(self)
+    def isDebug(self): return _pybw_swig.Game_isDebug(self)
+    def isLatComEnabled(self): return _pybw_swig.Game_isLatComEnabled(self)
+    def setLatCom(self, *args): return _pybw_swig.Game_setLatCom(self, *args)
+    def getReplayFrameCount(self): return _pybw_swig.Game_getReplayFrameCount(self)
+    def setGUI(self, enabled = True): return _pybw_swig.Game_setGUI(self, enabled)
+    def getInstanceNumber(self): return _pybw_swig.Game_getInstanceNumber(self)
+    def getAPM(self, includeSelects = False): return _pybw_swig.Game_getAPM(self, includeSelects)
+    def setMap(self, *args): return _pybw_swig.Game_setMap(self, *args)
+    def setFrameSkip(self, frameSkip = 1): return _pybw_swig.Game_setFrameSkip(self, frameSkip)
+    def hasPath(self, *args): return _pybw_swig.Game_hasPath(self, *args)
+    def setAlliance(self, *args): return _pybw_swig.Game_setAlliance(self, *args)
+    def setVision(self, *args): return _pybw_swig.Game_setVision(self, *args)
+    def elapsedTime(self): return _pybw_swig.Game_elapsedTime(self)
+    def setCommandOptimizationLevel(self, level = 2): return _pybw_swig.Game_setCommandOptimizationLevel(self, level)
+    def countdownTimer(self): return _pybw_swig.Game_countdownTimer(self)
+    def getAllRegions(self): return _pybw_swig.Game_getAllRegions(self)
+    def getRegionAt(self, *args): return _pybw_swig.Game_getRegionAt(self, *args)
+    def getLastEventTime(self): return _pybw_swig.Game_getLastEventTime(self)
+    def setReplayVision(self, *args): return _pybw_swig.Game_setReplayVision(self, *args)
+    def setRevealAll(self, reveal = True): return _pybw_swig.Game_setRevealAll(self, reveal)
+    def getAllUnits(self): return _pybw_swig.Game_getAllUnits(self)
+    def getMinerals(self): return _pybw_swig.Game_getMinerals(self)
+    def getGeysers(self): return _pybw_swig.Game_getGeysers(self)
+    def getNeutralUnits(self): return _pybw_swig.Game_getNeutralUnits(self)
+    def getStaticMinerals(self): return _pybw_swig.Game_getStaticMinerals(self)
+    def getStaticGeysers(self): return _pybw_swig.Game_getStaticGeysers(self)
+    def getStaticNeutralUnits(self): return _pybw_swig.Game_getStaticNeutralUnits(self)
+    def getSelectedUnits(self): return _pybw_swig.Game_getSelectedUnits(self)
+    def getPlayers(self): return _pybw_swig.Game_getPlayers(self)
+    def getForces(self): return _pybw_swig.Game_getForces(self)
+    def getUnitsOnTile(self, *args): return _pybw_swig.Game_getUnitsOnTile(self, *args)
+    def getStartLocations(self): return _pybw_swig.Game_getStartLocations(self)
+    def canBuildHere(self, *args): return _pybw_swig.Game_canBuildHere(self, *args)
+    def isExplored(self, *args): return _pybw_swig.Game_isExplored(self, *args)
+Game_swigregister = _pybw_swig.Game_swigregister
+Game_swigregister(Game)
+
+SinglePlayer = _pybw_swig.SinglePlayer
+LanLow = _pybw_swig.LanLow
+LanMedium = _pybw_swig.LanMedium
+LanHigh = _pybw_swig.LanHigh
+BattlenetLow = _pybw_swig.BattlenetLow
+BattlenetMedium = _pybw_swig.BattlenetMedium
+BattlenetHigh = _pybw_swig.BattlenetHigh
+class PlayerType(Type):
+    __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, PlayerType, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, PlayerType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
-        this = _pybw_swig.new_UnitCommandType(*args)
+        this = _pybw_swig.new_PlayerType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.UnitCommandType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.UnitCommandType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.UnitCommandType___lt__(self, *args)
-    def __gt__(self, *args): return _pybw_swig.UnitCommandType___gt__(self, *args)
-    def getID(self): return _pybw_swig.UnitCommandType_getID(self)
-    def getName(self): return _pybw_swig.UnitCommandType_getName(self)
-    __swig_destroy__ = _pybw_swig.delete_UnitCommandType
+    def getName(self): return _pybw_swig.PlayerType_getName(self)
+    def c_str(self): return _pybw_swig.PlayerType_c_str(self)
+    __swig_destroy__ = _pybw_swig.delete_PlayerType
     __del__ = lambda self : None;
-UnitCommandType_swigregister = _pybw_swig.UnitCommandType_swigregister
-UnitCommandType_swigregister(UnitCommandType)
+PlayerType_swigregister = _pybw_swig.PlayerType_swigregister
+PlayerType_swigregister(PlayerType)
 
 
-def getUnitCommandType(*args):
-  return _pybw_swig.getUnitCommandType(*args)
-getUnitCommandType = _pybw_swig.getUnitCommandType
+def getPlayerType(*args):
+  return _pybw_swig.getPlayerType(*args)
+getPlayerType = _pybw_swig.getPlayerType
 
-def allUnitCommandTypes():
-  return _pybw_swig.allUnitCommandTypes()
-allUnitCommandTypes = _pybw_swig.allUnitCommandTypes
-class UnitSizeType(_object):
+def allPlayerTypes():
+  return _pybw_swig.allPlayerTypes()
+allPlayerTypes = _pybw_swig.allPlayerTypes
+class Player(_object):
     __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Player, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Player, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    def getID(self): return _pybw_swig.Player_getID(self)
+    def getName(self): return _pybw_swig.Player_getName(self)
+    def getType(self): return _pybw_swig.Player_getType(self)
+    def getForce(self): return _pybw_swig.Player_getForce(self)
+    def isAlly(self, *args): return _pybw_swig.Player_isAlly(self, *args)
+    def isEnemy(self, *args): return _pybw_swig.Player_isEnemy(self, *args)
+    def isNeutral(self): return _pybw_swig.Player_isNeutral(self)
+    def isVictorious(self): return _pybw_swig.Player_isVictorious(self)
+    def isDefeated(self): return _pybw_swig.Player_isDefeated(self)
+    def leftGame(self): return _pybw_swig.Player_leftGame(self)
+    def minerals(self): return _pybw_swig.Player_minerals(self)
+    def gas(self): return _pybw_swig.Player_gas(self)
+    def gatheredMinerals(self): return _pybw_swig.Player_gatheredMinerals(self)
+    def gatheredGas(self): return _pybw_swig.Player_gatheredGas(self)
+    def repairedMinerals(self): return _pybw_swig.Player_repairedMinerals(self)
+    def repairedGas(self): return _pybw_swig.Player_repairedGas(self)
+    def refundedMinerals(self): return _pybw_swig.Player_refundedMinerals(self)
+    def refundedGas(self): return _pybw_swig.Player_refundedGas(self)
+    def spentMinerals(self): return _pybw_swig.Player_spentMinerals(self)
+    def spentGas(self): return _pybw_swig.Player_spentGas(self)
+    def supplyTotal(self, *args): return _pybw_swig.Player_supplyTotal(self, *args)
+    def supplyUsed(self, *args): return _pybw_swig.Player_supplyUsed(self, *args)
+    def allUnitCount(self, *args): return _pybw_swig.Player_allUnitCount(self, *args)
+    def visibleUnitCount(self, *args): return _pybw_swig.Player_visibleUnitCount(self, *args)
+    def completedUnitCount(self, *args): return _pybw_swig.Player_completedUnitCount(self, *args)
+    def incompleteUnitCount(self, *args): return _pybw_swig.Player_incompleteUnitCount(self, *args)
+    def deadUnitCount(self, *args): return _pybw_swig.Player_deadUnitCount(self, *args)
+    def killedUnitCount(self, *args): return _pybw_swig.Player_killedUnitCount(self, *args)
+    def getUpgradeLevel(self, *args): return _pybw_swig.Player_getUpgradeLevel(self, *args)
+    def hasResearched(self, *args): return _pybw_swig.Player_hasResearched(self, *args)
+    def isResearching(self, *args): return _pybw_swig.Player_isResearching(self, *args)
+    def getColor(self): return _pybw_swig.Player_getColor(self)
+    def getTextColor(self): return _pybw_swig.Player_getTextColor(self)
+    def maxEnergy(self, *args): return _pybw_swig.Player_maxEnergy(self, *args)
+    def topSpeed(self, *args): return _pybw_swig.Player_topSpeed(self, *args)
+    def groundWeaponMaxRange(self, *args): return _pybw_swig.Player_groundWeaponMaxRange(self, *args)
+    def airWeaponMaxRange(self, *args): return _pybw_swig.Player_airWeaponMaxRange(self, *args)
+    def weaponMaxRange(self, *args): return _pybw_swig.Player_weaponMaxRange(self, *args)
+    def sightRange(self, *args): return _pybw_swig.Player_sightRange(self, *args)
+    def groundWeaponDamageCooldown(self, *args): return _pybw_swig.Player_groundWeaponDamageCooldown(self, *args)
+    def armor(self, *args): return _pybw_swig.Player_armor(self, *args)
+    def getUnitScore(self): return _pybw_swig.Player_getUnitScore(self)
+    def getKillScore(self): return _pybw_swig.Player_getKillScore(self)
+    def getBuildingScore(self): return _pybw_swig.Player_getBuildingScore(self)
+    def getRazingScore(self): return _pybw_swig.Player_getRazingScore(self)
+    def getCustomScore(self): return _pybw_swig.Player_getCustomScore(self)
+    def isObserver(self): return _pybw_swig.Player_isObserver(self)
+    def getMaxUpgradeLevel(self, *args): return _pybw_swig.Player_getMaxUpgradeLevel(self, *args)
+    def isResearchAvailable(self, *args): return _pybw_swig.Player_isResearchAvailable(self, *args)
+    def isUnitAvailable(self, *args): return _pybw_swig.Player_isUnitAvailable(self, *args)
+    def getUnits(self): return _pybw_swig.Player_getUnits(self)
+    def getRace(self): return _pybw_swig.Player_getRace(self)
+    def getStartLocation(self): return _pybw_swig.Player_getStartLocation(self)
+    def isUpgrading(self, *args): return _pybw_swig.Player_isUpgrading(self, *args)
+Player_swigregister = _pybw_swig.Player_swigregister
+Player_swigregister(Player)
+PlayerTypes_None = cvar.PlayerTypes_None
+Computer = cvar.Computer
+PlayerTypes_Player = cvar.PlayerTypes_Player
+PlayerTypes_RescuePassive = cvar.PlayerTypes_RescuePassive
+EitherPreferComputer = cvar.EitherPreferComputer
+EitherPreferHuman = cvar.EitherPreferHuman
+PlayerTypes_Neutral = cvar.PlayerTypes_Neutral
+Closed = cvar.Closed
+PlayerTypes_PlayerLeft = cvar.PlayerTypes_PlayerLeft
+ComputerLeft = cvar.ComputerLeft
+PlayerTypes_Unknown = cvar.PlayerTypes_Unknown
+
+class TilePosition(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TilePosition, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, TilePosition, name)
+    __repr__ = _swig_repr
+    def __init__(self, *args): 
+        this = _pybw_swig.new_TilePosition(*args)
+        try: self.this.append(this)
+        except: self.this = this
+    def __eq__(self, *args): return _pybw_swig.TilePosition___eq__(self, *args)
+    def __ne__(self, *args): return _pybw_swig.TilePosition___ne__(self, *args)
+    def __lt__(self, *args): return _pybw_swig.TilePosition___lt__(self, *args)
+    def isValid(self): return _pybw_swig.TilePosition_isValid(self)
+    def __nonzero__(self):
+        return _pybw_swig.TilePosition___nonzero__(self)
+    __bool__ = __nonzero__
+
+
+    def __add__(self, *args): return _pybw_swig.TilePosition___add__(self, *args)
+    def __sub__(self, *args): return _pybw_swig.TilePosition___sub__(self, *args)
+    def makeValid(self): return _pybw_swig.TilePosition_makeValid(self)
+    def __iadd__(self, *args): return _pybw_swig.TilePosition___iadd__(self, *args)
+    def __isub__(self, *args): return _pybw_swig.TilePosition___isub__(self, *args)
+    def getDistance(self, *args): return _pybw_swig.TilePosition_getDistance(self, *args)
+    def getLength(self): return _pybw_swig.TilePosition_getLength(self)
+    def hasPath(self, *args): return _pybw_swig.TilePosition_hasPath(self, *args)
+    def getX(self): return _pybw_swig.TilePosition_getX(self)
+    def getY(self): return _pybw_swig.TilePosition_getY(self)
+    __swig_destroy__ = _pybw_swig.delete_TilePosition
+    __del__ = lambda self : None;
+TilePosition_swigregister = _pybw_swig.TilePosition_swigregister
+TilePosition_swigregister(TilePosition)
+
+EnableFlag = _pybw_swig.EnableFlag
+ChangeRace = _pybw_swig.ChangeRace
+StartGame = _pybw_swig.StartGame
+PauseGame = _pybw_swig.PauseGame
+ResumeGame = _pybw_swig.ResumeGame
+LeaveGame = _pybw_swig.LeaveGame
+RestartGame = _pybw_swig.RestartGame
+SetLocalSpeed = _pybw_swig.SetLocalSpeed
+SetTextSize = _pybw_swig.SetTextSize
+SetLatCom = _pybw_swig.SetLatCom
+SetGUI = _pybw_swig.SetGUI
+SetMap = _pybw_swig.SetMap
+SetFrameSkip = _pybw_swig.SetFrameSkip
+Printf = _pybw_swig.Printf
+SendText = _pybw_swig.SendText
+SetCommandOptimizationLevel = _pybw_swig.SetCommandOptimizationLevel
+class Unit(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Unit, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Unit, name)
+    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    def getID(self): return _pybw_swig.Unit_getID(self)
+    def getReplayID(self): return _pybw_swig.Unit_getReplayID(self)
+    def getPlayer(self): return _pybw_swig.Unit_getPlayer(self)
+    def getType(self): return _pybw_swig.Unit_getType(self)
+    def getPosition(self): return _pybw_swig.Unit_getPosition(self)
+    def getTilePosition(self): return _pybw_swig.Unit_getTilePosition(self)
+    def getAngle(self): return _pybw_swig.Unit_getAngle(self)
+    def getVelocityX(self): return _pybw_swig.Unit_getVelocityX(self)
+    def getVelocityY(self): return _pybw_swig.Unit_getVelocityY(self)
+    def getRegion(self): return _pybw_swig.Unit_getRegion(self)
+    def getLeft(self): return _pybw_swig.Unit_getLeft(self)
+    def getTop(self): return _pybw_swig.Unit_getTop(self)
+    def getRight(self): return _pybw_swig.Unit_getRight(self)
+    def getBottom(self): return _pybw_swig.Unit_getBottom(self)
+    def getHitPoints(self): return _pybw_swig.Unit_getHitPoints(self)
+    def getShields(self): return _pybw_swig.Unit_getShields(self)
+    def getEnergy(self): return _pybw_swig.Unit_getEnergy(self)
+    def getResources(self): return _pybw_swig.Unit_getResources(self)
+    def getResourceGroup(self): return _pybw_swig.Unit_getResourceGroup(self)
+    def getDistance(self, *args): return _pybw_swig.Unit_getDistance(self, *args)
+    def hasPath(self, *args): return _pybw_swig.Unit_hasPath(self, *args)
+    def getLastCommandFrame(self): return _pybw_swig.Unit_getLastCommandFrame(self)
+    def getLastCommand(self): return _pybw_swig.Unit_getLastCommand(self)
+    def getLastAttackingPlayer(self): return _pybw_swig.Unit_getLastAttackingPlayer(self)
+    def getUpgradeLevel(self, *args): return _pybw_swig.Unit_getUpgradeLevel(self, *args)
+    def getInitialType(self): return _pybw_swig.Unit_getInitialType(self)
+    def getInitialPosition(self): return _pybw_swig.Unit_getInitialPosition(self)
+    def getInitialTilePosition(self): return _pybw_swig.Unit_getInitialTilePosition(self)
+    def getInitialHitPoints(self): return _pybw_swig.Unit_getInitialHitPoints(self)
+    def getInitialResources(self): return _pybw_swig.Unit_getInitialResources(self)
+    def getKillCount(self): return _pybw_swig.Unit_getKillCount(self)
+    def getAcidSporeCount(self): return _pybw_swig.Unit_getAcidSporeCount(self)
+    def getInterceptorCount(self): return _pybw_swig.Unit_getInterceptorCount(self)
+    def getScarabCount(self): return _pybw_swig.Unit_getScarabCount(self)
+    def getSpiderMineCount(self): return _pybw_swig.Unit_getSpiderMineCount(self)
+    def getGroundWeaponCooldown(self): return _pybw_swig.Unit_getGroundWeaponCooldown(self)
+    def getAirWeaponCooldown(self): return _pybw_swig.Unit_getAirWeaponCooldown(self)
+    def getSpellCooldown(self): return _pybw_swig.Unit_getSpellCooldown(self)
+    def getDefenseMatrixPoints(self): return _pybw_swig.Unit_getDefenseMatrixPoints(self)
+    def getDefenseMatrixTimer(self): return _pybw_swig.Unit_getDefenseMatrixTimer(self)
+    def getEnsnareTimer(self): return _pybw_swig.Unit_getEnsnareTimer(self)
+    def getIrradiateTimer(self): return _pybw_swig.Unit_getIrradiateTimer(self)
+    def getLockdownTimer(self): return _pybw_swig.Unit_getLockdownTimer(self)
+    def getMaelstromTimer(self): return _pybw_swig.Unit_getMaelstromTimer(self)
+    def getOrderTimer(self): return _pybw_swig.Unit_getOrderTimer(self)
+    def getPlagueTimer(self): return _pybw_swig.Unit_getPlagueTimer(self)
+    def getRemoveTimer(self): return _pybw_swig.Unit_getRemoveTimer(self)
+    def getStasisTimer(self): return _pybw_swig.Unit_getStasisTimer(self)
+    def getStimTimer(self): return _pybw_swig.Unit_getStimTimer(self)
+    def getBuildType(self): return _pybw_swig.Unit_getBuildType(self)
+    def getTech(self): return _pybw_swig.Unit_getTech(self)
+    def getUpgrade(self): return _pybw_swig.Unit_getUpgrade(self)
+    def getRemainingBuildTime(self): return _pybw_swig.Unit_getRemainingBuildTime(self)
+    def getRemainingTrainTime(self): return _pybw_swig.Unit_getRemainingTrainTime(self)
+    def getRemainingResearchTime(self): return _pybw_swig.Unit_getRemainingResearchTime(self)
+    def getRemainingUpgradeTime(self): return _pybw_swig.Unit_getRemainingUpgradeTime(self)
+    def getBuildUnit(self): return _pybw_swig.Unit_getBuildUnit(self)
+    def getTarget(self): return _pybw_swig.Unit_getTarget(self)
+    def getTargetPosition(self): return _pybw_swig.Unit_getTargetPosition(self)
+    def getOrder(self): return _pybw_swig.Unit_getOrder(self)
+    def getSecondaryOrder(self): return _pybw_swig.Unit_getSecondaryOrder(self)
+    def getOrderTarget(self): return _pybw_swig.Unit_getOrderTarget(self)
+    def getOrderTargetPosition(self): return _pybw_swig.Unit_getOrderTargetPosition(self)
+    def getRallyPosition(self): return _pybw_swig.Unit_getRallyPosition(self)
+    def getRallyUnit(self): return _pybw_swig.Unit_getRallyUnit(self)
+    def getAddon(self): return _pybw_swig.Unit_getAddon(self)
+    def getNydusExit(self): return _pybw_swig.Unit_getNydusExit(self)
+    def getPowerUp(self): return _pybw_swig.Unit_getPowerUp(self)
+    def getTransport(self): return _pybw_swig.Unit_getTransport(self)
+    def getCarrier(self): return _pybw_swig.Unit_getCarrier(self)
+    def getInterceptors(self): return _pybw_swig.Unit_getInterceptors(self)
+    def getHatchery(self): return _pybw_swig.Unit_getHatchery(self)
+    def getLarva(self): return _pybw_swig.Unit_getLarva(self)
+    def getUnitsInRadius(self, *args): return _pybw_swig.Unit_getUnitsInRadius(self, *args)
+    def getUnitsInWeaponRange(self, *args): return _pybw_swig.Unit_getUnitsInWeaponRange(self, *args)
+    def getClientInfo(self): return _pybw_swig.Unit_getClientInfo(self)
+    def setClientInfo(self, *args): return _pybw_swig.Unit_setClientInfo(self, *args)
+    def exists(self): return _pybw_swig.Unit_exists(self)
+    def hasNuke(self): return _pybw_swig.Unit_hasNuke(self)
+    def isAccelerating(self): return _pybw_swig.Unit_isAccelerating(self)
+    def isAttacking(self): return _pybw_swig.Unit_isAttacking(self)
+    def isAttackFrame(self): return _pybw_swig.Unit_isAttackFrame(self)
+    def isBeingConstructed(self): return _pybw_swig.Unit_isBeingConstructed(self)
+    def isBeingGathered(self): return _pybw_swig.Unit_isBeingGathered(self)
+    def isBeingHealed(self): return _pybw_swig.Unit_isBeingHealed(self)
+    def isBlind(self): return _pybw_swig.Unit_isBlind(self)
+    def isBraking(self): return _pybw_swig.Unit_isBraking(self)
+    def isBurrowed(self): return _pybw_swig.Unit_isBurrowed(self)
+    def isCarryingGas(self): return _pybw_swig.Unit_isCarryingGas(self)
+    def isCarryingMinerals(self): return _pybw_swig.Unit_isCarryingMinerals(self)
+    def isCloaked(self): return _pybw_swig.Unit_isCloaked(self)
+    def isCompleted(self): return _pybw_swig.Unit_isCompleted(self)
+    def isConstructing(self): return _pybw_swig.Unit_isConstructing(self)
+    def isDefenseMatrixed(self): return _pybw_swig.Unit_isDefenseMatrixed(self)
+    def isDetected(self): return _pybw_swig.Unit_isDetected(self)
+    def isEnsnared(self): return _pybw_swig.Unit_isEnsnared(self)
+    def isFollowing(self): return _pybw_swig.Unit_isFollowing(self)
+    def isGatheringGas(self): return _pybw_swig.Unit_isGatheringGas(self)
+    def isGatheringMinerals(self): return _pybw_swig.Unit_isGatheringMinerals(self)
+    def isHallucination(self): return _pybw_swig.Unit_isHallucination(self)
+    def isHoldingPosition(self): return _pybw_swig.Unit_isHoldingPosition(self)
+    def isIdle(self): return _pybw_swig.Unit_isIdle(self)
+    def isInterruptible(self): return _pybw_swig.Unit_isInterruptible(self)
+    def isInvincible(self): return _pybw_swig.Unit_isInvincible(self)
+    def isInWeaponRange(self, *args): return _pybw_swig.Unit_isInWeaponRange(self, *args)
+    def isIrradiated(self): return _pybw_swig.Unit_isIrradiated(self)
+    def isLifted(self): return _pybw_swig.Unit_isLifted(self)
+    def isLoaded(self): return _pybw_swig.Unit_isLoaded(self)
+    def isLockedDown(self): return _pybw_swig.Unit_isLockedDown(self)
+    def isMaelstrommed(self): return _pybw_swig.Unit_isMaelstrommed(self)
+    def isMorphing(self): return _pybw_swig.Unit_isMorphing(self)
+    def isMoving(self): return _pybw_swig.Unit_isMoving(self)
+    def isParasited(self): return _pybw_swig.Unit_isParasited(self)
+    def isPatrolling(self): return _pybw_swig.Unit_isPatrolling(self)
+    def isPlagued(self): return _pybw_swig.Unit_isPlagued(self)
+    def isRepairing(self): return _pybw_swig.Unit_isRepairing(self)
+    def isResearching(self): return _pybw_swig.Unit_isResearching(self)
+    def isSelected(self): return _pybw_swig.Unit_isSelected(self)
+    def isSieged(self): return _pybw_swig.Unit_isSieged(self)
+    def isStartingAttack(self): return _pybw_swig.Unit_isStartingAttack(self)
+    def isStasised(self): return _pybw_swig.Unit_isStasised(self)
+    def isStimmed(self): return _pybw_swig.Unit_isStimmed(self)
+    def isStuck(self): return _pybw_swig.Unit_isStuck(self)
+    def isTraining(self): return _pybw_swig.Unit_isTraining(self)
+    def isUnderAttack(self): return _pybw_swig.Unit_isUnderAttack(self)
+    def isUnderDarkSwarm(self): return _pybw_swig.Unit_isUnderDarkSwarm(self)
+    def isUnderDisruptionWeb(self): return _pybw_swig.Unit_isUnderDisruptionWeb(self)
+    def isUnderStorm(self): return _pybw_swig.Unit_isUnderStorm(self)
+    def isUnpowered(self): return _pybw_swig.Unit_isUnpowered(self)
+    def isUpgrading(self): return _pybw_swig.Unit_isUpgrading(self)
+    def isVisible(self, *args): return _pybw_swig.Unit_isVisible(self, *args)
+    def canIssueCommand(self, *args): return _pybw_swig.Unit_canIssueCommand(self, *args)
+    def issueCommand(self, *args): return _pybw_swig.Unit_issueCommand(self, *args)
+    def attack(self, *args): return _pybw_swig.Unit_attack(self, *args)
+    def build(self, *args): return _pybw_swig.Unit_build(self, *args)
+    def buildAddon(self, *args): return _pybw_swig.Unit_buildAddon(self, *args)
+    def train(self, *args): return _pybw_swig.Unit_train(self, *args)
+    def morph(self, *args): return _pybw_swig.Unit_morph(self, *args)
+    def research(self, *args): return _pybw_swig.Unit_research(self, *args)
+    def setRallyPoint(self, *args): return _pybw_swig.Unit_setRallyPoint(self, *args)
+    def move(self, *args): return _pybw_swig.Unit_move(self, *args)
+    def patrol(self, *args): return _pybw_swig.Unit_patrol(self, *args)
+    def holdPosition(self, shiftQueueCommand = False): return _pybw_swig.Unit_holdPosition(self, shiftQueueCommand)
+    def stop(self, shiftQueueCommand = False): return _pybw_swig.Unit_stop(self, shiftQueueCommand)
+    def follow(self, *args): return _pybw_swig.Unit_follow(self, *args)
+    def gather(self, *args): return _pybw_swig.Unit_gather(self, *args)
+    def returnCargo(self, shiftQueueCommand = False): return _pybw_swig.Unit_returnCargo(self, shiftQueueCommand)
+    def repair(self, *args): return _pybw_swig.Unit_repair(self, *args)
+    def burrow(self): return _pybw_swig.Unit_burrow(self)
+    def unburrow(self): return _pybw_swig.Unit_unburrow(self)
+    def cloak(self): return _pybw_swig.Unit_cloak(self)
+    def decloak(self): return _pybw_swig.Unit_decloak(self)
+    def siege(self): return _pybw_swig.Unit_siege(self)
+    def unsiege(self): return _pybw_swig.Unit_unsiege(self)
+    def lift(self): return _pybw_swig.Unit_lift(self)
+    def land(self, *args): return _pybw_swig.Unit_land(self, *args)
+    def load(self, *args): return _pybw_swig.Unit_load(self, *args)
+    def unload(self, *args): return _pybw_swig.Unit_unload(self, *args)
+    def unloadAll(self, *args): return _pybw_swig.Unit_unloadAll(self, *args)
+    def rightClick(self, *args): return _pybw_swig.Unit_rightClick(self, *args)
+    def haltConstruction(self): return _pybw_swig.Unit_haltConstruction(self)
+    def cancelConstruction(self): return _pybw_swig.Unit_cancelConstruction(self)
+    def cancelAddon(self): return _pybw_swig.Unit_cancelAddon(self)
+    def cancelTrain(self, *args): return _pybw_swig.Unit_cancelTrain(self, *args)
+    def cancelMorph(self): return _pybw_swig.Unit_cancelMorph(self)
+    def cancelResearch(self): return _pybw_swig.Unit_cancelResearch(self)
+    def cancelUpgrade(self): return _pybw_swig.Unit_cancelUpgrade(self)
+    def useTech(self, *args): return _pybw_swig.Unit_useTech(self, *args)
+    def placeCOP(self, *args): return _pybw_swig.Unit_placeCOP(self, *args)
+    def getLoadedUnits(self): return _pybw_swig.Unit_getLoadedUnits(self)
+    def getTrainingQueue(self): return _pybw_swig.Unit_getTrainingQueue(self)
+    def upgrade(self, *args): return _pybw_swig.Unit_upgrade(self, *args)
+Unit_swigregister = _pybw_swig.Unit_swigregister
+Unit_swigregister(Unit)
+TilePositions_Invalid = cvar.TilePositions_Invalid
+TilePositions_None = cvar.TilePositions_None
+TilePositions_Unknown = cvar.TilePositions_Unknown
+
+class UnitSizeType(Type):
+    __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, UnitSizeType, name, value)
     __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, UnitSizeType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
         this = _pybw_swig.new_UnitSizeType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.UnitSizeType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.UnitSizeType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.UnitSizeType___lt__(self, *args)
-    def getID(self): return _pybw_swig.UnitSizeType_getID(self)
     def getName(self): return _pybw_swig.UnitSizeType_getName(self)
+    def c_str(self): return _pybw_swig.UnitSizeType_c_str(self)
     __swig_destroy__ = _pybw_swig.delete_UnitSizeType
     __del__ = lambda self : None;
 UnitSizeType_swigregister = _pybw_swig.UnitSizeType_swigregister
 UnitSizeType_swigregister(UnitSizeType)
-UnitCommandTypes_Attack_Move = cvar.UnitCommandTypes_Attack_Move
-UnitCommandTypes_Attack_Unit = cvar.UnitCommandTypes_Attack_Unit
-UnitCommandTypes_Build = cvar.UnitCommandTypes_Build
-UnitCommandTypes_Build_Addon = cvar.UnitCommandTypes_Build_Addon
-UnitCommandTypes_Train = cvar.UnitCommandTypes_Train
-UnitCommandTypes_Morph = cvar.UnitCommandTypes_Morph
-UnitCommandTypes_Research = cvar.UnitCommandTypes_Research
-UnitCommandTypes_Upgrade = cvar.UnitCommandTypes_Upgrade
-UnitCommandTypes_Set_Rally_Position = cvar.UnitCommandTypes_Set_Rally_Position
-UnitCommandTypes_Set_Rally_Unit = cvar.UnitCommandTypes_Set_Rally_Unit
-UnitCommandTypes_Move = cvar.UnitCommandTypes_Move
-UnitCommandTypes_Patrol = cvar.UnitCommandTypes_Patrol
-UnitCommandTypes_Hold_Position = cvar.UnitCommandTypes_Hold_Position
-UnitCommandTypes_Stop = cvar.UnitCommandTypes_Stop
-UnitCommandTypes_Follow = cvar.UnitCommandTypes_Follow
-UnitCommandTypes_Gather = cvar.UnitCommandTypes_Gather
-UnitCommandTypes_Return_Cargo = cvar.UnitCommandTypes_Return_Cargo
-UnitCommandTypes_Repair = cvar.UnitCommandTypes_Repair
-UnitCommandTypes_Burrow = cvar.UnitCommandTypes_Burrow
-UnitCommandTypes_Unburrow = cvar.UnitCommandTypes_Unburrow
-UnitCommandTypes_Cloak = cvar.UnitCommandTypes_Cloak
-UnitCommandTypes_Decloak = cvar.UnitCommandTypes_Decloak
-UnitCommandTypes_Siege = cvar.UnitCommandTypes_Siege
-UnitCommandTypes_Unsiege = cvar.UnitCommandTypes_Unsiege
-UnitCommandTypes_Lift = cvar.UnitCommandTypes_Lift
-UnitCommandTypes_Land = cvar.UnitCommandTypes_Land
-UnitCommandTypes_Load = cvar.UnitCommandTypes_Load
-UnitCommandTypes_Unload = cvar.UnitCommandTypes_Unload
-UnitCommandTypes_Unload_All = cvar.UnitCommandTypes_Unload_All
-UnitCommandTypes_Unload_All_Position = cvar.UnitCommandTypes_Unload_All_Position
-UnitCommandTypes_Right_Click_Position = cvar.UnitCommandTypes_Right_Click_Position
-UnitCommandTypes_Right_Click_Unit = cvar.UnitCommandTypes_Right_Click_Unit
-UnitCommandTypes_Halt_Construction = cvar.UnitCommandTypes_Halt_Construction
-UnitCommandTypes_Cancel_Construction = cvar.UnitCommandTypes_Cancel_Construction
-UnitCommandTypes_Cancel_Addon = cvar.UnitCommandTypes_Cancel_Addon
-UnitCommandTypes_Cancel_Train = cvar.UnitCommandTypes_Cancel_Train
-UnitCommandTypes_Cancel_Train_Slot = cvar.UnitCommandTypes_Cancel_Train_Slot
-UnitCommandTypes_Cancel_Morph = cvar.UnitCommandTypes_Cancel_Morph
-UnitCommandTypes_Cancel_Research = cvar.UnitCommandTypes_Cancel_Research
-UnitCommandTypes_Cancel_Upgrade = cvar.UnitCommandTypes_Cancel_Upgrade
-UnitCommandTypes_Use_Tech = cvar.UnitCommandTypes_Use_Tech
-UnitCommandTypes_Use_Tech_Position = cvar.UnitCommandTypes_Use_Tech_Position
-UnitCommandTypes_Use_Tech_Unit = cvar.UnitCommandTypes_Use_Tech_Unit
-Place_COP = cvar.Place_COP
-UnitCommandTypes_None = cvar.UnitCommandTypes_None
-UnitCommandTypes_Unknown = cvar.UnitCommandTypes_Unknown
 
 
 def getUnitSizeType(*args):
@@ -2496,21 +2641,20 @@ def allUnitSizeTypes():
   return _pybw_swig.allUnitSizeTypes()
 allUnitSizeTypes = _pybw_swig.allUnitSizeTypes
 BWAPI_UNIT_TYPE_MAX_COUNT = _pybw_swig.BWAPI_UNIT_TYPE_MAX_COUNT
-class UnitType(_object):
+class UnitType(Type):
     __swig_setmethods__ = {}
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, UnitType, name, value)
     __swig_getmethods__ = {}
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
     __getattr__ = lambda self, name: _swig_getattr(self, UnitType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
         this = _pybw_swig.new_UnitType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.UnitType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.UnitType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.UnitType___lt__(self, *args)
-    def getID(self): return _pybw_swig.UnitType_getID(self)
     def getName(self): return _pybw_swig.UnitType_getName(self)
+    def c_str(self): return _pybw_swig.UnitType_c_str(self)
     def getRace(self): return _pybw_swig.UnitType_getRace(self)
     def requiredTech(self): return _pybw_swig.UnitType_requiredTech(self)
     def cloakingTech(self): return _pybw_swig.UnitType_cloakingTech(self)
@@ -2579,6 +2723,8 @@ class UnitType(_object):
     def isSpecialBuilding(self): return _pybw_swig.UnitType_isSpecialBuilding(self)
     def isSpell(self): return _pybw_swig.UnitType_isSpell(self)
     def producesLarva(self): return _pybw_swig.UnitType_producesLarva(self)
+    def isMineralField(self): return _pybw_swig.UnitType_isMineralField(self)
+    def canBuildAddon(self): return _pybw_swig.UnitType_canBuildAddon(self)
     def whatBuilds(self): return _pybw_swig.UnitType_whatBuilds(self)
     __swig_destroy__ = _pybw_swig.delete_UnitType
     __del__ = lambda self : None;
@@ -2596,6 +2742,14 @@ def getUnitType(*args):
   return _pybw_swig.getUnitType(*args)
 getUnitType = _pybw_swig.getUnitType
 
+def maxUnitWidth():
+  return _pybw_swig.maxUnitWidth()
+maxUnitWidth = _pybw_swig.maxUnitWidth
+
+def maxUnitHeight():
+  return _pybw_swig.maxUnitHeight()
+maxUnitHeight = _pybw_swig.maxUnitHeight
+
 def allUnitTypes():
   return _pybw_swig.allUnitTypes()
 allUnitTypes = _pybw_swig.allUnitTypes
@@ -2603,35 +2757,47 @@ allUnitTypes = _pybw_swig.allUnitTypes
 def allMacroTypes():
   return _pybw_swig.allMacroTypes()
 allMacroTypes = _pybw_swig.allMacroTypes
-class UpgradeType(_object):
+class WeaponType(Type):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, UpgradeType, name, value)
+    for _s in [Type]: __swig_setmethods__.update(getattr(_s,'__swig_setmethods__',{}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, WeaponType, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, UpgradeType, name)
+    for _s in [Type]: __swig_getmethods__.update(getattr(_s,'__swig_getmethods__',{}))
+    __getattr__ = lambda self, name: _swig_getattr(self, WeaponType, name)
     __repr__ = _swig_repr
     def __init__(self, *args): 
-        this = _pybw_swig.new_UpgradeType(*args)
+        this = _pybw_swig.new_WeaponType(*args)
         try: self.this.append(this)
         except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.UpgradeType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.UpgradeType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.UpgradeType___lt__(self, *args)
-    def getID(self): return _pybw_swig.UpgradeType_getID(self)
-    def getName(self): return _pybw_swig.UpgradeType_getName(self)
-    def getRace(self): return _pybw_swig.UpgradeType_getRace(self)
-    def mineralPriceBase(self): return _pybw_swig.UpgradeType_mineralPriceBase(self)
-    def mineralPriceFactor(self): return _pybw_swig.UpgradeType_mineralPriceFactor(self)
-    def gasPriceBase(self): return _pybw_swig.UpgradeType_gasPriceBase(self)
-    def gasPriceFactor(self): return _pybw_swig.UpgradeType_gasPriceFactor(self)
-    def upgradeTimeBase(self): return _pybw_swig.UpgradeType_upgradeTimeBase(self)
-    def upgradeTimeFactor(self): return _pybw_swig.UpgradeType_upgradeTimeFactor(self)
-    def maxRepeats(self): return _pybw_swig.UpgradeType_maxRepeats(self)
-    def whatUpgrades(self): return _pybw_swig.UpgradeType_whatUpgrades(self)
-    def whatUses(self): return _pybw_swig.UpgradeType_whatUses(self)
-    __swig_destroy__ = _pybw_swig.delete_UpgradeType
+    def getName(self): return _pybw_swig.WeaponType_getName(self)
+    def c_str(self): return _pybw_swig.WeaponType_c_str(self)
+    def getTech(self): return _pybw_swig.WeaponType_getTech(self)
+    def whatUses(self): return _pybw_swig.WeaponType_whatUses(self)
+    def damageAmount(self): return _pybw_swig.WeaponType_damageAmount(self)
+    def damageBonus(self): return _pybw_swig.WeaponType_damageBonus(self)
+    def damageCooldown(self): return _pybw_swig.WeaponType_damageCooldown(self)
+    def damageFactor(self): return _pybw_swig.WeaponType_damageFactor(self)
+    def upgradeType(self): return _pybw_swig.WeaponType_upgradeType(self)
+    def damageType(self): return _pybw_swig.WeaponType_damageType(self)
+    def explosionType(self): return _pybw_swig.WeaponType_explosionType(self)
+    def minRange(self): return _pybw_swig.WeaponType_minRange(self)
+    def maxRange(self): return _pybw_swig.WeaponType_maxRange(self)
+    def innerSplashRadius(self): return _pybw_swig.WeaponType_innerSplashRadius(self)
+    def medianSplashRadius(self): return _pybw_swig.WeaponType_medianSplashRadius(self)
+    def outerSplashRadius(self): return _pybw_swig.WeaponType_outerSplashRadius(self)
+    def targetsAir(self): return _pybw_swig.WeaponType_targetsAir(self)
+    def targetsGround(self): return _pybw_swig.WeaponType_targetsGround(self)
+    def targetsMechanical(self): return _pybw_swig.WeaponType_targetsMechanical(self)
+    def targetsOrganic(self): return _pybw_swig.WeaponType_targetsOrganic(self)
+    def targetsNonBuilding(self): return _pybw_swig.WeaponType_targetsNonBuilding(self)
+    def targetsNonRobotic(self): return _pybw_swig.WeaponType_targetsNonRobotic(self)
+    def targetsTerrain(self): return _pybw_swig.WeaponType_targetsTerrain(self)
+    def targetsOrgOrMech(self): return _pybw_swig.WeaponType_targetsOrgOrMech(self)
+    def targetsOwn(self): return _pybw_swig.WeaponType_targetsOwn(self)
+    __swig_destroy__ = _pybw_swig.delete_WeaponType
     __del__ = lambda self : None;
-UpgradeType_swigregister = _pybw_swig.UpgradeType_swigregister
-UpgradeType_swigregister(UpgradeType)
+WeaponType_swigregister = _pybw_swig.WeaponType_swigregister
+WeaponType_swigregister(WeaponType)
 Terran_Marine = cvar.Terran_Marine
 Hero_Jim_Raynor_Marine = cvar.Hero_Jim_Raynor_Marine
 Terran_Ghost = cvar.Terran_Ghost
@@ -2722,6 +2888,8 @@ Protoss_Observer = cvar.Protoss_Observer
 Protoss_Scarab = cvar.Protoss_Scarab
 Critter_Rhynadon = cvar.Critter_Rhynadon
 Critter_Bengalaas = cvar.Critter_Bengalaas
+Special_Cargo_Ship = cvar.Special_Cargo_Ship
+Special_Mercenary_Gunship = cvar.Special_Mercenary_Gunship
 Critter_Scantid = cvar.Critter_Scantid
 Critter_Kakaru = cvar.Critter_Kakaru
 Critter_Ragnasaur = cvar.Critter_Ragnasaur
@@ -2792,6 +2960,9 @@ Special_Khaydarin_Crystal_Form = cvar.Special_Khaydarin_Crystal_Form
 Special_Protoss_Temple = cvar.Special_Protoss_Temple
 Special_XelNaga_Temple = cvar.Special_XelNaga_Temple
 Resource_Mineral_Field = cvar.Resource_Mineral_Field
+Resource_Mineral_Field_Type_2 = cvar.Resource_Mineral_Field_Type_2
+Resource_Mineral_Field_Type_3 = cvar.Resource_Mineral_Field_Type_3
+Special_Independant_Starport = cvar.Special_Independant_Starport
 Resource_Vespene_Geyser = cvar.Resource_Vespene_Geyser
 Special_Warp_Gate = cvar.Special_Warp_Gate
 Special_Psi_Disrupter = cvar.Special_Psi_Disrupter
@@ -2811,115 +2982,33 @@ Powerup_Young_Chrysalis = cvar.Powerup_Young_Chrysalis
 Powerup_Psi_Emitter = cvar.Powerup_Psi_Emitter
 Powerup_Data_Disk = cvar.Powerup_Data_Disk
 Powerup_Khaydarin_Crystal = cvar.Powerup_Khaydarin_Crystal
+Powerup_Mineral_Cluster_Type_1 = cvar.Powerup_Mineral_Cluster_Type_1
+Powerup_Mineral_Cluster_Type_2 = cvar.Powerup_Mineral_Cluster_Type_2
+Powerup_Protoss_Gas_Orb_Type_1 = cvar.Powerup_Protoss_Gas_Orb_Type_1
+Powerup_Protoss_Gas_Orb_Type_2 = cvar.Powerup_Protoss_Gas_Orb_Type_2
+Powerup_Zerg_Gas_Sac_Type_1 = cvar.Powerup_Zerg_Gas_Sac_Type_1
+Powerup_Zerg_Gas_Sac_Type_2 = cvar.Powerup_Zerg_Gas_Sac_Type_2
+Powerup_Terran_Gas_Tank_Type_1 = cvar.Powerup_Terran_Gas_Tank_Type_1
+Powerup_Terran_Gas_Tank_Type_2 = cvar.Powerup_Terran_Gas_Tank_Type_2
+Special_Map_Revealer = cvar.Special_Map_Revealer
+Special_Floor_Missile_Trap = cvar.Special_Floor_Missile_Trap
+Special_Floor_Hatch = cvar.Special_Floor_Hatch
+Special_Upper_Level_Door = cvar.Special_Upper_Level_Door
+Special_Right_Upper_Level_Door = cvar.Special_Right_Upper_Level_Door
+Special_Pit_Door = cvar.Special_Pit_Door
+Special_Right_Pit_Door = cvar.Special_Right_Pit_Door
+Special_Floor_Gun_Trap = cvar.Special_Floor_Gun_Trap
+Special_Wall_Missile_Trap = cvar.Special_Wall_Missile_Trap
+Special_Wall_Flame_Trap = cvar.Special_Wall_Flame_Trap
+Special_Right_Wall_Missile_Trap = cvar.Special_Right_Wall_Missile_Trap
+Special_Right_Wall_Flame_Trap = cvar.Special_Right_Wall_Flame_Trap
+Special_Start_Location = cvar.Special_Start_Location
 UnitTypes_None = cvar.UnitTypes_None
 AllUnits = cvar.AllUnits
 Men = cvar.Men
 Buildings = cvar.Buildings
 Factories = cvar.Factories
 UnitTypes_Unknown = cvar.UnitTypes_Unknown
-
-
-def getUpgradeType(*args):
-  return _pybw_swig.getUpgradeType(*args)
-getUpgradeType = _pybw_swig.getUpgradeType
-
-def allUpgradeTypes():
-  return _pybw_swig.allUpgradeTypes()
-allUpgradeTypes = _pybw_swig.allUpgradeTypes
-class WeaponType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, WeaponType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, WeaponType, name)
-    __repr__ = _swig_repr
-    def __init__(self, *args): 
-        this = _pybw_swig.new_WeaponType(*args)
-        try: self.this.append(this)
-        except: self.this = this
-    def __eq__(self, *args): return _pybw_swig.WeaponType___eq__(self, *args)
-    def __ne__(self, *args): return _pybw_swig.WeaponType___ne__(self, *args)
-    def __lt__(self, *args): return _pybw_swig.WeaponType___lt__(self, *args)
-    def getID(self): return _pybw_swig.WeaponType_getID(self)
-    def getName(self): return _pybw_swig.WeaponType_getName(self)
-    def getTech(self): return _pybw_swig.WeaponType_getTech(self)
-    def whatUses(self): return _pybw_swig.WeaponType_whatUses(self)
-    def damageAmount(self): return _pybw_swig.WeaponType_damageAmount(self)
-    def damageBonus(self): return _pybw_swig.WeaponType_damageBonus(self)
-    def damageCooldown(self): return _pybw_swig.WeaponType_damageCooldown(self)
-    def damageFactor(self): return _pybw_swig.WeaponType_damageFactor(self)
-    def upgradeType(self): return _pybw_swig.WeaponType_upgradeType(self)
-    def damageType(self): return _pybw_swig.WeaponType_damageType(self)
-    def explosionType(self): return _pybw_swig.WeaponType_explosionType(self)
-    def minRange(self): return _pybw_swig.WeaponType_minRange(self)
-    def maxRange(self): return _pybw_swig.WeaponType_maxRange(self)
-    def innerSplashRadius(self): return _pybw_swig.WeaponType_innerSplashRadius(self)
-    def medianSplashRadius(self): return _pybw_swig.WeaponType_medianSplashRadius(self)
-    def outerSplashRadius(self): return _pybw_swig.WeaponType_outerSplashRadius(self)
-    def targetsAir(self): return _pybw_swig.WeaponType_targetsAir(self)
-    def targetsGround(self): return _pybw_swig.WeaponType_targetsGround(self)
-    def targetsMechanical(self): return _pybw_swig.WeaponType_targetsMechanical(self)
-    def targetsOrganic(self): return _pybw_swig.WeaponType_targetsOrganic(self)
-    def targetsNonBuilding(self): return _pybw_swig.WeaponType_targetsNonBuilding(self)
-    def targetsNonRobotic(self): return _pybw_swig.WeaponType_targetsNonRobotic(self)
-    def targetsTerrain(self): return _pybw_swig.WeaponType_targetsTerrain(self)
-    def targetsOrgOrMech(self): return _pybw_swig.WeaponType_targetsOrgOrMech(self)
-    def targetsOwn(self): return _pybw_swig.WeaponType_targetsOwn(self)
-    __swig_destroy__ = _pybw_swig.delete_WeaponType
-    __del__ = lambda self : None;
-WeaponType_swigregister = _pybw_swig.WeaponType_swigregister
-WeaponType_swigregister(WeaponType)
-Terran_Infantry_Armor = cvar.Terran_Infantry_Armor
-Terran_Vehicle_Plating = cvar.Terran_Vehicle_Plating
-Terran_Ship_Plating = cvar.Terran_Ship_Plating
-Zerg_Carapace = cvar.Zerg_Carapace
-Zerg_Flyer_Carapace = cvar.Zerg_Flyer_Carapace
-Protoss_Ground_Armor = cvar.Protoss_Ground_Armor
-Protoss_Air_Armor = cvar.Protoss_Air_Armor
-Terran_Infantry_Weapons = cvar.Terran_Infantry_Weapons
-Terran_Vehicle_Weapons = cvar.Terran_Vehicle_Weapons
-Terran_Ship_Weapons = cvar.Terran_Ship_Weapons
-Zerg_Melee_Attacks = cvar.Zerg_Melee_Attacks
-Zerg_Missile_Attacks = cvar.Zerg_Missile_Attacks
-Zerg_Flyer_Attacks = cvar.Zerg_Flyer_Attacks
-Protoss_Ground_Weapons = cvar.Protoss_Ground_Weapons
-Protoss_Air_Weapons = cvar.Protoss_Air_Weapons
-Protoss_Plasma_Shields = cvar.Protoss_Plasma_Shields
-U_238_Shells = cvar.U_238_Shells
-Ion_Thrusters = cvar.Ion_Thrusters
-Titan_Reactor = cvar.Titan_Reactor
-Ocular_Implants = cvar.Ocular_Implants
-Moebius_Reactor = cvar.Moebius_Reactor
-Apollo_Reactor = cvar.Apollo_Reactor
-Colossus_Reactor = cvar.Colossus_Reactor
-Ventral_Sacs = cvar.Ventral_Sacs
-Antennae = cvar.Antennae
-Pneumatized_Carapace = cvar.Pneumatized_Carapace
-Metabolic_Boost = cvar.Metabolic_Boost
-Adrenal_Glands = cvar.Adrenal_Glands
-Muscular_Augments = cvar.Muscular_Augments
-Grooved_Spines = cvar.Grooved_Spines
-Gamete_Meiosis = cvar.Gamete_Meiosis
-Metasynaptic_Node = cvar.Metasynaptic_Node
-Singularity_Charge = cvar.Singularity_Charge
-Leg_Enhancements = cvar.Leg_Enhancements
-Scarab_Damage = cvar.Scarab_Damage
-Reaver_Capacity = cvar.Reaver_Capacity
-Gravitic_Drive = cvar.Gravitic_Drive
-Sensor_Array = cvar.Sensor_Array
-Gravitic_Boosters = cvar.Gravitic_Boosters
-Khaydarin_Amulet = cvar.Khaydarin_Amulet
-Apial_Sensors = cvar.Apial_Sensors
-Gravitic_Thrusters = cvar.Gravitic_Thrusters
-Carrier_Capacity = cvar.Carrier_Capacity
-Khaydarin_Core = cvar.Khaydarin_Core
-Argus_Jewel = cvar.Argus_Jewel
-Argus_Talisman = cvar.Argus_Talisman
-Caduceus_Reactor = cvar.Caduceus_Reactor
-Chitinous_Plating = cvar.Chitinous_Plating
-Anabolic_Synthesis = cvar.Anabolic_Synthesis
-Charon_Boosters = cvar.Charon_Boosters
-UpgradeTypes_None = cvar.UpgradeTypes_None
-UpgradeTypes_Unknown = cvar.UpgradeTypes_Unknown
 
 
 def getWeaponType(*args):
@@ -3037,6 +3126,11 @@ WeaponTypes_Subterranean_Spines = cvar.WeaponTypes_Subterranean_Spines
 Warp_Blades = cvar.Warp_Blades
 Warp_Blades_Hero = cvar.Warp_Blades_Hero
 Warp_Blades_Zeratul = cvar.Warp_Blades_Zeratul
+Independant_Laser_Battery = cvar.Independant_Laser_Battery
+Twin_Autocannons_Floor_Trap = cvar.Twin_Autocannons_Floor_Trap
+Hellfire_Missile_Pack_Wall_Trap = cvar.Hellfire_Missile_Pack_Wall_Trap
+Flame_Thrower_Wall_Trap = cvar.Flame_Thrower_Wall_Trap
+Hellfire_Missile_Pack_Floor_Trap = cvar.Hellfire_Missile_Pack_Floor_Trap
 WeaponTypes_Yamato_Gun = cvar.WeaponTypes_Yamato_Gun
 WeaponTypes_Nuclear_Strike = cvar.WeaponTypes_Nuclear_Strike
 WeaponTypes_Lockdown = cvar.WeaponTypes_Lockdown
@@ -3102,24 +3196,6 @@ class TA_Polygon(PositionVector):
     __del__ = lambda self : None;
 TA_Polygon_swigregister = _pybw_swig.TA_Polygon_swigregister
 TA_Polygon_swigregister(TA_Polygon)
-
-class Region(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, Region, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, Region, name)
-    def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined - class is abstract")
-    __repr__ = _swig_repr
-    def getPolygon(self): return _pybw_swig.Region_getPolygon(self)
-    def getCenter(self): return _pybw_swig.Region_getCenter(self)
-    def isReachable(self, *args): return _pybw_swig.Region_isReachable(self, *args)
-    def getReachableRegions(self): return _pybw_swig.Region_getReachableRegions(self)
-    def getChokepoints(self): return _pybw_swig.Region_getChokepoints(self)
-    def getBaseLocations(self): return _pybw_swig.Region_getBaseLocations(self)
-    __swig_destroy__ = _pybw_swig.delete_Region
-    __del__ = lambda self : None;
-Region_swigregister = _pybw_swig.Region_swigregister
-Region_swigregister(Region)
 
 
 

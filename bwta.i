@@ -11,9 +11,6 @@ Chokepoint
 
 %{
 #include "BWTA.h"
-
-using namespace BWTA;
-
 %}
 
 %rename(TA_Polygon) BWTA::Polygon;
@@ -183,7 +180,4 @@ BWTA::Polygon* TA_getNearestUnwalkablePolygon(BWAPI::TilePosition tileposition);
 %ignore BWTA::getNearestBaseLocation;
 %ignore BWTA::getNearestUnwalkablePolygon;
 %ignore BWTA::getUnwalkablePolygons;
-
-
-%include "BWTA.h"
 
