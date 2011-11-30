@@ -1,3 +1,4 @@
+* Make binary package for distribution
 * Move logic from client.cpp to python, refactor client.cpp
 * Write sample user script
 * Fix MapWrapper, PairWrapper and apply to relevant functions
